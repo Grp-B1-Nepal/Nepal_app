@@ -2,27 +2,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="50dp"
     android:layout_width="50dp"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     >
 
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
+        android:textColor ="#000000"
         android:title="Home" />
     <item
         android:id="@+id/navigation_activities"
         android:icon="@drawable/ic_activity"
+        android:textColor ="#000000"
         android:title="Activites"/>
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_profile"
+        android:textColor ="#000000"
         android:title="Profile" />
     <item
         android:id="@+id/navigation_progress"
         android:icon="@drawable/ic_progress"
+        android:textColor ="#000000"
         android:title="Progress" />
     <item
         android:id="@+id/navigation_recipe"
         android:icon="@drawable/ic_recipe"
+        android:textColor ="#000000"
         android:title="Recipe" />
 </menu>

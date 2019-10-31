@@ -55,4 +55,4 @@ public class MainActivity extends AppCompatActivity {
                     return false;
                 }
             };
-}
+    } //ellers lav aktiviterer mellem de andres? ved godt vi ikke har aftalt hvordan vi gør det

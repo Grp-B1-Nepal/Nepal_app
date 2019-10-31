@@ -28,6 +28,11 @@ public class Homepage_act extends AppCompatActivity implements View.OnClickListe
         developB = findViewById(R.id.developButton);
         activitesB = findViewById(R.id.activitiesButton);
 
+        //setting text on buttons
+        recipeB.setText("Go to recipes");
+        developB.setText("Go to development");
+        activitesB.setText("Go to activities");
+
         //setting up listeners
         recipeB.setOnClickListener(this);
         developB.setOnClickListener(this);

@@ -2,6 +2,7 @@ package com.example.nepal_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,13 +37,16 @@ public class Homepage_act extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v == recipeB) {
-            System.out.println("do nothing");
+            //Intent i = new Intent(this, reipes_akt.class);
+            //startActivity(i);
         }
         else if(v == developB) {
-            System.out.println("do nothing");
+            //Intent i = new Intent(this, development_akt.class);
+            //startActivity(i);
         }
         else if(v == activitesB){
-            System.out.println("do nothing");
+            //Intent i = new Intent(this, activities_akt.class);
+            //startActivity(i);
         }
 
     }

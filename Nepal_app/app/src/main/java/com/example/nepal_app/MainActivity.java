@@ -10,5 +10,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
+    } //ellers lav aktiviterer mellem de andres? ved godt vi ikke har aftalt hvordan vi gør det
 }

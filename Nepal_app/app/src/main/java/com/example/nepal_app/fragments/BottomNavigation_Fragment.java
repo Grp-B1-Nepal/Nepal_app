@@ -1,5 +1,5 @@
 package com.example.nepal_app.fragments;
 
-public class BottomNavigationView {
+public class BottomNavigation_Fragment {
 
 }

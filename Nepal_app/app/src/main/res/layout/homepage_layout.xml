@@ -7,6 +7,17 @@
     tools:context=".Homepage_act">
 
     <ImageView
+        android:id="@+id/speakerActivity"
+        android:layout_width="28dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activitiesButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageActivities"
+        app:layout_constraintVertical_bias="0.04000002"
+        app:srcCompat="@drawable/speaker" />
+
+    <ImageView
         android:id="@+id/imageActivities"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
@@ -70,4 +81,24 @@
         app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageRecipe" />
+
+    <ImageView
+        android:id="@+id/speakerRecipe"
+        android:layout_width="28dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageDevelopment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recipesButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageRecipe"
+        app:srcCompat="@drawable/speaker" />
+
+    <ImageView
+        android:id="@+id/speakerDevelop"
+        android:layout_width="28dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageActivities"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/developButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageDevelopment"
+        app:srcCompat="@drawable/speaker" />
 </androidx.constraintlayout.widget.ConstraintLayout>

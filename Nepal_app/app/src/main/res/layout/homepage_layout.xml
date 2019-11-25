@@ -4,7 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Homepage_act">
+    tools:context=".fragments.HomeFragment">
+
+    <ImageView
+        android:id="@+id/speakerActivity"
+        android:layout_width="28dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activitiesButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageActivities"
+        app:layout_constraintVertical_bias="0.04000002"
+        app:srcCompat="@drawable/like" />
 
     <ImageView
         android:id="@+id/imageActivities"
@@ -20,7 +31,7 @@
         style="@android:style/Widget.DeviceDefault.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#5BC0DE"
+        android:background="@drawable/button_shape"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.23"
@@ -41,7 +52,7 @@
         style="@android:style/Widget.DeviceDefault.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#5BC0DE"
+        android:background="@drawable/button_shape"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.23"
@@ -64,11 +75,30 @@
         style="@android:style/Widget.DeviceDefault.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#5BC0DE"
         android:text="Button"
+        android:background="@drawable/button_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageRecipe" />
 
+    <ImageView
+        android:id="@+id/speakerRecipe"
+        android:layout_width="28dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageDevelopment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recipesButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageRecipe"
+        app:srcCompat="@drawable/like" />
+
+    <ImageView
+        android:id="@+id/speakerDevelop"
+        android:layout_width="28dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageActivities"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/developButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageDevelopment"
+        app:srcCompat="@drawable/like" />
 </androidx.constraintlayout.widget.ConstraintLayout>

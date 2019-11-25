@@ -2,6 +2,7 @@ package com.example.nepal_app;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +10,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.nepal_app.fragments.ActivitiesFragment;
-import com.example.nepal_app.fragments.ChildbarFragment;
 import com.example.nepal_app.fragments.HomeFragment;
 import com.example.nepal_app.fragments.ProfileFragment;
 import com.example.nepal_app.fragments.ProgressFragment;
@@ -26,18 +26,10 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         openFragment(HomeFragment.newInstance("", ""));
-        createtopFragment(ChildbarFragment.newInstance("",""));
     }
     public void openFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
-    }
-
-    public void createtopFragment (Fragment fragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.child_topbar, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }

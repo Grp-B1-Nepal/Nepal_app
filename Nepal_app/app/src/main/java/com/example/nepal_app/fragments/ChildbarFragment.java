@@ -49,4 +49,5 @@ public class ChildbarFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.childbar_top, container, false);
     }
+
 }

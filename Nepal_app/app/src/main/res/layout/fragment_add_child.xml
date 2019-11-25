@@ -5,7 +5,7 @@
     android:id="@+id/addfrag"
     android:layout_width="match_parent"
     android:layout_height="575dp"
-    tools:context=".fragments.Fragment_addChild">
+    tools:context=".fragments.child.Fragment_addChild">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -84,14 +84,14 @@
             android:id="@+id/textViewTitle4"
             android:layout_width="381dp"
             android:layout_height="31dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:gravity="center_horizontal"
             android:text="Gender"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.533"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/birthday" />
+            app:layout_constraintTop_toBottomOf="@+id/pickdate_button" />
 
         <EditText
             android:id="@+id/name"
@@ -109,25 +109,10 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
         <EditText
-            android:id="@+id/birthday"
-            android:layout_width="321dp"
-            android:layout_height="37dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/layout_background_round_corners"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Birthday"
-            android:inputType="textPersonName"
-            android:maxLength="50"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTitle2" />
-
-        <EditText
             android:id="@+id/gender"
             android:layout_width="321dp"
             android:layout_height="37dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/layout_background_round_corners"
             android:ems="10"
             android:gravity="center"
@@ -139,17 +124,30 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewTitle4" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/save_button"
             android:layout_width="75dp"
             android:layout_height="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/button_shape"
             android:text="Save"
             android:textColor="#F3EDED"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <Button
+            android:id="@+id/pickdate_button"
+            android:layout_width="318dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/layout_background_round_corners"
+            android:text="Pick date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -110,9 +110,14 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
 
         if (v == pick_date) {
             showDateDialog();
-        }}
+        }
+    }
 
-        private void showDateDialog(){
+
+    /**
+     *Method to create the date dialog
+     */
+    private void showDateDialog(){
         DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
                 this,
                 Calendar.getInstance().get(Calendar.YEAR),
@@ -123,8 +128,11 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         }
 
 
-
     @Override
+    /**
+     * Implements the onDateSet from the DatePickerDialog to get tha data picked date from the calendar
+     *
+     */
     public void onDateSet(DatePicker view, int year, int month, int day) {
         Calendar c = Calendar.getInstance();
         c.set(year,month,day);
@@ -132,7 +140,10 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         currentDate = c.getTimeInMillis();
     }
 
-    void saveChild(){
+    /**
+     * Saving the child in the cache
+     */
+    private void saveChild(){
     SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("Children", Context.MODE_PRIVATE);
     SharedPreferences.Editor editor = sharedPreferences.edit();
     Gson gson = new Gson();

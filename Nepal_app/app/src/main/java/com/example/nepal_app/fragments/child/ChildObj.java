@@ -7,9 +7,21 @@ public class ChildObj{
     String gender;
 
     //Constructor til Child objektet.
-    ChildObj(String name, long birthday, String gender) {
+    public ChildObj(String name, long birthday, String gender) {
         this.name = name;
         this.birthday = birthday;
         this.gender = gender;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public String getGender(){
+        return gender;
+    }
+
+    public long getBirthday(){
+        return birthday;
     }
 }

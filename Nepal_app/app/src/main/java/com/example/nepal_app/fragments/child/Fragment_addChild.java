@@ -1,8 +1,6 @@
 package com.example.nepal_app.fragments.child;
 
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +13,7 @@ import android.os.Bundle;
 import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,25 +22,30 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import com.example.nepal_app.Factory.GetAndSet;
+import com.example.nepal_app.Factory.POJO;
 import com.example.nepal_app.R;
+import com.example.nepal_app.fragments.ProfileFragment;
 import com.google.gson.Gson;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Objects;
 
 
 import static android.app.Activity.RESULT_OK;
 
 
 public class Fragment_addChild extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
-    Button save, pick_date;
-    EditText name, gender;
-    ImageView imageView12, imageViewPreview, preview;
-    ConstraintLayout billede;
-    ArrayList<ChildObj> childArr = new ArrayList<>();
-    long currentDate;
+    private Button save, pick_date;
+    private EditText name, gender;
+    private ImageView  preview;
+    private ConstraintLayout billede;
+    private ArrayList<ChildObj> childArr = new ArrayList<>();
+    private long currentDate;
 
     //Gallery select variables
     public static final int GALLERY_SELECT = 1887;
@@ -50,7 +54,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     String ImageString = "flexicu";
     Bitmap ImageData = null;
     Uri imageUri = null;
-
+    POJO pojo;
     public Fragment_addChild() {
         // Required empty public constructor
     }
@@ -65,12 +69,15 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         name = view2.findViewById(R.id.name);
         pick_date = view2.findViewById(R.id.pickdate_button);
         gender = view2.findViewById(R.id.gender);
-        imageView12 = view2.findViewById(R.id.imageView12);
         preview = view2.findViewById(R.id.imageViewPreview);
         preview.setVisibility(View.INVISIBLE);
 
         pick_date.setOnClickListener(this);
         save.setOnClickListener(this);
+
+        pojo = POJO.getInstance();
+
+        childArr = pojo.getChildArr(getContext());
 
         //If you don't have the permission to open the Gallery ask for them, otherwise open the gallery
         billede.setOnClickListener((view) ->{
@@ -106,6 +113,8 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         if (v == save){
             childArr.add(new ChildObj(String.valueOf(name.getText()),currentDate ,String.valueOf(gender.getText())));
             saveChild();
+            FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
+            fm.popBackStack();
         }
 
         if (v == pick_date) {
@@ -150,6 +159,8 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     String json = gson.toJson(childArr);
     editor.putString("ChildArr",json);
     editor.apply();
+    pojo.setChildArr(childArr);
+
     }
 }
 

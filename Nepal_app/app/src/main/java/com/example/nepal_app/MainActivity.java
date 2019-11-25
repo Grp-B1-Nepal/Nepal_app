@@ -37,21 +37,22 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                     switch (item.getItemId()) {
                         case R.id.navigation_home:
-                            openFragment(HomeFragment.newInstance("", ""));
+                            openFragment(new HomeFragment());
                             return true;
                         case R.id.navigation_activities:
-                            openFragment(ActivitiesFragment.newInstance("", ""));
+                            openFragment(new ActivitiesFragment());
                             return true;
                         case R.id.navigation_profile:
-                            openFragment(ProfileFragment.newInstance("", ""));
+                            openFragment(new ProfileFragment());
                             return true;
                         case R.id.navigation_progress:
-                            openFragment(ProgressFragment.newInstance("", ""));
+                            openFragment(new ProgressFragment());
                             return true;
                         case R.id.navigation_recipe:
-                            openFragment(RecipesFragment.newInstance("", ""));
+                            openFragment(new RecipesFragment());
                             return true;
                     }
                     return false;

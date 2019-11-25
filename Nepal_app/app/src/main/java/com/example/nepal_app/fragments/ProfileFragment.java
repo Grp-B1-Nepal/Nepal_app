@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.nepal_app.R;
 
@@ -22,6 +24,11 @@ public class ProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private FrameLayout child_frame_1;
+    private FrameLayout child_frame_2;
+    private View rod;
+
     public ProfileFragment() {
         // Required empty public constructor
     }
@@ -54,6 +61,19 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        rod = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        child_frame_1 = rod.findViewById(R.id.child_topbar1);
+        child_frame_2 = rod.findViewById(R.id.child_topbar2);
+
+        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        ChildbarFragment Childbarfragment = new ChildbarFragment();
+        ChildbarFragment Childbarfragment2 = new ChildbarFragment();
+        fragmentTransaction.replace(R.id.child_topbar1, Childbarfragment);
+        fragmentTransaction.replace(R.id.child_topbar2, Childbarfragment2);
+        //fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
+        return rod;
     }
 }

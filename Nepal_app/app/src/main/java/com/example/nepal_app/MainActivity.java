@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                             openFragment(new ProgressFragment());
                             return true;
                         case R.id.navigation_recipe:
-                            openFragment(new RecipesFragment());
+                            openFragment(new recipe());
                             return true;
                     }
                     return false;

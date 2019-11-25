@@ -1,5 +1,6 @@
 package com.example.nepal_app;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Homepage_act extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView recipesI, developI, activitiesI;
+    private ImageView recipesI, developI, activitiesI, recipSound, develoSound, activitySound;
     private Button recipeB, developB, activitesB;
 
     @Override
@@ -21,6 +22,9 @@ public class Homepage_act extends AppCompatActivity implements View.OnClickListe
         recipesI = findViewById(R.id.imageRecipe);
         developI = findViewById(R.id.imageDevelopment);
         activitiesI = findViewById(R.id.imageActivities);
+        recipSound = findViewById(R.id.speakerRecipe);
+        develoSound = findViewById(R.id.speakerDevelop);
+        activitySound = findViewById(R.id.speakerActivity);
 
         //setting up buttons
         recipeB = findViewById(R.id.recipesButton);
@@ -36,6 +40,9 @@ public class Homepage_act extends AppCompatActivity implements View.OnClickListe
         recipeB.setOnClickListener(this);
         developB.setOnClickListener(this);
         activitesB.setOnClickListener(this);
+        recipSound.setOnClickListener(this);
+        develoSound.setOnClickListener(this);
+        activitySound.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +58,36 @@ public class Homepage_act extends AppCompatActivity implements View.OnClickListe
         else if(v == activitesB){
             //Intent i = new Intent(this, activities_akt.class);
             //startActivity(i);
+        }
+        else if(v == recipSound){
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.meow);
+            mp.start();
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    mp.release();
+                }
+            });
+        }
+        else if(v == develoSound){
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.meow);
+            mp.start();
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    mp.release();
+                }
+            });
+        }
+        else if(v == activitySound){
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.meow);
+            mp.start();
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    mp.release();
+                }
+            });
         }
 
     }

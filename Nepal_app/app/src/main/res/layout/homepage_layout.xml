@@ -12,27 +12,31 @@
         android:layout_height="31dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toEndOf="@+id/activitiesButton"
         app:layout_constraintTop_toBottomOf="@+id/imageActivities"
-        app:layout_constraintVertical_bias="0.04000002"
+        app:layout_constraintVertical_bias="0.35"
         app:srcCompat="@drawable/like" />
 
     <ImageView
         android:id="@+id/imageActivities"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/developButton"
-        app:srcCompat="@drawable/placeholder" />
+        app:srcCompat="@drawable/evo_of_child" />
 
     <Button
         android:id="@+id/activitiesButton"
         style="@android:style/Widget.DeviceDefault.Button"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_shape"
         android:text="Button"
+        android:textColor="#FDFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,18 +46,21 @@
         android:id="@+id/imageDevelopment"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recipesButton"
-        app:srcCompat="@drawable/placeholder" />
+        app:srcCompat="@drawable/children_on_ball" />
 
     <Button
         android:id="@+id/developButton"
         style="@android:style/Widget.DeviceDefault.Button"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_shape"
         android:text="Button"
+        android:textColor="#F5FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,20 +70,21 @@
         android:id="@+id/imageRecipe"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.120000005"
-        app:srcCompat="@drawable/placeholder" />
+        app:srcCompat="@drawable/food_frontpage" />
 
     <Button
         android:id="@+id/recipesButton"
         style="@android:style/Widget.DeviceDefault.Button"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_shape"
+        android:text="Button"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="parent"

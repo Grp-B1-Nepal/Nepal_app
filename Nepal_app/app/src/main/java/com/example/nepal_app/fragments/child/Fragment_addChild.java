@@ -4,7 +4,9 @@ package com.example.nepal_app.fragments.child;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -12,8 +14,6 @@ import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -24,11 +24,13 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import com.example.nepal_app.R;
+import com.google.gson.Gson;
+
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
+
 
 import static android.app.Activity.RESULT_OK;
 
@@ -103,6 +105,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     public void onClick(View v) {
         if (v == save){
             childArr.add(new ChildObj(String.valueOf(name.getText()),currentDate ,String.valueOf(gender.getText())));
+            saveChild();
         }
 
         if (v == pick_date) {
@@ -128,4 +131,15 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         pick_date.setText(day + "/" + (month+1) + "/" + year);
         currentDate = c.getTimeInMillis();
     }
+
+    void saveChild(){
+    SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("Children", Context.MODE_PRIVATE);
+    SharedPreferences.Editor editor = sharedPreferences.edit();
+    Gson gson = new Gson();
+    String json = gson.toJson(childArr);
+    editor.putString("ChildArr",json);
+    editor.apply();
+    }
 }
+
+

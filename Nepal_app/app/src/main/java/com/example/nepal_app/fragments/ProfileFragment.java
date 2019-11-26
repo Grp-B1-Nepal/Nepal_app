@@ -16,7 +16,6 @@ import com.example.nepal_app.fragments.child.ChildObj;
 import com.example.nepal_app.fragments.child.Fragment_addChild;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -48,7 +47,7 @@ public class ProfileFragment extends Fragment {
         getGender();
         getImage();
 
-        Adaptor_Listview adaptor = new Adaptor_Listview(getContext(), childArr);
+        Adaptor_Listview adaptor = new Adaptor_Listview(getContext(), childArr,images);
         list.setAdapter(adaptor);
 
         //TODO create fragment for this
@@ -102,8 +101,8 @@ public class ProfileFragment extends Fragment {
     private void getImage() {
         images = new Uri[childArr.size()];
         for (int i = 0; i < childArr.size(); i++) {
-            if (childArr.get(i).getImage() != null) {
-                images[i] = childArr.get(i).getImage();
+            if (pojo.getURI(getContext(),childArr.get(i).getName()) != null) {
+                images[i] = pojo.getURI(getContext(),childArr.get(i).getName());
             }
         }
     }

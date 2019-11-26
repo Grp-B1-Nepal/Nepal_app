@@ -115,11 +115,13 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 Toast.makeText(getContext(), "Select a gender", Toast.LENGTH_SHORT).show();
             }else {
                 childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem())));
+
                 saveChild();
 
                 if (imageUri != null) {
                     saveImage();
                 }
+
                 //Goes back to the last fragment
                 FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
                 fm.popBackStack();
@@ -179,9 +181,12 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         SharedPreferences.Editor editor = sharedPreferences.edit();
         int index = childArr.size();
         String name = childArr.get(index-1).getName();
-        editor.putString(name, String.valueOf(imageUri));
+        editor.putString(name, imageUri.toString());
         editor.apply();
     }
+
+
+
 }
 
 

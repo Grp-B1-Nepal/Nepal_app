@@ -18,12 +18,16 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.nepal_app.Factory.POJO;
+import com.example.nepal_app.MainActivity;
 import com.example.nepal_app.R;
 import com.google.gson.Gson;
 
@@ -38,12 +42,13 @@ import static android.app.Activity.RESULT_OK;
 
 public class Fragment_addChild extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
     private Button save, pick_date;
-    private EditText name, gender;
+    private EditText name;
     private ImageView  preview;
     private ConstraintLayout billede;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
     private long currentDate;
     private static final int PICK_IMAGE =100;
+    private Spinner genders;
 
     //Upload variables
     String ImageString = "flexicu";
@@ -65,10 +70,9 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         billede = view2.findViewById(R.id.billede);
         name = view2.findViewById(R.id.name);
         pick_date = view2.findViewById(R.id.pickdate_button);
-        gender = view2.findViewById(R.id.gender);
         preview = view2.findViewById(R.id.downloaded_picture);
         preview.setVisibility(View.INVISIBLE);
-
+        genders = view2.findViewById(R.id.gender_spinner);
         pick_date.setOnClickListener(this);
         save.setOnClickListener(this);
 
@@ -83,14 +87,11 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             startActivityForResult(gallery,PICK_IMAGE);
         });
 
-        //If you don't have the permission to open the Gallery ask for them, otherwise open the gallery
-       /* billede.setOnClickListener((view) ->{
-            Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-            photoPickerIntent.setType("image/*");
-            startActivityForResult(photoPickerIntent, GALLERY_SELECT);
-        });
-*/
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.spinner));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        genders.setAdapter(myAdapter);
 
+        
 
         return view2;
     }
@@ -110,23 +111,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         }
     }
 
-    /*
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Bitmap photo = null;
-        if (resultCode == RESULT_OK) {
-            try {
-                imageUri = data.getData();
-                final InputStream imageStream = getActivity().getContentResolver().openInputStream(imageUri);
-                photo = BitmapFactory.decodeStream(imageStream);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            ImageData = photo;
-        }
-    }
-
-     */
-
+        
     @Override
     public void onClick(View v) {
         if (v == save){
@@ -135,10 +120,10 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 name.setError("Please fill the name of the child");
             } else if (currentDate == 0){
                 pick_date.setError("Please pick the birthday of the child");
-            } else if (String.valueOf(gender.getText()).equals("")){
-                gender.setError("Please type the gender of the child");
+            } else if (String.valueOf(genders.getSelectedItem()).equals("")){
+                Toast.makeText(getContext(), "Select a gender", Toast.LENGTH_SHORT).show();
             }else {
-                childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(gender.getText())));
+                childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem())));
                 saveChild();
                 FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
                 fm.popBackStack();

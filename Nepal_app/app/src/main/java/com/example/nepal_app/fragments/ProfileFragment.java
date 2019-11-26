@@ -33,7 +33,7 @@ public class ProfileFragment extends Fragment {
     private FloatingActionButton add;
     private POJO pojo;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
-    Spinner genders;
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

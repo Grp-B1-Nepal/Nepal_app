@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/addfrag"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.Fragment_addChild">
+    android:layout_height="575dp"
+    tools:context=".Fragments.child.Fragment_addChild">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="575dp">
 
         <ImageView
-            android:id="@+id/imageViewPreview"
+            android:id="@+id/downloaded_picture"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,11 +25,11 @@
             android:id="@+id/billede"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewPreview">
+            app:layout_constraintTop_toBottomOf="@+id/downloaded_picture">
 
             <TextView
                 android:id="@+id/textView5"
@@ -58,7 +58,7 @@
             android:id="@+id/textViewTitle"
             android:layout_width="381dp"
             android:layout_height="31dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
             android:text="Name"
             android:textSize="20sp"
@@ -71,7 +71,7 @@
             android:id="@+id/textViewTitle2"
             android:layout_width="381dp"
             android:layout_height="31dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
             android:text="Birthday"
             android:textSize="20sp"
@@ -84,72 +84,74 @@
             android:id="@+id/textViewTitle4"
             android:layout_width="381dp"
             android:layout_height="31dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
             android:text="Gender"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.533"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/birthday" />
+            app:layout_constraintTop_toBottomOf="@+id/pickdate_button" />
 
         <EditText
             android:id="@+id/name"
             android:layout_width="321dp"
             android:layout_height="37dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/layout_background_round_corners"
             android:ems="10"
             android:gravity="center"
-            android:hint="Name"
+            android:hint="Write name"
             android:inputType="textPersonName"
             android:maxLength="50"
+            android:textColor="#130101"
+            android:textColorHint="#130101"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
-        <EditText
-            android:id="@+id/birthday"
-            android:layout_width="321dp"
-            android:layout_height="37dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/layout_background_round_corners"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Birthday"
-            android:inputType="textPersonName"
-            android:maxLength="50"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTitle2" />
-
-        <EditText
-            android:id="@+id/gender"
-            android:layout_width="321dp"
-            android:layout_height="37dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/layout_background_round_corners"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Gender"
-            android:inputType="textPersonName"
-            android:maxLength="50"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTitle4" />
-
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/save_button"
             android:layout_width="75dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/button_shape"
             android:text="Save"
             android:textColor="#F3EDED"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
+
+        <Button
+            android:id="@+id/pickdate_button"
+            android:layout_width="318dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/layout_background_round_corners"
+            android:text="Pick date"
+            android:textColor="#070000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle2" />
+
+        <Spinner
+            android:id="@+id/gender_spinner"
+            android:layout_width="318dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/layout_background_round_corners"
+            android:gravity="center"
+            android:paddingLeft="135dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gender" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

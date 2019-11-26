@@ -1,4 +1,4 @@
-package com.example.nepal_app.fragments;
+package com.example.nepal_app.Fragments;
 
 public class BottomNavigation_Fragment {
 

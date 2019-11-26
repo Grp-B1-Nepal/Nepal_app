@@ -1,7 +1,7 @@
 package com.example.nepal_app.Adaptor;
 
 import android.content.Context;
-import android.net.Uri;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.nepal_app.R;
-import com.example.nepal_app.fragments.child.ChildObj;
+import com.example.nepal_app.Fragments.child.ChildObj;
 
 import java.util.ArrayList;
 
@@ -25,9 +25,9 @@ public class Adaptor_Listview extends ArrayAdapter<String> {
 
     private Context context;
     private ArrayList<ChildObj> childArr;
-    private Uri[] image;
+    private ArrayList<Bitmap> image;
 
-    public Adaptor_Listview(Context context, ArrayList<ChildObj> arr, Uri[] image){
+    public Adaptor_Listview(Context context, ArrayList<ChildObj> arr, ArrayList<Bitmap> image){
         super(context, R.layout.profil_liste_element);
         this.childArr = arr;
         this.context = context;
@@ -53,7 +53,7 @@ public class Adaptor_Listview extends ArrayAdapter<String> {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-            viewHolder.childrenImage.setImageURI(image[position]);
+            viewHolder.childrenImage.setImageBitmap(image.get(position));
             viewHolder.name.setText(childArr.get(position).getName());
 
 

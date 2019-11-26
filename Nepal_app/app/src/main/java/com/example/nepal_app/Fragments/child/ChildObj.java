@@ -1,4 +1,4 @@
-package com.example.nepal_app.fragments.child;
+package com.example.nepal_app.Fragments.child;
 
 
 

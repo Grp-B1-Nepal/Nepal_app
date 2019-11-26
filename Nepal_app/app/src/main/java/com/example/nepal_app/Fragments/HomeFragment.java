@@ -1,4 +1,4 @@
-package com.example.nepal_app.fragments;
+package com.example.nepal_app.Fragments;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;

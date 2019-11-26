@@ -1,6 +1,6 @@
-package com.example.nepal_app.fragments;
+package com.example.nepal_app.Fragments;
 
-import android.net.Uri;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment;
 import com.example.nepal_app.Adaptor.Adaptor_Listview;
 import com.example.nepal_app.Factory.POJO;
 import com.example.nepal_app.R;
-import com.example.nepal_app.fragments.child.ChildObj;
-import com.example.nepal_app.fragments.child.Fragment_addChild;
+import com.example.nepal_app.Fragments.child.ChildObj;
+import com.example.nepal_app.Fragments.child.Fragment_addChild;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ public class ProfileFragment extends Fragment {
     private String[] child;
     private String[] birthday;
     private String[] gender;
-    private Uri[] images;
+    private ArrayList<Bitmap> images = new ArrayList<>();
     private FloatingActionButton add;
     private POJO pojo;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
@@ -99,11 +99,6 @@ public class ProfileFragment extends Fragment {
     }
 
     private void getImage() {
-        images = new Uri[childArr.size()];
-        for (int i = 0; i < childArr.size(); i++) {
-            if (pojo.getURI(getContext()) != null) {
-                images[i] = Uri.parse(String.valueOf(pojo.getURI(getContext())));
-            }
-        }
+        images.addAll(pojo.getBitmap(getContext()));
     }
 }

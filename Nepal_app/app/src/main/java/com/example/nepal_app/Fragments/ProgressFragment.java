@@ -1,4 +1,4 @@
-package com.example.nepal_app.fragments.child;
+package com.example.nepal_app.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,13 +9,20 @@ import androidx.fragment.app.Fragment;
 
 import com.example.nepal_app.R;
 
-public class ChildbarFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link ProgressFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class ProgressFragment extends Fragment {
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.   g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    public ChildbarFragment() {
+    public ProgressFragment() {
         // Required empty public constructor
     }
     /**
@@ -24,11 +31,11 @@ public class ChildbarFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment com.example.navigationbarapp.NavigationBarFragments.HomeFragment.
+     * @return A new instance of fragment ProgressFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ChildbarFragment newInstance(String param1, String param2) {
-        ChildbarFragment fragment = new ChildbarFragment();
+    public static ProgressFragment newInstance(String param1, String param2) {
+        ProgressFragment fragment = new ProgressFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,7 +54,6 @@ public class ChildbarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.childbar_top, container, false);
+        return inflater.inflate(R.layout.fragment_progress, container, false);
     }
-
 }

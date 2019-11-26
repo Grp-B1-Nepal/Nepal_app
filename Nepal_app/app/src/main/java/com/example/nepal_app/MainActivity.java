@@ -2,18 +2,17 @@ package com.example.nepal_app;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.nepal_app.fragments.ActivitiesFragment;
-import com.example.nepal_app.fragments.HomeFragment;
-import com.example.nepal_app.fragments.ProfileFragment;
-import com.example.nepal_app.fragments.ProgressFragment;
-import com.example.nepal_app.fragments.RecipesFragment;
+import com.example.nepal_app.Fragments.ActivitiesFragment;
+import com.example.nepal_app.Fragments.HomeFragment;
+import com.example.nepal_app.Fragments.ProfileFragment;
+import com.example.nepal_app.Fragments.ProgressFragment;
+import com.example.nepal_app.Fragments.RecipesFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

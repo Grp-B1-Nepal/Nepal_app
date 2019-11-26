@@ -2,14 +2,15 @@ package com.example.nepal_app.Factory;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.net.Uri;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 
-import com.example.nepal_app.fragments.child.ChildObj;
+import com.example.nepal_app.Fragments.child.ChildObj;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
-import java.net.URI;
 import java.util.ArrayList;
 
 public class POJO {
@@ -19,6 +20,7 @@ public class POJO {
         return ourInstance;
     }
     private ArrayList<String> image = new ArrayList<>();
+    private ArrayList<Bitmap> bitmap = new ArrayList<>();
 
 
     private POJO() {
@@ -36,25 +38,21 @@ public class POJO {
         return childArr;
     }
 
-    public ArrayList<String> getURI(Context context){
-        loadImage(context);
-        return image;
+    public ArrayList<Bitmap> getBitmap(Context context){
+        for (int i = 0; i <childArr.size() ; i++) {
+            loadImage(context,childArr.get(i).getName());
+        }
+        return bitmap;
     }
 
     //TODO open choose piture window in the call
-    public void setUri (Context context, URI image){
-        changeImage(context,image);
+
+    public void setBitmap(ArrayList<Bitmap> bitmaps){
+        bitmap.clear();
+
+        bitmap.addAll(bitmaps);
     }
 
-    public void setUri(ArrayList<Uri> uri){
-        image.clear();
-
-        for (int i = 0; i <uri.size() ; i++) {
-            image.add(String.valueOf(uri.get(i)));
-        }
-    }
-
-    public Uri getUri(){return Uri.parse(String.valueOf(image));}
 
 
     private void loadChild(Context context) {
@@ -69,24 +67,19 @@ public class POJO {
         }
     }
 
-    private void loadImage(Context context){
+    private void loadImage(Context context, String name){
+
         SharedPreferences settings = context.getSharedPreferences("Image", context.MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = settings.getString("Uri_image",null);
-        Type type = new TypeToken<ArrayList<String>>() {
-        }.getType();
-        image = gson.fromJson(json,type);
-        if (image == null){
-            image= new ArrayList<>();
+        String loadedImage = settings.getString(name, null);
+
+        if (!loadedImage.equalsIgnoreCase(null)){
+            byte[] b = Base64.decode(loadedImage, Base64.DEFAULT);
+            Bitmap s = BitmapFactory.decodeByteArray(b,0,b.length);
+            bitmap.add(s);
+
         }
-    }
-
-    private void changeImage(Context context, URI image){
-        SharedPreferences sharedPreferences = context.getSharedPreferences("Image", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("Uri_image", String.valueOf(image));
-        editor.apply();
-
-
+        if (bitmap == null){
+            bitmap = new ArrayList<>();
+        }
     }
 }

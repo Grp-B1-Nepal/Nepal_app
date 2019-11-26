@@ -101,8 +101,8 @@ public class ProfileFragment extends Fragment {
     private void getImage() {
         images = new Uri[childArr.size()];
         for (int i = 0; i < childArr.size(); i++) {
-            if (pojo.getURI(getContext(),childArr.get(i).getName()) != null) {
-                images[i] = pojo.getURI(getContext(),childArr.get(i).getName());
+            if (pojo.getURI(getContext()) != null) {
+                images[i] = Uri.parse(String.valueOf(pojo.getURI(getContext())));
             }
         }
     }

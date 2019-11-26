@@ -5,9 +5,6 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -43,12 +40,16 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     private EditText name;
     private ImageView  preview;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
+    private ArrayList<Uri> imageArr = new ArrayList<>();
+    private ArrayList<String> imageStringArr = new ArrayList<>();
     private long currentDate;
     private static final int PICK_IMAGE =100;
     private Spinner genders;
     private Uri imageUri = null;
     private POJO pojo;
-    ConstraintLayout picture;
+    private ConstraintLayout picture;
+
+
 
     public Fragment_addChild() {
         // Required empty public constructor
@@ -98,7 +99,8 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
                 imageUri = data.getData();
                 preview.setImageURI(imageUri);
-                pojo.setUri(imageUri);
+                imageArr.add(imageUri);
+                pojo.setUri(imageArr);
                 if (imageUri != null) {
                     preview.setVisibility(View.VISIBLE);
 
@@ -128,7 +130,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem())));
 
                 saveChild();
-                saveImage(pojo.getUri());
+                saveImage();
                 //Goes back to the last fragment
                 FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
                 fm.popBackStack();
@@ -182,13 +184,25 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     }
 
 
-    private void saveImage(Uri image){
-        childArr = pojo.getChildArr(getContext());
+    private void saveImage(){
+        if (pojo.getURI(getContext()).size() != 0) {
+            for (int i = 0; i < pojo.getURI(getContext()).size(); i++) {
+                imageArr.add(Uri.parse(pojo.getURI(getContext()).get(i)));
+            }
+        }
+        if (imageArr.size() != 0){
+            for (int i = 0; i < imageArr.size(); i++) {
+                imageStringArr.add(String.valueOf(imageArr.get(i)));
+            }
+        }
+
         SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("Image", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        int index = childArr.size();
-        String name = childArr.get(index-1).getName();
-        editor.putString(name, String.valueOf(image));
+        Gson gson = new Gson();
+        String json = gson.toJson(imageStringArr);
+        editor.putString("Uri_image", json);
+        editor.apply();
+        pojo.setUri(imageArr);
 
         editor.apply();
     }

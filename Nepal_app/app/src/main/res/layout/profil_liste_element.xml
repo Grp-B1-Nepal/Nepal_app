@@ -37,7 +37,7 @@
         android:max="100"
         android:progress="70"
         android:progressBackgroundTint="#0C0201"
-        android:progressTint="#39b5ed"
+        android:progressTint="@color/colorPrimary"
         android:visibility="visible" />
 
     <Button
@@ -62,7 +62,15 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="240dp"
         android:layout_marginTop="90dp"
-        android:text="70%"
-        android:textColor="#39b5ed" />
+        android:text="700"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/name"
+        android:layout_marginTop="30dp"
+        android:text="12/11/19" />
 
 </RelativeLayout>

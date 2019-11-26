@@ -12,7 +12,7 @@
         android:layout_height="575dp">
 
         <ImageView
-            android:id="@+id/imageViewPreview"
+            android:id="@+id/downloaded_picture"
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_marginTop="10dp"
@@ -29,7 +29,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewPreview">
+            app:layout_constraintTop_toBottomOf="@+id/downloaded_picture">
 
             <TextView
                 android:id="@+id/textView5"
@@ -108,32 +108,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
-        <EditText
-            android:id="@+id/gender"
-            android:layout_width="321dp"
-            android:layout_height="37dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/layout_background_round_corners"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Gender"
-            android:inputType="textPersonName"
-            android:maxLength="50"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTitle4" />
-
         <Button
             android:id="@+id/save_button"
             android:layout_width="75dp"
             android:layout_height="30dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="28dp"
             android:background="@drawable/button_shape"
             android:text="Save"
             android:textColor="#F3EDED"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gender" />
+            app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
 
         <Button
             android:id="@+id/pickdate_button"
@@ -148,6 +133,17 @@
             app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewTitle2" />
+
+        <Spinner
+            android:id="@+id/gender_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

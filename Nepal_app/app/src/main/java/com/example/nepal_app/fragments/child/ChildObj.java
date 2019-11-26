@@ -1,6 +1,5 @@
 package com.example.nepal_app.fragments.child;
 
-import android.net.Uri;
 
 
 public class ChildObj{

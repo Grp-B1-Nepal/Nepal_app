@@ -13,6 +13,7 @@
     <string name="todo">TODO</string>
     <string name="view_recipe">View Recipe</string>
     <string-array name="spinner">
+        <item>…</item>
         <item>Boy</item>
         <item>Girl</item>
         <item>Other</item>

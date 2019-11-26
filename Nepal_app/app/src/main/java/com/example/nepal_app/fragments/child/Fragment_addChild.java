@@ -5,6 +5,9 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -39,14 +42,13 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     private Button save, pick_date;
     private EditText name;
     private ImageView  preview;
-    private ConstraintLayout billede;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
     private long currentDate;
     private static final int PICK_IMAGE =100;
     private Spinner genders;
     private Uri imageUri = null;
     private POJO pojo;
-
+    ConstraintLayout picture;
 
     public Fragment_addChild() {
         // Required empty public constructor
@@ -58,7 +60,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                              Bundle savedInstanceState) {
         View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
         save = view2.findViewById(R.id.save_button);
-        billede = view2.findViewById(R.id.billede);
+        picture = view2.findViewById(R.id.billede);
         name = view2.findViewById(R.id.name);
         pick_date = view2.findViewById(R.id.pickdate_button);
         preview = view2.findViewById(R.id.downloaded_picture);
@@ -72,11 +74,12 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         childArr = pojo.getChildArr(getContext());
 
 
-
-        billede.setOnClickListener((view) ->{
+        picture.setOnClickListener((view) ->{
             Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
             startActivityForResult(gallery,PICK_IMAGE);
         });
+
+
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.spinner));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -87,14 +90,18 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         return view2;
     }
 
+
+
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         try {
 //TODO FIND A WAY TO SAVE THE PICTURE IN A CACHE
             if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
                 imageUri = data.getData();
                 preview.setImageURI(imageUri);
+                pojo.setUri(imageUri);
                 if (imageUri != null) {
                     preview.setVisibility(View.VISIBLE);
+
                 }
             }
         } catch (Exception e) {
@@ -102,26 +109,26 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         }
     }
 
+
+
         
     @Override
     public void onClick(View v) {
-        if (v == save){
 
+        if (v == save){
             if (String.valueOf(name.getText()).equals("")){
                 name.setError("Please fill the name of the child");
-            } else if (currentDate == 0){
+            } else if (currentDate == 0) {
                 pick_date.setError("Please pick the birthday of the child");
-            } else if (String.valueOf(genders.getSelectedItem()).equals("")){
-                Toast.makeText(getContext(), "Select a gender", Toast.LENGTH_SHORT).show();
-            }else {
+            //} else if(imageUri == null){
+              //  Toast.makeText(getContext(),"Add a photo of your child",Toast.LENGTH_LONG).show();
+            } else if(genders.getSelectedItem().equals("…")){
+                Toast.makeText(getContext(),"Select a gender",Toast.LENGTH_LONG).show();
+            } else {
                 childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem())));
 
                 saveChild();
-
-                if (imageUri != null) {
-                    saveImage();
-                }
-
+                saveImage(pojo.getUri());
                 //Goes back to the last fragment
                 FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
                 fm.popBackStack();
@@ -175,18 +182,16 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     }
 
 
-    private void saveImage(){
+    private void saveImage(Uri image){
         childArr = pojo.getChildArr(getContext());
         SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("Image", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         int index = childArr.size();
         String name = childArr.get(index-1).getName();
-        editor.putString(name, imageUri.toString());
+        editor.putString(name, String.valueOf(image));
+
         editor.apply();
     }
-
-
-
 }
 
 

@@ -69,16 +69,16 @@ public class POJO {
 
     private void loadImage(Context context, String name){
 
-        SharedPreferences settings = context.getSharedPreferences("Image", context.MODE_PRIVATE);
+        SharedPreferences settings = context.getSharedPreferences("Image", Context.MODE_PRIVATE);
         String loadedImage = settings.getString(name, null);
 
-        if (!loadedImage.equalsIgnoreCase(null)){
+        if (loadedImage != null){
             byte[] b = Base64.decode(loadedImage, Base64.DEFAULT);
             Bitmap s = BitmapFactory.decodeByteArray(b,0,b.length);
             bitmap.add(s);
 
         }
-        if (bitmap == null){
+        if (bitmap.size() == 0){
             bitmap = new ArrayList<>();
         }
     }

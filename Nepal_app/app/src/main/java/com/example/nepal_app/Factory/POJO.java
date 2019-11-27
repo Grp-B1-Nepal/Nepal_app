@@ -19,9 +19,8 @@ public class POJO {
     public static POJO getInstance() {
         return ourInstance;
     }
-    private ArrayList<String> image = new ArrayList<>();
     private ArrayList<Bitmap> bitmap = new ArrayList<>();
-
+    private int position;
 
     private POJO() {
     }
@@ -53,9 +52,24 @@ public class POJO {
         bitmap.addAll(bitmaps);
     }
 
+    public void deleteChild(int position, Context context){
+        deleteImage(childArr.get(position).getName(), context);
+        childArr.remove(position);
 
 
-    private void loadChild(Context context) {
+    }
+
+    public void setSingleImage(Bitmap image, int postion){
+        bitmap.set(postion,image);
+    }
+
+    private void deleteImage(String name, Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("Image", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove(name).apply();
+    }
+
+        private void loadChild(Context context) {
         SharedPreferences sharedPreferences =  context.getSharedPreferences("Children", Context.MODE_PRIVATE);;
         Gson gson = new Gson();
         String json = sharedPreferences.getString("ChildArr", null);
@@ -66,6 +80,9 @@ public class POJO {
             childArr = new ArrayList<>();
         }
     }
+
+    public int getPosition(){return position;}
+    public void setPosition(int position) {this.position = position;}
 
     private void loadImage(Context context, String name){
 

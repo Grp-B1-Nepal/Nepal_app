@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView.Adapter;
 
-import com.example.nepal_app.Adaptor.Adaptor_Listview;
+import com.example.nepal_app.Adaptor.Adaptor_ListviewChild;
 import com.example.nepal_app.Factory.POJO;
 import com.example.nepal_app.R;
 import com.example.nepal_app.Fragments.child.ChildObj;
@@ -26,6 +28,7 @@ public class ProfileFragment extends Fragment {
     private FloatingActionButton add;
     private POJO pojo;
 
+
     private ArrayList<ChildObj> childArr = new ArrayList<>();
 
 
@@ -39,13 +42,11 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         add = view.findViewById(R.id.floatingActionButton4);
         list = view.findViewById(R.id.list);
-
-
         getBirthday();
         getImage();
 
         if(birthday.length != 0 && childArr.size() != 0 && images.size() != 0) {
-            Adaptor_Listview adaptor = new Adaptor_Listview(getContext(), childArr, images, birthday);
+            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, images, birthday);
             list.setAdapter(adaptor);
         }
 
@@ -53,6 +54,9 @@ public class ProfileFragment extends Fragment {
             getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();
 
         });
+
+
+
 
 
         return view;
@@ -74,14 +78,5 @@ public class ProfileFragment extends Fragment {
 
     private void getImage() {
         images.addAll(pojo.getBitmap(getContext()));
-    }
-
-    private void daysOld(){
-
-        for (int i = 0; i <childArr.size() ; i++) {
-
-
-        }
-
     }
 }

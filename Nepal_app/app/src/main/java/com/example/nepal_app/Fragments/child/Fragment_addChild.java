@@ -100,7 +100,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         try {
-//TODO FIND A WAY TO SAVE THE PICTURE IN A CACHE
+
             if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
                 imageUri = data.getData();
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
@@ -159,7 +159,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
      *Method to create the date dialog
      */
     private void showDateDialog(){
-        DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(),
+        DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),
                 this,
                 Calendar.getInstance().get(Calendar.YEAR),
                 Calendar.getInstance().get(Calendar.MONTH),
@@ -196,6 +196,9 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     }
 
     private void saveImage(){
+
+
+
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG,100,byteArrayOutputStream);
         byte[] byteArr = byteArrayOutputStream.toByteArray();
@@ -205,7 +208,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(currentName, encodeImage);
         editor.apply();
-        pojo.setBitmap(imageArr);
     }
 }
 

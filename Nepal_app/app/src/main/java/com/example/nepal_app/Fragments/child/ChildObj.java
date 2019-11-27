@@ -25,4 +25,8 @@ public class ChildObj{
         return birthday;
     }
 
+    public void setName(String name){this.name = name;}
+    public void setGender(String gender){this.gender = gender;}
+    public void setBirthday(long birthday){this.birthday = birthday;}
+
 }

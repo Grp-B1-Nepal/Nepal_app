@@ -26,12 +26,15 @@ public class Adaptor_Listview extends ArrayAdapter<String> {
     private Context context;
     private ArrayList<ChildObj> childArr;
     private ArrayList<Bitmap> image;
+    private String[] birthday;
 
-    public Adaptor_Listview(Context context, ArrayList<ChildObj> arr, ArrayList<Bitmap> image){
+
+    public Adaptor_Listview(Context context, ArrayList<ChildObj> arr, ArrayList<Bitmap> image, String[] birthday){
         super(context, R.layout.profil_liste_element);
         this.childArr = arr;
         this.context = context;
         this.image = image;
+        this.birthday = birthday;
     }
 
     @Override
@@ -47,14 +50,18 @@ public class Adaptor_Listview extends ArrayAdapter<String> {
         if (convertView == null) {
             LayoutInflater mInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
             convertView = mInflater.inflate(R.layout.profil_liste_element, parent, false);
-            viewHolder.childrenImage = (ImageView) convertView.findViewById(R.id.image_children);
-            viewHolder.name = (TextView) convertView.findViewById(R.id.name);
+            viewHolder.childrenImage = convertView.findViewById(R.id.image_children);
+            viewHolder.name = convertView.findViewById(R.id.name);
+            viewHolder.birthday = convertView.findViewById(R.id.birthday);
+            viewHolder.gender = convertView.findViewById(R.id.gender);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
             viewHolder.childrenImage.setImageBitmap(image.get(position));
             viewHolder.name.setText(childArr.get(position).getName());
+            viewHolder.birthday.setText(birthday[position]);
+            viewHolder.gender.setText(childArr.get(position).getGender());
 
 
         return convertView;
@@ -62,6 +69,8 @@ public class Adaptor_Listview extends ArrayAdapter<String> {
     static class ViewHolder{
         ImageView childrenImage;
         TextView name;
+        TextView birthday;
+        TextView gender;
     }
 
 

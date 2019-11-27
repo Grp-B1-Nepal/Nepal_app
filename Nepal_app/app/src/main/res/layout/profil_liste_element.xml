@@ -73,4 +73,12 @@
         android:layout_marginTop="30dp"
         android:text="12/11/19" />
 
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/birthday"
+        android:layout_alignStart="@+id/birthday"
+        android:text="girl" />
+
 </RelativeLayout>

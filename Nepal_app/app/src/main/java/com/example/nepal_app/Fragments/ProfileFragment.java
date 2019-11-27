@@ -21,9 +21,7 @@ import java.util.Calendar;
 
 public class ProfileFragment extends Fragment {
     private ListView list;
-    private String[] child;
     private String[] birthday;
-    private String[] gender;
     private ArrayList<Bitmap> images = new ArrayList<>();
     private FloatingActionButton add;
     private POJO pojo;
@@ -42,12 +40,10 @@ public class ProfileFragment extends Fragment {
         list = view.findViewById(R.id.list);
 
 
-        getChild();
         getBirthday();
-        getGender();
         getImage();
 
-        Adaptor_Listview adaptor = new Adaptor_Listview(getContext(), childArr,images);
+        Adaptor_Listview adaptor = new Adaptor_Listview(getContext(), childArr,images, birthday);
         list.setAdapter(adaptor);
 
         //TODO create fragment for this
@@ -70,13 +66,6 @@ public class ProfileFragment extends Fragment {
         return view;
     }
 
-    private void getChild() {
-        child = new String[childArr.size()];
-        for (int i = 0; i < childArr.size(); i++) {
-            child[i] = childArr.get(i).getName();
-        }
-    }
-
     //TODO fix the apdapter
     private void getBirthday() {
         Calendar calendar = Calendar.getInstance();
@@ -88,13 +77,6 @@ public class ProfileFragment extends Fragment {
             date2 = calendar.getTime().toString().substring(30, 34);
             date3 = "Birthday " + date1 + " " + date2;
             birthday[i] = date3;
-        }
-    }
-
-    private void getGender() {
-        gender = new String[childArr.size()];
-        for (int i = 0; i < childArr.size(); i++) {
-            gender[i] = childArr.get(i).getGender();
         }
     }
 

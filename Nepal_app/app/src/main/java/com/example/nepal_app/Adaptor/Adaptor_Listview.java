@@ -53,7 +53,7 @@ public class Adaptor_Listview extends ArrayAdapter<String> {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-            viewHolder.childrenImage.setImageBitmap(image.get(position));
+            viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(image.get(position),120,120,false));
             viewHolder.name.setText(childArr.get(position).getName());
 
 

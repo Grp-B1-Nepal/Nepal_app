@@ -124,14 +124,20 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     public void onClick(View v) {
 
         if (v == save){
-            if (String.valueOf(name.getText()).equals("")){
-                name.setError("Please fill the name of the child");
-            } else if (currentDate == 0) {
-                pick_date.setError("Please pick the birthday of the child");
-            } else if(bitmap == null){
-                Toast.makeText(getContext(),"Add a photo of your child",Toast.LENGTH_LONG).show();
-            } else if(genders.getSelectedItem().equals("…")){
-                Toast.makeText(getContext(),"Select a gender",Toast.LENGTH_LONG).show();
+            if (String.valueOf(name.getText()).equals("") || currentDate == 0 || bitmap == null || genders.getSelectedItem().equals("…")) {
+
+                if (String.valueOf(name.getText()).equals("")){
+                    name.setError("Please fill the name of the child");
+                }
+                if (currentDate == 0) {
+                  pick_date.setError("Please pick the birthday of the child");
+                }
+                if(bitmap == null){
+                    Toast.makeText(getContext(),"Add a photo of your child",Toast.LENGTH_LONG).show();
+                }
+                if(genders.getSelectedItem().equals("…")){
+                    Toast.makeText(getContext(),"Select a gender",Toast.LENGTH_LONG).show();
+                }
             } else {
                 currentName = String.valueOf(name.getText());
                 childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem())));

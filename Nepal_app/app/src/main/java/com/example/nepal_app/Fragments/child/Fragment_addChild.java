@@ -44,7 +44,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     private ImageView  preview;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
     private ArrayList<Bitmap> imageArr = new ArrayList<>();
-    private ArrayList<String> imageStringArr = new ArrayList<>();
     private long currentDate;
     private static final int PICK_IMAGE =100;
     private Spinner genders;

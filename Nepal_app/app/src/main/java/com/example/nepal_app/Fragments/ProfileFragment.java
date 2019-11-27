@@ -25,7 +25,7 @@ public class ProfileFragment extends Fragment {
     private ArrayList<Bitmap> images = new ArrayList<>();
     private FloatingActionButton add;
     private POJO pojo;
-    private int days;
+
     private ArrayList<ChildObj> childArr = new ArrayList<>();
 
 
@@ -48,17 +48,6 @@ public class ProfileFragment extends Fragment {
             Adaptor_Listview adaptor = new Adaptor_Listview(getContext(), childArr, images, birthday);
             list.setAdapter(adaptor);
         }
-
-        //TODO create fragment for this
-       /* list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-            }
-        });
-
-        */
-
 
         add.setOnClickListener((test) -> {
             getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();

@@ -73,7 +73,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.childrenImage.setImageBitmap(image.get(position));
+        viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(image.get(position),120,120,false));
         viewHolder.name.setText(childArr.get(position).getName());
         viewHolder.birthday.setText(birthday[position]);
         viewHolder.gender.setText(childArr.get(position).getGender());

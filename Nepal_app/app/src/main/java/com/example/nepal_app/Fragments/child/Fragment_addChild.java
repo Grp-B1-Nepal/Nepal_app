@@ -118,7 +118,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     }
 
 
-        
     @Override
     public void onClick(View v) {
 
@@ -166,8 +165,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
         );
         datePickerDialog.show();
-        }
-
+    }
 
     @Override
     /**
@@ -196,8 +194,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     }
 
     private void saveImage(){
-
-
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         bitmap = Bitmap.createScaledBitmap(bitmap,60,60,true);

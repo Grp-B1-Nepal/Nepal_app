@@ -200,9 +200,11 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
 
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap = Bitmap.createScaledBitmap(bitmap,60,60,true);
         bitmap.compress(Bitmap.CompressFormat.PNG,100,byteArrayOutputStream);
         byte[] byteArr = byteArrayOutputStream.toByteArray();
         String encodeImage = Base64.encodeToString(byteArr,Base64.DEFAULT);
+
 
         SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("Image", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();

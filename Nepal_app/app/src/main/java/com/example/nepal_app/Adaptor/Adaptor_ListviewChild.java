@@ -37,16 +37,15 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
 
     private Context context;
     private ArrayList<ChildObj> childArr;
-    private ArrayList<Bitmap> image;
+
     private String[] birthday;
     private POJO pojo;
 
 
-    public Adaptor_ListviewChild(Context context, ArrayList<ChildObj> arr, ArrayList<Bitmap> image, String[] birthday) {
+    public Adaptor_ListviewChild(Context context, ArrayList<ChildObj> arr, String[] birthday) {
         super(context, R.layout.profil_liste_element);
         this.childArr = arr;
         this.context = context;
-        this.image = image;
         this.birthday = birthday;
         pojo = POJO.getInstance();
     }
@@ -73,7 +72,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(image.get(position),120,120,false));
+        viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(pojo.getBitmap(getContext(),childArr.get(position).getName()),120,120,false));
         viewHolder.name.setText(childArr.get(position).getName());
         viewHolder.birthday.setText(birthday[position]);
         viewHolder.gender.setText(childArr.get(position).getGender());

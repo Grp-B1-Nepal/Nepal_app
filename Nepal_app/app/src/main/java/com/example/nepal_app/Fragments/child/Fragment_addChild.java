@@ -43,7 +43,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     private EditText name;
     private ImageView  preview;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
-    private ArrayList<Bitmap> imageArr = new ArrayList<>();
     private long currentDate;
     private static final int PICK_IMAGE =100;
     private Spinner genders;
@@ -106,8 +105,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
 
                 preview.setImageBitmap(bitmap);
-                imageArr.add(bitmap);
-                pojo.setBitmap(imageArr);
+
                 if (bitmap != null) {
                     preview.setVisibility(View.VISIBLE);
                 }
@@ -139,9 +137,9 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             } else {
                 currentName = String.valueOf(name.getText());
                 childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem())));
+                pojo.setBitmap(bitmap,String.valueOf(name.getText()),getContext());
 
                 saveChild();
-                saveImage();
                 //Goes back to the last fragment
                 FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
                 fm.popBackStack();
@@ -193,20 +191,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
 
     }
 
-    private void saveImage(){
-
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bitmap = Bitmap.createScaledBitmap(bitmap,60,60,true);
-        bitmap.compress(Bitmap.CompressFormat.PNG,100,byteArrayOutputStream);
-        byte[] byteArr = byteArrayOutputStream.toByteArray();
-        String encodeImage = Base64.encodeToString(byteArr,Base64.DEFAULT);
-
-
-        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("Image", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(currentName, encodeImage);
-        editor.apply();
-    }
 }
 
 

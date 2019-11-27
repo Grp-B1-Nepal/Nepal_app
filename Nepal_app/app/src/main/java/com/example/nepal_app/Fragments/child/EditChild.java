@@ -119,7 +119,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
         }
         if (editBitmap != null){
             saveImage();
-            pojo.setSingleImage(editBitmap, position);
         }
 
         saveChild();
@@ -138,6 +137,8 @@ public class EditChild extends Fragment implements View.OnClickListener {
             fm.popBackStack();
         } else if (v == buttonDelete){
             pojo.deleteChild(position,getContext());
+            arr.remove(position);
+            saveChild();
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
         }

@@ -5,11 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView.Adapter;
 
 import com.example.nepal_app.Adaptor.Adaptor_ListviewChild;
 import com.example.nepal_app.Factory.POJO;
@@ -24,7 +22,6 @@ import java.util.Calendar;
 public class ProfileFragment extends Fragment {
     private ListView list;
     private String[] birthday;
-    private ArrayList<Bitmap> images = new ArrayList<>();
     private FloatingActionButton add;
     private POJO pojo;
 
@@ -43,10 +40,9 @@ public class ProfileFragment extends Fragment {
         add = view.findViewById(R.id.floatingActionButton4);
         list = view.findViewById(R.id.list);
         getBirthday();
-        getImage();
 
-        if(birthday.length != 0 && childArr.size() != 0 && images.size() != 0) {
-            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, images, birthday);
+        if(birthday.length != 0 && childArr.size() != 0) {
+            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday);
             list.setAdapter(adaptor);
         }
 
@@ -70,9 +66,5 @@ public class ProfileFragment extends Fragment {
             date3 = "Birthday " + date1 + " " + date2;
             birthday[i] = date3;
         }
-    }
-
-    private void getImage() {
-        images.addAll(pojo.getBitmap(getContext()));
     }
 }

@@ -4,18 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/addfrag"
     android:layout_width="match_parent"
-    android:layout_height="575dp"
+    android:layout_height="match_parent"
     tools:context=".Fragments.child.Fragment_addChild">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="575dp">
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button_editBack"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_shape"
+            android:text="Back"
+            android:textColor="#F2FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/save_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
 
         <ImageView
             android:id="@+id/downloaded_picture"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +134,8 @@
             android:text="Save"
             android:textColor="#F3EDED"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_editBack"
             app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
 
         <Button

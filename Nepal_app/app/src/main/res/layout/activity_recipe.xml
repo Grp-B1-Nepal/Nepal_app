@@ -3,13 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:background="@color/mainBackgroundColor">
+
+    <TextView
+        android:id="@+id/recipeTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="CHIKKA MASALA"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/recipeLikedButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/like"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/recipeLikedButton"
         android:id="@+id/recyclerv_view">
-
     </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

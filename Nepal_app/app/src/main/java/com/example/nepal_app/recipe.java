@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.example.nepal_app.Adaptor.RecyclerViewAdapterRecipe;
 import com.example.nepal_app.Fragments.RecipesFragment;
 
 import java.util.ArrayList;
@@ -86,6 +87,9 @@ public class recipe extends Fragment {
 
         recipeImage.add(R.drawable.example2);
         recipeText.add("mad mad5");
+
+        recipeImage.add(R.drawable.egg_image);
+        recipeText.add("Hej hej\nHej hej\nHej hej\nHej hej\n");
 
         initRecyclerView();
     }

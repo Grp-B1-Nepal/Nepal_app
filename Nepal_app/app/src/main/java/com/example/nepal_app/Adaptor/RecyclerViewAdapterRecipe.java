@@ -1,4 +1,4 @@
-package com.example.nepal_app;
+package com.example.nepal_app.Adaptor;
 
 import android.content.Context;
 import android.util.Log;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.nepal_app.R;
 
 import java.util.ArrayList;
 

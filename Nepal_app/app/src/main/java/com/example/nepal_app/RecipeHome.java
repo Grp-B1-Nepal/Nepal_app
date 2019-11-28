@@ -1,18 +1,18 @@
 package com.example.nepal_app;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.nepal_app.Adaptor.RecipeAdapter;
+import com.example.nepal_app.Fragments.child.EditChild;
+import com.example.nepal_app.Fragments.child.Fragment_addChild;
 
 import java.util.ArrayList;
 
@@ -62,7 +62,9 @@ public class RecipeHome extends AppCompatActivity {
 
     }
 
+
     public interface OnNoteListener extends RecipeAdapter.OnNoteListener {
         void onNoteClick(int position);
+
     }
 }

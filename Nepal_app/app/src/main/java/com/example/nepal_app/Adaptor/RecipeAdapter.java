@@ -1,4 +1,4 @@
-package com.example.nepal_app;
+package com.example.nepal_app.Adaptor;
 
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.nepal_app.R;
 
 import java.util.ArrayList;
 

@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
-    android:id="@+id/parent_layout">
+    android:id="@+id/parent_layout"
+    android:background="@color/mainBackgroundColor">
 
     <ImageView
         android:id="@+id/layoutListItemImage"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:paddingTop="5dp"
+        tools:srcCompat="@tools:sample/avatars"
+        android:background="@color/justWhite"/>
 
     <TextView
         android:id="@+id/layoutListItemFoodName"
@@ -20,8 +23,12 @@
         android:layout_below="@+id/layoutListItemImage"
         android:gravity="center"
         android:text="2 x eggs"
-        android:layout_marginTop="10dp"
+        android:background="@color/justWhite"
+        android:layout_marginBottom="2dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
         android:textColor="#80A53F"
-        android:textSize="17sp" />
+        android:textSize="17sp"
+        />
 
 </RelativeLayout>

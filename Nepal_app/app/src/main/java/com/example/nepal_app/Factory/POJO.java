@@ -26,9 +26,9 @@ public class POJO {
     private POJO() {
     }
 
-    public void setChildArr(ArrayList<ChildObj> arr) {
-        childArr.clear();
-        childArr.addAll(arr);
+    public void setChildArr(ArrayList<ChildObj> arr, Context context) {
+
+        saveChild(context, arr);
     }
 
 
@@ -121,4 +121,59 @@ public class POJO {
 
         saveImage(context,newName);
     }
+    public String monthText(int intMonth){
+        String month = null;
+
+        switch (intMonth){
+            case 1:
+                month = "Jan";
+                break;
+            case 2:
+                month = "Feb";
+                break;
+            case 3:
+                month = "Mar";
+                break;
+            case 4:
+                month = "Apr";
+                break;
+            case 5:
+                month = "May";
+                break;
+            case 6:
+                month = "Jun";
+                break;
+            case 7:
+                month = "Jul";
+                break;
+            case 8:
+                month = "Aug";
+                break;
+            case 9:
+                month = "Sept";
+                break;
+            case 10:
+                month = "Oct";
+                break;
+            case 11:
+                month = "Nov";
+                break;
+            case 12:
+                month = "Dec";
+                break;
+
+        }
+
+        return month;
+    }
+
+    private void saveChild(Context context, ArrayList<ChildObj> arr){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("Children", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(arr);
+        editor.putString("ChildArr",json);
+        editor.apply();
+    }
+
 }

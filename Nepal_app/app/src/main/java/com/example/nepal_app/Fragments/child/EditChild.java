@@ -1,14 +1,11 @@
 package com.example.nepal_app.Fragments.child;
 
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +22,6 @@ import androidx.fragment.app.FragmentManager;
 
 import com.example.nepal_app.Factory.POJO;
 import com.example.nepal_app.R;
-import com.google.gson.Gson;
-
-import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
@@ -93,13 +87,12 @@ public class EditChild extends Fragment implements View.OnClickListener {
         image.setImageBitmap(pojo.getBitmap(getContext(),name));
         editName.setText(name);
         buttonBirthday.setText(birthday);
-        //editGender.setText("The current gender is: " + gender);
-        //picText.setText("Choose picture);
-        //buttonDelete.setText("Delete " + name);
+
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.spinner));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         genders.setAdapter(myAdapter);
+
         // Inflate the layout for this fragment
         return view2;
     }
@@ -118,10 +111,10 @@ public class EditChild extends Fragment implements View.OnClickListener {
             arr.get(position).setGender(gender);
         }
         if (editBitmap != null){
-            saveImage();
+            pojo.setBitmap(editBitmap,name,getContext());
         }
 
-        saveChild();
+        pojo.setChildArr(arr,getContext());
 
         FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
         fm.popBackStack();
@@ -138,7 +131,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         } else if (v == buttonDelete){
             pojo.deleteChild(position,getContext());
             arr.remove(position);
-            saveChild();
+            pojo.setChildArr(arr,getContext());
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
         }
@@ -158,10 +151,10 @@ public class EditChild extends Fragment implements View.OnClickListener {
         datePickerDialog.show();
     }
 
-    public void onDateSet(DatePicker view, int year, int month, int day) {
+    private void onDateSet(DatePicker view, int year, int month, int day) {
         Calendar c = Calendar.getInstance();
         c.set(year,month,day);
-        buttonBirthday.setText(day + "/" + (month+1) + "/" + year);
+        buttonBirthday.setText(pojo.monthText((month+1)) + " " + day + " " + year);
         newBirthday = c.getTimeInMillis();
         arr.get(position).setBirthday(newBirthday);
     }
@@ -191,32 +184,4 @@ public class EditChild extends Fragment implements View.OnClickListener {
             e.printStackTrace();
         }
     }
-
-    private void saveChild(){
-        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("Children", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(arr);
-        editor.putString("ChildArr",json);
-        editor.apply();
-        pojo.setChildArr(arr);
-
-    }
-
-    private void saveImage(){
-        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("Image", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove(name).apply();
-
-
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        editBitmap.compress(Bitmap.CompressFormat.PNG,100,byteArrayOutputStream);
-        byte[] byteArr = byteArrayOutputStream.toByteArray();
-        String encodeImage = Base64.encodeToString(byteArr,Base64.DEFAULT);
-
-        editor.putString(name, encodeImage);
-        editor.apply();
-    }
-
-
 }

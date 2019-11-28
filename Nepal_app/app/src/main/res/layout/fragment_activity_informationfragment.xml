@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/fragment_activity_informationfragment_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/child_picture" />
+
+    <TextView
+        android:id="@+id/fragment_activity_informationfragment_headline"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:gravity="center_vertical"
+        android:text="Reading with baby every day"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+
+
+
+    <TextView
+        android:id="@+id/fragment_activity_informationfragment_infotext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="From bonding time to learning how the world works, there are plenty of reasons to read to your baby before they can even say ‘Peppa Pig’. Reading every day helps your baby learn sounds and words, which are the basic building blocks of lifelong language and communication skills. \n \n
+Reading stimulates your child’s creativity, brain development, and independence. Even if your baby just puts them in her mouth at first, early exposure to books makes a long-term difference, boosting your child’s language abilities and making them more eager to learn how to read. \n \n
+The more words your little one is exposed to as an infant, the better their pre-school language skills will be. They’ll also be better prepared to begin reading on their own and, with any luck, become a life-long book lover! \n \n
+By pointing, commenting, and asking questions as you read, you can introduce everyday things to your baby, help them understand how words relate to pictures and the way language is made up of symbols. \n \n
+As you read aloud to your baby, they may not understand what you’re saying, but they’ll definitely be picking up on the way you speak. Listening to your tone, rhythm and inflections will help your little one finesse their own first words. \n \n
+Whether you sing a nursery rhyme or just get through this morning’s news headlines, the ritual of reading to your baby can be a wonderful time to simply enjoy time with one another. Your baby will enjoy the attention almost as much as you will love watching your budding wordsmith grow. \n \n"  />
+        </LinearLayout>
+
+</ScrollView>
+</LinearLayout>

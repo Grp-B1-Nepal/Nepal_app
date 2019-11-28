@@ -18,10 +18,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    //TODO Make arraylist of recipes
     //TODO remove search bar from recipemain and into activity_main
-    //TODO mangler onclicklistener
-
+    //TODO evt lav det hele om til cardview
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -29,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Integer> imageViews = new ArrayList<>();
     private ArrayList<String> recipeNames = new ArrayList<>();
+
+    private OnNoteListener onNoteListener;
 
     public void fillLists() {
         imageViews.add(R.drawable.dal);
@@ -50,12 +50,16 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setHasFixedSize(true);
 
-        rcAdapter = new RecipeAdapter(imageViews, recipeNames);
+        rcAdapter = new RecipeAdapter(imageViews, recipeNames, onNoteListener);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(rcAdapter);
 
 
+    }
+
+    public interface OnNoteListener extends RecipeAdapter.OnNoteListener {
+        void onNoteClick(int position);
     }
 }

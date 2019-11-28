@@ -8,8 +8,9 @@
 
     <Button
         android:id="@+id/recipe_choose_all"
-        android:layout_width="135dp"
-        android:layout_height="55dp"
+        android:layout_width="93dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
         android:text="all"
         app:layout_constraintStart_toEndOf="@+id/recipe_choose_favorites"
         app:layout_constraintTop_toTopOf="parent" />
@@ -17,24 +18,25 @@
     <Button
         android:id="@+id/recipe_choose_today"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="135dp"
-        android:layout_height="55dp"
+        android:layout_width="82dp"
+        android:layout_height="51dp"
         android:text="today"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/recipe_choose_favorites"
-        android:layout_width="135dp"
-        android:layout_height="55dp"
+        android:layout_width="112dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="12dp"
         android:text="favorites"
         app:layout_constraintStart_toEndOf="@+id/recipe_choose_today"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvrecipes"
-        android:layout_width="409dp"
-        android:layout_height="680dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recipe_choose_favorites" />

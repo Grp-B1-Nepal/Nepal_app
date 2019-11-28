@@ -9,10 +9,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.annotation.RequiresApi;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +20,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
 import com.example.nepal_app.Factory.POJO;
 import com.example.nepal_app.R;
 import com.google.gson.Gson;
@@ -31,7 +33,6 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
-
 
 import static android.app.Activity.RESULT_OK;
 
@@ -83,8 +84,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
             startActivityForResult(gallery,PICK_IMAGE);
         });
-
-
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.spinner));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -188,7 +187,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     editor.putString("ChildArr",json);
     editor.apply();
     pojo.setChildArr(childArr);
-
     }
 
 }

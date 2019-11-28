@@ -41,7 +41,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private Button buttonBirthday, buttonImage, buttonBack, buttonSave, buttonDelete;
     private EditText editName;
     private Bitmap   editBitmap;
-    private String name, gender, birthday;
+    private String name, gender, birthday, oldName;
     private ArrayList<ChildObj> arr = new ArrayList<>();
     private long newBirthday;
     private POJO pojo;
@@ -85,6 +85,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         arr = pojo.getChildArr(getContext());
 
         arr = pojo.getChildArr(getContext());
+        oldName = arr.get(position).getName();
         name = arr.get(position).getName();
         gender = arr.get(position).getGender();
         birthday = getBirthday(position);
@@ -112,6 +113,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
             if (!(String.valueOf(editName.getText()).equals(""))) {
             name = String.valueOf(editName.getText());
             arr.get(position).setName(name);
+            pojo.newNameImage(getContext(),oldName,name);
         }
         if (!(genders.getSelectedItem().equals("…"))) {
             gender = String.valueOf(genders.getSelectedItem());

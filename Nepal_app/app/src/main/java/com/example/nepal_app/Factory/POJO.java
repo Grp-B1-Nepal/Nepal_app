@@ -54,9 +54,11 @@ public class POJO {
     public void deleteChild(int position, Context context){
         deleteImage(childArr.get(position).getName(), context);
 
+    }
 
 
-
+    public void newNameImage(Context context, String oldName, String newName){
+     saveImageNewName(context,oldName,newName);
     }
 
     private void deleteImage(String name, Context context) {
@@ -109,5 +111,14 @@ public class POJO {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(name, encodeImage);
         editor.apply();
+    }
+
+    private void saveImageNewName(Context context, String oldName, String newName){
+
+        bitmap = loadImage(context, oldName);
+
+        deleteImage(oldName, context);
+
+        saveImage(context,newName);
     }
 }

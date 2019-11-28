@@ -36,4 +36,6 @@ hs_err_pid*
 /captures
 .externalNativeBuild
 .cxx
+./Nepal_app/.idea
+./Nepal_app/loca.properties
 

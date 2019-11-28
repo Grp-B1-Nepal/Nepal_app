@@ -60,15 +60,15 @@ public class EditChild extends Fragment implements View.OnClickListener {
         pojo = POJO.getInstance();
 
         position = pojo.getPosition();
-        editName = view2.findViewById(R.id.editText_editName);
+        editName = view2.findViewById(R.id.name);
 
 
-        genders = view2.findViewById(R.id.gender_editSpinner);
+        genders = view2.findViewById(R.id.gender_spinner);
 
-        buttonBirthday = view2.findViewById(R.id.button_newBirthday);
-        buttonImage = view2.findViewById(R.id.billede);
+        buttonBirthday = view2.findViewById(R.id.pickdate_button);
+        buttonImage = view2.findViewById(R.id.picture);
         buttonBack = view2.findViewById(R.id.button_editBack);
-        buttonSave = view2.findViewById(R.id.button_editSave);
+        buttonSave = view2.findViewById(R.id.save_button);
         buttonDelete = view2.findViewById(R.id.button_deleteChild);
 
         buttonDelete.setOnClickListener(this);
@@ -78,8 +78,8 @@ public class EditChild extends Fragment implements View.OnClickListener {
         buttonSave.setOnClickListener(this);
 
 
-        image = view2.findViewById(R.id.image_editView);
-        image.setVisibility(View.INVISIBLE);
+        image = view2.findViewById(R.id.downloaded_picture);
+        image.setVisibility(View.VISIBLE);
         arr = pojo.getChildArr(getContext());
 
         arr = pojo.getChildArr(getContext());
@@ -90,6 +90,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         newBirthday = arr.get(position).getBirthday();
 
 
+        image.setImageBitmap(pojo.getBitmap(getContext(),name));
         editName.setText(name);
         buttonBirthday.setText(birthday);
         //editGender.setText("The current gender is: " + gender);

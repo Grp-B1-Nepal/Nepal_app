@@ -4,28 +4,122 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".Fragments.ProgressFragment"
     >
+
+
     <ImageView
-        android:id="@+id/image_children"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:id="@+id/fragmentProgress_imageView"
+        android:layout_width="182dp"
+        android:layout_height="184dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/ic_progress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        />
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Progress fragment"
-        app:layout_constraintBottom_toTopOf="@+id/image_children"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/child_picture"
+        app:layout_constraintEnd_toStartOf="@+id/fragmentProgress_monthsOld"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragmentProgress_monthsOld"
+        android:layout_width="135dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="2 months old"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentProgress_Height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fragmentProgress_imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragmentProgress_Height"
+        android:layout_width="135dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Height"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentProgress_Weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/fragmentProgress_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentProgress_monthsOld" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="135dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="4.12 - 8.29 kg"
+        android:textSize="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/fragmentProgress_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentProgress_Weight" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="135dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="2 Months old"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentProgress_Weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/fragmentProgress_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentProgress_Height"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/fragmentProgress_Weight"
+        android:layout_width="135dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Weight"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentProgress_Headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/fragmentProgress_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentProgress_Height"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <TextView
+        android:id="@+id/fragmentProgress_Headline"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Your 2 month old baby"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentProgress_imageView" />
+
+    <TextView
+        android:id="@+id/fragmentProgress_InfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:text="Your baby is past the newborn phase, and you may be feeling more relaxed about caring for your darling. You and your partner are probably learning about your baby’s likes and dislikes. While there is still a lot to learn, you may be starting to feel more confident in your parenting skills."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentProgress_Headline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

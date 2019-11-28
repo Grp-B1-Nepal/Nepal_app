@@ -89,8 +89,8 @@ public class EditChild extends Fragment implements View.OnClickListener {
         buttonBirthday.setText(birthday);
 
 
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.spinner));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),R.layout.spinner_layout,getResources().getStringArray(R.array.spinner));
+        myAdapter.setDropDownViewResource(R.layout.spinner_layout);
         genders.setAdapter(myAdapter);
 
         // Inflate the layout for this fragment

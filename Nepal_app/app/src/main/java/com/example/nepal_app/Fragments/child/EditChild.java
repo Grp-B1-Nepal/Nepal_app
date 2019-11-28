@@ -18,8 +18,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -37,8 +37,7 @@ import static android.app.Activity.RESULT_OK;
 
 public class EditChild extends Fragment implements View.OnClickListener {
     private int position;
-    private TextView textName, textGender, textBirthday;
-    private Button buttonBirthday, buttonImage, buttonBack, buttonSave, buttonDelete;
+    private Button buttonBirthday, buttonBack, buttonSave, buttonDelete;
     private EditText editName;
     private Bitmap   editBitmap;
     private String name, gender, birthday, oldName;
@@ -48,27 +47,26 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private static final int PICK_IMAGE =100;
     private Uri imageUri = null;
     private ImageView image;
+    private ConstraintLayout buttonImage;
     private Spinner genders;
+
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view2 = inflater.inflate(R.layout.fragment_edit_child, container, false);
+        View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
 
         pojo = POJO.getInstance();
 
         position = pojo.getPosition();
-        textName = view2.findViewById(R.id.textView_editName);
-        textGender = view2.findViewById(R.id.textView_editGender);
-        textBirthday = view2.findViewById(R.id.textView_editBirthday);
-
-
         editName = view2.findViewById(R.id.editText_editName);
+
+
         genders = view2.findViewById(R.id.gender_editSpinner);
 
         buttonBirthday = view2.findViewById(R.id.button_newBirthday);
-        buttonImage = view2.findViewById(R.id.button_editImage);
+        buttonImage = view2.findViewById(R.id.billede);
         buttonBack = view2.findViewById(R.id.button_editBack);
         buttonSave = view2.findViewById(R.id.button_editSave);
         buttonDelete = view2.findViewById(R.id.button_deleteChild);
@@ -92,12 +90,11 @@ public class EditChild extends Fragment implements View.OnClickListener {
         newBirthday = arr.get(position).getBirthday();
 
 
-        textName.setText("The current name is: " + name);
-        textBirthday.setText("The current birthday is: " + birthday);
-        textGender.setText("The current gender is: " + gender);
-        buttonImage.setText("Click to  update the picture of " + name);
-        buttonImage.setText("Set new image of " + name);
-        buttonDelete.setText("Delete " + name);
+        editName.setText(name);
+        buttonBirthday.setText(birthday);
+        //editGender.setText("The current gender is: " + gender);
+        //picText.setText("Choose picture);
+        //buttonDelete.setText("Delete " + name);
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.spinner));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -174,7 +171,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
             calendar.setTimeInMillis(arr.get(index).getBirthday());
             date1 = calendar.getTime().toString().substring(4, 10);
             date2 = calendar.getTime().toString().substring(30, 34);
-            date3 = "Birthday " + date1 + " " + date2;
+            date3 = date1 + " " + date2;
             return date3;
     }
 

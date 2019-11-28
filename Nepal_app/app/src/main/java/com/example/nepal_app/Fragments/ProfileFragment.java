@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
@@ -59,11 +60,12 @@ public class ProfileFragment extends Fragment {
         Calendar calendar = Calendar.getInstance();
         birthday = new String[childArr.size()];
         String date1, date2, date3;
+
         for (int i = 0; i < childArr.size(); i++) {
             calendar.setTimeInMillis(childArr.get(i).getBirthday());
             date1 = calendar.getTime().toString().substring(4, 10);
             date2 = calendar.getTime().toString().substring(30, 34);
-            date3 = "Birthday " + date1 + " " + date2;
+            date3 = date1 + " " + date2;
             birthday[i] = date3;
         }
     }

@@ -13,15 +13,14 @@
 
         <Button
             android:id="@+id/button_editBack"
-            android:layout_width="75dp"
-            android:layout_height="30dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
             android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
             android:background="@drawable/button_shape"
             android:text="Back"
             android:textColor="#F2FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/save_button"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_deleteChild"
             app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
 
         <ImageView
@@ -114,10 +113,10 @@
             android:layout_height="37dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/layout_background_round_corners"
-            android:inputType="textCapSentences"
             android:ems="10"
             android:gravity="center"
             android:hint="Write name"
+            android:inputType="textCapSentences"
             android:maxLength="50"
             android:textColor="#130101"
             android:textColorHint="#130101"
@@ -127,15 +126,14 @@
 
         <Button
             android:id="@+id/save_button"
-            android:layout_width="75dp"
-            android:layout_height="30dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/button_shape"
             android:text="Save"
             android:textColor="#F3EDED"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_editBack"
+            app:layout_constraintStart_toEndOf="@+id/button_deleteChild"
             app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
 
         <Button
@@ -171,16 +169,15 @@
 
         <Button
             android:id="@+id/button_deleteChild"
-            android:layout_width="75dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="6dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="6dp"
             android:background="@drawable/button_shape"
             android:text="Delete"
             android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/save_button"
-            app:layout_constraintStart_toEndOf="@+id/button_editBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

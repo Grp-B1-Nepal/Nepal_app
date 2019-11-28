@@ -30,6 +30,7 @@ import com.example.nepal_app.Factory.POJO;
 import com.example.nepal_app.R;
 import com.google.gson.Gson;
 
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
@@ -38,7 +39,7 @@ import static android.app.Activity.RESULT_OK;
 
 
 public class Fragment_addChild extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
-    private Button save, pick_date, deleteButton;
+    private Button save, pick_date, deleteButton,buttonBack;
     private EditText name;
     private ImageView  preview;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
@@ -74,6 +75,8 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         save.setOnClickListener(this);
         deleteButton = view2.findViewById(R.id.button_deleteChild);
         deleteButton.setVisibility(View.INVISIBLE);
+        buttonBack = view2.findViewById(R.id.button_editBack);
+        buttonBack.setOnClickListener(this);
 
         pojo = POJO.getInstance();
 
@@ -93,8 +96,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
 
         return view2;
     }
-
-
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         try {
@@ -137,16 +138,16 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 currentName = String.valueOf(name.getText());
                 childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem())));
                 pojo.setBitmap(bitmap,String.valueOf(name.getText()),getContext());
-
-                saveChild();
+                pojo.setChildArr(childArr,getContext());
                 //Goes back to the last fragment
                 FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
                 fm.popBackStack();
             }
-        }
-
-        if (v == pick_date) {
+        } else if (v == pick_date) {
             showDateDialog();
+        } else if (v == buttonBack){
+            FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
+            fm.popBackStack();
         }
     }
 
@@ -172,23 +173,9 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     public void onDateSet(DatePicker view, int year, int month, int day) {
         Calendar c = Calendar.getInstance();
         c.set(year,month,day);
-        pick_date.setText(day + "/" + (month+1) + "/" + year);
+        pick_date.setText(pojo.monthText((month+1)) + day + year);
         currentDate = c.getTimeInMillis();
     }
-
-    /**
-     * Saving the child in the cache
-     */
-    private void saveChild(){
-    SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("Children", Context.MODE_PRIVATE);
-    SharedPreferences.Editor editor = sharedPreferences.edit();
-    Gson gson = new Gson();
-    String json = gson.toJson(childArr);
-    editor.putString("ChildArr",json);
-    editor.apply();
-    pojo.setChildArr(childArr);
-    }
-
 }
 
 

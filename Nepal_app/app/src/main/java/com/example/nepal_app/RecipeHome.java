@@ -32,10 +32,10 @@ public class RecipeHome extends AppCompatActivity {
     private OnNoteListener onNoteListener;
 
     public void fillLists() {
-        imageViews.add(R.drawable.dal);
-        imageViews.add(R.drawable.cake);
-        imageViews.add(R.drawable.banana);
-        imageViews.add(R.drawable.mos);
+        imageViews.add(R.drawable.egg_image);
+        imageViews.add(R.drawable.egg_image);
+        imageViews.add(R.drawable.egg_image);
+        imageViews.add(R.drawable.egg_image);
 
         recipeNames.add("Dal");
         recipeNames.add("Cake");

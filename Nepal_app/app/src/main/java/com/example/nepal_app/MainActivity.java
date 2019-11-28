@@ -12,6 +12,7 @@ import com.example.nepal_app.Fragments.ActivitiesFragment;
 import com.example.nepal_app.Fragments.HomeFragment;
 import com.example.nepal_app.Fragments.ProfileFragment;
 import com.example.nepal_app.Fragments.ProgressFragment;
+import com.example.nepal_app.Fragments.RecipeHome;
 import com.example.nepal_app.Fragments.RecipesFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                             openFragment(new ProgressFragment());
                             return true;
                         case R.id.navigation_recipe:
-                            openFragment(new recipe());
+                            openFragment(new RecipeHome());
                             return true;
                     }
                     return false;

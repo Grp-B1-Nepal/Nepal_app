@@ -31,9 +31,12 @@ hs_err_pid*
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/
 .DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
+./Nepal_app/.idea
+./Nepal_app/loca.properties
 

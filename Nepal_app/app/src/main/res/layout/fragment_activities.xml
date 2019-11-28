@@ -4,33 +4,97 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".fragments.ActivitiesFragment">
+tools:context=".Fragments.ActivitiesFragment">
 
-    <ListView
+
+    <Button
+        android:id="@+id/fragment_activities_Singing"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/black_button_boarder"
+        android:drawableLeft="@drawable/child_picture_small"
+        android:gravity="center_vertical"
+        android:text="Singing"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_activities_Talking"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<Button
-    android:id="@+id/button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="158dp"
-    android:layout_marginEnd="165dp"
-    android:layout_marginBottom="168dp"
-    android:background="#00FFFFFF"
-    android:shadowColor="#00FFFFFF"
-    android:shadowDx="0"
-    android:shadowDy="0"
-    android:shadowRadius="0"
-    android:text="Add Child"
-    android:textAllCaps="false"
-    android:textColor="#817F7F"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/fragment_activities_Talking"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/black_button_boarder"
+        android:drawableLeft="@drawable/child_picture_small"
+        android:gravity="center_vertical"
+        android:text="Talking"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_activities_TummyTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_activities_Singing"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/fragment_activities_TummyTime"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@drawable/black_button_boarder"
+        android:drawableLeft="@drawable/child_picture_small"
+        android:gravity="center_vertical"
+        android:text="Tummy Time"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_activities_CuddlingTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_activities_Talking" />
+
+    <Button
+        android:id="@+id/fragment_activities_CuddlingTime"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/black_button_boarder"
+        android:drawableLeft="@drawable/child_picture_small"
+        android:gravity="center_vertical"
+        android:text="Cuddling Time"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_activities_PlayTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_activities_TummyTime"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/fragment_activities_PlayTime"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/black_button_boarder"
+        android:drawableLeft="@drawable/child_picture_small"
+        android:gravity="center_vertical"
+        android:text="Play Time"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_activities_Reading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_activities_CuddlingTime" />
+
+    <Button
+        android:id="@+id/fragment_activities_Reading"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginBottom="279dp"
+        android:background="@drawable/black_button_boarder"
+        android:drawableLeft="@drawable/child_picture_small"
+        android:gravity="center_vertical"
+        android:text="Reading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_activities_PlayTime" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

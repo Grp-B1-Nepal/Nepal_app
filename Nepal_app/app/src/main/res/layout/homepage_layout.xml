@@ -1,73 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView xmlns:android = "http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    tools:context=".Homepage_act">
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.HomeFragment">
 
-    <ImageView
-        android:id="@+id/imageActivities"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/developButton"
-        app:srcCompat="@drawable/placeholder" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/activitiesButton"
-        style="@android:style/Widget.DeviceDefault.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#5BC0DE"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageActivities" />
+            <ImageView
+                android:id="@+id/speakerDevelop"
+                android:layout_width="28dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="83dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="82dp"
+                android:layout_marginBottom="9dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageActivities"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/developButton"
+                app:layout_constraintTop_toBottomOf="@+id/imageDevelopment"
+                app:srcCompat="@drawable/speaker" />
 
-    <ImageView
-        android:id="@+id/imageDevelopment"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipesButton"
-        app:srcCompat="@drawable/placeholder" />
+            <ImageView
+                android:id="@+id/speakerRecipe"
+                android:layout_width="28dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="83dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="82dp"
+                android:layout_marginBottom="9dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageDevelopment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/recipesButton"
+                app:layout_constraintTop_toBottomOf="@+id/imageRecipe"
+                app:srcCompat="@drawable/speaker" />
 
-    <Button
-        android:id="@+id/developButton"
-        style="@android:style/Widget.DeviceDefault.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#5BC0DE"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageDevelopment" />
+            <ImageView
+                android:id="@+id/speakerActivity"
+                android:layout_width="28dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="83dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="82dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/activitiesButton"
+                app:layout_constraintTop_toBottomOf="@+id/imageActivities"
+                app:srcCompat="@drawable/speaker" />
 
-    <ImageView
-        android:id="@+id/imageRecipe"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.120000005"
-        app:srcCompat="@drawable/placeholder" />
+            <ImageView
+                android:id="@+id/imageActivities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/activitiesButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/developButton"
+                app:srcCompat="@drawable/evo_of_child" />
 
-    <Button
-        android:id="@+id/recipesButton"
-        style="@android:style/Widget.DeviceDefault.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#5BC0DE"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageRecipe" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/activitiesButton"
+                style="@android:style/Widget.DeviceDefault.Button"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="58dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="83dp"
+                android:background="@drawable/button_shape"
+                android:text="Button"
+                android:textColor="#FDFFFFFF"
+                app:layout_constraintEnd_toStartOf="@+id/speakerActivity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageActivities" />
+
+            <ImageView
+                android:id="@+id/imageDevelopment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/developButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recipesButton"
+                app:srcCompat="@drawable/children_on_ball" />
+
+            <Button
+                android:id="@+id/developButton"
+                style="@android:style/Widget.DeviceDefault.Button"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="58dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="83dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_shape"
+                android:text="Button"
+                android:textColor="#F5FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/imageActivities"
+                app:layout_constraintEnd_toStartOf="@+id/speakerDevelop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageDevelopment" />
+
+            <ImageView
+                android:id="@+id/imageRecipe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/recipesButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/food_frontpage" />
+
+            <Button
+                android:id="@+id/recipesButton"
+                style="@android:style/Widget.DeviceDefault.Button"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="58dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="83dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_shape"
+                android:text="Button"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/imageDevelopment"
+                app:layout_constraintEnd_toStartOf="@+id/speakerRecipe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageRecipe" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</ScrollView>

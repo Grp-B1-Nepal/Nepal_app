@@ -133,11 +133,11 @@
       <find>container</find>
       <find>spinner</find>
       <find>button_newBirthday</find>
-      <find>delete</find>
       <find>genders</find>
       <find>editBitmap</find>
       <find>bit</find>
       <find>.add</find>
+      <find>delete</find>
     </findStrings>
   </component>
   <component name="Git.Settings">

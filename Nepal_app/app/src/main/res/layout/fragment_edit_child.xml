@@ -129,7 +129,7 @@
             android:ems="10"
             android:gravity="center"
             android:hint="Type a new name"
-            android:inputType="textPersonName"
+            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

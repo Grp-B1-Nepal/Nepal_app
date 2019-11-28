@@ -1,162 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout"
+    android:id="@+id/Frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.child.EditChild">
 
-    <TextView
-        android:id="@+id/textView_editName"
-        android:layout_width="160dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
-        android:text="edit name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView_editBirthday"
-        android:layout_width="160dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Edit birthday"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_editGender" />
+        <TextView
+            android:id="@+id/birthday"
+            android:layout_width="381dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Birthday"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_editName" />
 
-    <TextView
-        android:id="@+id/textView_editGender"
-        android:layout_width="160dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Edit gender"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_editName" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="381dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Name "
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/billede" />
 
-    <EditText
-        android:id="@+id/editText_editName"
-        android:layout_width="150dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="49dp"
-        android:ems="10"
-        android:hint="Type a new name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView_editName"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="381dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Gender"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_newBirthday" />
 
-    <TextView
-        android:id="@+id/textView_editHeadline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="100dp"
-        android:text="Edit the information"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/billede"
+            android:layout_width="321dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_background_round_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_editView">
 
-    <Button
-        android:id="@+id/button_editBack"
-        android:layout_width="120dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="275dp"
-        android:layout_marginBottom="140dp"
-        android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_editSave" />
+            <TextView
+                android:id="@+id/picTex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose picture"
+                android:textColor="#F7090101"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_editImage"
-        android:layout_width="339dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="47dp"
-        android:text="Set new image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_newBirthday" />
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_photo_library_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/picTex"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/button_newBirthday"
-        android:layout_width="150dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="47dp"
-        android:text="Change birthday"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_editBirthday"
-        app:layout_constraintTop_toBottomOf="@+id/gender_editSpinner" />
+        <Button
+            android:id="@+id/button_deleteChild"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_shape"
+            android:text="Delete"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/button_editSave"
+            app:layout_constraintTop_toBottomOf="@+id/gender_editSpinner" />
 
-    <Button
-        android:id="@+id/button_editSave"
-        android:layout_width="100dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="155dp"
-        android:text="Save"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_editView" />
+        <Spinner
+            android:id="@+id/gender_editSpinner"
+            android:layout_width="321dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_background_round_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
 
-    <ImageView
-        android:id="@+id/image_editView"
-        android:layout_width="117dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="150dp"
-        android:src="@android:drawable/arrow_up_float"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_editImage" />
+        <Button
+            android:id="@+id/button_newBirthday"
+            android:layout_width="321dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_background_round_corners"
+            android:text="Change birthday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birthday" />
 
-    <Spinner
-        android:id="@+id/gender_editSpinner"
-        android:layout_width="150dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="49dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_editGender"
-        app:layout_constraintTop_toBottomOf="@+id/editText_editName" />
+        <EditText
+            android:id="@+id/editText_editName"
+            android:layout_width="321dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_background_round_corners"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Type a new name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
 
-    <Button
-        android:id="@+id/button_deleteChild"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="47dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button_editBack"
-        app:layout_constraintTop_toBottomOf="@+id/button_editSave" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button_editSave"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_shape"
+            android:text="Save"
+            android:textColor="#F3FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_editSpinner" />
+
+        <ImageView
+            android:id="@+id/image_editView"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="10dp"
+            android:src="@android:drawable/arrow_up_float"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_editHeadline" />
+
+        <Button
+            android:id="@+id/button_editBack"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_shape"
+            android:text="Back"
+            android:textColor="#F2FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/button_editSave"
+            app:layout_constraintTop_toBottomOf="@+id/gender_editSpinner" />
+
+        <TextView
+            android:id="@+id/textView_editHeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Edit the information"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

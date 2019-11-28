@@ -13,10 +13,10 @@
 
         <Button
             android:id="@+id/button_editBack"
-            android:layout_width="75dp"
-            android:layout_height="30dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="40dp"
             android:background="@drawable/button_shape"
             android:text="Back"
             android:textColor="#F2FFFFFF"
@@ -126,9 +126,9 @@
 
         <Button
             android:id="@+id/save_button"
-            android:layout_width="75dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="50dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/button_shape"
             android:text="Save"
@@ -169,8 +169,8 @@
 
         <Button
             android:id="@+id/button_deleteChild"
-            android:layout_width="75dp"
-            android:layout_height="30dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/button_shape"
             android:text="Delete"

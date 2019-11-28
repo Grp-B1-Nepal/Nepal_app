@@ -6,6 +6,34 @@
     android:layout_height="fill_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/search_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="@string/search_for_recipe"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searching_glass2"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_choose_favorites" />
+
+    <ImageView
+        android:id="@+id/searching_glass2"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:contentDescription="@string/todo"
+        android:src="@android:drawable/ic_menu_search"
+        app:layout_constraintEnd_toStartOf="@+id/search_text"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_choose_today" />
+
     <Button
         android:id="@+id/recipe_choose_all"
         android:layout_width="93dp"
@@ -38,7 +66,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipe_choose_favorites" />
+        app:layout_constraintTop_toBottomOf="@+id/search_text2"
+        android:layout_below="@id/search_text2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

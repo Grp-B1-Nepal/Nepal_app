@@ -19,7 +19,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     //TODO remove search bar from recipemain and into activity_main
-    //TODO evt lav det hele om til cardview
+    //TODO searchbar functionality
+    //TODO Top buttons (All, favorite, Today) functionality
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -34,10 +35,12 @@ public class MainActivity extends AppCompatActivity {
         imageViews.add(R.drawable.dal);
         imageViews.add(R.drawable.cake);
         imageViews.add(R.drawable.banana);
+        imageViews.add(R.drawable.mos);
 
         recipeNames.add("Dal");
         recipeNames.add("Cake");
         recipeNames.add("Banana");
+        recipeNames.add("Mash");
     }
 
     @Override

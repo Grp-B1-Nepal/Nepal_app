@@ -102,6 +102,7 @@
             android:layout_height="37dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/layout_background_round_corners"
+            android:paddingLeft="135dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

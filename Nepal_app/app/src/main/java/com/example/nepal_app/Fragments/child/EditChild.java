@@ -94,7 +94,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         editName.setText(name);
         buttonBirthday.setText(birthday);
         //editGender.setText("The current gender is: " + gender);
-        picText.setText("Choose picture of" + name);
+        //picText.setText("Choose picture);
         //buttonDelete.setText("Delete " + name);
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.spinner));
@@ -171,7 +171,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
             calendar.setTimeInMillis(arr.get(index).getBirthday());
             date1 = calendar.getTime().toString().substring(4, 10);
             date2 = calendar.getTime().toString().substring(30, 34);
-            date3 = "Birthday " + date1 + " " + date2;
+            date3 = date1 + " " + date2;
             return date3;
     }
 

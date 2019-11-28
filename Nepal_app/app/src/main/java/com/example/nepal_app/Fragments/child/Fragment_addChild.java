@@ -14,7 +14,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import android.provider.MediaStore;
-import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +28,6 @@ import com.example.nepal_app.Factory.POJO;
 import com.example.nepal_app.R;
 import com.google.gson.Gson;
 
-import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
@@ -39,7 +37,7 @@ import static android.app.Activity.RESULT_OK;
 
 
 public class Fragment_addChild extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
-    private Button save, pick_date;
+    private Button save, pick_date, deleteButton;
     private EditText name;
     private ImageView  preview;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
@@ -65,7 +63,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                              Bundle savedInstanceState) {
         View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
         save = view2.findViewById(R.id.save_button);
-        picture = view2.findViewById(R.id.billede);
+        picture = view2.findViewById(R.id.picture);
         name = view2.findViewById(R.id.name);
         pick_date = view2.findViewById(R.id.pickdate_button);
         preview = view2.findViewById(R.id.downloaded_picture);
@@ -73,6 +71,8 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         genders = view2.findViewById(R.id.gender_spinner);
         pick_date.setOnClickListener(this);
         save.setOnClickListener(this);
+        deleteButton = view2.findViewById(R.id.button_deleteChild);
+        deleteButton.setVisibility(View.INVISIBLE);
 
         pojo = POJO.getInstance();
 

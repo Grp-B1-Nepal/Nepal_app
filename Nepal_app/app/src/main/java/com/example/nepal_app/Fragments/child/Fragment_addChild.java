@@ -85,11 +85,10 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             startActivityForResult(gallery,PICK_IMAGE);
         });
 
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.spinner));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),R.layout.spinner_layout,getResources().getStringArray(R.array.spinner));
+        myAdapter.setDropDownViewResource(R.layout.spinner_layout);
         genders.setAdapter(myAdapter);
 
-        
 
         return view2;
     }

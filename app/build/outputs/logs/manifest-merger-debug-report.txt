@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-26:12
+ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-23:12
 MERGED from [com.google.android.material:material:1.2.0-alpha02] /home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/fredrik/.gradle/caches/transforms-2/files-2.1/508ac768b50158a079142e4dc4915061/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
@@ -44,25 +44,25 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] /home/fredrik/.gradle/caches/
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/fredrik/.gradle/caches/transforms-2/files-2.1/df65787e67fe4b4bc0635deed9695797/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/fredrik/.gradle/caches/transforms-2/files-2.1/a1f5477cd6fd5fad9baa3e263bec7d60/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/fredrik/.gradle/caches/transforms-2/files-2.1/60b50828def4ba3859898ffb4c971c21/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-23:12
 	package
 		ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:3:5-36
 		INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml
 		INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml
-		ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-26:12
+		ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-23:12
 		INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml
-		ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-26:12
+		ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:1-23:12
 		INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:5:5-24:19
+ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:5:5-21:19
 MERGED from [com.google.android.material:material:1.2.0-alpha02] /home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.0-alpha02] /home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/fredrik/.gradle/caches/transforms-2/files-2.1/508ac768b50158a079142e4dc4915061/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
@@ -107,12 +107,6 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
 		ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:18:27-74
-activity#com.example.nepal_app.Profil
-ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:21:9-23:52
-	android:screenOrientation
-		ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:23:13-49
-	android:name
-		ADDED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:22:13-35
 uses-sdk
 INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml

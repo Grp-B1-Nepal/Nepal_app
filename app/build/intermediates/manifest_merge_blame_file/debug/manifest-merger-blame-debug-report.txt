@@ -11,7 +11,7 @@
 9-->/home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:5:5-24:19
+11-->/home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:5:5-21:19
 12        android:allowBackup="true"
 12-->/home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -45,12 +45,6 @@
 27-->/home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:18:27-74
 28            </intent-filter>
 29        </activity>
-30        <activity
-30-->/home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:21:9-23:52
-31            android:name="com.example.nepal_app.Profil"
-31-->/home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:22:13-35
-32            android:screenOrientation="portrait" />
-32-->/home/fredrik/android_projekter/Nepal_app/app/src/main/AndroidManifest.xml:23:13-49
-33    </application>
-34
-35</manifest>
+30    </application>
+31
+32</manifest>

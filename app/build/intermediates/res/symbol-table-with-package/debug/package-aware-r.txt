@@ -1958,7 +1958,6 @@ layout fragment_add_child
 layout fragment_home
 layout fragment_profile
 layout fragment_progress
-layout fragment_recipe
 layout fragment_recipe_selectable
 layout homepage_layout
 layout layout_listitem

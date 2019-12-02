@@ -2,9 +2,7 @@
 package com.example.nepal_app.Adaptor;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,19 +13,14 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 
 import com.example.nepal_app.Factory.POJO;
-import com.example.nepal_app.Fragments.ProfileFragment;
 import com.example.nepal_app.Fragments.child.EditChild;
-import com.example.nepal_app.Fragments.child.Fragment_addChild;
 import com.example.nepal_app.R;
 import com.example.nepal_app.Fragments.child.ChildObj;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 /**
  * Inspiration taken from https://www.youtube.com/watch?v=q2XA0Pe2W04

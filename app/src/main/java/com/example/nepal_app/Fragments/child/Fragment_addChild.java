@@ -172,7 +172,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     public void onDateSet(DatePicker view, int year, int month, int day) {
         Calendar c = Calendar.getInstance();
         c.set(year,month,day);
-        pick_date.setText(pojo.monthText((month+1)) + day + year);
+        pick_date.setText(pojo.monthText((month+1)) + " " + day + " " + year);
         currentDate = c.getTimeInMillis();
     }
 }

@@ -14,7 +14,7 @@ import java.io.ByteArrayOutputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-public class ChildInfo implements IChildInfo {
+public class ChildInfo {
     private static final ChildInfo ourInstance = new ChildInfo();
     private ArrayList<ChildObj> childArr = new ArrayList<>();
     public static ChildInfo getInstance() {
@@ -26,50 +26,40 @@ public class ChildInfo implements IChildInfo {
     private ChildInfo() {
     }
 
-    @Override
     public void setChildArr(ArrayList<ChildObj> arr, Context context) {
 
         saveChild(context, arr);
     }
 
-    @Override
     public ArrayList<ChildObj> getChildArr(Context context) {
         childArr.clear();
         loadChild(context);
         return childArr;
     }
-    @Override
+
     public Bitmap getBitmap(Context context, String name){
 
         return loadImage(context,name);
     }
 
-    @Override
     public void setBitmap(Bitmap bitmaps,String name, Context context){
         this.bitmap = bitmaps;
         saveImage(context,name);
 
     }
 
-    @Override
     public void deleteChild(int position, Context context){
         deleteImage(childArr.get(position).getName(), context);
 
     }
 
-    @Override
     public void newNameImage(Context context, String oldName, String newName){
      saveImageNewName(context,oldName,newName);
     }
 
-    @Override
     public int getPosition(){return position;}
-
-    @Override
     public void setPosition(int position) {this.position = position;}
 
-
-    @Override
     public String monthText(int intMonth){
         String month = null;
 

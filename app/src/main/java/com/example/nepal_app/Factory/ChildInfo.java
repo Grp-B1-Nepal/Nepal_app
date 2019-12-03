@@ -14,16 +14,16 @@ import java.io.ByteArrayOutputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-public class POJO implements IPOJO {
-    private static final POJO ourInstance = new POJO();
+public class ChildInfo implements IChildInfo {
+    private static final ChildInfo ourInstance = new ChildInfo();
     private ArrayList<ChildObj> childArr = new ArrayList<>();
-    public static POJO getInstance() {
+    public static ChildInfo getInstance() {
         return ourInstance;
     }
     private Bitmap bitmap;
     private int position;
 
-    private POJO() {
+    private ChildInfo() {
     }
 
     @Override

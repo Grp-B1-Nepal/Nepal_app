@@ -20,7 +20,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.nepal_app.Factory.POJO;
+import com.example.nepal_app.Factory.ChildInfo;
 import com.example.nepal_app.R;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -37,7 +37,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private String name, gender, birthday, oldName;
     private ArrayList<ChildObj> arr = new ArrayList<>();
     private long newBirthday;
-    private POJO pojo;
+    private ChildInfo childInfo;
     private static final int PICK_IMAGE =100;
     private Uri imageUri = null;
     private ImageView image;
@@ -51,9 +51,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
 
-        pojo = POJO.getInstance();
+        childInfo = ChildInfo.getInstance();
 
-        position = pojo.getPosition();
+        position = childInfo.getPosition();
         editName = view2.findViewById(R.id.name);
 
 
@@ -74,9 +74,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
 
         image = view2.findViewById(R.id.downloaded_picture);
         image.setVisibility(View.VISIBLE);
-        arr = pojo.getChildArr(getContext());
+        arr = childInfo.getChildArr(getContext());
 
-        arr = pojo.getChildArr(getContext());
+        arr = childInfo.getChildArr(getContext());
         oldName = arr.get(position).getName();
         name = arr.get(position).getName();
         gender = arr.get(position).getGender();
@@ -84,7 +84,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         newBirthday = arr.get(position).getBirthday();
 
 
-        image.setImageBitmap(pojo.getBitmap(getContext(),name));
+        image.setImageBitmap(childInfo.getBitmap(getContext(),name));
         editName.setText(name);
         buttonBirthday.setText(birthday);
 
@@ -104,17 +104,17 @@ public class EditChild extends Fragment implements View.OnClickListener {
             if (!(String.valueOf(editName.getText()).equals(""))) {
             name = String.valueOf(editName.getText());
             arr.get(position).setName(name);
-            pojo.newNameImage(getContext(),oldName,name);
+            childInfo.newNameImage(getContext(),oldName,name);
         }
         if (!(genders.getSelectedItem().equals("…"))) {
             gender = String.valueOf(genders.getSelectedItem());
             arr.get(position).setGender(gender);
         }
         if (editBitmap != null){
-            pojo.setBitmap(editBitmap,name,getContext());
+            childInfo.setBitmap(editBitmap,name,getContext());
         }
 
-        pojo.setChildArr(arr,getContext());
+        childInfo.setChildArr(arr,getContext());
 
         FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
         fm.popBackStack();
@@ -129,9 +129,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
         } else if (v == buttonDelete){
-            pojo.deleteChild(position,getContext());
+            childInfo.deleteChild(position,getContext());
             arr.remove(position);
-            pojo.setChildArr(arr,getContext());
+            childInfo.setChildArr(arr,getContext());
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
         }
@@ -154,7 +154,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private void onDateSet(DatePicker view, int year, int month, int day) {
         Calendar c = Calendar.getInstance();
         c.set(year,month,day);
-        buttonBirthday.setText(pojo.monthText((month+1)) + " " + day + " " + year);
+        buttonBirthday.setText(childInfo.monthText((month+1)) + " " + day + " " + year);
         newBirthday = c.getTimeInMillis();
         arr.get(position).setBirthday(newBirthday);
     }

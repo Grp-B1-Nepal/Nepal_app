@@ -1,17 +1,15 @@
 package com.example.nepal_app.Fragments.Profile;
 
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.DatePicker;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
 
 import com.example.nepal_app.Adaptor.Adaptor_ListviewChild;
-import com.example.nepal_app.Factory.POJO;
+import com.example.nepal_app.Factory.ChildInfo;
 import com.example.nepal_app.R;
 import com.example.nepal_app.Fragments.child.ChildObj;
 import com.example.nepal_app.Fragments.child.Fragment_addChild;
@@ -24,7 +22,7 @@ public class ProfileFragment extends Fragment {
     private ListView list;
     private String[] birthday;
     private FloatingActionButton add;
-    private POJO pojo;
+    private ChildInfo childInfo;
 
 
     private ArrayList<ChildObj> childArr = new ArrayList<>();
@@ -33,9 +31,9 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        pojo = POJO.getInstance();
+        childInfo = ChildInfo.getInstance();
 
-        childArr = pojo.getChildArr(getContext());
+        childArr = childInfo.getChildArr(getContext());
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         add = view.findViewById(R.id.floatingActionButton4);

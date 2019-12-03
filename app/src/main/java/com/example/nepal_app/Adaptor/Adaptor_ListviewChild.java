@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.nepal_app.Factory.POJO;
+import com.example.nepal_app.Factory.ChildInfo;
 import com.example.nepal_app.Fragments.child.EditChild;
 import com.example.nepal_app.R;
 import com.example.nepal_app.Fragments.child.ChildObj;
@@ -32,7 +32,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
     private ArrayList<ChildObj> childArr;
 
     private String[] birthday;
-    private POJO pojo;
+    private ChildInfo childInfo;
 
 
     public Adaptor_ListviewChild(Context context, ArrayList<ChildObj> arr, String[] birthday) {
@@ -40,7 +40,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         this.childArr = arr;
         this.context = context;
         this.birthday = birthday;
-        pojo = POJO.getInstance();
+        childInfo = ChildInfo.getInstance();
     }
 
     @Override
@@ -65,14 +65,14 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(pojo.getBitmap(getContext(),childArr.get(position).getName()),120,120,false));
+        viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(childInfo.getBitmap(getContext(),childArr.get(position).getName()),120,120,false));
         viewHolder.name.setText(childArr.get(position).getName());
         viewHolder.birthday.setText(birthday[position]);
         viewHolder.gender.setText(childArr.get(position).getGender());
         viewHolder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pojo.setPosition(position);
+                childInfo.setPosition(position);
                 ((FragmentActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.container,new EditChild()).addToBackStack(null).commit();
             }
         });

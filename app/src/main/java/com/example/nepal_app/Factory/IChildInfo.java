@@ -7,7 +7,7 @@ import com.example.nepal_app.Fragments.child.ChildObj;
 
 import java.util.ArrayList;
 
-public interface IPOJO {
+public interface IChildInfo {
 
     void setChildArr(ArrayList<ChildObj> arr, Context context);
 
@@ -26,9 +26,5 @@ public interface IPOJO {
     void setPosition(int position);
 
     String monthText(int intMonth);
-
-
-
-
 
 }

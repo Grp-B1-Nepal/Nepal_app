@@ -5,7 +5,7 @@
     android:id="@+id/addfrag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.child.Fragment_addChild">
+    tools:context=".UI.Fragments.child.Fragment_addChild">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

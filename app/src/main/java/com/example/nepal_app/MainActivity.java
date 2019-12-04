@@ -8,11 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.nepal_app.Fragments.Activities.ActivitiesFragment;
-import com.example.nepal_app.Fragments.Navigation.HomeFragment;
-import com.example.nepal_app.Fragments.Profile.ProfileFragment;
-import com.example.nepal_app.Fragments.Progress.ProgressFragment;
-import com.example.nepal_app.Fragments.Recipes.RecipeHome;
+import com.example.nepal_app.UI.Fragments.Activities.ActivitiesFragment;
+import com.example.nepal_app.UI.Fragments.Navigation.HomeFragment;
+import com.example.nepal_app.UI.Fragments.Profile.ProfileFragment;
+import com.example.nepal_app.UI.Fragments.Progress.ProgressFragment;
+import com.example.nepal_app.UI.Fragments.Recipes.RecipeHome;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

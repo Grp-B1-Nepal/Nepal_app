@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:background="@drawable/layout_boarder"
-    tools:context=".UI.Fragments.child.ChildbarFragment" >
+    tools:context=".UI.Fragments.Profile.Child.ChildbarFragment" >
 
 
     <TextView

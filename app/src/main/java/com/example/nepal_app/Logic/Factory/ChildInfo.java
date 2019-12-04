@@ -1,18 +1,9 @@
 package com.example.nepal_app.Logic.Factory;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.util.Base64;
-
 import com.example.nepal_app.Datalayer.CacheSaving;
 import com.example.nepal_app.Logic.ChildObj;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.ByteArrayOutputStream;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class ChildInfo {

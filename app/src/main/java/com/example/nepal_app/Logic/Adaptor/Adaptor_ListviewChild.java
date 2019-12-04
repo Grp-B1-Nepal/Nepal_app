@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
 import com.example.nepal_app.Logic.Factory.ChildInfo;
-import com.example.nepal_app.UI.Fragments.child.EditChild;
+import com.example.nepal_app.UI.Fragments.Profile.Child.EditChild;
 import com.example.nepal_app.R;
 import com.example.nepal_app.Logic.ChildObj;
 

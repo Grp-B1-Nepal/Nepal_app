@@ -12,7 +12,7 @@ import com.example.nepal_app.Logic.Adaptor.Adaptor_ListviewChild;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
 import com.example.nepal_app.Logic.ChildObj;
-import com.example.nepal_app.UI.Fragments.child.Fragment_addChild;
+import com.example.nepal_app.UI.Fragments.Profile.Child.Fragment_addChild;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;

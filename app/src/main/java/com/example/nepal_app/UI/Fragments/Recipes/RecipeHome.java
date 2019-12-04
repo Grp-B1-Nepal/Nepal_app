@@ -39,12 +39,12 @@ public class RecipeHome extends Fragment implements RecipeAdapter.OnNoteListener
     }
 
     public void fillLists() {
-        imageViews.add(R.drawable.egg_image);
-        imageViews.add(R.drawable.egg_image);
+        imageViews.add(R.drawable.banana);
+        imageViews.add(R.drawable.cake);
         imageViews.add(R.drawable.egg_image);
         imageViews.add(R.drawable.egg_image);
 
-        recipeNames.add("Dal");
+        recipeNames.add("Banana");
         recipeNames.add("Cake");
         recipeNames.add("Banana");
         recipeNames.add("Mash");

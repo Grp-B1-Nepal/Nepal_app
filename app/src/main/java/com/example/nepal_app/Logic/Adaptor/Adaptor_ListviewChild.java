@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -33,13 +34,15 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
 
     private String[] birthday;
     private ChildInfo childInfo;
+    private long[] progress;
 
 
-    public Adaptor_ListviewChild(Context context, ArrayList<ChildObj> arr, String[] birthday) {
+    public Adaptor_ListviewChild(Context context, ArrayList<ChildObj> arr, String[] birthday, long[] progress) {
         super(context, R.layout.profil_liste_element);
         this.childArr = arr;
         this.context = context;
         this.birthday = birthday;
+        this.progress = progress;
         childInfo = ChildInfo.getInstance();
     }
 
@@ -61,6 +64,8 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
             viewHolder.birthday = convertView.findViewById(R.id.birthday);
             viewHolder.gender = convertView.findViewById(R.id.gender);
             viewHolder.edit = convertView.findViewById(R.id.edit);
+            viewHolder.progress = convertView.findViewById(R.id.num);
+            viewHolder.progressBar = convertView.findViewById(R.id.progressBar2);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -69,6 +74,8 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         viewHolder.name.setText(childArr.get(position).getName());
         viewHolder.birthday.setText(birthday[position]);
         viewHolder.gender.setText(childArr.get(position).getGender());
+        viewHolder.progress.setText( String.valueOf(progress[position]));
+        viewHolder.progressBar.setProgress((int) progress[position]);
         viewHolder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,6 +91,8 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         TextView birthday;
         TextView gender;
         Button edit;
+        TextView progress;
+        ProgressBar progressBar;
     }
 }
 

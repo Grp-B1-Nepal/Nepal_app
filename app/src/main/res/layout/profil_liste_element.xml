@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@id/name"
         android:layout_marginTop="105dp"
-        android:max="100"
+        android:max="1000"
         android:progress="70"
         android:progressBackgroundTint="#0C0201"
         android:progressTint="@color/colorPrimary"

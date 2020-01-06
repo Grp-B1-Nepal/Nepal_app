@@ -23,6 +23,7 @@ public class ProfileFragment extends Fragment {
     private String[] birthday;
     private FloatingActionButton add;
     private ChildInfo childInfo;
+    private long[] progress;
 
 
     private ArrayList<ChildObj> childArr = new ArrayList<>();
@@ -39,9 +40,10 @@ public class ProfileFragment extends Fragment {
         add = view.findViewById(R.id.floatingActionButton4);
         list = view.findViewById(R.id.list);
         getBirthday();
+        progress();
 
         if(birthday.length != 0 && childArr.size() != 0) {
-            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday);
+            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday, progress);
             list.setAdapter(adaptor);
         }
 
@@ -66,5 +68,18 @@ public class ProfileFragment extends Fragment {
             date3 = date1 + " " + date2;
             birthday[i] = date3;
         }
+    }
+
+
+    private void progress(){
+        progress = new long[childArr.size()];
+        long a = System.currentTimeMillis();
+        for (int i = 0; i <childArr.size() ; i++) {
+            long b = childArr.get(i).getBirthday();
+            progress[i] = a - b;
+            progress[i] = progress[i]/(1000*60*60*24);
+        }
+
+
     }
 }

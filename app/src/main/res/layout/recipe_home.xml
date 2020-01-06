@@ -24,7 +24,6 @@
         android:id="@+id/searching_glass"
         android:layout_width="46dp"
         android:layout_height="46dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="1dp"
         android:contentDescription="@string/todo"
@@ -35,12 +34,17 @@
         app:layout_constraintTop_toBottomOf="@+id/recipe_choose_today" />
 
     <Button
-        android:id="@+id/recipe_choose_all"
-        android:layout_width="93dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:text="all"
-        app:layout_constraintStart_toEndOf="@+id/recipe_choose_favorites"
+        android:id="@+id/recipe_choose_favorites"
+        android:layout_width="112dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorPrimary"
+        android:text="favorites"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/recipe_choose_all"
+        app:layout_constraintStart_toEndOf="@+id/recipe_choose_today"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -48,17 +52,24 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="82dp"
         android:layout_height="51dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
         android:text="today"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/recipe_choose_favorites"
-        android:layout_width="112dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="12dp"
-        android:text="favorites"
-        app:layout_constraintStart_toEndOf="@+id/recipe_choose_today"
+        android:id="@+id/recipe_choose_all"
+        android:layout_width="93dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorPrimary"
+        android:text="all"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView

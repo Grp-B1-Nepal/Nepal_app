@@ -1391,7 +1391,6 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
-drawable banana
 drawable black_button_boarder
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -1402,12 +1401,9 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_shape
-drawable cake
-drawable chicken_tikka_masala
 drawable child_picture
 drawable child_picture_small
 drawable children_on_ball
-drawable dal
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1475,6 +1471,10 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable person_add_icon
 drawable placeholder
+drawable recipehome_bananas
+drawable recipehome_cake
+drawable recipehome_chicken
+drawable recipehome_dal
 drawable rectangle
 drawable rectangle1
 drawable selectimageicon
@@ -1672,7 +1672,6 @@ id layoutListItemImage
 id left
 id line1
 id line3
-id linearLayout
 id list
 id listMode
 id list_item
@@ -1751,13 +1750,6 @@ id recipeTitleText
 id recipe_choose_all
 id recipe_choose_favorites
 id recipe_choose_today
-id recipe_cook_time
-id recipe_date
-id recipe_description
-id recipe_goto
-id recipe_image
-id recipe_name
-id recipe_num
 id recipesButton
 id recyclerv_view
 id right
@@ -1849,7 +1841,6 @@ id textinput_helper_text
 id textinput_prefix_text
 id textinput_suffix_text
 id time
-id time_img
 id title
 id titleDividerNoCustom
 id title_template
@@ -1958,7 +1949,6 @@ layout fragment_add_child
 layout fragment_home
 layout fragment_profile
 layout fragment_progress
-layout fragment_recipe_selectable
 layout homepage_layout
 layout layout_listitem
 layout mtrl_alert_dialog

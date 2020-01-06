@@ -7,6 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5200e684-5c38-4540-bfad-0e73086ac2d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/recipehome_bananas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/recipehome_cake.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/recipehome_chicken.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/recipehome_dal.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
@@ -16,7 +20,15 @@
       <change beforePath="$PROJECT_DIR$/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Recipes/RecipeHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Recipes/RecipeHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/banana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/cake.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/chicken_tikka_masala.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/dal.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_recipe_selectable.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/recipe_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/recipe_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/recipe_listhelper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/recipe_listhelper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,20 +59,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="668">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="85" column="27" lean-forward="true" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
+            <state relative-caret-position="992">
+              <caret line="80" column="41" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -68,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            <state relative-caret-position="366">
+              <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
@@ -132,8 +144,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/child/ProfileFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" />
       </list>
     </option>
   </component>
@@ -361,8 +373,8 @@
       <window_info anchor="bottom" id="Run" order="0" weight="0.32920924" />
       <window_info anchor="bottom" id="Logcat" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.32920924" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.3259817" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32920924" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.3259817" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.26358256" />
@@ -384,12 +396,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java</url>
           <line>72</line>
@@ -606,25 +612,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml">
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-29/android/view/ViewRootImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="590">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <caret line="2422" selection-start-line="2422" selection-end-line="2422" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="85" column="27" lean-forward="true" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
+        <state relative-caret-position="668">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="992">
+          <caret line="80" column="41" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
         </state>
       </provider>
     </entry>

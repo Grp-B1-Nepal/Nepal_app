@@ -13,17 +13,11 @@ import com.example.nepal_app.R;
 import com.example.nepal_app.Logic.Adaptor.RecipeAdapter;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class RecipeHome extends Fragment implements RecipeAdapter.OnNoteListener {
-    private String mParam1;
-    private String mParam2;
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
     View rod;
 
-    //TODO searchbar functionality
-    //TODO Top buttons (All, favorite, Today) functionality
-    //TODO make into a fragment
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -51,13 +45,11 @@ public class RecipeHome extends Fragment implements RecipeAdapter.OnNoteListener
         initRecyclerView();
     }
 
+    HashSet<Integer> opened = new HashSet<>();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
 
     }
 
@@ -76,13 +68,10 @@ public class RecipeHome extends Fragment implements RecipeAdapter.OnNoteListener
         void onNoteClick(int position);
     }
 
-
-
     private void initRecyclerView() {
 
         recyclerView = rod.findViewById(R.id.rcvrecipes);
         rcAdapter = new RecipeAdapter(imageViews, recipeNames, onNoteListener);
-
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(rcAdapter);

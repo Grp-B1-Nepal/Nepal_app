@@ -25,26 +25,25 @@
 17-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:9:9-54
 18        android:supportsRtl="true"
 18-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:10:9-35
-19        android:testOnly="true"
-20        android:theme="@style/AppTheme" >
-20-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:11:9-40
-21        <activity
-21-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:12:9-20:20
-22            android:name="com.example.nepal_app.MainActivity"
-22-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:13:13-41
-23            android:screenOrientation="portrait" >
-23-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:14:13-49
-24            <intent-filter>
-24-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:15:13-19:29
-25                <action android:name="android.intent.action.MAIN" />
-25-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:16:17-69
-25-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:16:25-66
-26
-27                <category android:name="android.intent.category.LAUNCHER" />
-27-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:18:17-77
-27-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:18:27-74
-28            </intent-filter>
-29        </activity>
-30    </application>
-31
-32</manifest>
+19        android:theme="@style/AppTheme" >
+19-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:11:9-40
+20        <activity
+20-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:12:9-20:20
+21            android:name="com.example.nepal_app.MainActivity"
+21-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:13:13-41
+22            android:screenOrientation="portrait" >
+22-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:14:13-49
+23            <intent-filter>
+23-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:15:13-19:29
+24                <action android:name="android.intent.action.MAIN" />
+24-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:16:17-69
+24-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:16:25-66
+25
+26                <category android:name="android.intent.category.LAUNCHER" />
+26-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:18:17-77
+26-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:18:27-74
+27            </intent-filter>
+28        </activity>
+29    </application>
+30
+31</manifest>

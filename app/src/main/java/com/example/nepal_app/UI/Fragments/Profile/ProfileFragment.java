@@ -21,7 +21,7 @@ import java.util.Calendar;
 public class ProfileFragment extends Fragment {
     private ListView list;
     private String[] birthday;
-    private FloatingActionButton add;
+    private FloatingActionButton addChildButton;
     private ChildInfo childInfo;
     private long[] progress;
 
@@ -34,20 +34,24 @@ public class ProfileFragment extends Fragment {
 
         childInfo = ChildInfo.getInstance();
 
+        //Gets the childArr from the singleton class
         childArr = childInfo.getChildArr(getContext());
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        add = view.findViewById(R.id.floatingActionButton4);
+        addChildButton = view.findViewById(R.id.floatingActionButton4);
         list = view.findViewById(R.id.list);
         getBirthday();
         progress();
 
+        //Checks if there is data in the list before setting the adaptor.
         if(birthday.length != 0 && childArr.size() != 0) {
             Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday, progress);
             list.setAdapter(adaptor);
         }
 
-        add.setOnClickListener((test) -> {
+
+        //OnClickListner for the editor button
+        addChildButton.setOnClickListener((something) -> {
             getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();
 
         });
@@ -55,7 +59,9 @@ public class ProfileFragment extends Fragment {
         return view;
     }
 
-    //TODO fix the apdapter
+    /**
+     * Sets the birthday to the correct format to in the string[] birthday
+     */
     private void getBirthday() {
         Calendar calendar = Calendar.getInstance();
         birthday = new String[childArr.size()];
@@ -70,7 +76,9 @@ public class ProfileFragment extends Fragment {
         }
     }
 
-
+    /**
+     * Calculate the age of the child
+     */
     private void progress(){
         progress = new long[childArr.size()];
         long a = System.currentTimeMillis();

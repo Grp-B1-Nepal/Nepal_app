@@ -72,19 +72,19 @@ public class EditChild extends Fragment implements View.OnClickListener {
         buttonBack.setOnClickListener(this);
         buttonSave.setOnClickListener(this);
 
-
         image = view2.findViewById(R.id.downloaded_picture);
         image.setVisibility(View.VISIBLE);
-        arr = childInfo.getChildArr(getContext());
+
 
         arr = childInfo.getChildArr(getContext());
+        //Gets the objects from the ChillObj in the arr
         oldName = arr.get(position).getName();
         name = arr.get(position).getName();
         gender = arr.get(position).getGender();
         birthday = getBirthday(position);
         newBirthday = arr.get(position).getBirthday();
 
-
+        //Sets up known info
         image.setImageBitmap(childInfo.getBitmap(getContext(),name));
         editName.setText(name);
         buttonBirthday.setText(birthday);
@@ -128,7 +128,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
         } else if (buttonDelete.equals(v)) {
-            childInfo.deleteChild(position, getContext());
+            childInfo.deleteChildImage(position, getContext());
             arr.remove(position);
             childInfo.setChildArr(arr, getContext());
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
@@ -150,6 +150,13 @@ public class EditChild extends Fragment implements View.OnClickListener {
         datePickerDialog.show();
     }
 
+    /**
+     * Method implemented from datePickerDialog
+     * @param view
+     * @param year
+     * @param month
+     * @param day
+     */
     private void onDateSet(DatePicker view, int year, int month, int day) {
         Calendar c = Calendar.getInstance();
         c.set(year,month,day);
@@ -158,6 +165,11 @@ public class EditChild extends Fragment implements View.OnClickListener {
         arr.get(position).setBirthday(newBirthday);
     }
 
+    /**
+     * Getter for the birthday
+     * @param index For the child array
+     * @return
+     */
     private String getBirthday(int index) {
         Calendar calendar = Calendar.getInstance();
         String date1, date2, date3;
@@ -168,6 +180,12 @@ public class EditChild extends Fragment implements View.OnClickListener {
             return date3;
     }
 
+    /**
+     * Getting result inform of picture from the camera roll
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         try {
 

@@ -47,19 +47,19 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     private ChildInfo childInfo;
     private ConstraintLayout picture;
     private Bitmap bitmap;
-    private String currentName;
 
 
-
-
+    /**
+     * Required empty constructor
+     */
     public Fragment_addChild() {
-        // Required empty public constructor
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
         save = view2.findViewById(R.id.save_button);
         picture = view2.findViewById(R.id.picture);
@@ -93,6 +93,12 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         return view2;
     }
 
+    /**
+     * Getting result inform of picture from the camera roll
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         try {
 
@@ -131,7 +137,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                     Toast.makeText(getContext(),"Select a gender",Toast.LENGTH_LONG).show();
                 }
             } else {
-                currentName = String.valueOf(name.getText());
                 childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem())));
                 childInfo.setBitmap(bitmap,String.valueOf(name.getText()),getContext());
                 childInfo.setChildArr(childArr,getContext());

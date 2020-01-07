@@ -16,46 +16,92 @@ public class ChildInfo {
     private ChildInfo() {
     }
 
-
+    //Creates instance for singleton
     public static ChildInfo getInstance() {
         return ourInstance;
     }
 
-
+    /**
+     *Setter for the childarr arraylist
+     * @param arr is the array
+     * @param context
+     */
     public void setChildArr(ArrayList<ChildObj> arr, Context context) {
 
         cacheSaving.saveChild(context, arr);
     }
 
+    /**
+     * Getter for the Childarr arraylist
+     * @param context
+     * @return the arraylist
+     */
     public ArrayList<ChildObj> getChildArr(Context context) {
         childArr.clear();
         childArr = cacheSaving.loadChild(context);
         return childArr;
     }
 
+    /**
+     * Getter for the Bitmap
+     * @param context
+     * @param name name of the child
+     * @return The Bitmap for the given Child
+     */
     public Bitmap getBitmap(Context context, String name){
 
         return cacheSaving.loadImage(context,name);
     }
 
+    /**
+     * Setter for the Bitmap
+     * @param bitmaps
+     * @param name Name of the child
+     * @param context
+     */
     public void setBitmap(Bitmap bitmaps,String name, Context context){
         this.bitmap = bitmaps;
         cacheSaving.saveImage(context,name, bitmap);
 
     }
 
-    public void deleteChild(int position, Context context){
+    /**
+     * Deletes the child
+     * @param position Postion where the child is saved
+     * @param context
+     */
+    public void deleteChildImage(int position, Context context){
         cacheSaving.deleteImage(childArr.get(position).getName(), context);
 
     }
 
+    /**
+     * Switching picture from old name to new name
+     * @param context
+     * @param oldName Current name of the child
+     * @param newName New name of the child
+     */
     public void newNameImage(Context context, String oldName, String newName){
      cacheSaving.saveImageNewName(context,oldName,newName, bitmap);
     }
 
+    /**
+     * Getter for the position to the ChildArr arraylist
+     * @return the position
+     */
     public int getPosition(){return position;}
+
+    /**
+     * Setter for position
+     * @param position
+     */
     public void setPosition(int position) {this.position = position;}
 
+    /**
+     * Switch that returns the string of a month
+     * @param intMonth
+     * @return
+     */
     public String monthText(int intMonth){
         String month = null;
 

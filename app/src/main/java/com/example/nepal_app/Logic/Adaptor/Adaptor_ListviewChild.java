@@ -74,7 +74,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         viewHolder.name.setText(childArr.get(position).getName());
         viewHolder.birthday.setText(birthday[position]);
         viewHolder.gender.setText(childArr.get(position).getGender());
-        viewHolder.progress.setText( String.valueOf(progress[position]));
+        viewHolder.progress.setText( String.valueOf(progress[position]) + " days old");
         viewHolder.progressBar.setProgress((int) progress[position]);
         viewHolder.edit.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -82,7 +82,7 @@ public class ChildInfo {
      * @param newName New name of the child
      */
     public void newNameImage(Context context, String oldName, String newName){
-     cacheSaving.saveImageNewName(context,oldName,newName, bitmap);
+     cacheSaving.saveImageNewName(context,oldName,newName);
     }
 
     /**

@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class CacheSaving {
     private static final CacheSaving ourInstance = new CacheSaving();
     private ArrayList<ChildObj> childArr = new ArrayList<>();
+    private Bitmap bitmap;
 
     private CacheSaving(){
 
@@ -34,6 +35,11 @@ public class CacheSaving {
         editor.apply();
     }
 
+    /**
+     * Deletes image for the given name
+     * @param name parameter for the person we want to delete
+     * @param context
+     */
     public void deleteImage(String name, Context context) {
 
         SharedPreferences sharedPreferences = context.getSharedPreferences("Image", Context.MODE_PRIVATE);
@@ -41,15 +47,26 @@ public class CacheSaving {
         editor.remove(name).apply();
     }
 
-    public void saveImageNewName(Context context, String oldName, String newName, Bitmap bitmap){
+    /**
+     *Saves the bitmap in a new name
+     * @param context
+     * @param oldName
+     * @param newName
+     */
+    public void saveImageNewName(Context context, String oldName, String newName){
 
         bitmap = loadImage(context, oldName);
-
         deleteImage(oldName, context);
-
         saveImage(context,newName, bitmap);
     }
 
+
+    /**
+     * Saves the bitmap in sharedPreferences
+     * @param context
+     * @param name
+     * @param bitmap
+     */
     public void saveImage(Context context, String name, Bitmap bitmap){
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -65,6 +82,12 @@ public class CacheSaving {
         editor.apply();
     }
 
+    /**
+     * Loads the pictures from the sharedPreferences
+     * @param context
+     * @param name
+     * @return the bitmap
+     */
     public Bitmap loadImage(Context context, String name){
         Bitmap bitmap = null;
         SharedPreferences settings = context.getSharedPreferences("Image", Context.MODE_PRIVATE);
@@ -77,7 +100,11 @@ public class CacheSaving {
         return bitmap;
     }
 
-
+    /**
+     * Loads the child arraylist from the sharedPreferences
+     * @param context
+     * @return the arraylist
+     */
     public ArrayList<ChildObj> loadChild(Context context) {
         SharedPreferences sharedPreferences =  context.getSharedPreferences("Children", Context.MODE_PRIVATE);;
         Gson gson = new Gson();

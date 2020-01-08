@@ -22,18 +22,15 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
 
     int speakerimage;
     ArrayList<String> informationtext;
-    private OnNoteListener mOnNoteListener;
-    private static OnClickListener mOnClickListener;
     public MediaPlayer mediaPlayer= new MediaPlayer();
     public ArrayList<Integer> sounds;
     private Context mcontext;
 
 
-    public ActivityAdapter(int speakerimage, ArrayList<String> informationtext, OnNoteListener onNoteListener, ArrayList<Integer> sounds) {
-
+    public ActivityAdapter(int speakerimage, ArrayList<String> informationtext, ArrayList<Integer> sounds) {
+//This information is passed on by the overlaying fragment containing the recycler view.
         this.speakerimage = speakerimage;
         this.informationtext = informationtext;
-        this.mOnNoteListener = onNoteListener;
         this.sounds = sounds;
 
     }
@@ -43,7 +40,8 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item, parent, false);
-        ViewHolder vh = new ViewHolder(view, mOnNoteListener);
+        ViewHolder vh = new ViewHolder(view);
+        //Context is needed by the media player a couple of methods down.
         mcontext = parent.getContext();
 
         return vh;
@@ -53,7 +51,9 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         holder.layout_speakerimage.setImageResource(speakerimage);
-        //texts
+        //The image ressource is passed on by the activity, such that we know what image it is. This can probably be found in a different way tho.
+        //Got confused because i couldn't find any nice way to do it.
+        //TODO improve the above line.
 
         holder.layout_informationtext.setText(informationtext.get(position));
 
@@ -68,25 +68,21 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
 
         public ImageView layout_speakerimage;
         public TextView layout_informationtext;
-        OnNoteListener onNoteListener;
 
 
-        public ViewHolder(View itemView, OnNoteListener OnNoteListner) {
+        public ViewHolder(View itemView) {
             super(itemView);
             layout_speakerimage = itemView.findViewById(R.id.activityitem_imgview);
             layout_informationtext = itemView.findViewById(R.id.activityitem_txtview);
 
-            this.onNoteListener = mOnNoteListener;
             layout_speakerimage.setOnClickListener(this);
-
 
         }
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(v.getContext(), "position = " + getLayoutPosition(), Toast.LENGTH_SHORT).show();
             if (getLayoutPosition() == 0 ) {
-
+                //TODO when more sound files are added it has to pick between them. Right now it's also only the speaker talking.
                 mediaPlayer = MediaPlayer.create(mcontext, sounds.get(0));
                 mediaPlayer.start();
                 mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -97,11 +93,6 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
                 });
             }
         }
-    }
-
-    public interface OnNoteListener{
-        void onNoteClick(int position);
-
     }
 }
 

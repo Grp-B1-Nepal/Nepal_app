@@ -2,20 +2,19 @@ package com.example.nepal_app.Fragments.Activities;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.nepal_app.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -31,18 +30,16 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private TextView txtSinging, txtTalking, txtTummy_Time, txtCuddling_Time, txtPlay_Time, txtReading;
     private ImageView Singing, Talking, Tummy_Time, Cuddling_Time, Play_Time, Reading, SoundSinging, SoundTalking, SoundTummy_Time, SoundCuddling_Time, SoundPlay_Time, SoundReading;
     private View rod;
     private Button months04, months58, months912;
     private int agerange = 1;
 
 
-
-
     public ActivitiesFragment() {
         // Required empty public constructor
     }
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -60,6 +57,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +66,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -123,87 +122,20 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
         }
         return rod;
     }
-//TODO do something about the sound list, find out what the good way to go about it is. Can i save multiple raw files in an array?
+
+    //TODO do something about the sound list, find out what the good way to go about it is. Can i save multiple raw files in an array?
     @Override
     public void onClick(View v) {
 
         if (v == Singing || v == Talking || v == Tummy_Time || v == Cuddling_Time || v == Play_Time || v == Reading) {
             //There are two different things supposed to be done on click and both the different types are image views, therefore this huge if statement.
-            int listnum = 0;
             int imagenum = R.drawable.mother_reading;
-            ArrayList<Integer> soundlist = new ArrayList<>();
-            if (v == Singing) {
-                //imagenum = R.drawable.mother_Singing; here there is supposed to be added a picture, but the picture isnt added yet.
-                if (agerange == 1) {
-                    listnum = R.array.activities_information_Singing_category1;
-                } else if (agerange == 2) {
-                    listnum = R.array.activities_information_Singing_category2;
-                } else if (agerange == 3) {
-                    listnum = R.array.activities_information_Singing_category3;
-                }
 
 
-            } else if (v == Talking) {
-                //imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
-                if (agerange == 1) {
-                    listnum = R.array.activities_information_Talking_category1;
-                } else if (agerange == 2) {
-                    listnum = R.array.activities_information_Talking_category2;
-                } else if (agerange == 3) {
-                    listnum = R.array.activities_information_Talking_category3;
-                }
+//For now the soundlist is just a sample. This has to be different based on agerange and the button clicked, when sound files are generated.
 
 
-            } else if (v == Tummy_Time) {
-//imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
-                if (agerange == 1) {
-                    listnum = R.array.activities_information_TummyTime_category1;
-                } else if (agerange == 2) {
-                    listnum = R.array.activities_information_TummyTime_category2;
-                } else if (agerange == 3) {
-                    listnum = R.array.activities_information_TummyTime_category3;
-                }
-
-
-            } else if (v == Cuddling_Time) {
-//imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
-                if (agerange == 1) {
-                    listnum = R.array.activities_information_CuddlingTime_category1;
-                } else if (agerange == 2) {
-                    listnum = R.array.activities_information_CuddlingTime_category2;
-                } else if (agerange == 3) {
-                    listnum = R.array.activities_information_CuddlingTime_category3;
-                }
-
-
-            } else if (v == Play_Time) {
-//imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
-                if (agerange == 1) {
-                    listnum = R.array.activities_information_PlayTimecategory1;
-                } else if (agerange == 2) {
-                    listnum = R.array.activities_information_PlayTimecategory2;
-                } else if (agerange == 3) {
-                    listnum = R.array.activities_information_PlayTimecategory3;
-                }
-
-
-            } else if (v == Reading) {
-                //imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
-                if (agerange == 1) {
-                    listnum = R.array.activities_information_Readingcategory1;
-                } else if (agerange == 2) {
-                    listnum = R.array.activities_information_Readingcategory2;
-                } else if (agerange == 3) {
-                    listnum = R.array.activities_information_Readingcategory3;
-                }
-            }
-
-            soundlist.add(R.raw.activitiestts);
-            soundlist.add(R.raw.activitiestts);
-            soundlist.add(R.raw.activitiestts);
-            soundlist.add(R.raw.activitiestts);
-
-            Fragment information_fragment = new fragment_activity_information(listnum, soundlist, imagenum);
+            Fragment information_fragment = new fragment_activity_information(onclickactivity(v));
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.container, information_fragment);
             transaction.addToBackStack(null);
@@ -211,23 +143,183 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
 
         } else if (v == SoundCuddling_Time || v == SoundPlay_Time || v == SoundReading || v == SoundSinging || v == SoundTalking || v == SoundTummy_Time) {
-
+//TODO add some sound files
         } else if (v == months04 || v == months58 || v == months912) {
-
+            //Resets the color of all the buttons before it paints the background on one of them.
             months04.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
             months58.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
-                months912.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
+            months912.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
 
-          if (v == months04) {
-            agerange = 1;
-            v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-        } else if (v == months58) {
-            agerange = 2;
-            v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-        } else if (v == months912) {
-            agerange = 3;
-            v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            //Paints the background and changes the informationnum range number. The number is passed on to the next fragment such that it knows what information it should get.
+            if (v == months04) {
+                agerange = 1;
+                v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            } else if (v == months58) {
+                agerange = 2;
+                v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            } else if (v == months912) {
+                agerange = 3;
+                v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            }
         }
+    }
+
+    /**
+     * In the future this should also return the list of sounds.
+     *
+     * @param v
+     * @return
+     */
+    public ActivityPOJO onclickactivity(View v) {
+
+        ArrayList<Integer> arraylist = new ArrayList<>();
+
+        ActivityPOJO activityPOJO = new ActivityPOJO(" ", 0 ,arraylist, 0);
+        activityPOJO.setImagenum(R.drawable.mother_reading);
+
+        ArrayList<Integer> soundlist = new ArrayList<>();
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.activitiestts);
+
+        //TODO find sound clips.
+        if (v == Singing) {
+            //activityPOJO.setImagenum(R.drawable.mother_reading); here there is supposed to be added a picture, but the picture isnt added yet.
+            activityPOJO.setHeadlinetext("Singing for your child and it's benefits");
+
+            if (agerange == 1) {
+                activityPOJO.setInformationnum(R.array.activities_information_Singing_category1);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 2) {
+                activityPOJO.setInformationnum(R.array.activities_information_Singing_category2);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 3) {
+                activityPOJO.setInformationnum(R.array.activities_information_Singing_category3);
+                activityPOJO.setSoundnumberlist(soundlist);
+            }
+
+
+        } else if (v == Talking) {
+            //imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
+            activityPOJO.setHeadlinetext("Talking to your child and it's benefits");
+
+            if (agerange == 1) {
+                activityPOJO.setInformationnum(R.array.activities_information_Talking_category1);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 2) {
+                activityPOJO.setInformationnum(R.array.activities_information_Talking_category2);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 3) {
+                activityPOJO.setInformationnum(R.array.activities_information_Talking_category3);
+                activityPOJO.setSoundnumberlist(soundlist);
+            }
+
+
+        } else if (v == Tummy_Time) {
+//imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
+            activityPOJO.setHeadlinetext("How a little tummy time develops your childs abilities.");
+
+
+            if (agerange == 1) {
+                activityPOJO.setInformationnum(R.array.activities_information_TummyTime_category1);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 2) {
+                activityPOJO.setInformationnum(R.array.activities_information_TummyTime_category2);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 3) {
+                activityPOJO.setInformationnum(R.array.activities_information_TummyTime_category3);
+                activityPOJO.setSoundnumberlist(soundlist);
+            }
+
+
+        } else if (v == Cuddling_Time) {
+//imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
+            activityPOJO.setHeadlinetext("Cuddling increases the bond between the mother and the baby.");
+
+            if (agerange == 1) {
+                activityPOJO.setInformationnum(R.array.activities_information_CuddlingTime_category1);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 2) {
+                activityPOJO.setInformationnum(R.array.activities_information_CuddlingTime_category2);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 3) {
+                activityPOJO.setInformationnum(R.array.activities_information_CuddlingTime_category3);
+                activityPOJO.setSoundnumberlist(soundlist);
+            }
+
+
+        } else if (v == Play_Time) {
+//imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
+            activityPOJO.setHeadlinetext("Play time to increase your childs awareness");
+
+            if (agerange == 1) {
+                activityPOJO.setInformationnum(R.array.activities_information_PlayTimecategory1);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 2) {
+                activityPOJO.setInformationnum(R.array.activities_information_PlayTimecategory2);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 3) {
+                activityPOJO.setInformationnum(R.array.activities_information_PlayTimecategory3);
+                activityPOJO.setSoundnumberlist(soundlist);
+            }
+
+
+        } else if (v == Reading) {
+            //imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
+            activityPOJO.setHeadlinetext("Reading for your child to improve it's reading abilities");
+
+            if (agerange == 1) {
+                activityPOJO.setInformationnum(R.array.activities_information_Readingcategory1);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 2) {
+                activityPOJO.setInformationnum(R.array.activities_information_Readingcategory2);
+                activityPOJO.setSoundnumberlist(soundlist);
+            } else if (agerange == 3) {
+                activityPOJO.setInformationnum(R.array.activities_information_Readingcategory3);
+                activityPOJO.setSoundnumberlist(soundlist);
+            }
         }
+        return activityPOJO;
+    }
+
+    // POGO for grouping multiple fields
+    final class ActivityPOJO {
+        public String headlinetext;
+        public int informationnum;
+        public ArrayList<Integer> soundnumberlist;
+        public int imagenum;
+
+        public ActivityPOJO(String headlinetext, int informationnum, ArrayList<Integer> soundnumberlist, int imagenum) {
+            this.headlinetext = headlinetext;
+            this.informationnum = informationnum;
+            this.soundnumberlist = soundnumberlist;
+            this.imagenum = imagenum;
         }
-        }
+
+        public ArrayList<Integer> getSoundnumberlist() { return soundnumberlist; }
+
+        public int getImagenum() { return imagenum; }
+
+        public int getInformationnum() { return informationnum; }
+
+        public String getHeadlinetext() { return headlinetext; }
+
+        public void setHeadlinetext(String headlinetext) { this.headlinetext = headlinetext; }
+
+        public void setInformationnum(int informationnum) { this.informationnum = informationnum; }
+
+        public void setSoundnumberlist(ArrayList<Integer> soundnumberlist) { this.soundnumberlist = soundnumberlist; }
+
+        public void setImagenum(int imagenum) { this.imagenum = imagenum; }
+    }
+}

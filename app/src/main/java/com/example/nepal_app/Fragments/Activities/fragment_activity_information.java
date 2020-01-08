@@ -1,5 +1,6 @@
 package com.example.nepal_app.Fragments.Activities;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -25,23 +26,24 @@ public class fragment_activity_information extends Fragment {
 
     private View rod;
     private ImageView topimage;
-    private TextView textView;
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter rcAdapter;
+    private TextView headlinetxt;
 
     private int imageView;
     private int listnum;
     private int imagenum;
+    private String headlinestring;
     private ArrayList<Integer> soundfiles = new ArrayList<>();
 
-    private RecipeHome.OnNoteListener onNoteListener;
+    public fragment_activity_information(ActivitiesFragment.ActivityPOJO activityPOJO)  {
+        this.listnum = activityPOJO.getInformationnum();
+        this.soundfiles = activityPOJO.getSoundnumberlist();
+        this.imagenum = activityPOJO.getImagenum();
+        this.headlinestring = activityPOJO.getHeadlinetext();
 
-    public fragment_activity_information(int listnum, ArrayList<Integer> soundfiles, int imagenum)  {
-        this.listnum = listnum;
-        this.soundfiles = soundfiles;
-        this.imagenum = imagenum;
     }
 
     @Override
@@ -52,8 +54,13 @@ public class fragment_activity_information extends Fragment {
 
         recyclerView = rod.findViewById(R.id.fragment_acitivityinformation_recyclerview);
         topimage = rod.findViewById(R.id.fragment_activity_informationfragment_picture);
+        headlinetxt = rod.findViewById(R.id.activity_information_headline);
+        headlinetxt.setText(headlinestring);
+
+        topimage.setImageResource(imagenum);
 
         initRecyclerView();
+        recyclerView.setNestedScrollingEnabled(false);
 
         return rod;
     }
@@ -65,9 +72,14 @@ public class fragment_activity_information extends Fragment {
 
         ArrayList<String> stringlist = new ArrayList<>();
         Collections.addAll(stringlist, getActivity().getResources().getStringArray(listnum));
-        rcAdapter = new ActivityAdapter(imageView, stringlist, (ActivityAdapter.OnNoteListener) onNoteListener, soundfiles);
-
+        rcAdapter = new ActivityAdapter(imageView, stringlist, soundfiles);
+        //layoutManager = new CustomGridLayoutManager(getActivity());
         layoutManager = new LinearLayoutManager(getActivity());
+       //     @Override
+         //   public boolean canScrollVertically() {
+           //     return false;
+           // }
+        //};
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(rcAdapter);
 

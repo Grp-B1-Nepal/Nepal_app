@@ -1,7 +1,5 @@
 package com.example.nepal_app.Logic;
 
-
-
 public class ChildObj{
 
     private String name;

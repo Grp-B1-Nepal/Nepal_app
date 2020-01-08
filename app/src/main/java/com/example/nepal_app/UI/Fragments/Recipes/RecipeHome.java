@@ -1,6 +1,7 @@
 package com.example.nepal_app.UI.Fragments.Recipes;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,8 +22,6 @@ import java.util.List;
 
 public class RecipeHome extends Fragment {
 
-    View rootView;
-    RecyclerView recyclerView;
     List<RecipeForHome> recipeList;
     List<String> categoryList;
     Button btnViewRecipe, btnFavorite;
@@ -44,19 +43,28 @@ public class RecipeHome extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.recipe_home_tester_rv, container, false);
         fillLists();
-        initRecyclerView();
-        return rootView;
+        final View v = inflater.inflate(R.layout.recipe_home_tester_rv, container, false);
+        final FragmentActivity c = getActivity();
+        final RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recipeRecView);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(c);
+        recyclerView.setLayoutManager(layoutManager);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                final RecipeHomeAdapter adapter = new RecipeHomeAdapter(recipeList, categoryList);
+                c.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        recyclerView.setAdapter(adapter);
+                    }
+                });
+            }
+        }).start();
+
+        return v;
 
     }
 
-    public void initRecyclerView() {
-
-
-        RecipeHomeAdapter recipeAdapter = new RecipeHomeAdapter(recipeList, categoryList);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(recipeAdapter);
-    }
 
 }

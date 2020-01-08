@@ -8,83 +8,49 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.example.nepal_app.Logic.Adaptor.RecipeHomeAdapter;
+import com.example.nepal_app.Logic.RecipeForHome;
 import com.example.nepal_app.R;
 import com.example.nepal_app.Logic.Adaptor.RecipeAdapter;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
-public class RecipeHome extends Fragment implements RecipeAdapter.OnNoteListener {
-    View rod;
+public class RecipeHome extends Fragment {
 
-
-    private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView.Adapter rcAdapter;
-
-    private ArrayList<Integer> imageViews = new ArrayList<>();
-    private ArrayList<String> recipeNames = new ArrayList<>();
-
-    private OnNoteListener onNoteListener;
-
-    public RecipeHome() {
-        //empty constructor
-    }
+    View rootView;
+    RecyclerView recyclerView;
+    List<RecipeForHome> recipeList;
+    Button btnViewRecipe, btnFavorite;
 
     public void fillLists() {
-        imageViews.add(R.drawable.recipehome_bananas);
-        imageViews.add(R.drawable.recipehome_cake);
-        imageViews.add(R.drawable.recipehome_dal);
-        imageViews.add(R.drawable.recipehome_chicken);
-
-        recipeNames.add("Banana");
-        recipeNames.add("Cake");
-        recipeNames.add("Dal");
-        recipeNames.add("Chicken");
-        initRecyclerView();
+        recipeList = new ArrayList<>();
+        recipeList.add(new RecipeForHome("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
+        recipeList.add(new RecipeForHome("Cake", R.drawable.recipehome_cake, btnViewRecipe, btnFavorite));
+        recipeList.add(new RecipeForHome("Dal", R.drawable.recipehome_dal, btnViewRecipe, btnFavorite));
+        recipeList.add(new RecipeForHome("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
     }
-
-    HashSet<Integer> opened = new HashSet<>();
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
-        rod = inflater.inflate(R.layout.recipe_home, container, false);
-
+        rootView = inflater.inflate(R.layout.recipe_home_tester, container, false);
+        //recyclerView = getView().findViewById(R.id.recView);
         fillLists();
-        return rod;
+        initRecyclerView();
+        return rootView;
 
-    }
-
-    public interface OnNoteListener extends RecipeAdapter.OnNoteListener {
-        void onNoteClick(int position);
     }
 
     private void initRecyclerView() {
 
-        recyclerView = rod.findViewById(R.id.rcvrecipes);
-        rcAdapter = new RecipeAdapter(imageViews, recipeNames, onNoteListener);
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(rcAdapter);
+        recyclerView = rootView.findViewById(R.id.recView);
+        RecipeHomeAdapter recipeAdapter = new RecipeHomeAdapter(recipeList);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(recipeAdapter);
+    }
 
-    }
-//TODO FIX NOT WORKING
-    @Override
-    public void onNoteClick(int position) {
-        /*
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, new Recipe_fragment());
-        transaction.addToBackStack(null);
-        transaction.commit();
-         */
-    }
 }

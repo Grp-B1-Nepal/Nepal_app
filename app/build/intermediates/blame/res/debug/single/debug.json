@@ -16,12 +16,20 @@
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable_full_star_background.xml.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/drawable/full_star_background.xml"
+    },
+    {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/color_test_mtrl_calendar_day_selected.xml.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/color/test_mtrl_calendar_day_selected.xml"
     },
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable_mtrl_tabs_default_indicator.xml.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/drawable/mtrl_tabs_default_indicator.xml"
+    },
+    {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_full_star.png.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-xxxhdpi/full_star.png"
     },
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable_mtrl_dropdown_arrow.xml.flat",
@@ -324,6 +332,10 @@
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-hdpi_full_star.png.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-hdpi/full_star.png"
+    },
+    {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
@@ -466,6 +478,10 @@
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_full_star.xml.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-anydpi-v26/full_star.xml"
     },
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/animator_mtrl_extended_fab_show_motion_spec.xml.flat",
@@ -908,6 +924,14 @@
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/color/material_on_surface_disabled.xml"
     },
     {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_full_star_round.png.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-xxhdpi/full_star_round.png"
+    },
+    {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable_empty_star.xml.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/drawable/empty_star.xml"
+    },
+    {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/layout-land_mtrl_picker_header_dialog.xml.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/layout-land/mtrl_picker_header_dialog.xml"
     },
@@ -940,8 +964,16 @@
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/drawable/mtrl_ic_cancel.xml"
     },
     {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-mdpi_full_star.png.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-mdpi/full_star.png"
+    },
+    {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/color_mtrl_chip_background_color.xml.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/color/mtrl_chip_background_color.xml"
+    },
+    {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-hdpi_full_star_round.png.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-hdpi/full_star_round.png"
     },
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_progress.xml.flat",
@@ -1018,6 +1050,10 @@
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-xhdpi_full_star_round.png.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-xhdpi/full_star_round.png"
     },
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/layout_design_navigation_item_header.xml.flat",
@@ -1692,6 +1728,10 @@
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-xhdpi_full_star.png.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-xhdpi/full_star.png"
+    },
+    {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/color_mtrl_bottom_nav_ripple_color.xml.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/color/mtrl_bottom_nav_ripple_color.xml"
     },
@@ -1702,10 +1742,6 @@
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable_ic_launcher_foreground.xml.flat",
-        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/drawable/ic_launcher_foreground.xml"
     },
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
@@ -1786,6 +1822,10 @@
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_home.png.flat",
         "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/drawable-xhdpi/ic_home.png"
+    },
+    {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-mdpi_full_star_round.png.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-mdpi/full_star_round.png"
     },
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -2140,6 +2180,10 @@
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png"
     },
     {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_full_star_round.xml.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-anydpi-v26/full_star_round.xml"
+    },
+    {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
@@ -2380,10 +2424,6 @@
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/color/design_icon_tint.xml"
     },
     {
-        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
-    },
-    {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable_ic_keyboard_arrow_right_black_24dp.xml.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/drawable/ic_keyboard_arrow_right_black_24dp.xml"
     },
@@ -2484,6 +2524,10 @@
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable_full_star_foreground.xml.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/drawable/full_star_foreground.xml"
+    },
+    {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -2558,6 +2602,10 @@
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/anim-v21_mtrl_bottom_sheet_slide_in.xml.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/anim-v21/mtrl_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_full_star_round.png.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-xxxhdpi/full_star_round.png"
     },
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/layout_design_layout_tab_icon.xml.flat",
@@ -2782,5 +2830,9 @@
     {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-v23_abc_control_background_material.xml.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-v23/abc_control_background_material.xml"
+    },
+    {
+        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_full_star.png.flat",
+        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/mipmap-xxhdpi/full_star.png"
     }
 ]

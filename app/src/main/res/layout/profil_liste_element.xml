@@ -81,4 +81,14 @@
         android:layout_alignStart="@+id/birthday"
         android:text="girl" />
 
+    <ImageView
+        android:id="@+id/active"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="19dp"
+        app:srcCompat="@android:drawable/star_on" />
+
 </RelativeLayout>

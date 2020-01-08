@@ -7,7 +7,7 @@ public class ChildObj{
     private String name;
     private long birthday;
     private String gender;
-
+    private boolean active;
 
     /**
      *Constructor to Child object.
@@ -15,11 +15,11 @@ public class ChildObj{
      * @param birthday Birthday of the child
      * @param gender The gender of the child
      */
-    public ChildObj(String name, long birthday, String gender) {
+    public ChildObj(String name, long birthday, String gender, boolean active) {
         this.name = name;
         this.birthday = birthday;
         this.gender = gender;
-
+        this.active = active;
     }
 
     /**
@@ -43,6 +43,19 @@ public class ChildObj{
     public long getBirthday(){
         return birthday;
     }
+
+    /**
+     *Getter for if the child is in use
+     * @return
+     */
+    public boolean getActive(){return active;}
+
+    /**
+     * Setter for setting child in use
+     * @param active
+     */
+    public void setActive(boolean active) {this.active = active;}
+
 
     /**
      * Setter for the name of the child

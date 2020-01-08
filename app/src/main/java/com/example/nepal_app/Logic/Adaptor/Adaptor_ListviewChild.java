@@ -66,6 +66,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
             viewHolder.edit = convertView.findViewById(R.id.edit);
             viewHolder.progress = convertView.findViewById(R.id.num);
             viewHolder.progressBar = convertView.findViewById(R.id.progressBar2);
+            viewHolder.active = convertView.findViewById(R.id.active);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -74,8 +75,13 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         viewHolder.name.setText(childArr.get(position).getName());
         viewHolder.birthday.setText(birthday[position]);
         viewHolder.gender.setText(childArr.get(position).getGender());
-        viewHolder.progress.setText( String.valueOf(progress[position]) + " days old");
+        viewHolder.progress.setText(progress[position] + " days old");
         viewHolder.progressBar.setProgress((int) progress[position]);
+        if (childArr.get(position).getActive()){
+            viewHolder.active.setImageResource(R.drawable.full_star_foreground);
+        } else
+            viewHolder.active.setImageResource(R.drawable.empty_star);
+
         viewHolder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +93,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
     }
     static class ViewHolder {
         ImageView childrenImage;
+        ImageView active;
         TextView name;
         TextView birthday;
         TextView gender;

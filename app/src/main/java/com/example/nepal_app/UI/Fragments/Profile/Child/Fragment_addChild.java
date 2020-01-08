@@ -137,7 +137,10 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                     Toast.makeText(getContext(),"Select a gender",Toast.LENGTH_LONG).show();
                 }
             } else {
-                childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem())));
+                if (childArr.size() != 0) {
+                    childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem()),false));
+                } else
+                    childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem()),true));
                 childInfo.setBitmap(bitmap,String.valueOf(name.getText()),getContext());
                 childInfo.setChildArr(childArr,getContext());
                 //Goes back to the last fragment

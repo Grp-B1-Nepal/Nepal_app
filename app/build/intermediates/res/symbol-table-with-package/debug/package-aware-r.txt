@@ -1413,12 +1413,15 @@ drawable design_snackbar_background
 drawable egg_image
 drawable element1
 drawable ellipse
+drawable empty_star
 drawable evo_of_child
 drawable example1
 drawable example2
 drawable example3
 drawable example4
 drawable food_frontpage
+drawable full_star_background
+drawable full_star_foreground
 drawable ic_action_name
 drawable ic_activity
 drawable ic_calendar_black_24dp
@@ -1428,7 +1431,6 @@ drawable ic_home
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
-drawable ic_launcher_foreground
 drawable ic_menu_arrow_down_black_24dp
 drawable ic_menu_arrow_up_black_24dp
 drawable ic_mtrl_checked_circle
@@ -1544,6 +1546,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_text
 id actions
+id active
 id activitiesButton
 id activity_chooser_view_content
 id add
@@ -2015,6 +2018,8 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_navigation_menu
+mipmap full_star
+mipmap full_star_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

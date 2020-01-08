@@ -14,10 +14,8 @@ import android.widget.Button;
 import com.example.nepal_app.Logic.Adaptor.RecipeHomeAdapter;
 import com.example.nepal_app.Logic.RecipeForHome;
 import com.example.nepal_app.R;
-import com.example.nepal_app.Logic.Adaptor.RecipeAdapter;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 public class RecipeHome extends Fragment {
@@ -44,7 +42,7 @@ public class RecipeHome extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         fillLists();
-        final View v = inflater.inflate(R.layout.recipe_home_tester_rv, container, false);
+        final View v = inflater.inflate(R.layout.recipe_home, container, false);
         final FragmentActivity c = getActivity();
         final RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recipeRecView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(c);

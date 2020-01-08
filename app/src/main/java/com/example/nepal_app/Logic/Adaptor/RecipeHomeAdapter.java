@@ -1,12 +1,10 @@
 package com.example.nepal_app.Logic.Adaptor;
 
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -15,8 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.nepal_app.Logic.RecipeForHome;
 import com.example.nepal_app.R;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.RecipeVH>{
@@ -33,7 +29,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.Re
 
     @Override
     public RecipeVH onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v =  LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_home_tester, parent, false);
+        View v =  LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_home_info_to_display, parent, false);
         return new RecipeVH(v);
     }
 

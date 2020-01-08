@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.nepal_app.Logic.Adaptor.RecipeAdapter;
 import com.example.nepal_app.R;
 
 import java.util.ArrayList;

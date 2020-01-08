@@ -63,8 +63,8 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.Re
             super(itemView);
 
             btnCategory = itemView.findViewById(R.id.btnCategory);
-            recImg = itemView.findViewById(R.id.recipeImgReal);
-            recName = itemView.findViewById(R.id.recipeNameReal);
+            recImg = itemView.findViewById(R.id.recipeImg);
+            recName = itemView.findViewById(R.id.recipeName);
             expandableLayout = itemView.findViewById(R.id.expandLay);
 
             btnCategory.setOnClickListener(new View.OnClickListener() {

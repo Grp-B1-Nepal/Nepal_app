@@ -7,157 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5200e684-5c38-4540-bfad-0e73086ac2d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/full_star-web.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/empty_star.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/full_star_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/full_star_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/full_star.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/full_star_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/full_star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/full_star_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/full_star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/full_star_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/full_star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/full_star_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/full_star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/full_star_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/full_star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/full_star_round.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/activity/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/activity/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/appcompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/appcompat/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/appcompat/resources/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/appcompat/resources/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/asynclayoutinflater/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/asynclayoutinflater/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/constraintlayout/widget/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/constraintlayout/widget/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/coordinatorlayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/coordinatorlayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/core/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/core/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/customview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/customview/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/drawerlayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/drawerlayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/fragment/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/fragment/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/legacy/coreui/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/legacy/coreui/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/legacy/coreutils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/legacy/coreutils/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/legacy/v4/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/legacy/v4/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/loader/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/loader/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/media/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/media/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/recyclerview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/recyclerview/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/slidingpanelayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/slidingpanelayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/swiperefreshlayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/swiperefreshlayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/transition/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/transition/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/vectordrawable/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/vectordrawable/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/vectordrawable/animated/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/vectordrawable/animated/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/viewpager/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/viewpager/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/viewpager2/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/androidx/viewpager2/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/com/bumptech/glide/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/com/bumptech/glide/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/com/example/nepal_app/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/com/example/nepal_app/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/com/google/android/material/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/not_namespaced_r_class_sources/debug/r/com/google/android/material/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/drawable_ic_launcher_foreground.xml.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_profil_liste_element.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout_profil_liste_element.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/symbols/debug/R.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/activity/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/activity/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/activity/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/activity/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/resources/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/resources/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/resources/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/resources/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/asynclayoutinflater/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/asynclayoutinflater/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/asynclayoutinflater/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/asynclayoutinflater/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/constraintlayout/widget/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/constraintlayout/widget/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/coordinatorlayout/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/coordinatorlayout/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/coordinatorlayout/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/coordinatorlayout/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/core/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/core/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/core/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/core/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/customview/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/customview/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/customview/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/customview/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/drawerlayout/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/drawerlayout/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/drawerlayout/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/drawerlayout/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/fragment/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/fragment/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/fragment/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/fragment/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreui/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreui/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreui/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreui/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreutils/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreutils/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreutils/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreutils/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/v4/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/v4/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/v4/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/v4/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/loader/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/loader/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/loader/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/loader/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/media/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/media/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/media/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/media/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/recyclerview/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/recyclerview/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/recyclerview/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/recyclerview/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/slidingpanelayout/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/slidingpanelayout/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/slidingpanelayout/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/slidingpanelayout/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/swiperefreshlayout/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/swiperefreshlayout/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/swiperefreshlayout/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/swiperefreshlayout/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/transition/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/transition/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/transition/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/transition/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/animated/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/animated/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/animated/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/animated/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager2/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager2/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager2/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager2/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/bumptech/glide/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/bumptech/glide/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/bumptech/glide/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/bumptech/glide/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/MainActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/MainActivity$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/MainActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$integer.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$integer.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$interpolator.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$interpolator.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$layout.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$layout.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$menu.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$menu.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$mipmap.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$mipmap.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$plurals.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$plurals.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$raw.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$raw.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$string.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$string.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$style.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$style.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$styleable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$styleable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$xml.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/R$xml.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/google/android/material/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/google/android/material/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/google/android/material/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/google/android/material/R$id.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ic_launcher-web.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ic_launcher-web.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/ChildObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/ChildObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +45,50 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1056">
+              <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -244,15 +145,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Recipes/RecipeHome.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/child/ProfileFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Datalayer/CacheSaving.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/ChildObj.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" />
         <option value="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" />
         <option value="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java" />
       </list>
     </option>
   </component>
@@ -267,6 +168,62 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Nepal_app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Nepal_app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Nepal_app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="nepal_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nepal_app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="nepal_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nepal_app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="nepal_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nepal_app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="nepal_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nepal_app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="nepal_app" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
+              <item name="Child" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,9 +246,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,9 +357,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3840" height="2125" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20708956" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20708956" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -434,12 +391,22 @@
     <MESSAGE value="Added Development branch" />
     <option name="LAST_COMMIT_MESSAGE" value="Added Development branch" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/recipe_selectable.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_recipe.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_recipe.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Fragments/RecipesFragment.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Factory/IChildInfo.java" />
@@ -489,8 +456,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/childbar_top.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/drawable/dal.jpeg" />
     <entry file="file://$PROJECT_DIR$/src/main/res/drawable/example2.png">
@@ -533,8 +500,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/homepage_layout.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -547,8 +514,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/layout_listitem.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0/b9ebb04df2cb0cad4419af3c658690bc82aa5706/fragment-1.1.0-sources.jar!/androidx/fragment/app/Fragment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -572,20 +539,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_profil.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_add_child.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
           <caret line="167" column="72" lean-forward="true" selection-start-line="167" selection-start-column="72" selection-end-line="167" selection-end-column="72" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_profile.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -612,16 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="188" selection-start-line="182" selection-end-line="188" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,27 +613,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-v24/star_empty.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/drawable-v24/star_empty.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="142" column="137" selection-start-line="142" selection-start-column="137" selection-end-line="142" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="82" column="68" selection-start-line="82" selection-start-column="68" selection-end-line="82" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -690,14 +631,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/res/drawable/ic_photo_library_black_24dp.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1198">
-          <caret line="84" column="31" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/ChildObj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1280">
@@ -705,20 +638,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="96">
+          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-29/android/widget/AbsListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="2364" selection-start-line="2364" selection-end-line="2364" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="448">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-29/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="6294" selection-start-line="6294" selection-end-line="6294" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

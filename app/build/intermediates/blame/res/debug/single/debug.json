@@ -1,15 +1,15 @@
 [
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable_recipehome_cake.png.flat",
-        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/drawable/recipehome_cake.png"
+        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_home.xml.flat",
+        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/drawable-anydpi/ic_home.xml"
     },
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/interpolator_btn_radio_to_off_mtrl_animation_interpolator_0.xml.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/interpolator/btn_radio_to_off_mtrl_animation_interpolator_0.xml"
     },
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_home.xml.flat",
-        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/drawable-anydpi/ic_home.xml"
+        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable_recipehome_cake.png.flat",
+        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/drawable/recipehome_cake.png"
     },
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -20,12 +20,12 @@
         "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/drawable/child_picture.PNG"
     },
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
-        "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/xml_standalone_badge_gravity_bottom_end.xml.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/xml/standalone_badge_gravity_bottom_end.xml"
+    },
+    {
+        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
+        "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable_abc_btn_default_mtrl_shape.xml.flat",
@@ -40,12 +40,12 @@
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/layout/abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_reho_snack.png.flat",
         "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/drawable-xhdpi/ic_reho_snack.png"
+    },
+    {
+        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable_ic_mtrl_chip_close_circle.xml.flat",
@@ -60,12 +60,12 @@
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/layout/text_view_with_line_height_from_layout.xml"
     },
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable_abc_ic_menu_overflow_material.xml.flat",
-        "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable/abc_ic_menu_overflow_material.xml"
-    },
-    {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/f01b27bb220ecb79298884ef36a7a2fb/core-1.1.0/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable_abc_ic_menu_overflow_material.xml.flat",
+        "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable/abc_ic_menu_overflow_material.xml"
     },
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout_text_view_without_line_height.xml.flat",
@@ -92,12 +92,12 @@
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/color/mtrl_calendar_item_stroke_color.xml"
     },
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/color_abc_background_cache_hint_selector_material_dark.xml.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/color/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable_ic_launcher_foreground.xml.flat",
@@ -124,12 +124,12 @@
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/layout/design_navigation_menu_item.xml"
     },
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_background_transition_holo_light.xml.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_reho_recommended.png.flat",
@@ -600,10 +600,6 @@
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout_recipe_home_real_layout.xml.flat",
-        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/layout/recipe_home_real_layout.xml"
-    },
-    {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/animator_mtrl_card_state_list_anim.xml.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/animator/mtrl_card_state_list_anim.xml"
     },
@@ -1052,10 +1048,6 @@
         "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/drawable/rectangle.png"
     },
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout_recipe_home_tester.xml.flat",
-        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/layout/recipe_home_tester.xml"
-    },
-    {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable_abc_ic_voice_search_api_material.xml.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable/abc_ic_voice_search_api_material.xml"
     },
@@ -1074,6 +1066,10 @@
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout_mtrl_alert_select_dialog_multichoice.xml.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/layout/mtrl_alert_select_dialog_multichoice.xml"
+    },
+    {
+        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout_recipe_home_ll.xml.flat",
+        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/layout/recipe_home_ll.xml"
     },
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout_mtrl_calendar_month_navigation.xml.flat",
@@ -1704,10 +1700,6 @@
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/12f5fefd267a516b087649cc29b8b339/material-1.2.0-alpha02/res/drawable/design_fab_background.xml"
     },
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout_recipe_listhelper.xml.flat",
-        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/layout/recipe_listhelper.xml"
-    },
-    {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_home.png.flat",
         "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/drawable-xxhdpi/ic_home.png"
     },
@@ -1982,6 +1974,10 @@
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable_abc_cab_background_internal_bg.xml.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout_recipe_home_info_to_display.xml.flat",
+        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/layout/recipe_home_info_to_display.xml"
     },
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/color_mtrl_tabs_colored_ripple_color.xml.flat",
@@ -2524,10 +2520,6 @@
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/anim/abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout_recipe_home_tester_rv.xml.flat",
-        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/layout/recipe_home_tester_rv.xml"
-    },
-    {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/layout-watch-v20/abc_alert_dialog_title_material.xml"
     },
@@ -2742,10 +2734,6 @@
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/res/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
-    },
-    {
-        "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/layout_recipe_home_bar.xml.flat",
-        "source": "/Users/PomFritzen/Desktop/Nepal/app/src/main/res/layout/recipe_home_bar.xml"
     },
     {
         "merged": "/Users/PomFritzen/Desktop/Nepal/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",

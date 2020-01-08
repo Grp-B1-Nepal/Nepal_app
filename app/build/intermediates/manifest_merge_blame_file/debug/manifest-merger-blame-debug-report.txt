@@ -6,43 +6,43 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml
+8-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml
+9-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:5:5-21:19
+11-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:5:5-21:19
 12        android:allowBackup="true"
-12-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:6:9-35
+12-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.1.0] C:\Users\nickl\.gradle\caches\transforms-2\files-2.1\f01b27bb220ecb79298884ef36a7a2fb\core-1.1.0\AndroidManifest.xml:24:18-86
+13-->[androidx.core:core:1.1.0] /Users/PomFritzen/.gradle/caches/transforms-2/files-2.1/f01b27bb220ecb79298884ef36a7a2fb/core-1.1.0/AndroidManifest.xml:24:18-86
 14        android:debuggable="true"
 15        android:icon="@mipmap/ic_launcher"
-15-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:7:9-43
+15-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:7:9-43
 16        android:label="@string/app_name"
-16-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:8:9-41
+16-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:8:9-41
 17        android:roundIcon="@mipmap/ic_launcher_round"
-17-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:9:9-54
+17-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:9:9-54
 18        android:supportsRtl="true"
-18-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:10:9-35
+18-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:10:9-35
 19        android:testOnly="true"
 20        android:theme="@style/AppTheme" >
-20-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:11:9-40
+20-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:11:9-40
 21        <activity
-21-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:12:9-20:20
+21-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:12:9-20:20
 22            android:name="com.example.nepal_app.MainActivity"
-22-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:13:13-41
+22-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:13:13-41
 23            android:screenOrientation="portrait" >
-23-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:14:13-49
+23-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:14:13-49
 24            <intent-filter>
-24-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:15:13-19:29
+24-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:15:13-19:29
 25                <action android:name="android.intent.action.MAIN" />
-25-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:16:17-69
-25-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:16:25-66
+25-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:16:17-69
+25-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:16:25-66
 26
 27                <category android:name="android.intent.category.LAUNCHER" />
-27-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:18:17-77
-27-->C:\Users\nickl\Desktop\Nepal\app\src\main\AndroidManifest.xml:18:27-74
+27-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:18:17-77
+27-->/Users/PomFritzen/Desktop/Nepal/app/src/main/AndroidManifest.xml:18:27-74
 28            </intent-filter>
 29        </activity>
 30    </application>

@@ -24,31 +24,37 @@ public class RecipeHome extends Fragment {
     View rootView;
     RecyclerView recyclerView;
     List<RecipeForHome> recipeList;
+    List<String> categoryList;
     Button btnViewRecipe, btnFavorite;
 
     public void fillLists() {
         recipeList = new ArrayList<>();
+        categoryList = new ArrayList<>();
         recipeList.add(new RecipeForHome("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
         recipeList.add(new RecipeForHome("Cake", R.drawable.recipehome_cake, btnViewRecipe, btnFavorite));
         recipeList.add(new RecipeForHome("Dal", R.drawable.recipehome_dal, btnViewRecipe, btnFavorite));
         recipeList.add(new RecipeForHome("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        categoryList.add("Recommended");
+        categoryList.add("Favorites");
+        categoryList.add("Snacks");
+        categoryList.add("Common");
+        categoryList.add("Search");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.recipe_home_tester, container, false);
-        //recyclerView = getView().findViewById(R.id.recView);
+        rootView = inflater.inflate(R.layout.recipe_home_tester_rv, container, false);
         fillLists();
         initRecyclerView();
         return rootView;
 
     }
 
-    private void initRecyclerView() {
+    public void initRecyclerView() {
 
-        recyclerView = rootView.findViewById(R.id.recView);
-        RecipeHomeAdapter recipeAdapter = new RecipeHomeAdapter(recipeList);
+
+        RecipeHomeAdapter recipeAdapter = new RecipeHomeAdapter(recipeList, categoryList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(recipeAdapter);
     }

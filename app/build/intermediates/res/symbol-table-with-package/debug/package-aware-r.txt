@@ -1623,6 +1623,7 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
+id expandLay
 id expand_activities_button
 id expanded_menu
 id fade
@@ -1685,10 +1686,10 @@ id left
 id line1
 id line3
 id linearLayout
-id linearLayout2
 id list
 id listMode
 id list_item
+id llMain
 id masked
 id media_actions
 id message
@@ -1763,8 +1764,13 @@ id recViewCommon
 id recViewFavorites
 id recViewSearch
 id recViewSnacks
+id recipeBtnLike
+id recipeBtnView
 id recipeConsLay
+id recipeImgReal
 id recipeLikedButton
+id recipeNameReal
+id recipeRecView
 id recipeTitleText
 id recipe_choose_all
 id recipe_choose_favorites
@@ -2022,6 +2028,7 @@ layout recipe_home
 layout recipe_home_bar
 layout recipe_home_real_layout
 layout recipe_home_tester
+layout recipe_home_tester_rv
 layout recipe_listhelper
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

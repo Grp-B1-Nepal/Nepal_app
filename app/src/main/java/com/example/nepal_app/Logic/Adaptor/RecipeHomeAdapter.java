@@ -23,32 +23,27 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.Re
 
     private static final String TAG = "RecipeHomeAdapter";
     List<RecipeForHome> recipeList;
-    ArrayList<String> categoryList = new ArrayList<>();
+    List<String> categoryList;
 
-    public void fillCatList() {
-        categoryList.add("Recommended");
-        categoryList.add("Favorites");
-        categoryList.add("Snacks");
-        categoryList.add("Common");
-        categoryList.add("Search");
-    }
 
-    public RecipeHomeAdapter(List<RecipeForHome> recipeList) {
+    public RecipeHomeAdapter(List<RecipeForHome> recipeList, List<String> categoryList) {
         this.recipeList = recipeList;
+        this.categoryList = categoryList;
     }
 
     @Override
     public RecipeVH onCreateViewHolder(ViewGroup parent, int viewType) {
         View v =  LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_home_tester, parent, false);
-        fillCatList();
         return new RecipeVH(v);
     }
 
     @Override
     public void onBindViewHolder(RecipeVH holder, int position) {
 
-        RecipeForHome recipe = recipeList.get(position);
         holder.btnCategory.setText(categoryList.get(position));
+        RecipeForHome recipe = recipeList.get(position);
+        holder.recImg.setImageResource(recipe.getRecipeImg());
+        holder.recName.setText(recipe.getRecipeName());
 
         boolean isExpanded = recipeList.get(position).isExpanded();
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
@@ -63,7 +58,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.Re
 
         private static final String TAG = "RecipeVH";
 
-        RecyclerView expandableLayout;
+        ConstraintLayout expandableLayout;
         TextView recName;
         ImageView recImg;
         Button btnCategory;
@@ -72,8 +67,9 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.Re
             super(itemView);
 
             btnCategory = itemView.findViewById(R.id.btnCategory);
-            expandableLayout = itemView.findViewById(R.id.recView);
-
+            recImg = itemView.findViewById(R.id.recipeImgReal);
+            recName = itemView.findViewById(R.id.recipeNameReal);
+            expandableLayout = itemView.findViewById(R.id.expandLay);
 
             btnCategory.setOnClickListener(new View.OnClickListener() {
                 @Override

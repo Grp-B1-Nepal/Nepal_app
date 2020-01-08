@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout2"
+    android:id="@+id/llMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -22,16 +22,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recView"
-        android:layout_width="386dp"
-        android:layout_height="46dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/expandLay"
+        android:layout_width="405dp"
+        android:layout_height="330dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCategory" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCategory">
+
+        <Button
+            android:id="@+id/recipeBtnLike"
+            android:layout_width="54dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="34dp"
+            android:background="@drawable/like_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/recipeBtnView"
+            app:layout_constraintTop_toBottomOf="@+id/recipeImgReal" />
+
+        <Button
+            android:id="@+id/recipeBtnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_shape"
+            android:text="@string/view_recipe"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipeNameReal" />
+
+        <ImageView
+            android:id="@+id/recipeImgReal"
+            android:layout_width="386dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars[0]" />
+
+        <TextView
+            android:id="@+id/recipeNameReal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Hej"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipeImgReal" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

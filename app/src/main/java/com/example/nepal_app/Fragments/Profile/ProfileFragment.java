@@ -47,7 +47,6 @@ public class ProfileFragment extends Fragment {
 
         add.setOnClickListener((test) -> {
             getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();
-
         });
 
         return view;

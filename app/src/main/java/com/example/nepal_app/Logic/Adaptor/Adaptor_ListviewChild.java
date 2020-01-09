@@ -85,8 +85,9 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
                 for (int i = 0; i <childArr.size() ; i++) {
                     childArr.get(i).setActive(false);
                 }
-                    childArr.get(position).setActive(true);
-                    childInfo.setChildArr(childArr,getContext());
+                childArr.get(position).setActive(true);
+                childInfo.setChildArr(childArr,getContext());
+                //Updates the adaptor after the change
                 notifyDataSetChanged();
             }
         });

@@ -65,6 +65,10 @@ public class ChildInfo {
 
     }
 
+    /**'
+     * Getter to get the active child
+     * @return the position in the array the child is located.
+     */
     public int getActiveChild(){
         int position = -1;
         for (int i = 0; i <childArr.size() ; i++) {

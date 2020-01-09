@@ -1,11 +1,8 @@
-edit child
-
-        package com.example.nepal_app.Fragments.child;
+package com.example.nepal_app.Fragments.child;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -23,11 +20,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-import com.example.nepal_app.Factory.POJO;
+import com.example.nepal_app.Factory.ChildInfo;
 import com.example.nepal_app.R;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
@@ -42,9 +36,8 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private Bitmap   editBitmap;
     private String name, gender, birthday, oldName;
     private ArrayList<ChildObj> arr = new ArrayList<>();
-
     private long newBirthday;
-    private POJO pojo;
+    private ChildInfo childInfo;
     private static final int PICK_IMAGE =100;
     private Uri imageUri = null;
     private ImageView image;
@@ -58,9 +51,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
 
-        pojo = POJO.getInstance();
+        childInfo = ChildInfo.getInstance();
 
-        position = pojo.getPosition();
+        position = childInfo.getPosition();
         editName = view2.findViewById(R.id.name);
 
 
@@ -81,10 +74,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
 
         image = view2.findViewById(R.id.downloaded_picture);
         image.setVisibility(View.VISIBLE);
-        arr = pojo.getChildArr(getContext());
+        arr = childInfo.getChildArr(getContext());
 
-
-        arr = pojo.getChildArr(getContext());
+        arr = childInfo.getChildArr(getContext());
         oldName = arr.get(position).getName();
         name = arr.get(position).getName();
         gender = arr.get(position).getGender();
@@ -92,11 +84,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         newBirthday = arr.get(position).getBirthday();
 
 
-        Glide.with(this).load(pojo.getBitmap(getContext(),name)).
-                apply(RequestOptions.circleCropTransform())
-                .into(image);
-
-        //image.setImageBitmap(pojo.getBitmap(getContext(),name));
+        image.setImageBitmap(childInfo.getBitmap(getContext(),name));
         editName.setText(name);
         buttonBirthday.setText(birthday);
 
@@ -114,22 +102,22 @@ public class EditChild extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         if (v == buttonSave) {
             if (!(String.valueOf(editName.getText()).equals(""))) {
-                name = String.valueOf(editName.getText());
-                arr.get(position).setName(name);
-                pojo.newNameImage(getContext(),oldName,name);
-            }
-            if (!(genders.getSelectedItem().equals("…"))) {
-                gender = String.valueOf(genders.getSelectedItem());
-                arr.get(position).setGender(gender);
-            }
-            if (editBitmap != null){
-                pojo.setBitmap(editBitmap,name,getContext());
-            }
+            name = String.valueOf(editName.getText());
+            arr.get(position).setName(name);
+            childInfo.newNameImage(getContext(),oldName,name);
+        }
+        if (!(genders.getSelectedItem().equals("…"))) {
+            gender = String.valueOf(genders.getSelectedItem());
+            arr.get(position).setGender(gender);
+        }
+        if (editBitmap != null){
+            childInfo.setBitmap(editBitmap,name,getContext());
+        }
 
-            pojo.setChildArr(arr,getContext());
+        childInfo.setChildArr(arr,getContext());
 
-            FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
-            fm.popBackStack();
+        FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
+        fm.popBackStack();
 
         } else if (v == buttonBirthday){
             showDateDialog();
@@ -141,9 +129,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
         } else if (v == buttonDelete){
-            pojo.deleteChild(position,getContext());
+            childInfo.deleteChild(position,getContext());
             arr.remove(position);
-            pojo.setChildArr(arr,getContext());
+            childInfo.setChildArr(arr,getContext());
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
         }
@@ -166,7 +154,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private void onDateSet(DatePicker view, int year, int month, int day) {
         Calendar c = Calendar.getInstance();
         c.set(year,month,day);
-        buttonBirthday.setText(pojo.monthText((month+1)) + " " + day + " " + year);
+        buttonBirthday.setText(childInfo.monthText((month+1)) + " " + day + " " + year);
         newBirthday = c.getTimeInMillis();
         arr.get(position).setBirthday(newBirthday);
     }
@@ -174,32 +162,20 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private String getBirthday(int index) {
         Calendar calendar = Calendar.getInstance();
         String date1, date2, date3;
-        calendar.setTimeInMillis(arr.get(index).getBirthday());
-        date1 = calendar.getTime().toString().substring(4, 10);
-        date2 = calendar.getTime().toString().substring(30, 34);
-        date3 = date1 + " " + date2;
-        return date3;
+            calendar.setTimeInMillis(arr.get(index).getBirthday());
+            date1 = calendar.getTime().toString().substring(4, 10);
+            date2 = calendar.getTime().toString().substring(30, 34);
+            date3 = date1 + " " + date2;
+            return date3;
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Bitmap bitmapTemp;
-        float degree = 90;
-        Matrix matrix = new Matrix();
-        matrix.setRotate(degree);
-
         try {
 
             if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
                 imageUri = data.getData();
                 editBitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
-                bitmapTemp = editBitmap;
-                editBitmap = Bitmap.createBitmap(bitmapTemp, 0,0, editBitmap.getWidth(),editBitmap.getHeight(),matrix,true);
-                editBitmap = Bitmap.createScaledBitmap(editBitmap,200,200,true);
-                //Get round image
-                Glide.with(this).load(editBitmap).
-                        apply(RequestOptions.circleCropTransform())
-                        .into(image);
-
+                image.setImageBitmap(editBitmap);
                 if (image != null){
                     image.setVisibility(View.VISIBLE);
                 }

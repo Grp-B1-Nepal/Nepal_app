@@ -1,9 +1,8 @@
+
 package com.example.nepal_app.Adaptor;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,21 +13,14 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-import com.example.nepal_app.Factory.POJO;
-import com.example.nepal_app.Fragments.ProfileFragment;
+import com.example.nepal_app.Factory.ChildInfo;
 import com.example.nepal_app.Fragments.child.EditChild;
-import com.example.nepal_app.Fragments.child.Fragment_addChild;
 import com.example.nepal_app.R;
 import com.example.nepal_app.Fragments.child.ChildObj;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 /**
  * Inspiration taken from https://www.youtube.com/watch?v=q2XA0Pe2W04
@@ -40,7 +32,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
     private ArrayList<ChildObj> childArr;
 
     private String[] birthday;
-    private POJO pojo;
+    private ChildInfo childInfo;
 
 
     public Adaptor_ListviewChild(Context context, ArrayList<ChildObj> arr, String[] birthday) {
@@ -48,7 +40,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         this.childArr = arr;
         this.context = context;
         this.birthday = birthday;
-        pojo = POJO.getInstance();
+        childInfo = ChildInfo.getInstance();
     }
 
     @Override
@@ -73,17 +65,14 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        Glide.with(getContext()).load(pojo.getBitmap(getContext(), childArr.get(position).getName())).
-                apply(RequestOptions.circleCropTransform())
-                .into(viewHolder.childrenImage);
-        //viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(pojo.getBitmap(getContext(),childArr.get(position).getName()),120,120,false));
+        viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(childInfo.getBitmap(getContext(),childArr.get(position).getName()),120,120,false));
         viewHolder.name.setText(childArr.get(position).getName());
         viewHolder.birthday.setText(birthday[position]);
         viewHolder.gender.setText(childArr.get(position).getGender());
         viewHolder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pojo.setPosition(position);
+                childInfo.setPosition(position);
                 ((FragmentActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.container,new EditChild()).addToBackStack(null).commit();
             }
         });
@@ -101,3 +90,4 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         Button edit;
     }
 }
+

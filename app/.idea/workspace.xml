@@ -6,25 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5200e684-5c38-4540-bfad-0e73086ac2d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild$ViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild$ViewHolder.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Factory/ChildInfo.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Factory/ChildInfo.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/MainActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Navigation/BottomNavigation_Fragment.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment$3.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Navigation/BottomNavigation_Fragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment.java" afterDir="false" />
-    </list>
+    <list default="true" id="5200e684-5c38-4540-bfad-0e73086ac2d3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+            <state relative-caret-position="738">
+              <caret line="97" column="33" lean-forward="true" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -88,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="762">
-              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/child/EditChild.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Recipes/RecipeHome.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/child/ProfileFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Datalayer/CacheSaving.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/ChildObj.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java" />
@@ -195,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java" />
       </list>
     </option>
   </component>
@@ -382,12 +364,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575379858722</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Deleted ButtomNavigation_Fragment.java">
+      <created>1578657066303</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578657066303</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3840" height="2125" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20708956" />
@@ -419,7 +407,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Development branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Development branch" />
+    <MESSAGE value="Deleted ButtomNavigation_Fragment.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted ButtomNavigation_Fragment.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -713,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Navigation/HomeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
+        <state relative-caret-position="738">
+          <caret line="97" column="33" lean-forward="true" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -738,7 +727,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="762">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,4 +1,4 @@
-#Thu Jan 09 12:41:48 CET 2020
+#Fri Jan 10 11:58:20 CET 2020
 base.0=/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

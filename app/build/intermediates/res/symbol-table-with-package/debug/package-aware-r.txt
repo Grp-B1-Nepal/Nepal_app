@@ -1408,6 +1408,12 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable activity_cuddling
+drawable activity_playtime
+drawable activity_reading
+drawable activity_singing
+drawable activity_talking
+drawable activity_tummytime
 drawable avd_hide_password
 drawable avd_show_password
 drawable banana
@@ -1469,7 +1475,6 @@ drawable layout_boarder
 drawable like
 drawable like_button
 drawable mos
-drawable mother_reading
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down

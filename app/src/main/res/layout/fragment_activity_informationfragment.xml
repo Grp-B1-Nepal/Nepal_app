@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/mother_reading" />
+            app:srcCompat="@drawable/activity_reading" />
 
         <TextView
             android:id="@+id/activity_information_headline"

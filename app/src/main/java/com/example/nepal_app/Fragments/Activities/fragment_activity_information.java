@@ -22,6 +22,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * This class shows the information for the activity fragment after a category has been chosen.
+ * @author s185031 Gustav Emil Nobert
+ */
 public class fragment_activity_information extends Fragment {
 
     private View rod;
@@ -38,17 +42,18 @@ public class fragment_activity_information extends Fragment {
     private String headlinestring;
     private ArrayList<Integer> soundfiles = new ArrayList<>();
 
+//Recieves the information in a pojo object.
     public fragment_activity_information(ActivitiesFragment.ActivityPOJO activityPOJO)  {
         this.listnum = activityPOJO.getInformationnum();
         this.soundfiles = activityPOJO.getSoundnumberlist();
         this.imagenum = activityPOJO.getImagenum();
         this.headlinestring = activityPOJO.getHeadlinetext();
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        if (rod == null ){
 
         rod = inflater.inflate(R.layout.fragment_activity_informationfragment, container, false);
 
@@ -61,27 +66,24 @@ public class fragment_activity_information extends Fragment {
 
         initRecyclerView();
         recyclerView.setNestedScrollingEnabled(false);
-
+        }
         return rod;
     }
 
+    /**
+     * Initializes the recycler view.
+     */
     private void initRecyclerView() {
-
         //Here the picture is passed to the recycler view.
         imageView = R.drawable.speaker;
 
         ArrayList<String> stringlist = new ArrayList<>();
+        //Returns the correct information from strings based on an int.
         Collections.addAll(stringlist, getActivity().getResources().getStringArray(listnum));
         rcAdapter = new ActivityAdapter(imageView, stringlist, soundfiles);
-        //layoutManager = new CustomGridLayoutManager(getActivity());
         layoutManager = new LinearLayoutManager(getActivity());
-       //     @Override
-         //   public boolean canScrollVertically() {
-           //     return false;
-           // }
-        //};
+
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(rcAdapter);
-
     }
 }

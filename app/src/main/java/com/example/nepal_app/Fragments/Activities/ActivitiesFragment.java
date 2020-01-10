@@ -14,13 +14,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.nepal_app.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link ActivitiesFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * This fragment is shown when the user navigates to the activities. It can be achieved from the front page or the navigation bar.
+ *
  */
 public class ActivitiesFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
@@ -34,6 +32,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
     private View rod;
     private Button months04, months58, months912;
     private int agerange = 1;
+    private int imagenum = 0;
 
 
     public ActivitiesFragment() {
@@ -71,56 +70,57 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        if (rod == null ) {
+            rod = inflater.inflate(R.layout.fragment_activity, container, false);
 
-        rod = inflater.inflate(R.layout.fragment_activity, container, false);
+            Singing = rod.findViewById(R.id.activities_imageViewSinging);
+            Talking = rod.findViewById(R.id.activities_imageViewTalking);
+            Tummy_Time = rod.findViewById(R.id.activities_imageViewTummyTime);
+            Cuddling_Time = rod.findViewById(R.id.activities_imageViewCuddlingTime);
+            Play_Time = rod.findViewById(R.id.activities_imageViewPlayTime);
+            Reading = rod.findViewById(R.id.activities_imageViewReading);
 
-        Singing = rod.findViewById(R.id.activities_imageViewSinging);
-        Talking = rod.findViewById(R.id.activities_imageViewTalking);
-        Tummy_Time = rod.findViewById(R.id.activities_imageViewTummyTime);
-        Cuddling_Time = rod.findViewById(R.id.activities_imageViewCuddlingTime);
-        Play_Time = rod.findViewById(R.id.activities_imageViewPlayTime);
-        Reading = rod.findViewById(R.id.activities_imageViewReading);
+            SoundSinging = rod.findViewById(R.id.activities_soundSinging);
+            SoundTalking = rod.findViewById(R.id.activities_soundTalking);
+            SoundTummy_Time = rod.findViewById(R.id.activities_soundTummyTime);
+            SoundCuddling_Time = rod.findViewById(R.id.activities_soundCuddlingTime);
+            SoundPlay_Time = rod.findViewById(R.id.activities_soundPlayTime);
+            SoundReading = rod.findViewById(R.id.activities_soundReading);
 
-        SoundSinging = rod.findViewById(R.id.activities_soundSinging);
-        SoundTalking = rod.findViewById(R.id.activities_soundTalking);
-        SoundTummy_Time = rod.findViewById(R.id.activities_soundTummyTime);
-        SoundCuddling_Time = rod.findViewById(R.id.activities_soundCuddlingTime);
-        SoundPlay_Time = rod.findViewById(R.id.activities_soundPlayTime);
-        SoundReading = rod.findViewById(R.id.activities_soundReading);
+            months04 = rod.findViewById(R.id.activities_button04months);
+            months58 = rod.findViewById(R.id.activities_button58months);
+            months912 = rod.findViewById(R.id.activities_button912months);
 
-        months04 = rod.findViewById(R.id.activities_button04months);
-        months58 = rod.findViewById(R.id.activities_button58months);
-        months912 = rod.findViewById(R.id.activities_button912months);
+            Singing.setOnClickListener(this);
+            Talking.setOnClickListener(this);
+            Tummy_Time.setOnClickListener(this);
+            Cuddling_Time.setOnClickListener(this);
+            Play_Time.setOnClickListener(this);
+            Reading.setOnClickListener(this);
 
-        Singing.setOnClickListener(this);
-        Talking.setOnClickListener(this);
-        Tummy_Time.setOnClickListener(this);
-        Cuddling_Time.setOnClickListener(this);
-        Play_Time.setOnClickListener(this);
-        Reading.setOnClickListener(this);
+            SoundSinging.setOnClickListener(this);
+            SoundTalking.setOnClickListener(this);
+            SoundTummy_Time.setOnClickListener(this);
+            SoundCuddling_Time.setOnClickListener(this);
+            SoundPlay_Time.setOnClickListener(this);
+            SoundReading.setOnClickListener(this);
 
-        SoundSinging.setOnClickListener(this);
-        SoundTalking.setOnClickListener(this);
-        SoundTummy_Time.setOnClickListener(this);
-        SoundCuddling_Time.setOnClickListener(this);
-        SoundPlay_Time.setOnClickListener(this);
-        SoundReading.setOnClickListener(this);
+            months04.setOnClickListener(this);
+            months58.setOnClickListener(this);
+            months912.setOnClickListener(this);
 
-        months04.setOnClickListener(this);
-        months58.setOnClickListener(this);
-        months912.setOnClickListener(this);
-
-        //Months04 is chosen to be the default selection.
-        //here i could probably do something else that is much more suitable for the task by using saved instace state or something like that.
-        //This remembers what button was pressed if a user goes back to this view.
-        if (agerange == 1) {
-            months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-        } else if (agerange == 2) {
-            months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-        } else if (agerange == 3) {
-            months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            //Months04 is chosen to be the default selection.
+            //here i could probably do something else that is much more suitable for the task by using saved instace state or something like that.
+            //This remembers what button was pressed if a user goes back to this view.
+            if (agerange == 1) {
+                months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            } else if (agerange == 2) {
+                months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            } else if (agerange == 3) {
+                months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            }
         }
-        return rod;
+            return rod;
     }
 
     //TODO do something about the sound list, find out what the good way to go about it is. Can i save multiple raw files in an array?
@@ -129,18 +129,13 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
         if (v == Singing || v == Talking || v == Tummy_Time || v == Cuddling_Time || v == Play_Time || v == Reading) {
             //There are two different things supposed to be done on click and both the different types are image views, therefore this huge if statement.
-            int imagenum = R.drawable.mother_reading;
-
-
-//For now the soundlist is just a sample. This has to be different based on agerange and the button clicked, when sound files are generated.
-
+            //For now the soundlist is just a sample. This has to be different based on agerange and the button clicked, when sound files are generated.
 
             Fragment information_fragment = new fragment_activity_information(onclickactivity(v));
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.container, information_fragment);
             transaction.addToBackStack(null);
             transaction.commit();
-
 
         } else if (v == SoundCuddling_Time || v == SoundPlay_Time || v == SoundReading || v == SoundSinging || v == SoundTalking || v == SoundTummy_Time) {
 //TODO add some sound files
@@ -166,7 +161,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
     /**
      * In the future this should also return the list of sounds.
-     *
+     * Huge on click method
      * @param v
      * @return
      */
@@ -174,19 +169,9 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
         ArrayList<Integer> arraylist = new ArrayList<>();
 
-        ActivityPOJO activityPOJO = new ActivityPOJO(" ", 0 ,arraylist, 0);
-        activityPOJO.setImagenum(R.drawable.mother_reading);
+        ActivityPOJO activityPOJO = new ActivityPOJO(" ", 0 ,arraylist, imagenum);
 
         ArrayList<Integer> soundlist = new ArrayList<>();
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
         soundlist.add(R.raw.activitiestts);
         soundlist.add(R.raw.activitiestts);
         soundlist.add(R.raw.activitiestts);
@@ -194,7 +179,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
         //TODO find sound clips.
         if (v == Singing) {
-            //activityPOJO.setImagenum(R.drawable.mother_reading); here there is supposed to be added a picture, but the picture isnt added yet.
+            imagenum = R.drawable.activity_singing;
             activityPOJO.setHeadlinetext("Singing for your child and it's benefits");
 
             if (agerange == 1) {
@@ -210,7 +195,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
 
         } else if (v == Talking) {
-            //imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
+            imagenum = R.drawable.activity_talking;
             activityPOJO.setHeadlinetext("Talking to your child and it's benefits");
 
             if (agerange == 1) {
@@ -226,9 +211,8 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
 
         } else if (v == Tummy_Time) {
-//imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
+            imagenum = R.drawable.activity_tummytime;
             activityPOJO.setHeadlinetext("How a little tummy time develops your childs abilities.");
-
 
             if (agerange == 1) {
                 activityPOJO.setInformationnum(R.array.activities_information_TummyTime_category1);
@@ -243,7 +227,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
 
         } else if (v == Cuddling_Time) {
-//imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
+            imagenum = R.drawable.activity_cuddling;
             activityPOJO.setHeadlinetext("Cuddling increases the bond between the mother and the baby.");
 
             if (agerange == 1) {
@@ -259,7 +243,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
 
         } else if (v == Play_Time) {
-//imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
+            imagenum = R.drawable.activity_playtime;
             activityPOJO.setHeadlinetext("Play time to increase your childs awareness");
 
             if (agerange == 1) {
@@ -275,7 +259,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
 
         } else if (v == Reading) {
-            //imagenum = R.drawable.mother_Talking; here there is supposed to be added a picture, but the picture isnt added yet.
+            imagenum = R.drawable.activity_reading;
             activityPOJO.setHeadlinetext("Reading for your child to improve it's reading abilities");
 
             if (agerange == 1) {
@@ -289,6 +273,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
                 activityPOJO.setSoundnumberlist(soundlist);
             }
         }
+        activityPOJO.setImagenum(imagenum);
         return activityPOJO;
     }
 

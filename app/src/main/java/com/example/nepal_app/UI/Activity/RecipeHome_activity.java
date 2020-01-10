@@ -48,7 +48,7 @@ public class RecipeHome_activity extends AppCompatActivity {
 
         recyclerView.setHasFixedSize(true);
 
-        rcAdapter = new RecipeAdapter(imageViews, recipeNames, onNoteListener);
+       // rcAdapter = new RecipeAdapter(imageViews, recipeNames, onNoteListener);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

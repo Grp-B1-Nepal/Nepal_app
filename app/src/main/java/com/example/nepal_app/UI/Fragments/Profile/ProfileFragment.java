@@ -61,7 +61,6 @@ public class ProfileFragment extends Fragment {
         //OnClickListner for the editor button
         addChildButton.setOnClickListener((something) -> {
             getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();
-
         });
 
         return view;

@@ -10,21 +10,20 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nepal_app.Logic.CategoriesWithRecipeListsObject;
 import com.example.nepal_app.Logic.RecipeForHome;
 import com.example.nepal_app.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.RecipeVH>{
 
     private static final String TAG = "RecipeHomeAdapter";
-    List<RecipeForHome> recipeList;
-    List<String> categoryList;
+    List<CategoriesWithRecipeListsObject> allRecAndCatList;
 
-
-    public RecipeHomeAdapter(List<RecipeForHome> recipeList, List<String> categoryList) {
-        this.recipeList = recipeList;
-        this.categoryList = categoryList;
+    public RecipeHomeAdapter(List<CategoriesWithRecipeListsObject> allRecAndCatList) {
+        this.allRecAndCatList = allRecAndCatList;
     }
 
     @Override
@@ -36,18 +35,18 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.Re
     @Override
     public void onBindViewHolder(RecipeVH holder, int position) {
 
-        holder.btnCategory.setText(categoryList.get(position));
-        RecipeForHome recipe = recipeList.get(position);
-        holder.recImg.setImageResource(recipe.getRecipeImg());
-        holder.recName.setText(recipe.getRecipeName());
+        holder.btnCategory.setText(allRecAndCatList.get(position).getCategory());
+        ArrayList<RecipeForHome> recipe = allRecAndCatList.get(position).getRecipeList();
+        holder.recImg.setImageResource(recipe.get(position).getRecipeImg());
+        holder.recName.setText(recipe.get(position).getRecipeName());
 
-        boolean isExpanded = recipeList.get(position).isExpanded();
+        boolean isExpanded = allRecAndCatList.get(position).isExpanded();
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
     }
 
     @Override
     public int getItemCount() {
-        return recipeList.size();
+        return allRecAndCatList.size();
     }
 
     public class RecipeVH extends RecyclerView.ViewHolder{
@@ -71,8 +70,8 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.Re
                 @Override
                 public void onClick(View v) {
 
-                    RecipeForHome recipe = recipeList.get(getAdapterPosition());
-                    recipe.setExpanded(!recipe.isExpanded());
+                    CategoriesWithRecipeListsObject catAndRecipe = allRecAndCatList.get(getAdapterPosition());
+                    catAndRecipe.setExpanded(!catAndRecipe.isExpanded());
                     notifyItemChanged(getAdapterPosition());
 
                 }

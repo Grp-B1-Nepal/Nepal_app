@@ -1565,9 +1565,6 @@ id blocking
 id bottom
 id bottom_navigation
 id btnCategory
-id btnCategory1
-id btnLikeL
-id btnViewL
 id button
 id buttonPanel
 id button_deleteChild
@@ -1622,7 +1619,6 @@ id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expandLay
-id expandLay1
 id expand_activities_button
 id expanded_menu
 id fade
@@ -1755,11 +1751,9 @@ id progress_horizontal
 id radio
 id recipeBtnLike
 id recipeBtnView
-id recipeImgL
-id recipeImgReal
+id recipeImg
 id recipeLikedButton
-id recipeNameL
-id recipeNameReal
+id recipeName
 id recipeRecView
 id recipeTitleText
 id recipe_common
@@ -1859,7 +1853,6 @@ id title
 id titleDividerNoCustom
 id title_template
 id top
-id topLayer
 id topPanel
 id touch_outside
 id transition_current_scene
@@ -2012,7 +2005,6 @@ layout notification_template_part_time
 layout profil_liste_element
 layout recipe_home
 layout recipe_home_info_to_display
-layout recipe_home_ll
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

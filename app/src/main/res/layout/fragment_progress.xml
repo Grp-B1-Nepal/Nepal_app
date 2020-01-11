@@ -9,9 +9,17 @@
 
 
     <ImageView
+        android:id="@+id/speakerActivity2"
+        android:layout_width="28dp"
+        android:layout_height="31dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentProgress_InfoText"
+        app:srcCompat="@drawable/speaker" />
+
+    <ImageView
         android:id="@+id/fragmentProgress_imageView"
         android:layout_width="182dp"
-        android:layout_height="140dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="20dp"
         android:src="@drawable/child_picture"
         app:layout_constraintBottom_toTopOf="@+id/fragmentProgress_Headline"
@@ -46,9 +54,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/buttonshape"
         app:layout_constraintBottom_toTopOf="@+id/fragmentProgress_Headline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -56,10 +65,11 @@
 
         <TextView
             android:id="@+id/fragmentProgress_Weight"
-            android:layout_width="100dp"
+            android:layout_width="60dp"
             android:layout_height="20dp"
             android:layout_marginTop="5dp"
             android:text="Weight"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,10 +77,10 @@
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="100dp"
+            android:layout_width="60dp"
             android:layout_height="19dp"
-            android:text="4.12 - 8.29 kg"
 
+            android:text="4.12 - 8.29 kg"
             android:textSize="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -79,9 +89,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="100dp"
+            android:layout_width="60dp"
             android:layout_height="19dp"
-            android:text="4.12 - 8.29 kg"
+            android:text="60cm"
 
             android:textSize="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -91,24 +101,16 @@
 
         <TextView
             android:id="@+id/fragmentProgress_Height"
-            android:layout_width="100dp"
+            android:layout_width="60dp"
             android:layout_height="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:text="Height"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragmentProgress_monthsOld" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/fragmentProgress_monthsOld"
-            android:layout_width="100dp"
-            android:layout_height="20dp"
-            android:text="2 months old"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="16dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

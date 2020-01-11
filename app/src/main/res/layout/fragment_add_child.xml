@@ -38,7 +38,7 @@
             android:layout_width="321dp"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/layout_background_round_corners"
+            android:background="@drawable/buttonshape"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
 
         <TextView
             android:id="@+id/textViewTitle"
-            android:layout_width="381dp"
+            android:layout_width="321dp"
             android:layout_height="31dp"
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
@@ -83,7 +83,7 @@
 
         <TextView
             android:id="@+id/textViewTitle2"
-            android:layout_width="381dp"
+            android:layout_width="321dp"
             android:layout_height="31dp"
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
@@ -96,7 +96,7 @@
 
         <TextView
             android:id="@+id/textViewTitle4"
-            android:layout_width="381dp"
+            android:layout_width="321dp"
             android:layout_height="31dp"
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
@@ -112,7 +112,7 @@
             android:layout_width="321dp"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/layout_background_round_corners"
+            android:background="@drawable/buttonshape"
             android:ems="10"
             android:gravity="center"
             android:hint="Write name"
@@ -144,7 +144,7 @@
             android:layout_marginStart="45dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="45dp"
-            android:background="@drawable/layout_background_round_corners"
+            android:background="@drawable/buttonshape"
             android:text="Pick date"
             android:textColor="#070000"
             app:layout_constraintEnd_toEndOf="parent"
@@ -161,7 +161,7 @@
             android:layout_marginStart="1dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="1dp"
-            android:background="@drawable/layout_background_round_corners"
+            android:background="@drawable/buttonshape"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

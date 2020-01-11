@@ -1401,7 +1401,6 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_shape
-drawable buttonshape
 drawable child_picture
 drawable child_picture_small
 drawable children_on_ball
@@ -1587,7 +1586,6 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id confirm_button
-id constraintLayout
 id container
 id content
 id contentPanel
@@ -1633,6 +1631,7 @@ id fragmentProgress_Height
 id fragmentProgress_InfoText
 id fragmentProgress_Weight
 id fragmentProgress_imageView
+id fragmentProgress_monthsOld
 id fragment_activities_CuddlingTime
 id fragment_activities_PlayTime
 id fragment_activities_Reading
@@ -1798,7 +1797,6 @@ id snap
 id snapMargins
 id spacer
 id speakerActivity
-id speakerActivity2
 id speakerDevelop
 id speakerRecipe
 id split_action_bar
@@ -1830,11 +1828,11 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
 id textView1
 id textView11
 id textView2
 id textView4
+id textView8
 id textViewTitle
 id textViewTitle2
 id textViewTitle4

@@ -1,7 +1,7 @@
-#Fri Jan 10 13:46:37 CET 2020
-base.0=C\:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+#Sat Jan 11 18:12:48 CET 2020
+base.0=/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.1=/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex

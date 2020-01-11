@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
@@ -26,6 +27,8 @@ public class ProfileFragment extends Fragment {
     private long[] progress;
 
 
+
+
     private ArrayList<ChildObj> childArr = new ArrayList<>();
 
 
@@ -46,14 +49,18 @@ public class ProfileFragment extends Fragment {
         //Checks if there is data in the list before setting the adaptor.
         if(birthday.length != 0 && childArr.size() != 0) {
             Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday, progress);
+
+
             list.setAdapter(adaptor);
         }
+
+
+
 
 
         //OnClickListner for the editor button
         addChildButton.setOnClickListener((something) -> {
             getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();
-
         });
 
         return view;

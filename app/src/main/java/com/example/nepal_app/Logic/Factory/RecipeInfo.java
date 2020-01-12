@@ -1,7 +1,5 @@
 package com.example.nepal_app.Logic.Factory;
 
-import android.content.Context;
-
 import com.example.nepal_app.Datalayer.RecipeJSONParsing;
 import com.example.nepal_app.Logic.RecipeObj;
 
@@ -16,7 +14,6 @@ public class RecipeInfo {
     private ArrayList<RecipeObj> recipeArr = new ArrayList<>();*/
 
     private RecipeJSONParsing recipeJSONParsing = RecipeJSONParsing.getInstance();
-
 
     private RecipeInfo(){}
 

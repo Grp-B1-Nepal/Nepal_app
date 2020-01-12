@@ -22,6 +22,7 @@ public class RecipeJSONParsing extends AppCompatActivity {
 
     public RecipeObj loadRecipe(int position) throws IOException {
         String name = "";
+        ArrayList<String> images = new ArrayList<>();
         ArrayList<String> ingrediens = new ArrayList<>();
         ArrayList<String> directions = new ArrayList<>();
         try {
@@ -42,6 +43,12 @@ public class RecipeJSONParsing extends AppCompatActivity {
                 String item;
 
                 if(i==0) {
+                    JSONArray picturesArr = mainRecipeObject.getJSONArray("images");
+                    for (int j = 0; j < picturesArr.length(); j++) {
+                        item = picturesArr.getString(j);
+                        images.add(item);
+                    }
+                } else if(i==1) {
                     JSONArray ingrediensArr = mainRecipeObject.getJSONArray("ingrediens");
                     for (int j = 0; j < ingrediensArr.length(); j++) {
                         item = ingrediensArr.getString(j);
@@ -59,7 +66,8 @@ public class RecipeJSONParsing extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        RecipeObj recipe = new RecipeObj(name,ingrediens,directions);
+
+        RecipeObj recipe = new RecipeObj(name,images,ingrediens,directions);
         return recipe;
     }
 }

@@ -7,76 +7,52 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.nepal_app.Logic.CategoriesWithRecipeListsObject;
-import com.example.nepal_app.Logic.RecipeForHome;
+import com.example.nepal_app.Logic.RecipeObject;
 import com.example.nepal_app.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.RecipeVH>{
+public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.recipelistVH>{
+    List<RecipeObject> recipeList;
 
-    private static final String TAG = "RecipeHomeAdapter";
-    List<CategoriesWithRecipeListsObject> allRecAndCatList;
-
-    public RecipeHomeAdapter(List<CategoriesWithRecipeListsObject> allRecAndCatList) {
-        this.allRecAndCatList = allRecAndCatList;
+    public RecipeHomeAdapter(List<RecipeObject> recipeList) {
+        this.recipeList = recipeList;
     }
 
     @Override
-    public RecipeVH onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v =  LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_home_info_to_display, parent, false);
-        return new RecipeVH(v);
+    public recipelistVH onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v =  LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_home_recipe, parent, false);
+        return new recipelistVH(v);
     }
 
     @Override
-    public void onBindViewHolder(RecipeVH holder, int position) {
+    public void onBindViewHolder(recipelistVH holder, int position) {
 
-        holder.btnCategory.setText(allRecAndCatList.get(position).getCategory());
-        ArrayList<RecipeForHome> recipe = allRecAndCatList.get(position).getRecipeList();
-        holder.recImg.setImageResource(recipe.get(position).getRecipeImg());
-        holder.recName.setText(recipe.get(position).getRecipeName());
+            holder.recImg.setImageResource(recipeList.get(position).getRecipeImg());
+            holder.recName.setText(recipeList.get(position).getRecipeName());
 
-        boolean isExpanded = allRecAndCatList.get(position).isExpanded();
-        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
     }
 
     @Override
     public int getItemCount() {
-        return allRecAndCatList.size();
+        return recipeList.size();
     }
 
-    public class RecipeVH extends RecyclerView.ViewHolder{
+    public class recipelistVH extends RecyclerView.ViewHolder {
 
-        private static final String TAG = "RecipeVH";
-
-        ConstraintLayout expandableLayout;
         TextView recName;
         ImageView recImg;
-        Button btnCategory;
 
-        public RecipeVH(View itemView) {
+        public recipelistVH(View itemView) {
             super(itemView);
 
-            btnCategory = itemView.findViewById(R.id.btnCategory);
-            recImg = itemView.findViewById(R.id.recipeImg);
-            recName = itemView.findViewById(R.id.recipeName);
-            expandableLayout = itemView.findViewById(R.id.expandLay);
-
-            btnCategory.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    CategoriesWithRecipeListsObject catAndRecipe = allRecAndCatList.get(getAdapterPosition());
-                    catAndRecipe.setExpanded(!catAndRecipe.isExpanded());
-                    notifyItemChanged(getAdapterPosition());
-
-                }
-            });
+            recName = itemView.findViewById(R.id.recipeName2);
+            recImg = itemView.findViewById(R.id.recipeImg2);
         }
 
     }
+
+
 }

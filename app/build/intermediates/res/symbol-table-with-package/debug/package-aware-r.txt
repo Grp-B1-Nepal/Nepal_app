@@ -1618,7 +1618,6 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
-id expandLay
 id expand_activities_button
 id expanded_menu
 id fade
@@ -1749,11 +1748,11 @@ id progressBar2
 id progress_circular
 id progress_horizontal
 id radio
-id recipeBtnLike
-id recipeBtnView
-id recipeImg
+id recipeBtnLike2
+id recipeBtnView2
+id recipeImg2
 id recipeLikedButton
-id recipeName
+id recipeName2
 id recipeRecView
 id recipeTitleText
 id recipe_common
@@ -1761,11 +1760,13 @@ id recipe_favorites
 id recipe_recommended
 id recipe_snacks
 id recipesButton
+id recviewRecipe
 id recyclerv_view
 id right
 id right_icon
 id right_side
 id rounded
+id rvRep
 id save_button
 id save_non_transition_alpha
 id save_overlay_view
@@ -2004,7 +2005,8 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout profil_liste_element
 layout recipe_home
-layout recipe_home_info_to_display
+layout recipe_home_category
+layout recipe_home_recipe
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

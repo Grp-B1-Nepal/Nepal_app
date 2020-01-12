@@ -4,9 +4,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class RecipeForHome {
+public class RecipeObject {
 
-    public RecipeForHome(String recipeName, int recipeImg, Button btnViewRecipe, Button btnFavorite) {
+    public RecipeObject(String recipeName, int recipeImg, Button btnViewRecipe, Button btnFavorite) {
 
         this.recipeName = recipeName;
         this.recipeImg = recipeImg;
@@ -68,7 +68,7 @@ public class RecipeForHome {
 
     @Override
     public String toString() {
-        return "RecipeForHome{" +
+        return "RecipeObject{" +
                 "recipeName=" + recipeName +
                 ", recipeImg=" + recipeImg +
                 ", btnViewRecipe=" + btnViewRecipe +

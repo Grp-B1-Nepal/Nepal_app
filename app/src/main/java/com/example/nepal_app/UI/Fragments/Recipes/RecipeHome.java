@@ -11,9 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.nepal_app.Logic.Adaptor.CategoryAdapter;
+import com.example.nepal_app.Logic.CategoryObject;
 import com.example.nepal_app.Logic.Adaptor.RecipeHomeAdapter;
-import com.example.nepal_app.Logic.CategoriesWithRecipeListsObject;
-import com.example.nepal_app.Logic.RecipeForHome;
+import com.example.nepal_app.Logic.RecipeObject;
 import com.example.nepal_app.R;
 
 import java.util.ArrayList;
@@ -23,49 +24,24 @@ public class RecipeHome extends Fragment {
 
     //TODO Make a new arraylist, that contains all recipes for all category (essentially 4 arraylists) and make the adapter operate on that.
 
-    List<CategoriesWithRecipeListsObject> recipeList;
+    List<CategoryObject> categoryList;
+    List<RecipeObject> recipeList;
     Button btnViewRecipe, btnFavorite;
 
     public void fillLists() {
         recipeList = new ArrayList<>();
+        categoryList = new ArrayList<>();
 
-        ArrayList<RecipeForHome> Recommended = new ArrayList<>();
-        ArrayList<RecipeForHome> Favorites = new ArrayList<>();
-        ArrayList<RecipeForHome> Snacks = new ArrayList<>();
-        ArrayList<RecipeForHome> Common = new ArrayList<>();
-        ArrayList<RecipeForHome> Search = new ArrayList<>();
+        categoryList.add(new CategoryObject("Recommended", recipeList));
+        categoryList.add(new CategoryObject("Favorites", recipeList));
+        categoryList.add(new CategoryObject("Snacks", recipeList));
+        categoryList.add(new CategoryObject("Common", recipeList));
+        categoryList.add(new CategoryObject("Search", recipeList));
 
-
-        Recommended.add(new RecipeForHome("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
-        Recommended.add(new RecipeForHome("Cake", R.drawable.recipehome_cake, btnViewRecipe, btnFavorite));
-        Recommended.add(new RecipeForHome("Dal", R.drawable.recipehome_dal, btnViewRecipe, btnFavorite));
-        Recommended.add(new RecipeForHome("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
-
-        Favorites.add(new RecipeForHome("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
-        Favorites.add(new RecipeForHome("Cake", R.drawable.recipehome_cake, btnViewRecipe, btnFavorite));
-        Favorites.add(new RecipeForHome("Dal", R.drawable.recipehome_dal, btnViewRecipe, btnFavorite));
-        Favorites.add(new RecipeForHome("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
-
-        Snacks.add(new RecipeForHome("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
-        Snacks.add(new RecipeForHome("Cake", R.drawable.recipehome_cake, btnViewRecipe, btnFavorite));
-        Snacks.add(new RecipeForHome("Dal", R.drawable.recipehome_dal, btnViewRecipe, btnFavorite));
-        Snacks.add(new RecipeForHome("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
-
-        Common.add(new RecipeForHome("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
-        Common.add(new RecipeForHome("Cake", R.drawable.recipehome_cake, btnViewRecipe, btnFavorite));
-        Common.add(new RecipeForHome("Dal", R.drawable.recipehome_dal, btnViewRecipe, btnFavorite));
-        Common.add(new RecipeForHome("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
-
-        Search.add(new RecipeForHome("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
-        Search.add(new RecipeForHome("Cake", R.drawable.recipehome_cake, btnViewRecipe, btnFavorite));
-        Search.add(new RecipeForHome("Dal", R.drawable.recipehome_dal, btnViewRecipe, btnFavorite));
-        Search.add(new RecipeForHome("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
-
-        recipeList.add(new CategoriesWithRecipeListsObject("Recommended", Recommended));
-        recipeList.add(new CategoriesWithRecipeListsObject("Favorites", Favorites));
-        recipeList.add(new CategoriesWithRecipeListsObject("Snacks", Snacks));
-        recipeList.add(new CategoriesWithRecipeListsObject("Common", Common));
-        recipeList.add(new CategoriesWithRecipeListsObject("Search", Search));
+        recipeList.add(new RecipeObject("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
+        recipeList.add(new RecipeObject("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        recipeList.add(new RecipeObject("Cake", R.drawable.recipehome_cake, btnViewRecipe, btnFavorite));
+        recipeList.add(new RecipeObject("Dal", R.drawable.recipehome_dal, btnViewRecipe, btnFavorite));
     }
 
     @Override
@@ -80,7 +56,7 @@ public class RecipeHome extends Fragment {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                final RecipeHomeAdapter adapter = new RecipeHomeAdapter(recipeList);
+                final CategoryAdapter adapter = new CategoryAdapter(categoryList);
                 c.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

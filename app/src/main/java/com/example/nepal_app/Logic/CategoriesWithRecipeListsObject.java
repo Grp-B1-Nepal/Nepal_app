@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class CategoriesWithRecipeListsObject {
 
     String category;
-    ArrayList<RecipeForHome> recipeList;
+    ArrayList<RecipeObject> recipeList;
     private boolean expanded;
 
 
-    public CategoriesWithRecipeListsObject(String category, ArrayList<RecipeForHome> recipeList) {
+    public CategoriesWithRecipeListsObject(String category, ArrayList<RecipeObject> recipeList) {
         this.category = category;
         this.recipeList = recipeList;
     }
@@ -22,11 +22,11 @@ public class CategoriesWithRecipeListsObject {
         this.category = category;
     }
 
-    public ArrayList<RecipeForHome> getRecipeList() {
+    public ArrayList<RecipeObject> getRecipeList() {
         return recipeList;
     }
 
-    public void setRecipeList(ArrayList<RecipeForHome> recipeList) {
+    public void setRecipeList(ArrayList<RecipeObject> recipeList) {
         this.recipeList = recipeList;
     }
 

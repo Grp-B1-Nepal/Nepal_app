@@ -25,23 +25,32 @@ public class RecipeHome extends Fragment {
     //TODO Make a new arraylist, that contains all recipes for all category (essentially 4 arraylists) and make the adapter operate on that.
 
     List<CategoryObject> categoryList;
-    List<RecipeObject> recipeList;
+    List<RecipeObject> recipeList, chickenList;
     Button btnViewRecipe, btnFavorite;
 
     public void fillLists() {
         recipeList = new ArrayList<>();
         categoryList = new ArrayList<>();
-
-        categoryList.add(new CategoryObject("Recommended", recipeList));
-        categoryList.add(new CategoryObject("Favorites", recipeList));
-        categoryList.add(new CategoryObject("Snacks", recipeList));
-        categoryList.add(new CategoryObject("Common", recipeList));
-        categoryList.add(new CategoryObject("Search", recipeList));
+        chickenList = new ArrayList<>();
 
         recipeList.add(new RecipeObject("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
         recipeList.add(new RecipeObject("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
         recipeList.add(new RecipeObject("Cake", R.drawable.recipehome_cake, btnViewRecipe, btnFavorite));
         recipeList.add(new RecipeObject("Dal", R.drawable.recipehome_dal, btnViewRecipe, btnFavorite));
+
+        chickenList.add(new RecipeObject("Delicious Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeObject("Yummy Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeObject("Exquisit Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeObject("Mouth Watering Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeObject("Look at that Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeObject("I could eat this Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeObject("MORE Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+
+        categoryList.add(new CategoryObject("Recommended", recipeList));
+        categoryList.add(new CategoryObject("Favorites", recipeList));
+        categoryList.add(new CategoryObject("Snacks", chickenList));
+        categoryList.add(new CategoryObject("Common", recipeList));
+        categoryList.add(new CategoryObject("Search", recipeList));
     }
 
     @Override

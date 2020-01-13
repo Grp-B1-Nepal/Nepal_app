@@ -4,85 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="24dp"
-    android:layout_marginRight="24dp"
-    android:layout_marginTop="8dp">
+    android:layout_marginTop="15dp">
 
 
     <ImageView
         android:id="@+id/activities_imageViewPlayTime"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="156dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/activities_textviewPlayTime"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activities_imageViewTummyTime"
         app:layout_constraintTop_toBottomOf="@+id/activities_textviewCuddlingTime"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/activity_playtime" />
 
     <TextView
         android:id="@+id/activities_textviewPlayTime"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="131dp"
         android:text="Play Time"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/activities_soundPlayTime"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/activities_soundTummyTime"
-        app:layout_constraintTop_toBottomOf="@+id/activities_imageViewPlayTime"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/activities_imageViewPlayTime"
+        app:layout_constraintTop_toBottomOf="@+id/activities_imageViewPlayTime" />
 
     <ImageView
         android:id="@+id/activities_soundPlayTime"
         android:layout_width="50dp"
         android:layout_height="25dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="131dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/activities_textviewPlayTime"
+        app:layout_constraintEnd_toEndOf="@+id/activities_imageViewPlayTime"
         app:layout_constraintTop_toBottomOf="@+id/activities_imageViewPlayTime"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/speaker" />
 
     <TextView
         android:id="@+id/activities_textviewTummyTime"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="131dp"
         android:text="Tummy time"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/activities_soundTummyTime"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activities_imageViewTummyTime"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/activities_imageViewTummyTime"
+        app:layout_constraintTop_toBottomOf="@+id/activities_imageViewTummyTime" />
 
     <ImageView
         android:id="@+id/activities_soundTummyTime"
         android:layout_width="50dp"
         android:layout_height="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/activities_textviewPlayTime"
-        app:layout_constraintStart_toEndOf="@+id/activities_textviewTummyTime"
+        app:layout_constraintEnd_toEndOf="@+id/activities_imageViewTummyTime"
         app:layout_constraintTop_toBottomOf="@+id/activities_imageViewTummyTime"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/speaker" />
 
     <ImageView
         android:id="@+id/activities_imageViewTummyTime"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/activities_textviewTummyTime"
         app:layout_constraintEnd_toStartOf="@+id/activities_imageViewPlayTime"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activities_textviewTalking"
         app:srcCompat="@drawable/activity_tummytime" />
@@ -91,10 +67,10 @@
         android:id="@+id/activities_imageViewCuddlingTime"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/activities_textviewCuddlingTime"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activities_imageViewTalking"
         app:layout_constraintTop_toBottomOf="@+id/activities_textviewReading"
         app:srcCompat="@drawable/activity_cuddling" />
@@ -103,33 +79,26 @@
         android:id="@+id/activities_textviewCuddlingTime"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_marginStart="38dp"
         android:text="Cuddling Time"
-        app:layout_constraintEnd_toStartOf="@+id/activities_soundCuddlingTime"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/activities_soundTalking"
+        app:layout_constraintStart_toStartOf="@+id/activities_imageViewCuddlingTime"
         app:layout_constraintTop_toBottomOf="@+id/activities_imageViewCuddlingTime" />
 
     <ImageView
         android:id="@+id/activities_soundCuddlingTime"
         android:layout_width="50dp"
         android:layout_height="25dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="63dp"
-        app:layout_constraintBottom_toTopOf="@+id/activities_imageViewPlayTime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/activities_textviewCuddlingTime"
+        app:layout_constraintEnd_toEndOf="@+id/activities_imageViewCuddlingTime"
         app:layout_constraintTop_toBottomOf="@+id/activities_imageViewCuddlingTime"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/speaker" />
 
     <ImageView
         android:id="@+id/activities_imageViewTalking"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/activities_textviewTalking"
         app:layout_constraintEnd_toStartOf="@+id/activities_imageViewCuddlingTime"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activities_textviewSinging"
         app:srcCompat="@drawable/activity_talking" />
@@ -138,115 +107,86 @@
         android:id="@+id/activities_textviewTalking"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="63dp"
         android:text="Talking"
-        app:layout_constraintBottom_toTopOf="@+id/activities_imageViewTummyTime"
-        app:layout_constraintEnd_toStartOf="@+id/activities_soundTalking"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/activities_imageViewTalking"
         app:layout_constraintTop_toBottomOf="@+id/activities_imageViewTalking" />
 
     <ImageView
         android:id="@+id/activities_soundTalking"
         android:layout_width="50dp"
         android:layout_height="25dp"
-        android:layout_marginBottom="63dp"
-        app:layout_constraintBottom_toTopOf="@+id/activities_imageViewTummyTime"
-        app:layout_constraintEnd_toStartOf="@+id/activities_textviewCuddlingTime"
-        app:layout_constraintStart_toEndOf="@+id/activities_textviewTalking"
+        app:layout_constraintEnd_toEndOf="@+id/activities_imageViewTalking"
         app:layout_constraintTop_toBottomOf="@+id/activities_imageViewTalking"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/speaker" />
 
     <TextView
         android:id="@+id/activities_textviewReading"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="48dp"
         android:text="Reading"
-        app:layout_constraintBottom_toTopOf="@+id/activities_imageViewCuddlingTime"
-        app:layout_constraintEnd_toStartOf="@+id/activities_soundReading"
-        app:layout_constraintStart_toEndOf="@+id/activities_soundSinging"
+        app:layout_constraintStart_toStartOf="@+id/activities_imageViewReading"
         app:layout_constraintTop_toBottomOf="@+id/activities_imageViewReading" />
 
     <ImageView
         android:id="@+id/activities_soundReading"
         android:layout_width="50dp"
         android:layout_height="25dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="63dp"
-        app:layout_constraintBottom_toTopOf="@+id/activities_imageViewCuddlingTime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/activities_textviewReading"
+        app:layout_constraintEnd_toEndOf="@+id/activities_imageViewReading"
         app:layout_constraintTop_toBottomOf="@+id/activities_imageViewReading"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/speaker" />
 
     <ImageView
         android:id="@+id/activities_imageViewReading"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toTopOf="@+id/activities_textviewReading"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activities_imageViewSinging"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activities_button58months"
         app:srcCompat="@drawable/activity_reading" />
 
     <ImageView
         android:id="@+id/activities_imageViewSinging"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
         app:layout_constraintBottom_toTopOf="@+id/activities_textviewSinging"
         app:layout_constraintEnd_toStartOf="@+id/activities_imageViewReading"
-        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activities_button04months"
         app:srcCompat="@drawable/activity_singing" />
 
     <TextView
         android:id="@+id/activities_textviewSinging"
         android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="48dp"
         android:text="Singing"
-        app:layout_constraintBottom_toTopOf="@+id/activities_imageViewTalking"
         app:layout_constraintEnd_toStartOf="@+id/activities_soundSinging"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/activities_imageViewSinging"
         app:layout_constraintTop_toBottomOf="@+id/activities_imageViewSinging" />
 
     <ImageView
         android:id="@+id/activities_soundSinging"
         android:layout_width="50dp"
         android:layout_height="25dp"
-        android:layout_marginBottom="63dp"
-        app:layout_constraintBottom_toTopOf="@+id/activities_imageViewTalking"
-        app:layout_constraintEnd_toStartOf="@+id/activities_textviewReading"
-        app:layout_constraintStart_toEndOf="@+id/activities_textviewSinging"
+        app:layout_constraintEnd_toEndOf="@+id/activities_imageViewSinging"
         app:layout_constraintTop_toBottomOf="@+id/activities_imageViewSinging"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/speaker" />
 
     <Button
         android:id="@+id/activities_button04months"
         android:layout_width="90dp"
         android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/buttonshape"
         android:text="0-4 months"
         android:textColor="#FF6E6E"
         android:textSize="11dp"
         app:layout_constraintBottom_toTopOf="@+id/activities_imageViewSinging"
         app:layout_constraintEnd_toStartOf="@+id/activities_button58months"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -254,17 +194,14 @@
         android:id="@+id/activities_button58months"
         android:layout_width="90dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/buttonshape"
         android:text="5-8 months"
         android:textColor="#FF6E6E"
         android:textSize="11dp"
-        app:layout_constraintBottom_toTopOf="@+id/activities_imageViewSinging"
+        app:layout_constraintBottom_toTopOf="@+id/activities_imageViewReading"
         app:layout_constraintEnd_toStartOf="@+id/activities_button912months"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activities_button04months"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -272,16 +209,14 @@
         android:id="@+id/activities_button912months"
         android:layout_width="90dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/buttonshape"
         android:text="9-12 months"
         android:textColor="#FF6E6E"
         android:textSize="11dp"
         app:layout_constraintBottom_toTopOf="@+id/activities_imageViewReading"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activities_button58months"
         app:layout_constraintTop_toTopOf="parent" />
 

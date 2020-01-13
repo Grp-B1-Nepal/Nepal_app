@@ -1682,12 +1682,6 @@ id fragmentProgress_Weight
 id fragmentProgress_imageView
 id fragmentProgress_monthsOld
 id fragment_acitivityinformation_recyclerview
-id fragment_activities_CuddlingTime
-id fragment_activities_PlayTime
-id fragment_activities_Reading
-id fragment_activities_Singing
-id fragment_activities_Talking
-id fragment_activities_TummyTime
 id fragment_activity_informationfragment_picture
 id gender
 id gender_spinner
@@ -1994,7 +1988,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_activities
 layout fragment_activity
 layout fragment_activity_informationfragment
 layout fragment_add_child

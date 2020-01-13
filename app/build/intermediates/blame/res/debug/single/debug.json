@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_hide_motion_spec.xml.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\animator\\design_fab_hide_motion_spec.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_child_picture_small.PNG.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable\\child_picture_small.PNG"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_hide_motion_spec.xml.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\animator\\design_fab_hide_motion_spec.xml"
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_activity_reading.jpg.flat",
@@ -20,12 +20,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\raw_recipestts.mp3.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\raw\\recipestts.mp3"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_child_element.xml.flat",
@@ -52,12 +52,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\ddf6a25e6e3e5e2af441269b48288beb\\appcompat-resources-1.1.0\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -606,10 +606,6 @@
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_singlechoice_material.xml.flat",
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\select_dialog_singlechoice_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_activities.xml.flat",
-        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\layout\\fragment_activities.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",

@@ -1724,10 +1724,6 @@
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/layout_fragment_activities.xml.flat",
-        "source": "/home/fredrik/android_projekter/Nepal_app/app/src/main/res/layout/fragment_activities.xml"
-    },
-    {
         "merged": "/home/fredrik/android_projekter/Nepal_app/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/home/fredrik/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },

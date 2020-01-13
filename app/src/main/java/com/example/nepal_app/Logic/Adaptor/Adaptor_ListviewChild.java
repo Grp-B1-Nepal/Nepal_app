@@ -76,12 +76,8 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
                 ((FragmentActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.container,new EditChild()).addToBackStack(null).commit();
             }
         });
-
-
         return convertView;
     }
-
-
     static class ViewHolder {
         ImageView childrenImage;
         TextView name;

@@ -1,6 +1,7 @@
 package com.example.nepal_app.UI.Fragments.Recipes;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -8,94 +9,74 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.example.nepal_app.Logic.Adaptor.CategoryAdapter;
+import com.example.nepal_app.Logic.CategoryObject;
+import com.example.nepal_app.Logic.RecipeHomeObject;
 import com.example.nepal_app.R;
-import com.example.nepal_app.Logic.Adaptor.RecipeAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class RecipeHome extends Fragment implements RecipeAdapter.OnNoteListener {
-    private String mParam1;
-    private String mParam2;
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-    View rod;
+public class RecipeHome extends Fragment {
 
-    //TODO searchbar functionality
-    //TODO Top buttons (All, favorite, Today) functionality
-    //TODO make into a fragment
+    //TODO Make a new arraylist, that contains all recipes for all category (essentially 4 arraylists) and make the adapter operate on that.
 
-    private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView.Adapter rcAdapter;
-
-    private ArrayList<Integer> imageViews = new ArrayList<>();
-    private ArrayList<String> recipeNames = new ArrayList<>();
-
-    private OnNoteListener onNoteListener;
-
-    public RecipeHome() {
-        //empty constructor
-    }
+    List<CategoryObject> categoryList;
+    List<RecipeHomeObject> recipeList, chickenList;
+    Button btnViewRecipe, btnFavorite;
 
     public void fillLists() {
-        imageViews.add(R.drawable.banana);
-        imageViews.add(R.drawable.cake);
-        imageViews.add(R.drawable.egg_image);
-        imageViews.add(R.drawable.egg_image);
+        recipeList = new ArrayList<>();
+        categoryList = new ArrayList<>();
+        chickenList = new ArrayList<>();
 
-        recipeNames.add("Banana");
-        recipeNames.add("Cake");
-        recipeNames.add("Banana");
-        recipeNames.add("Mash");
-        initRecyclerView();
+        recipeList.add(new RecipeHomeObject("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
+        recipeList.add(new RecipeHomeObject("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        recipeList.add(new RecipeHomeObject("Cake", R.drawable.recipehome_cake, btnViewRecipe, btnFavorite));
+        recipeList.add(new RecipeHomeObject("Dal", R.drawable.recipehome_dal, btnViewRecipe, btnFavorite));
+
+        chickenList.add(new RecipeHomeObject("Delicious Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeHomeObject("Yummy Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeHomeObject("Exquisit Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeHomeObject("Mouth Watering Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeHomeObject("Look at that Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeHomeObject("I could eat this Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+        chickenList.add(new RecipeHomeObject("MORE Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
+
+        categoryList.add(new CategoryObject("Recommended", recipeList));
+        categoryList.add(new CategoryObject("Favorites", recipeList));
+        categoryList.add(new CategoryObject("Snacks", chickenList));
+        categoryList.add(new CategoryObject("Common", recipeList));
+        categoryList.add(new CategoryObject("Search", recipeList));
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-
-    }
-
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
-        rod = inflater.inflate(R.layout.recipe_home, container, false);
-
         fillLists();
-        return rod;
-
-    }
-
-    public interface OnNoteListener extends RecipeAdapter.OnNoteListener {
-        void onNoteClick(int position);
-    }
-
-
-
-    private void initRecyclerView() {
-
-        recyclerView = rod.findViewById(R.id.rcvrecipes);
-        rcAdapter = new RecipeAdapter(imageViews, recipeNames, onNoteListener);
-
-        layoutManager = new LinearLayoutManager(getActivity());
+        final View v = inflater.inflate(R.layout.recipe_home, container, false);
+        final FragmentActivity c = getActivity();
+        final RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recipeRecView);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(c);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(rcAdapter);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                final CategoryAdapter adapter = new CategoryAdapter(categoryList);
+                c.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        recyclerView.setAdapter(adapter);
+                    }
+                });
+            }
+        }).start();
+
+        return v;
 
     }
-//TODO FIX NOT WORKING
-    @Override
-    public void onNoteClick(int position) {
-        /*
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, new Recipe_fragment());
-        transaction.addToBackStack(null);
-        transaction.commit();
-         */
-    }
+
+
 }

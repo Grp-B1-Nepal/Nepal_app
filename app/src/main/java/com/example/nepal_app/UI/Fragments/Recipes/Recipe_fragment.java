@@ -1,6 +1,5 @@
 package com.example.nepal_app.UI.Fragments.Recipes;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,7 +8,8 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.nepal_app.Logic.Adaptor.RecyclerViewAdapterRecipe;
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
@@ -25,7 +25,9 @@ public class Recipe_fragment extends Fragment {
     private ArrayList<Integer> recipeImage = new ArrayList<>();
     private String mParam1;
     private String mParam2;
+    private int position;
     private RecipeInfo recipeInfo;
+    private RecipeObj recipeObj;
     RecyclerViewAdapterRecipe adapter;
     RecyclerView recyclerView;
     private static final String ARG_PARAM1 = "param1";
@@ -33,7 +35,8 @@ public class Recipe_fragment extends Fragment {
     View rod;
 
 
-    public Recipe_fragment() {
+    public Recipe_fragment(int position) {
+        this.position = position;
         // Required empty public constructor
     }
 
@@ -45,6 +48,7 @@ public class Recipe_fragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         recipeInfo = recipeInfo.getInstance();
+        recipeObj = recipeInfo.getRecipe(position);
     }
 
     @Override
@@ -61,10 +65,10 @@ public class Recipe_fragment extends Fragment {
     private void arrayFill(int position) {
         Log.d(TAG,"Filling arraylist.");
 
-        RecipeObj recipe = recipeInfo.getRecipe(position);
+        //RecipeObj recipe = recipeInfo.getRecipe(position);
 
-        ingrediensTxt = recipe.getIngrediens();
-        directionsTxt = recipe.getDirections();
+        //ingrediensTxt = recipe.getIngrediens();
+        //directionsTxt = recipe.getDirections();
 
         recipeImage.add(R.drawable.egg_image);
         recipeImage.add(R.drawable.example2);
@@ -83,7 +87,7 @@ public class Recipe_fragment extends Fragment {
         Log.d(TAG, "initRecyclerView initializing");
 
         recyclerView = rod.findViewById(R.id.recyclerv_view);
-        adapter = new RecyclerViewAdapterRecipe(getActivity(), recipeImage, ingrediensTxt);
+        adapter = new RecyclerViewAdapterRecipe(getActivity(), recipeObj);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
     }

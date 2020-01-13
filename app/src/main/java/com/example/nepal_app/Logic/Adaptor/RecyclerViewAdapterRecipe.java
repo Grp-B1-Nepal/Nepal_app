@@ -30,8 +30,6 @@ public class RecyclerViewAdapterRecipe extends RecyclerView.Adapter<RecyclerView
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         recipeInfo = RecipeInfo.getInstance();
 
-        recipeObj = recipeInfo.getRecipe(recipeInfo.getPosition());
-
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem,parent,false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;

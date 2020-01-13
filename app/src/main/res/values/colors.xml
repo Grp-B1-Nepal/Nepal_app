@@ -5,6 +5,6 @@
     <color name="colorAccent">#CE1919</color>
     <color name="redDark">#a51414</color>
     <color name="redMat">#ecc9c1</color>
-    <color name="justWhite">#FFF</color>
+    <color name="justWhite">#FFFFFF</color>
     <color name="mainBackgroundColor">#F3F3F3</color>
 </resources>

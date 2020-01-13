@@ -42,6 +42,19 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
 
             holder.recImg.setImageResource(recipeList.get(position).getRecipeImg());
             holder.recName.setText(recipeList.get(position).getRecipeName());
+            holder.btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (position < recipeList.size()) {
+
+                        Fragment recipeFragment = new Recipe_fragment(position);
+                        MainActivity mainActivity = (MainActivity) context;
+                        FragmentTransaction transaction = mainActivity.getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container,recipeFragment);
+                        transaction.commit();
+                    }
+                }
+            });
 
     }
 
@@ -63,17 +76,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
             recImg = itemView.findViewById(R.id.recipeImg2);
             btn = itemView.findViewById(R.id.recipeBtnView2);
 
-            btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getAdapterPosition();
-                    Fragment recipeFragment = new Recipe_fragment(position);
-                    MainActivity mainActivity = (MainActivity) context;
-                    FragmentTransaction transaction = mainActivity.getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.container,recipeFragment);
-                    transaction.commit();
-                }
-            });
         }
     }
 }

@@ -21,8 +21,6 @@ import java.util.List;
 
 public class RecipeHome extends Fragment {
 
-    //TODO Make a new arraylist, that contains all recipes for all category (essentially 4 arraylists) and make the adapter operate on that.
-
     List<CategoryObject> categoryList;
     List<RecipeHomeObject> recipeList, chickenList;
     Button btnViewRecipe, btnFavorite;

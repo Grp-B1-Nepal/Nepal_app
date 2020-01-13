@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="0dp"
     tools:context=".UI.Fragments.Progress.ProgressFragment">
 
 
@@ -37,6 +37,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/fragmentProgress_InfoText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -112,5 +113,120 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/redDarkDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@color/redDarkDark"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/b1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="1"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="2"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="3"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="4"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="5"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="6"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="7"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="8"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="9"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="10"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b11"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="11"
+                android:textColor="#F8FFFFFF" />
+
+            <Button
+                android:id="@+id/b12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/scroll_buttons"
+                android:text="12"
+                android:textColor="#F8FFFFFF" />
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

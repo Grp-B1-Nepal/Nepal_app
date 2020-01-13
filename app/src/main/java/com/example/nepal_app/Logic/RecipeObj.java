@@ -23,13 +23,17 @@ public class RecipeObj {
     public String getIngrediens(int position) {
         return ingrediens.get(position);
     }
-    public ArrayList<String> getDirections() {
-        return directions;
+    public String getDirections(int position) {
+        return directions.get(position);
     }
-    public int getImages(int position) {
-        return Integer.valueOf(images.get(position));
+    public String getImages(int position) {
+        return images.get(position);
     }
-    public int getRecipeArrayListSize() {
+    public int getRecipeArrayListSizeIngrediens() {
         return ingrediens.size();
+    }
+
+    public int getRecipeArrayListSizeDirections() {
+        return directions.size();
     }
 }

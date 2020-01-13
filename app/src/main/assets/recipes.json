@@ -4,17 +4,16 @@
   "recipe": [
       {
         "images": [
-          "R.drawable.banana",
-          "R.drawable.banana",
-          "R.drawable.banana",
-          "R.drawable.banana",
-          "R.drawable.banana",
-          "R.drawable.banana",
-          "R.drawable.banana",
-          "R.drawable.banana",
-          "R.drawable.banana"
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image"
         ],
-
         "ingrediens": [
           "item1",
           "item1",

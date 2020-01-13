@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.nepal_app.Logic.Adaptor.RecyclerViewAdapterRecipe;
+import com.example.nepal_app.Logic.Adaptor.RecyclerViewAdapterDirections;
+import com.example.nepal_app.Logic.Adaptor.RecyclerViewAdapterIngrediens;
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
 import com.example.nepal_app.Logic.RecipeObj;
 import com.example.nepal_app.R;
@@ -28,7 +28,8 @@ public class Recipe_fragment extends Fragment {
     private int position;
     private RecipeInfo recipeInfo;
     private RecipeObj recipeObj;
-    RecyclerViewAdapterRecipe adapter;
+    RecyclerViewAdapterIngrediens adapter;
+    RecyclerViewAdapterDirections adapter1;
     RecyclerView recyclerView;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -48,7 +49,7 @@ public class Recipe_fragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         recipeInfo = recipeInfo.getInstance();
-        recipeObj = recipeInfo.getRecipe(position);
+        recipeObj = recipeInfo.getRecipe(position,getContext());
     }
 
     @Override
@@ -80,15 +81,26 @@ public class Recipe_fragment extends Fragment {
         recipeImage.add(R.drawable.example2);
         recipeImage.add(R.drawable.example2);
 
-        initRecyclerView();
+        initRecyclerViewIngrediens();
+        initRecyclerViewDirections();
     }
 
-    private void initRecyclerView() {
-        Log.d(TAG, "initRecyclerView initializing");
+    private void initRecyclerViewIngrediens() {
+        Log.d(TAG, "initRecyclerViewIngrediens initializing");
 
         recyclerView = rod.findViewById(R.id.recyclerv_view);
-        adapter = new RecyclerViewAdapterRecipe(getActivity(), recipeObj);
+        adapter = new RecyclerViewAdapterIngrediens(getActivity(), recipeObj);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
+    }
+
+    private void initRecyclerViewDirections() {
+        Log.d(TAG, "initRecyclerViewDirections initializing");
+
+        recyclerView = rod.findViewById(R.id.recyclerv_view1);
+        adapter1 = new RecyclerViewAdapterDirections(getActivity(), recipeObj);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(adapter1);
+
     }
 }

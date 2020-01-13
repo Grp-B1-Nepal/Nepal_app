@@ -1,5 +1,7 @@
 package com.example.nepal_app.Datalayer;
 
+import android.content.Context;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nepal_app.Logic.RecipeHomeObject;
@@ -22,36 +24,26 @@ public class RecipeJSONParsing extends AppCompatActivity {
 
     private RecipeJSONParsing() { }
 
-    public RecipeObj loadRecipe(int position) throws IOException {
+    public RecipeObj loadRecipe(int position, Context context) throws IOException {
         String name = "";
         ArrayList<String> images = new ArrayList<>();
         ArrayList<String> ingrediens = new ArrayList<>();
         ArrayList<String> directions = new ArrayList<>();
-        //try {
+        try {
             // Reading from JSON file
-            //InputStream is = getAssets().open("recipe.json");
-            Thread getJSON = new Thread() {
-                @Override
-                public void run() {
-                    try {
-                        InputStream is = getApplicationContext().getAssets().open("recipes.json");
-                        byte b[] = new byte[is.available()];
-                        is.read(b);
-                        String str = new String(b, "UTF-8");
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            };
+            InputStream is = context.getAssets().open("recipes.json");
+            byte b[] = new byte[is.available()];
+            is.read(b);
+            String str = new String(b, "UTF-8");
 
-            /*JSONArray jsonArray = new JSONArray(str);
+            JSONArray jsonArray = new JSONArray(str);
             JSONObject json = jsonArray.getJSONObject(position);
             name = json.getString("name");
 
             JSONArray mainRecipeTxt = json.getJSONArray("recipe");
+            JSONObject mainRecipeObject = mainRecipeTxt.getJSONObject(0);
 
-            for (int i = 0; i < json.length(); i++) {
-                JSONObject mainRecipeObject = mainRecipeTxt.getJSONObject(0);
+            for (int i = 0; i < mainRecipeObject.length(); i++) {
                 String item;
 
                 if(i==0) {
@@ -66,7 +58,7 @@ public class RecipeJSONParsing extends AppCompatActivity {
                         item = ingrediensArr.getString(j);
                         ingrediens.add(item);
                     }
-                } else if(i==1) {
+                } else if(i==2) {
                     JSONArray dirArr = mainRecipeObject.getJSONArray("directions");
                     for (int j = 0; j < dirArr.length(); j++) {
                         item = dirArr.getString(j);
@@ -79,8 +71,7 @@ public class RecipeJSONParsing extends AppCompatActivity {
         }
 
 
-        RecipeObj recipe = new RecipeObj(name,images,ingrediens,directions);*/
-        //return recipe;
-            return new RecipeObj(name,images,ingrediens,directions);
+        RecipeObj recipe = new RecipeObj(name,images,ingrediens,directions);
+        return recipe;
     }
 }

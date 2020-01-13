@@ -14,14 +14,14 @@ import com.example.nepal_app.Logic.Factory.RecipeInfo;
 import com.example.nepal_app.Logic.RecipeObj;
 import com.example.nepal_app.R;
 
-public class RecyclerViewAdapterRecipe extends RecyclerView.Adapter<RecyclerViewAdapterRecipe.ViewHolder> {
+public class RecyclerViewAdapterIngrediens extends RecyclerView.Adapter<RecyclerViewAdapterIngrediens.ViewHolder> {
     private static final String TAG = "RecyclerViewAdapter";
 
     private RecipeInfo recipeInfo;
     private RecipeObj recipeObj;
     private Context context;
 
-    public RecyclerViewAdapterRecipe(Context context, RecipeObj recipeObj) {
+    public RecyclerViewAdapterIngrediens(Context context, RecipeObj recipeObj) {
         this.recipeObj = recipeObj;
         this.context = context;
     }
@@ -38,24 +38,14 @@ public class RecyclerViewAdapterRecipe extends RecyclerView.Adapter<RecyclerView
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Log.d(TAG, "OnBindViewHolder: called.");
-
-        if(position == recipeObj.getRecipeArrayListSize() + 1) {
-            holder.ingrediensImage.setVisibility(View.INVISIBLE);
-            String str = "";
-            for (int i = 0; i < recipeObj.getDirections().size(); i++) {
-                str = recipeObj.getDirections().get(i) + "\n";
-                str = str.concat(str);
-            }
-            holder.ingrediensTxt.setText(str);
-        } else {
-            holder.ingrediensTxt.setText(recipeObj.getIngrediens(position));
-            holder.ingrediensImage.setImageResource(recipeObj.getImages(position));
-        }
+        holder.ingrediensTxt.setText(recipeObj.getIngrediens(position));
+        int identifier = context.getResources().getIdentifier(recipeObj.getImages(position),"drawable",context.getPackageName());
+        holder.ingrediensImage.setImageResource(identifier);
     }
 
     @Override
     public int getItemCount() {
-        return recipeObj.getRecipeArrayListSize() + 1;
+        return recipeObj.getRecipeArrayListSizeIngrediens();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

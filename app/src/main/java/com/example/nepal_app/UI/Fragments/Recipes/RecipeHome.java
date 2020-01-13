@@ -22,6 +22,7 @@ import java.util.List;
 public class RecipeHome extends Fragment {
 
     List<CategoryObject> categoryList;
+    List<Integer> btnIcons;
     List<RecipeHomeObject> recipeList, chickenList;
     Button btnViewRecipe, btnFavorite;
 
@@ -29,6 +30,7 @@ public class RecipeHome extends Fragment {
         recipeList = new ArrayList<>();
         categoryList = new ArrayList<>();
         chickenList = new ArrayList<>();
+        btnIcons = new ArrayList<>();
 
         recipeList.add(new RecipeHomeObject("Banana", R.drawable.recipehome_bananas, btnViewRecipe, btnFavorite));
         recipeList.add(new RecipeHomeObject("Chicken", R.drawable.recipehome_chicken, btnViewRecipe, btnFavorite));
@@ -48,6 +50,12 @@ public class RecipeHome extends Fragment {
         categoryList.add(new CategoryObject("Snacks", chickenList));
         categoryList.add(new CategoryObject("Common", recipeList));
         categoryList.add(new CategoryObject("Search", recipeList));
+
+        btnIcons.add(R.drawable.ic_reho_recommended);
+        btnIcons.add(R.drawable.ic_reho_heart);
+        btnIcons.add(R.drawable.ic_reho_snack);
+        btnIcons.add(R.drawable.ic_reho_common);
+        btnIcons.add(R.drawable.ic_reho_search);
     }
 
     @Override
@@ -62,7 +70,7 @@ public class RecipeHome extends Fragment {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                final CategoryAdapter adapter = new CategoryAdapter(categoryList);
+                final CategoryAdapter adapter = new CategoryAdapter(categoryList, btnIcons);
                 c.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

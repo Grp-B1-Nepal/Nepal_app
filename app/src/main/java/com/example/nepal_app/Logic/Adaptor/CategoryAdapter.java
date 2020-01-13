@@ -19,9 +19,11 @@ import java.util.List;
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.categoryVH> {
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
     List<CategoryObject> categoryList;
+    List<Integer> btnIcons;
 
-    public CategoryAdapter(List<CategoryObject> categoryList) {
+    public CategoryAdapter(List<CategoryObject> categoryList, List<Integer> btnIcons) {
         this.categoryList = categoryList;
+        this.btnIcons = btnIcons;
     }
 
     @Override
@@ -33,6 +35,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
     @Override
     public void onBindViewHolder(@NonNull categoryVH holder, int position) {
         holder.category.setText(categoryList.get(position).getCategoryName());
+        holder.category.setCompoundDrawablesRelativeWithIntrinsicBounds(0, btnIcons.get(position), 0, 0);
         LinearLayoutManager layoutManager = new LinearLayoutManager(
                 holder.rvRecipe.getContext(),
                 LinearLayoutManager.VERTICAL,

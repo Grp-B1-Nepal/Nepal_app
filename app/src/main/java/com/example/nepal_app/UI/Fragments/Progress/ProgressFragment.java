@@ -53,25 +53,7 @@ public class ProgressFragment extends Fragment {
             b3.getBackground().setColorFilter(getResources().getColor(R.color.redMat), PorterDuff.Mode.MULTIPLY);
         }
 
-        public void onClick(View v) {
-
-            if (v == b1 || v == b2 || v == b3 || v == b4 || v == b5 || v == b6) {
-
-                if (v == b1) {
-                    b1.getBackground().setColorFilter(getResources().getColor(R.color.redMat), PorterDuff.Mode.MULTIPLY);
-                }
-                if (v == b2) {
-                    b2.getBackground().setColorFilter(getResources().getColor(R.color.redMat), PorterDuff.Mode.MULTIPLY);
-                }
-                if (v == b3) {
-                    b3.getBackground().setColorFilter(getResources().getColor(R.color.redMat), PorterDuff.Mode.MULTIPLY);
-                }
-
-
-
-
-
-                    // Inflate the layout for this fragment
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_progress, container, false);
 
     }

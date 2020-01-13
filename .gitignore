@@ -33,7 +33,7 @@ hs_err_pid*
 /.idea/assetWizardSettings.xml
 /.idea/
 .DS_Store
-/build
+/app/build/
 /captures
 .externalNativeBuild
 .cxx

@@ -3,6 +3,9 @@ package com.example.nepal_app.Logic.Adaptor;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.media.ExifInterface;
+import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,16 +14,20 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.UI.Fragments.Profile.Child.EditChild;
 import com.example.nepal_app.R;
 import com.example.nepal_app.Logic.ChildObj;
 
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -71,6 +78,10 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
+        Glide.with(getContext()).load(childInfo.getBitmap(getContext(), childArr.get(position).getName())).
+                apply(RequestOptions.circleCropTransform())
+                .into(viewHolder.childrenImage);
+
         viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(childInfo.getBitmap(getContext(),childArr.get(position).getName()),120,120,false));
         viewHolder.name.setText(childArr.get(position).getName());
         viewHolder.birthday.setText(birthday[position]);
@@ -78,7 +89,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         viewHolder.progress.setText(progress[position] + " days old");
         viewHolder.progressBar.setProgress((int) progress[position]);
 
-        View finalConvertView = convertView;
+
         viewHolder.active.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +99,10 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
                 childArr.get(position).setActive(true);
                 childInfo.setChildArr(childArr,getContext());
                 //Updates the adaptor after the change
+                //TODO maybe rephrase
+                Toast.makeText(context,"You change to " + childArr.get(position).getName(),Toast.LENGTH_LONG).show();
                 notifyDataSetChanged();
+
             }
         });
         if (childArr.get(position).getActive()){
@@ -120,5 +134,6 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         TextView progress;
         ProgressBar progressBar;
     }
+
 }
 

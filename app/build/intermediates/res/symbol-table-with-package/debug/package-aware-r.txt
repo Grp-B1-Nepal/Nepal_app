@@ -1610,7 +1610,6 @@ id beginning
 id birthday
 id blocking
 id bottom
-id bottom_navigation
 id button
 id buttonPanel
 id button_deleteChild

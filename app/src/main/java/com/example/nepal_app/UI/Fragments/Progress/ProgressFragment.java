@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.nepal_app.R;
 
+import java.util.ArrayList;
+
 public class ProgressFragment extends Fragment {
     ImageView image;
     TextView info, age, box_age, height, weight;
@@ -41,6 +43,8 @@ public class ProgressFragment extends Fragment {
 
 
 
+
+
         if (agerange == 1) {
             b1.getBackground().setColorFilter(getResources().getColor(R.color.redMat), PorterDuff.Mode.MULTIPLY);
         } else if (agerange == 2) {
@@ -49,8 +53,25 @@ public class ProgressFragment extends Fragment {
             b3.getBackground().setColorFilter(getResources().getColor(R.color.redMat), PorterDuff.Mode.MULTIPLY);
         }
 
+        public void onClick(View v) {
 
-        // Inflate the layout for this fragment
+            if (v == b1 || v == b2 || v == b3 || v == b4 || v == b5 || v == b6) {
+
+                if (v == b1) {
+                    b1.getBackground().setColorFilter(getResources().getColor(R.color.redMat), PorterDuff.Mode.MULTIPLY);
+                }
+                if (v == b2) {
+                    b2.getBackground().setColorFilter(getResources().getColor(R.color.redMat), PorterDuff.Mode.MULTIPLY);
+                }
+                if (v == b3) {
+                    b3.getBackground().setColorFilter(getResources().getColor(R.color.redMat), PorterDuff.Mode.MULTIPLY);
+                }
+
+
+
+
+
+                    // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_progress, container, false);
 
     }

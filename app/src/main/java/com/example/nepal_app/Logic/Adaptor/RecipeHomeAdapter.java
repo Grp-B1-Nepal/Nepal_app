@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nepal_app.Logic.Factory.RecipeInfo;
 import com.example.nepal_app.Logic.RecipeHomeObject;
 import com.example.nepal_app.MainActivity;
 import com.example.nepal_app.R;
@@ -25,6 +26,7 @@ import java.util.List;
 public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.recipelistVH>{
     List<RecipeHomeObject> recipeList;
     private Context context;
+    private RecipeInfo recipeInfo;
 
     public RecipeHomeAdapter(List<RecipeHomeObject> recipeList) {
         this.recipeList = recipeList;
@@ -34,6 +36,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
     public recipelistVH onCreateViewHolder(ViewGroup parent, int viewType) {
         View v =  LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_home_recipe, parent, false);
         context = parent.getContext();
+        recipeInfo = RecipeInfo.getInstance();
         return new recipelistVH(v);
     }
 
@@ -46,11 +49,12 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                 @Override
                 public void onClick(View v) {
                     if (position < recipeList.size()) {
-
-                        Fragment recipeFragment = new Recipe_fragment(position);
+                        recipeInfo.setPostionRecipe(position);
+                        Fragment recipeFragment = new Recipe_fragment();
                         MainActivity mainActivity = (MainActivity) context;
                         FragmentTransaction transaction = mainActivity.getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.container,recipeFragment);
+                        transaction.addToBackStack(null);
                         transaction.commit();
                     }
                 }

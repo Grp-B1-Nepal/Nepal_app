@@ -36,8 +36,7 @@ public class Recipe_fragment extends Fragment {
     View rod;
 
 
-    public Recipe_fragment(int position) {
-        this.position = position;
+    public Recipe_fragment() {
         // Required empty public constructor
     }
 
@@ -49,6 +48,7 @@ public class Recipe_fragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         recipeInfo = recipeInfo.getInstance();
+        position = recipeInfo.getPostionRecipe();
         recipeObj = recipeInfo.getRecipe(position,getContext());
     }
 
@@ -57,7 +57,6 @@ public class Recipe_fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rod = inflater.inflate(R.layout.activity_recipe, container, false);
-        int position = 0;
         arrayFill(position);
 
         return rod;
@@ -65,21 +64,6 @@ public class Recipe_fragment extends Fragment {
 
     private void arrayFill(int position) {
         Log.d(TAG,"Filling arraylist.");
-
-        //RecipeObj recipe = recipeInfo.getRecipe(position);
-
-        //ingrediensTxt = recipe.getIngrediens();
-        //directionsTxt = recipe.getDirections();
-
-        recipeImage.add(R.drawable.egg_image);
-        recipeImage.add(R.drawable.example2);
-        recipeImage.add(R.drawable.example3);
-        recipeImage.add(R.drawable.example4);
-        recipeImage.add(R.drawable.example2);
-        recipeImage.add(R.drawable.example2);
-        recipeImage.add(R.drawable.egg_image);
-        recipeImage.add(R.drawable.example2);
-        recipeImage.add(R.drawable.example2);
 
         initRecyclerViewIngrediens();
         initRecyclerViewDirections();

@@ -56,7 +56,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             rod = inflater.inflate(R.layout.homepage_layout_new, container, false);
 
             //setting up buttons
-            activitiesB = rod.findViewById(R.id.activitiesButton);
+            activitiesB = rod.findViewById(R.id.activitesButton);
             activitesSound = rod.findViewById(R.id.activitesSpeaker);
             profileB = rod.findViewById(R.id.profileButton);
             profileSound = rod.findViewById(R.id.profileSpeaker);

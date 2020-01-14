@@ -48,8 +48,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-            if(rod == null) {
             rod = inflater.inflate(R.layout.homepage_layout, container, false);
 
             //settin up images
@@ -77,7 +75,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             recipSound.setOnClickListener(this);
             develoSound.setOnClickListener(this);
             activitySound.setOnClickListener(this);
-            }
+
         return rod;
     }
 

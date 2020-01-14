@@ -65,20 +65,6 @@ public class ChildInfo {
 
     }
 
-    /**'
-     * Getter to get the active child
-     * @return the position in the array the child is located.
-     */
-    public int getActiveChild(){
-        int position = -1;
-        for (int i = 0; i <childArr.size() ; i++) {
-            if (childArr.get(i).getActive()){
-                position = i;
-            }
-        }
-        return position;
-    }
-
     /**
      * Deletes the child
      * @param position Postion where the child is saved
@@ -110,6 +96,42 @@ public class ChildInfo {
      * @param position
      */
     public void setPosition(int position) {this.position = position;}
+
+
+
+    /**
+     * Calculate the age of the child
+     */
+    public long[] progressDaysOld(){
+        long[] progress = new long[childArr.size()];
+        for (int i = 0; i <childArr.size() ; i++) {
+            progress[i] = childArr.get(i).getBirthday();
+        }
+        progress = new long[childArr.size()];
+        long a = System.currentTimeMillis();
+        for (int i = 0; i <childArr.size() ; i++) {
+            long b = childArr.get(i).getBirthday();
+            progress[i] = a - b;
+            progress[i] = progress[i]/(1000*60*60*24);
+        }
+        return progress;
+    }
+
+    public long[] progressMonthsOld(){
+        long[] progress = new long[childArr.size()];
+        for (int i = 0; i <childArr.size() ; i++) {
+            progress[i] = childArr.get(i).getBirthday();
+        }
+        progress = new long[childArr.size()];
+        long a = System.currentTimeMillis();
+        for (int i = 0; i <childArr.size() ; i++) {
+            long b = childArr.get(i).getBirthday();
+            progress[i] = a - b;
+            progress[i] = (progress[i]/(1000*60*60*24))/30;
+        }
+        return progress;
+    }
+
 
     /**
      * Switch that returns the string of a month

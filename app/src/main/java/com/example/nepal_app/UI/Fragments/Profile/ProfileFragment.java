@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
@@ -27,8 +26,6 @@ public class ProfileFragment extends Fragment {
     private long[] progress;
 
 
-
-
     private ArrayList<ChildObj> childArr = new ArrayList<>();
 
 
@@ -44,23 +41,18 @@ public class ProfileFragment extends Fragment {
         addChildButton = view.findViewById(R.id.floatingActionButton4);
         list = view.findViewById(R.id.list);
         getBirthday();
-        progress();
+        progress = childInfo.progressDaysOld();
 
         //Checks if there is data in the list before setting the adaptor.
         if(birthday.length != 0 && childArr.size() != 0) {
             Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday, progress);
-
-
             list.setAdapter(adaptor);
         }
-
-
-
-
 
         //OnClickListner for the editor button
         addChildButton.setOnClickListener((something) -> {
             getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();
+
         });
 
         return view;
@@ -83,18 +75,5 @@ public class ProfileFragment extends Fragment {
         }
     }
 
-    /**
-     * Calculate the age of the child
-     */
-    private void progress(){
-        progress = new long[childArr.size()];
-        long a = System.currentTimeMillis();
-        for (int i = 0; i <childArr.size() ; i++) {
-            long b = childArr.get(i).getBirthday();
-            progress[i] = a - b;
-            progress[i] = progress[i]/(1000*60*60*24);
-        }
 
-
-    }
 }

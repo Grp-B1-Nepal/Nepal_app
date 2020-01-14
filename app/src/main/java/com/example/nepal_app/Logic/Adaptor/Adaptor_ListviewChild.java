@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -88,29 +87,10 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         viewHolder.gender.setText(childArr.get(position).getGender());
         viewHolder.progress.setText(progress[position] + " days old");
         viewHolder.progressBar.setProgress((int) progress[position]);
-
-
-        viewHolder.active.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                for (int i = 0; i <childArr.size() ; i++) {
-                    childArr.get(i).setActive(false);
-                }
-                childArr.get(position).setActive(true);
-                childInfo.setChildArr(childArr,getContext());
-                //Updates the adaptor after the change
-                //TODO maybe rephrase
-                Toast.makeText(context,"You change to " + childArr.get(position).getName(),Toast.LENGTH_LONG).show();
-                notifyDataSetChanged();
-
-            }
-        });
         if (childArr.get(position).getActive()){
             viewHolder.active.setImageResource(R.drawable.full_star_foreground);
         } else
             viewHolder.active.setImageResource(R.drawable.empty_star);
-
-
 
         viewHolder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,9 +99,6 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
                 ((FragmentActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.container,new EditChild()).addToBackStack(null).commit();
             }
         });
-
-
-
         return convertView;
     }
     static class ViewHolder {

@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="true">
-
-    <LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    >
+    <ScrollView
+        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:fillViewport="true"
+        android:layout_height="match_parent" >
 
-        <ImageView
-            android:id="@+id/fragment_activity_informationfragment_picture"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/activity_reading" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/activity_information_headline"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:gravity="center"
-            android:text="Headline"
-            android:textSize="32dp"
-            android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/fragment_activity_informationfragment_picture"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/mother_reading" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/fragment_acitivityinformation_recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:nestedScrollingEnabled="false">
+    <TextView
+        android:id="@+id/fragment_activity_informationfragment_headline"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:gravity="center_vertical"
+        android:text="Reading with baby every day"
+        android:textSize="22dp"
+        android:textStyle="bold" />
 
-        </androidx.recyclerview.widget.RecyclerView>
 
-    </LinearLayout>
 
-</androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/fragment_activity_informationfragment_infotext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="From bonding time to learning how the world works, there are plenty of reasons to read to your baby before they can even say ‘Peppa Pig’. Reading every day helps your baby learn sounds and words, which are the basic building blocks of lifelong language and communication skills. \n \n
+Reading stimulates your child’s creativity, brain development, and independence. Even if your baby just puts them in her mouth at first, early exposure to books makes a long-term difference, boosting your child’s language abilities and making them more eager to learn how to read. \n \n
+The more words your little one is exposed to as an infant, the better their pre-school language skills will be. They’ll also be better prepared to begin reading on their own and, with any luck, become a life-long book lover! \n \n
+By pointing, commenting, and asking questions as you read, you can introduce everyday things to your baby, help them understand how words relate to pictures and the way language is made up of symbols. \n \n
+As you read aloud to your baby, they may not understand what you’re saying, but they’ll definitely be picking up on the way you speak. Listening to your tone, rhythm and inflections will help your little one finesse their own first words. \n \n
+Whether you sing a nursery rhyme or just get through this morning’s news headlines, the ritual of reading to your baby can be a wonderful time to simply enjoy time with one another. Your baby will enjoy the attention almost as much as you will love watching your budding wordsmith grow. \n \n"  />
+        </LinearLayout>
+
+</ScrollView>
+</LinearLayout>

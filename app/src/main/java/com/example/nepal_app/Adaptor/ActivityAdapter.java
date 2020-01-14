@@ -26,7 +26,6 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
     public ArrayList<Integer> sounds;
     private Context mcontext;
 
-
     public ActivityAdapter(int speakerimage, ArrayList<String> informationtext, ArrayList<Integer> sounds) {
 //This information is passed on by the overlaying fragment containing the recycler view.
         this.speakerimage = speakerimage;

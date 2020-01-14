@@ -17,7 +17,6 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
     ImageView image;
     TextView info, age, height, weight, head, info2;
     private Button b1, b2, b3, b4, b5, b6, b7, b8,b9,b10,b11,b12;
-    private int agerange = 1;
     private View rod;
 
 
@@ -58,6 +57,7 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         b10.setOnClickListener(this);
         b11.setOnClickListener(this);
         b12.setOnClickListener(this);
+        updateInfo(1);
 
 
         // Inflate the layout for this fragment

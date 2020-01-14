@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@id/name"
         android:layout_marginTop="105dp"
-        android:max="100"
+        android:max="1000"
         android:progress="70"
         android:progressBackgroundTint="#0C0201"
         android:progressTint="@color/colorPrimary"
@@ -80,5 +80,15 @@
         android:layout_below="@+id/birthday"
         android:layout_alignStart="@+id/birthday"
         android:text="girl" />
+
+    <ImageView
+        android:id="@+id/active"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@android:drawable/star_on" />
 
 </RelativeLayout>

@@ -7,4 +7,5 @@
     <color name="redMat">#ecc9c1</color>
     <color name="justWhite">#FFFFFF</color>
     <color name="mainBackgroundColor">#F3F3F3</color>
+    <color name="buttongrey">#E0E0E0</color>
 </resources>

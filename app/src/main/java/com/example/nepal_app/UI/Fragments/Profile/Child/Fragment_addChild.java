@@ -2,12 +2,17 @@ package com.example.nepal_app.UI.Fragments.Profile.Child;
 
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,10 +29,13 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.nepal_app.Logic.ChildObj;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
@@ -47,19 +55,19 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     private ChildInfo childInfo;
     private ConstraintLayout picture;
     private Bitmap bitmap;
-    private String currentName;
 
 
-
-
+    /**
+     * Required empty constructor
+     */
     public Fragment_addChild() {
-        // Required empty public constructor
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
         save = view2.findViewById(R.id.save_button);
         picture = view2.findViewById(R.id.picture);
@@ -93,14 +101,42 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         return view2;
     }
 
+    /**
+     * Getting result inform of picture from the camera roll
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Bitmap bitmapTemp;
+        float degree;
+        Matrix matrix = new Matrix();
+        String filePath;
         try {
 
             if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
                 imageUri = data.getData();
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
+                bitmapTemp = bitmap;
+                bitmap = Bitmap.createBitmap(bitmapTemp, 0,0, bitmap.getWidth(),bitmap.getHeight(),matrix,true);
+                bitmap = Bitmap.createScaledBitmap(bitmap,200,200,true);
 
-                preview.setImageBitmap(bitmap);
+                String[] filePathColumn = {MediaStore.Images.Media.DATA};
+
+                Cursor cursor = getActivity().getContentResolver().query(imageUri, filePathColumn, null, null, null);
+                cursor.moveToFirst();
+
+                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                filePath = cursor.getString(columnIndex);
+                cursor.close();
+
+                degree = getCameraPhotoOrientation(getContext(), imageUri, filePath);
+                matrix.setRotate(degree);
+
+                //Get round image
+                Glide.with(this).load(bitmap).
+                        apply(RequestOptions.circleCropTransform())
+                        .into(preview);
 
                 if (bitmap != null) {
                     preview.setVisibility(View.VISIBLE);
@@ -131,8 +167,10 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                     Toast.makeText(getContext(),"Select a gender",Toast.LENGTH_LONG).show();
                 }
             } else {
-                currentName = String.valueOf(name.getText());
-                childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem())));
+                if (childArr.size() != 0) {
+                    childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem()),false));
+                } else
+                    childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem()),true));
                 childInfo.setBitmap(bitmap,String.valueOf(name.getText()),getContext());
                 childInfo.setChildArr(childArr,getContext());
                 //Goes back to the last fragment
@@ -172,6 +210,36 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         pick_date.setText(childInfo.monthText((month+1)) + " " + day + " " + year);
         currentDate = c.getTimeInMillis();
     }
+
+    public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
+        int rotate = 0;
+        try {
+            context.getContentResolver().notifyChange(imageUri, null);
+            File imageFile = new File(imagePath);
+
+            ExifInterface exif = new ExifInterface(imageFile.getAbsolutePath());
+            int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
+
+            switch (orientation) {
+                case ExifInterface.ORIENTATION_ROTATE_270:
+                    rotate = 270;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_180:
+                    rotate = 180;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_90:
+                    rotate = 90;
+                    break;
+            }
+
+            Log.i("RotateImage", "Exif orientation: " + orientation);
+            Log.i("RotateImage", "Rotate value: " + rotate);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return rotate;
+    }
+
 }
 
 

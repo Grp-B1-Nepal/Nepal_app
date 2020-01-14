@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
@@ -21,8 +22,11 @@ import java.util.Calendar;
 public class ProfileFragment extends Fragment {
     private ListView list;
     private String[] birthday;
-    private FloatingActionButton add;
+    private FloatingActionButton addChildButton;
     private ChildInfo childInfo;
+    private long[] progress;
+
+
 
 
     private ArrayList<ChildObj> childArr = new ArrayList<>();
@@ -33,27 +37,38 @@ public class ProfileFragment extends Fragment {
 
         childInfo = ChildInfo.getInstance();
 
+        //Gets the childArr from the singleton class
         childArr = childInfo.getChildArr(getContext());
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        add = view.findViewById(R.id.floatingActionButton4);
+        addChildButton = view.findViewById(R.id.floatingActionButton4);
         list = view.findViewById(R.id.list);
         getBirthday();
+        progress();
 
+        //Checks if there is data in the list before setting the adaptor.
         if(birthday.length != 0 && childArr.size() != 0) {
-            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday);
+            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday, progress);
+
+
             list.setAdapter(adaptor);
         }
 
-        add.setOnClickListener((test) -> {
-            getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();
 
+
+
+
+        //OnClickListner for the editor button
+        addChildButton.setOnClickListener((something) -> {
+            getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();
         });
 
         return view;
     }
 
-    //TODO fix the apdapter
+    /**
+     * Sets the birthday to the correct format to in the string[] birthday
+     */
     private void getBirthday() {
         Calendar calendar = Calendar.getInstance();
         birthday = new String[childArr.size()];
@@ -66,5 +81,20 @@ public class ProfileFragment extends Fragment {
             date3 = date1 + " " + date2;
             birthday[i] = date3;
         }
+    }
+
+    /**
+     * Calculate the age of the child
+     */
+    private void progress(){
+        progress = new long[childArr.size()];
+        long a = System.currentTimeMillis();
+        for (int i = 0; i <childArr.size() ; i++) {
+            long b = childArr.get(i).getBirthday();
+            progress[i] = a - b;
+            progress[i] = progress[i]/(1000*60*60*24);
+        }
+
+
     }
 }

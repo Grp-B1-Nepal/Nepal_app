@@ -1,11 +1,16 @@
 package com.example.nepal_app.UI.Fragments.Profile.Child;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +25,13 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.nepal_app.Logic.ChildObj;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
@@ -44,6 +53,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private ImageView image;
     private ConstraintLayout buttonImage;
     private Spinner genders;
+
 
 
 
@@ -72,19 +82,23 @@ public class EditChild extends Fragment implements View.OnClickListener {
         buttonBack.setOnClickListener(this);
         buttonSave.setOnClickListener(this);
 
-
         image = view2.findViewById(R.id.downloaded_picture);
         image.setVisibility(View.VISIBLE);
-        arr = childInfo.getChildArr(getContext());
+
 
         arr = childInfo.getChildArr(getContext());
+        //Gets the objects from the ChillObj in the arr
         oldName = arr.get(position).getName();
         name = arr.get(position).getName();
         gender = arr.get(position).getGender();
         birthday = getBirthday(position);
         newBirthday = arr.get(position).getBirthday();
 
+        Glide.with(this).load(childInfo.getBitmap(getContext(),name)).
+                apply(RequestOptions.circleCropTransform())
+                .into(image);
 
+        //Sets up known info
         image.setImageBitmap(childInfo.getBitmap(getContext(),name));
         editName.setText(name);
         buttonBirthday.setText(birthday);
@@ -128,7 +142,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
         } else if (buttonDelete.equals(v)) {
-            childInfo.deleteChild(position, getContext());
+            childInfo.deleteChildImage(position, getContext());
             arr.remove(position);
             childInfo.setChildArr(arr, getContext());
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
@@ -150,6 +164,13 @@ public class EditChild extends Fragment implements View.OnClickListener {
         datePickerDialog.show();
     }
 
+    /**
+     * Method implemented from datePickerDialog
+     * @param view
+     * @param year
+     * @param month
+     * @param day
+     */
     private void onDateSet(DatePicker view, int year, int month, int day) {
         Calendar c = Calendar.getInstance();
         c.set(year,month,day);
@@ -158,6 +179,11 @@ public class EditChild extends Fragment implements View.OnClickListener {
         arr.get(position).setBirthday(newBirthday);
     }
 
+    /**
+     * Getter for the birthday
+     * @param index For the child array
+     * @return
+     */
     private String getBirthday(int index) {
         Calendar calendar = Calendar.getInstance();
         String date1, date2, date3;
@@ -168,13 +194,43 @@ public class EditChild extends Fragment implements View.OnClickListener {
             return date3;
     }
 
+    /**
+     * Getting result inform of picture from the camera roll
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Bitmap bitmapTemp;
+        float degree;
+        Matrix matrix = new Matrix();
+        String filePath;
         try {
 
             if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
                 imageUri = data.getData();
                 editBitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
-                image.setImageBitmap(editBitmap);
+                bitmapTemp = editBitmap;
+                editBitmap = Bitmap.createBitmap(bitmapTemp, 0,0, editBitmap.getWidth(),editBitmap.getHeight(),matrix,true);
+                editBitmap = Bitmap.createScaledBitmap(editBitmap,200,200,true);
+
+                String[] filePathColumn = {MediaStore.Images.Media.DATA};
+
+                Cursor cursor = getActivity().getContentResolver().query(imageUri, filePathColumn, null, null, null);
+                cursor.moveToFirst();
+
+                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                filePath = cursor.getString(columnIndex);
+                cursor.close();
+
+                degree = getCameraPhotoOrientation(getContext(), imageUri, filePath);
+                matrix.setRotate(degree);
+
+                //Get round image
+                Glide.with(this).load(editBitmap).
+                        apply(RequestOptions.circleCropTransform())
+                        .into(image);
+
                 if (image != null){
                     image.setVisibility(View.VISIBLE);
                 }
@@ -183,4 +239,33 @@ public class EditChild extends Fragment implements View.OnClickListener {
             e.printStackTrace();
         }
     }
+    public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
+        int rotate = 0;
+        try {
+            context.getContentResolver().notifyChange(imageUri, null);
+            File imageFile = new File(imagePath);
+
+            ExifInterface exif = new ExifInterface(imageFile.getAbsolutePath());
+            int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
+
+            switch (orientation) {
+                case ExifInterface.ORIENTATION_ROTATE_270:
+                    rotate = 270;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_180:
+                    rotate = 180;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_90:
+                    rotate = 90;
+                    break;
+            }
+
+            Log.i("RotateImage", "Exif orientation: " + orientation);
+            Log.i("RotateImage", "Rotate value: " + rotate);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return rotate;
+    }
+
 }

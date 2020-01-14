@@ -1,4 +1,4 @@
-package com.example.nepal_app.notification;
+package com.example.nepal_app.MyReciever;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -7,33 +7,17 @@ import android.util.Log;
 
 import com.example.nepal_app.MainActivity;
 
-/**
- * Created by Jaison on 17/06/17.
- */
-
-public class AlarmReceiver extends BroadcastReceiver {
-
-    String TAG = "AlarmReceiver";
-
+public class MyReciever extends BroadcastReceiver{
     @Override
-    public void onReceive(Context context, Intent intent) {
-        // TODO Auto-generated method stub
-
-        if (intent.getAction() != null && context != null) {
-            if (intent.getAction().equalsIgnoreCase(Intent.ACTION_BOOT_COMPLETED)) {
-                // Set the alarm here.
-                Log.d(TAG, "onReceive: BOOT_COMPLETED");
-                LocalData localData = new LocalData(context);
-                NotificationScheduler.setReminder(context, AlarmReceiver.class, localData.get_hour(), localData.get_min());
-                return;
-            }
+    public void onReceive(Context context, Intent intent)
+    {
+      /*Intent service1 = new Intent(context, MyAlarmService.class);
+        context.startService(service1);*/
+        Log.i("App", "called receiver method");
+        try{
+            Utils.generateNotification(context);
+        }catch(Exception e){
+            e.printStackTrace();
         }
-
-        Log.d(TAG, "onReceive: ");
-
-        //Trigger the notification
-        NotificationScheduler.showNotification(context, MainActivity.class,
-                "You have 5 unwatched videos", "Watch them now?");
-
     }
 }

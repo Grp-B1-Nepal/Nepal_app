@@ -1,4 +1,4 @@
-package com.example.nepal_app.notification;
+package com.example.nepal_app.MyReciever;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;

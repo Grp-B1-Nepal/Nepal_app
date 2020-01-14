@@ -1,4 +1,4 @@
-package com.example.nepal_app.notification;
+package com.example.nepal_app.MyReciever;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 
 import androidx.core.app.NotificationCompat;
 

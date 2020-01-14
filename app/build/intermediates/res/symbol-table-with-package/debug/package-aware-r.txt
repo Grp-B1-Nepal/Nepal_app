@@ -1430,6 +1430,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_shape
 drawable buttonshape
+drawable buttonshape_home
 drawable child_picture
 drawable child_picture_small
 drawable children_on_ball

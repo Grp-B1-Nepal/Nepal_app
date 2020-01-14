@@ -97,6 +97,42 @@ public class ChildInfo {
      */
     public void setPosition(int position) {this.position = position;}
 
+
+
+    /**
+     * Calculate the age of the child
+     */
+    public long[] progressDaysOld(){
+        long[] progress = new long[childArr.size()];
+        for (int i = 0; i <childArr.size() ; i++) {
+            progress[i] = childArr.get(i).getBirthday();
+        }
+        progress = new long[childArr.size()];
+        long a = System.currentTimeMillis();
+        for (int i = 0; i <childArr.size() ; i++) {
+            long b = childArr.get(i).getBirthday();
+            progress[i] = a - b;
+            progress[i] = progress[i]/(1000*60*60*24);
+        }
+        return progress;
+    }
+
+    public long[] progressMonthsOld(){
+        long[] progress = new long[childArr.size()];
+        for (int i = 0; i <childArr.size() ; i++) {
+            progress[i] = childArr.get(i).getBirthday();
+        }
+        progress = new long[childArr.size()];
+        long a = System.currentTimeMillis();
+        for (int i = 0; i <childArr.size() ; i++) {
+            long b = childArr.get(i).getBirthday();
+            progress[i] = a - b;
+            progress[i] = (progress[i]/(1000*60*60*24))/30;
+        }
+        return progress;
+    }
+
+
     /**
      * Switch that returns the string of a month
      * @param intMonth

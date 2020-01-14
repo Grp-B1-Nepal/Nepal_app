@@ -41,14 +41,13 @@ public class ProfileFragment extends Fragment {
         addChildButton = view.findViewById(R.id.floatingActionButton4);
         list = view.findViewById(R.id.list);
         getBirthday();
-        progress();
+        progress = childInfo.progressDaysOld();
 
         //Checks if there is data in the list before setting the adaptor.
         if(birthday.length != 0 && childArr.size() != 0) {
             Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday, progress);
             list.setAdapter(adaptor);
         }
-
 
         //OnClickListner for the editor button
         addChildButton.setOnClickListener((something) -> {
@@ -76,18 +75,5 @@ public class ProfileFragment extends Fragment {
         }
     }
 
-    /**
-     * Calculate the age of the child
-     */
-    private void progress(){
-        progress = new long[childArr.size()];
-        long a = System.currentTimeMillis();
-        for (int i = 0; i <childArr.size() ; i++) {
-            long b = childArr.get(i).getBirthday();
-            progress[i] = a - b;
-            progress[i] = progress[i]/(1000*60*60*24);
-        }
 
-
-    }
 }

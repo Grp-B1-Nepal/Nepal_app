@@ -1,5 +1,6 @@
 package com.example.nepal_app.UI.Fragments.Progress;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
 
 
@@ -17,14 +19,20 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
     ImageView image;
     TextView info, age, height, weight, head, info2;
     private Button b1, b2, b3, b4, b5, b6, b7, b8,b9,b10,b11,b12;
-    private int agerange = 1;
     private View rod;
+    private ChildInfo childInfo;
+    private Bitmap imageChild;
+    private long monthsOld;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         rod = inflater.inflate(R.layout.fragment_progress, container, false);
+
+
+        childInfo = ChildInfo.getInstance();
+
 
         info = rod.findViewById(R.id.fragmentProgress_InfoText);
         info2 = rod.findViewById(R.id.fragmentProgress_InfoText2);

@@ -60,7 +60,7 @@ public class RecipeHome extends Fragment {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                final CategoryAdapter adapter = new CategoryAdapter(categoryList, btnIcons);
+                final CategoryAdapter adapter = new CategoryAdapter(categoryList, btnIcons, getContext());
                 c.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

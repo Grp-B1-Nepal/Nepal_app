@@ -18,4 +18,139 @@
         <item>Girl</item>
         <item>Other</item>
     </string-array>
+
+    <!-- Strings for progress -->
+    <string name="weight1">2,94 – 5,91 Kg</string>
+    <string name="weight2">4,12 – 8,29 Kg</string>
+    <string name="weight3">4,82 – 9,03 Kg</string>
+    <string name="weight4">5,34 – 9,65 Kg</string>
+    <string name="weight5">5,77 – 10,17 Kg</string>
+    <string name="weight6">6,12 – 10,64 Kg</string>
+    <string name="weight7">6,41 – 11,07 Kg</string>
+    <string name="weight8">6,68 – 11,43 Kg</string>
+    <string name="weight9">6,9 – 11,78 Kg</string>
+    <string name="weight10">7,11 – 12,1 Kg</string>
+    <string name="weight11">7,29 – 12,42 Kg</string>
+    <string name="weight12">7,47 – 12,72 Kg</string>
+
+    <string name="height1">49,0 – 58,9 cm</string>
+    <string name="height2">53,7 – 66,1 cm</string>
+    <string name="height3">56,6 – 68.6 cm</string>
+    <string name="height4">59,0 – 70,7 cm</string>
+    <string name="height5">61,0 – 72,5 cm</string>
+    <string name="height6">62,6 – 74,2 cm</string>
+    <string name="height7">64,1 – 75,8 cm</string>
+    <string name="height8">65,5 – 77,2 cm</string>
+    <string name="height9">66,8 – 78,6 cm</string>
+    <string name="height10">68,0 – 80,0 cm</string>
+    <string name="height11">69,2 – 81,3 cm</string>
+    <string name="height12">70,3 – 12,72 cm</string>
+
+    <string name="age1">Your 1 month old baby</string>
+    <string name="age2">Your 2 month old baby</string>
+    <string name="age3">Your 3 month old baby</string>
+    <string name="age4">Your 4 month old baby</string>
+    <string name="age5">Your 5 month old baby</string>
+    <string name="age6">Your 6 month old baby</string>
+    <string name="age7">Your 7 month old baby</string>
+    <string name="age8">Your 8 month old baby</string>
+    <string name="age9">Your 9 month old baby</string>
+    <string name="age10">Your 10 month old baby</string>
+    <string name="age11">Your 11 month old baby</string>
+    <string name="age12">Your 12 month old baby</string>
+
+    <string name="head1">Feeding pattern</string>
+    <string name="head2">Development</string>
+    <string name="head3">Development</string>
+    <string name="head4">Development</string>
+    <string name="head5">Development</string>
+    <string name="head6">Development</string>
+    <string name="head7">Development</string>
+    <string name="head8">Development</string>
+    <string name="head9">Development</string>
+    <string name="head10">Development</string>
+    <string name="head11">Development</string>
+    <string name="head12">Development</string>
+
+    <string name="info1_1">Your baby is nearly one month old! Soon you will have to entertain your little one.
+        Right now though it’s still all about feeding and sleeping.</string>
+    <string name="info1_2">Social and emotional development</string>
+    <string name="info1_3">Your baby is three months\' old, and you’re probably starting to get the hang of this
+        parenting thing. You may have settled into a schedule, or your routine may vary from day to day.
+        Either way, your 3 month old has changed from a tiny newborn to an active infant.</string>
+    <string name="info1_4">Just when you thought your baby could not get any more adorable,
+        he somehow does. At four months, your baby is learning more about himself and also becoming pretty
+        fascinated with the world around him.</string>
+    <string name="info1_5">By five months old, your baby is certainly showing more personality.
+        He may be crying less and babbling more. He is also probably becoming more interested in playing.
+        Lots of other fun changes are taking place during the fifth month.</string>
+    <string name="info1_6">It may be hard to believe your baby is already six months old.
+        You’ll probably see a lot of developmental milestones this month.
+        But it’s also important for moms and dads to understand, each baby is a unique individual and may do things
+        at their own pace. If you’re concerned about something, don’t hesitate talking to your pediatrician.</string>
+    <string name="info1_7">Social and emotional development</string>
+    <string name="info1_8">Social and emotional development</string>
+    <string name="info1_9">Social and emotional development</string>
+    <string name="info1_10">Social and emotional development</string>
+    <string name="info1_11">Social and emotional development</string>
+    <string name="info1_12">Social and emotional development</string>
+
+
+    <string name="info2_1">You might notice more of a pattern starting to form around feeding.
+        Your baby will probably still require cluster-feeding at night when he needs a lot of feeding in order to
+        have enough for the next day. But you are also able to tell whether your baby is hungry, needs a diaper change
+        or has colic. You can try to feed a little longer in the evenings now so you can catch more sleep
+        during the night.</string>
+    <string name="info2_2">You may not think a lot is going on as far as social development,
+        but it is. As you love your baby and respond to his cries, you’re building his trust,
+        which helps his social and emotional development. \n
+Your baby still needs lots of cuddles and skin-to-skin contact, so enjoy quiet time together when you can.
+        Research indicates that babies need touch in order to thrive.
+        So all those cuddles are actually helping your baby’s development. \n
+His emotional development also includes his ability to self-soothe, which he does by sucking.
+        2 month old babies have a strong sucking reflex. Your baby may like to suck on a pacifier, his fist or a finger.
+
+Most babies this age also start following objects with their eyes. At two months, your baby’s vision is
+        not as sharp as an adult’s, but it is improving.</string>
+
+    <string name="info2_3">One cool thing you may notice is your baby is starting to figure out who’s who.
+        While you can’t expect your little one to say mama or dada just yet,
+        your baby may be showing signs of parental recognition. For example, when your baby sees you,
+        he may kick his legs with excitement or smile at the sound of your voice.
+
+Not only is your baby’s brain developing rapidly, his senses are also becoming more active.
+        For example, you may notice your baby turns his head towards sounds. Your 3 month old also thrives on touch,
+        so continue to spend a lot of time snuggling and cuddling. Partners, you should also make time
+        for skin to skin contact.</string>
+    <string name="info2_4">Your baby is likely becoming more social.
+        You may notice he copies some facial expressions, such as frowning or smiling.
+        He is probably enjoying playing more and may even start to cry when playtime stops.
+If you have not already introduced music, now may be a good time to give it a shot.
+        Some research indicates music helps babies with their intellectual and social development.
+        Consider a baby class, or just sing to your little one. But even with all the social development going on,
+        your baby still needs quiet time. Make sure you allow plenty of time for quiet snuggles.</string>
+    <string name="info2_5">You may have noticed, your baby’s sense of humor is developing more.
+        He’s starting to get the joke. For instance, he may laugh when you make silly faces or use a goofy voice.
+        Continue to encourage those adorable giggles with silly chatter. It helps your baby’s social development.
+
+Along with a sense of humor, your baby may be showing a wider range of emotions, such as anger and happiness.
+        He may express those varied emotions by grunting when he is mad or squealing when he is happy.
+
+You and your partner can help your baby’s social and emotional development by just doing what you do.
+        Every time you respond to a cry, play or cuddle your baby, you’re helping him feel safe and loved.</string>
+    <string name="info2_6">It may be hard to believe your baby is already six months old.
+        You’ll probably see a lot of developmental milestones this month.
+        But it’s also important for moms and dads to understand, each baby is a unique
+        individual and may do It may be hard to believe your baby is already six months old.
+        You’ll probably see a lot of developmental milestones this month.
+        But it’s also important for moms and dads to understand, each baby is a unique individual and may do
+        things at their own pace. If you’re concerned about something, don’t hesitate talking to your pediatrician.
+        things at their own pace. If you’re concerned about something, don’t hesitate talking to your pediatrician.</string>
+    <string name="info2_7">Social and emotional development</string>
+    <string name="info2_8">Social and emotional development</string>
+    <string name="info2_9">Social and emotional development</string>
+    <string name="info2_10">Social and emotional development</string>
+    <string name="info2_11">Social and emotional development</string>
+    <string name="info2_12">Social and emotional development</string>
+
 </resources>

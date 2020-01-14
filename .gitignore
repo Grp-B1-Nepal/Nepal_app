@@ -46,6 +46,7 @@ captures/
 .idea/assetWizardSettings.xml
 .idea/dictionaries
 .idea/libraries
+.idea/runConfigurations.xml
 
 # Android Studio 3 in .gitignore file.
 .idea/caches
@@ -70,6 +71,8 @@ freeline.py
 freeline/
 freeline_project_description.json
 
+
+app/gradle/*
 
 
 # fastlane

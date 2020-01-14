@@ -7,24 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5200e684-5c38-4540-bfad-0e73086ac2d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Factory/ChildInfo.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/Logic/Factory/ChildInfo.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Progress/ProgressFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dexBuilder/debug/0/com/example/nepal_app/UI/Fragments/Progress/ProgressFragment.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Progress/ProgressFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Progress/ProgressFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_progress.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_progress.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/profil_liste_element.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Progress/ProgressFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="489">
-              <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+              <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -79,17 +64,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="208" selection-start-line="208" selection-end-line="216" />
+            <state relative-caret-position="734">
+              <caret line="216" selection-start-line="216" selection-end-line="216" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="152" column="12" selection-start-line="152" selection-start-column="12" selection-end-line="152" selection-end-column="12" />
+            <state relative-caret-position="768">
+              <caret line="155" column="30" lean-forward="true" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,11 +162,11 @@
         <option value="$PROJECT_DIR$/src/main/res/drawable/empty_star.xml" />
         <option value="$PROJECT_DIR$/../.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Factory/ChildInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Progress/ProgressFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/Logic/Adaptor/Adaptor_ListviewChild.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Progress/ProgressFragment.java" />
       </list>
     </option>
   </component>
@@ -362,7 +347,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3840" height="2125" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20708956" />
@@ -376,11 +360,11 @@
       <window_info anchor="bottom" id="Run" order="0" weight="0.32920924" />
       <window_info anchor="bottom" id="Logcat" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32920924" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49946696" weight="0.26035503" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50053304" side_tool="true" weight="0.2614309" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.32920924" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" sideWeight="0.49920043" visible="true" weight="0.26035503" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5007996" side_tool="true" visible="true" weight="0.26035503" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.3846154" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.2006455" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32920924" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -407,10 +391,10 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java</url>
-          <line>216</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java</url>
+          <line>146</line>
           <properties />
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -719,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="208" selection-start-line="208" selection-end-line="216" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/ProfileFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
@@ -733,20 +710,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Progress/ProgressFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/Fragment_addChild.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+        <state relative-caret-position="734">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Profile/Child/EditChild.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="152" column="12" selection-start-line="152" selection-start-column="12" selection-end-line="152" selection-end-column="12" />
+        <state relative-caret-position="768">
+          <caret line="155" column="30" lean-forward="true" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/nepal_app/UI/Fragments/Progress/ProgressFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
         </state>
       </provider>
     </entry>

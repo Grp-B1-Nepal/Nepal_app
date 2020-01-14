@@ -66,6 +66,7 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         b10.setOnClickListener(this);
         b11.setOnClickListener(this);
         b12.setOnClickListener(this);
+        updateInfo(1);
 
 
         childInfo = ChildInfo.getInstance();

@@ -38,6 +38,7 @@ import com.example.nepal_app.R;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Objects;
 
 import static android.app.Activity.RESULT_OK;
@@ -205,10 +206,16 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
      *
      */
     public void onDateSet(DatePicker view, int year, int month, int day) {
-        Calendar c = Calendar.getInstance();
-        c.set(year,month,day);
+        Date date = new Date();
+        //Minus because of Java API
+        date.setYear(year-1900);
+        date.setDate(day);
+        date.setMonth(month);
+        date.setMinutes(0);
+        date.setHours(0);
+        date.setSeconds(0);
         pick_date.setText(childInfo.monthText((month+1)) + " " + day + " " + year);
-        currentDate = c.getTimeInMillis();
+        currentDate = date.getTime();
     }
 
     public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){

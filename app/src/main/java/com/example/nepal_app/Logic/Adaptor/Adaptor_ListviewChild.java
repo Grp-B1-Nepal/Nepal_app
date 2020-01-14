@@ -41,10 +41,10 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
 
     private String[] birthday;
     private ChildInfo childInfo;
-    private long[] progress;
+    private int[] progress;
 
 
-    public Adaptor_ListviewChild(Context context, ArrayList<ChildObj> arr, String[] birthday, long[] progress) {
+    public Adaptor_ListviewChild(Context context, ArrayList<ChildObj> arr, String[] birthday, int[] progress) {
         super(context, R.layout.profil_liste_element);
         this.childArr = arr;
         this.context = context;

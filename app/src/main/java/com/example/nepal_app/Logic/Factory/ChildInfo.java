@@ -111,6 +111,18 @@ public class ChildInfo {
      */
     public void setPosition(int position) {this.position = position;}
 
+
+    /**
+     * Calculate how many months old the child is
+     */
+    public int monthProgress(){
+        int progress;
+        progress = (int) (System.currentTimeMillis() - childArr.get(getActiveChild()).getBirthday());
+        progress = (progress/(1000*60*60*24))/30;
+        return progress;
+    }
+
+
     /**
      * Switch that returns the string of a month
      * @param intMonth

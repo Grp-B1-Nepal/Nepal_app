@@ -1408,6 +1408,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable activities_frontpage_image
 drawable activity_cuddling
 drawable activity_playtime
 drawable activity_reading
@@ -1446,6 +1447,7 @@ drawable example2
 drawable example3
 drawable example4
 drawable food_frontpage
+drawable fp_speaker
 drawable full_star_background
 drawable full_star_foreground
 drawable ic_action_name
@@ -1453,6 +1455,8 @@ drawable ic_activity
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_edit_black_24dp
+drawable ic_food_background
+drawable ic_food_foreground
 drawable ic_home
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
@@ -1498,10 +1502,13 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable person_add_icon
 drawable placeholder
+drawable profile_button_image
+drawable progress_frontpage_image
 drawable recipehome_bananas
 drawable recipehome_cake
 drawable recipehome_chicken
 drawable recipehome_dal
+drawable recipes_frontpage_image
 drawable rectangle
 drawable rectangle1
 drawable selectimageicon
@@ -1572,6 +1579,8 @@ id action_mode_close_button
 id action_text
 id actions
 id active
+id activitesButton
+id activitesSpeaker
 id activitiesButton
 id activities_button04months
 id activities_button58months
@@ -1784,7 +1793,11 @@ id picTex
 id pickdate_button
 id picture
 id pin
+id profileButton
+id profileSpeaker
 id progressBar2
+id progressButton
+id progressSpeaker
 id progress_circular
 id progress_horizontal
 id radio
@@ -1796,6 +1809,7 @@ id recipe_choose_all
 id recipe_choose_favorites
 id recipe_choose_today
 id recipesButton
+id recipesSpeaker
 id recyclerv_view
 id right
 id right_icon
@@ -1995,6 +2009,7 @@ layout fragment_home
 layout fragment_profile
 layout fragment_progress
 layout homepage_layout
+layout homepage_layout_new
 layout layout_listitem
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
@@ -2062,6 +2077,8 @@ layout text_view_without_line_height
 menu bottom_navigation_menu
 mipmap full_star
 mipmap full_star_round
+mipmap ic_food
+mipmap ic_food_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

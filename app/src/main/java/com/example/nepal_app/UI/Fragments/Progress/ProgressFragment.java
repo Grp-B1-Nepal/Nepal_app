@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.nepal_app.Logic.ChildObj;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
@@ -40,6 +42,7 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         head = rod.findViewById(R.id.fragmentProgress_Headline2);
         height = rod.findViewById(R.id.progress_height);
         weight = rod.findViewById(R.id.progress_weight);
+        image = rod.findViewById(R.id.fragmentProgress_imageView);
 
         b1 = rod.findViewById(R.id.b1);
         b2 = rod.findViewById(R.id.b2);
@@ -66,14 +69,25 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         b10.setOnClickListener(this);
         b11.setOnClickListener(this);
         b12.setOnClickListener(this);
-        updateInfo(1);
 
+        b1.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+        updateInfo(1);
 
         childInfo = ChildInfo.getInstance();
 
         chillArr = childInfo.getChildArr(getContext());
         imageChild = childInfo.getBitmap(getContext(),chillArr.get(childInfo.getActiveChild()).getName());
         monthAge = childInfo.monthProgress();
+
+        if (chillArr.size() != 0){
+            updateInfo(monthAge);
+            image.setImageBitmap(imageChild);
+
+            Glide.with(this).load(imageChild).
+                    apply(RequestOptions.circleCropTransform())
+                    .into(image);
+        }
+
 
 
         // Inflate the layout for this fragment
@@ -82,52 +96,28 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         //Paints the background and changes the informationnum range number. The number is passed on to the next fragment such that it knows what information it should get.
         if (v == b1) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(1);
         } else if (v == b2) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(2);
         } else if (v == b3) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(3);
         }else if (v == b4) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(4);
         }else if (v == b5) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(5);
         }else if (v == b6) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(6);
         }else if (v == b7) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(7);
         }else if (v == b8) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(8);
         }else if (v == b9) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(9);
         }else if (v == b10) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(10);
         }else if (v == b11) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(11);
         } else if (v == b12) {
-            resetColors();
-            v.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             updateInfo(12);
         }
     }
@@ -147,7 +137,9 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         b12.setBackground(getResources().getDrawable(R.drawable.scroll_buttons));
     }
     public void updateInfo(int agerange){
-        if (agerange == 1){
+        if (agerange <= 1){
+            resetColors();
+            b1.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight1);
             height.setText(R.string.height1);
             age.setText(R.string.age1);
@@ -156,6 +148,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             info2.setText(R.string.info2_1);
         }
         if (agerange == 2){
+            resetColors();
+            b2.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight2);
             height.setText(R.string.height2);
             age.setText(R.string.age2);
@@ -164,6 +158,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             info2.setText(R.string.info2_2);
         }
         if (agerange == 3){
+            resetColors();
+            b3.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight3);
             height.setText(R.string.height3);
             age.setText(R.string.age3);
@@ -172,6 +168,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             info2.setText(R.string.info2_3);
         }
         if (agerange == 4){
+            resetColors();
+            b4.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight4);
             height.setText(R.string.height4);
             age.setText(R.string.age4);
@@ -180,6 +178,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             info2.setText(R.string.info2_4);
         }
         if (agerange == 5){
+            resetColors();
+            b5.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight5);
             height.setText(R.string.height5);
             age.setText(R.string.age5);
@@ -188,6 +188,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             info2.setText(R.string.info2_5);
         }
         if (agerange == 6){
+            resetColors();
+            b6.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight6);
             height.setText(R.string.height6);
             age.setText(R.string.age6);
@@ -196,6 +198,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             info2.setText(R.string.info2_6);
         }
         if (agerange == 7){
+            resetColors();
+            b7.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight7);
             height.setText(R.string.height7);
             age.setText(R.string.age7);
@@ -205,6 +209,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             );
         }
         if (agerange == 8){
+            resetColors();
+            b8.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight8);
             height.setText(R.string.height8);
             age.setText(R.string.age8);
@@ -213,6 +219,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             info2.setText(R.string.info2_8);
         }
         if (agerange == 9){
+            resetColors();
+            b9.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight9);
             height.setText(R.string.height9);
             age.setText(R.string.age9);
@@ -221,6 +229,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             info2.setText(R.string.info2_9);
         }
         if (agerange == 10){
+            resetColors();
+            b10.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight10);
             height.setText(R.string.height10);
             age.setText(R.string.age10);
@@ -229,6 +239,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             info2.setText(R.string.info2_10);
         }
         if (agerange == 11){
+            resetColors();
+            b11.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight11);
             height.setText(R.string.height11);
             age.setText(R.string.age11);
@@ -236,7 +248,9 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             info.setText(R.string.info1_11);
             info2.setText(R.string.info2_11);
         }
-        if (agerange == 12){
+        if (agerange >= 12){
+            resetColors();
+            b12.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
             weight.setText(R.string.weight12);
             height.setText(R.string.height12);
             age.setText(R.string.age12);

@@ -16,13 +16,8 @@ import com.example.nepal_app.Logic.Factory.RecipeInfo;
 import com.example.nepal_app.Logic.RecipeObj;
 import com.example.nepal_app.R;
 
-import java.util.ArrayList;
-
 public class Recipe_fragment extends Fragment {
     private static final String TAG = "RecipeActivity";
-    private ArrayList<String> ingrediensTxt = new ArrayList<>();
-    private ArrayList<String> directionsTxt = new ArrayList<>();
-    private ArrayList<Integer> recipeImage = new ArrayList<>();
     private String mParam1;
     private String mParam2;
     private int position;
@@ -57,16 +52,11 @@ public class Recipe_fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rod = inflater.inflate(R.layout.activity_recipe, container, false);
-        arrayFill(position);
-
-        return rod;
-    }
-
-    private void arrayFill(int position) {
-        Log.d(TAG,"Filling arraylist.");
 
         initRecyclerViewIngrediens();
         initRecyclerViewDirections();
+
+        return rod;
     }
 
     private void initRecyclerViewIngrediens() {

@@ -1,43 +1,43 @@
 [
   {
-  "name": "recipe1",
+  "name": "Banana Cake", "image": "recipehome_cake",
   "recipe": [
       {
         "images": [
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
           "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image"
+          "recipehome_cake"
         ],
         "ingrediens": [
-          "item1",
-          "item1",
-          "item1",
-          "item1",
-          "item1",
-          "item1",
-          "item1",
-          "item1",
-          "item1"
+          "1 1/2 cups all-purpose flour",
+          "2/3 cup white sugar",
+          "1 1/2 teaspoons baking powder",
+          "1/4 teaspoon salt",
+          "1 cup mashed bananas",
+          "1 egg",
+          "1/2 cup unsalted butter, melted",
+          "1/4 cup milk",
+          "3/4 cup semisweet chocolate chips"
         ],
         "directions": [
-          "directions1",
-          "directions1",
-          "directions1",
-          "directions1",
-          "directions1",
-          "directions1"
+          "1. Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
+          "2. In a large bowl, mix flour, sugar, baking powder and salt.",
+          "3. In a separate bowl, combine bananas, egg, melted butter and milk.",
+          "4. Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
+          "5. Stir in chocolate chips.",
+          "6. Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
         ]
       }
     ]
   },
   {
-    "name": "recipe2",
+    "name": "Chicken in a box", "image": "recipehome_chicken",
     "recipe": [
       {
         "images": [
@@ -74,7 +74,7 @@
     ]
   },
   {
-    "name": "recipe3",
+    "name": "Banana in a box", "image": "recipehome_bananas",
     "recipe": [
       {
         "images": [

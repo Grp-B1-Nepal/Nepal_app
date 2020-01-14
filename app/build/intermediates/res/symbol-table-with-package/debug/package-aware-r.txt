@@ -1671,6 +1671,7 @@ id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id layoutListItemDirections
 id layoutListItemFoodName
 id layoutListItemImage
 id left
@@ -1762,6 +1763,7 @@ id recipe_snacks
 id recipesButton
 id recviewRecipe
 id recyclerv_view
+id recyclerv_view1
 id right
 id right_icon
 id right_side
@@ -1959,6 +1961,7 @@ layout fragment_home
 layout fragment_profile
 layout fragment_progress
 layout homepage_layout
+layout layout_directions
 layout layout_listitem
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions

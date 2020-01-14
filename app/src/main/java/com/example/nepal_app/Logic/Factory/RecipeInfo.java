@@ -3,29 +3,31 @@ package com.example.nepal_app.Logic.Factory;
 import android.content.Context;
 
 import com.example.nepal_app.Datalayer.RecipeJSONParsing;
+import com.example.nepal_app.Logic.RecipeHomeObject;
 import com.example.nepal_app.Logic.RecipeObj;
 
-import java.io.IOException;
+import java.util.ArrayList;
 
 public class RecipeInfo {
     private static final RecipeInfo Recipeinstans = new RecipeInfo();
     private int recipePostion;
     private RecipeObj recipe;
-
-    /* ONLY useful if we need to obtain/save all recipes at once.
-    private ArrayList<RecipeObj> recipeArr = new ArrayList<>();*/
+    private ArrayList<RecipeHomeObject> recipeHomeObjects;
 
     private RecipeJSONParsing recipeJSONParsing = RecipeJSONParsing.getInstance();
 
     private RecipeInfo(){}
 
     public RecipeObj getRecipe(int position, Context context) {
-        try {
-            recipe = recipeJSONParsing.loadRecipe(position,context);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        recipe = recipeJSONParsing.loadRecipe(position,context);
+
         return recipe;
+    }
+
+    public ArrayList<RecipeHomeObject> getRecipeList(Context context) {
+        recipeHomeObjects = recipeJSONParsing.loadRecipeList(context);
+
+        return recipeHomeObjects;
     }
 
     public void setRecipe(RecipeObj recipe) {

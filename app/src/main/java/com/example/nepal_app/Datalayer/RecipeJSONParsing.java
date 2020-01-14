@@ -1,6 +1,7 @@
 package com.example.nepal_app.Datalayer;
 
 import android.content.Context;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,19 +25,50 @@ public class RecipeJSONParsing extends AppCompatActivity {
 
     private RecipeJSONParsing() { }
 
-    public RecipeObj loadRecipe(int position, Context context) throws IOException {
-        String name = "";
-        ArrayList<String> images = new ArrayList<>();
-        ArrayList<String> ingrediens = new ArrayList<>();
-        ArrayList<String> directions = new ArrayList<>();
+    public JSONArray readJSON(Context context) {
+        JSONArray jsonArray = null;
         try {
-            // Reading from JSON file
             InputStream is = context.getAssets().open("recipes.json");
             byte b[] = new byte[is.available()];
             is.read(b);
             String str = new String(b, "UTF-8");
 
-            JSONArray jsonArray = new JSONArray(str);
+            jsonArray = new JSONArray(str);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return jsonArray;
+    }
+
+    public ArrayList<RecipeHomeObject> loadRecipeList(Context context) {
+        ArrayList<RecipeHomeObject> recipeHomeObjects = new ArrayList<>();
+        JSONArray jsonArray = readJSON(context);
+        String name, image;
+
+        try {
+            for (int i = 0; i < jsonArray.length(); i++) {
+                name = jsonArray.getJSONObject(i).getString("name");
+                image = jsonArray.getJSONObject(i).getString("image");
+                recipeHomeObjects.add(new RecipeHomeObject(name,image));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        return recipeHomeObjects;
+    }
+
+    public RecipeObj loadRecipe(int position, Context context) {
+        String name = "";
+        ArrayList<String> images = new ArrayList<>();
+        ArrayList<String> ingrediens = new ArrayList<>();
+        ArrayList<String> directions = new ArrayList<>();
+        try {
+            JSONArray jsonArray = readJSON(context);
+
             JSONObject json = jsonArray.getJSONObject(position);
             name = json.getString("name");
 
@@ -69,7 +101,6 @@ public class RecipeJSONParsing extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
 
         RecipeObj recipe = new RecipeObj(name,images,ingrediens,directions);
         return recipe;

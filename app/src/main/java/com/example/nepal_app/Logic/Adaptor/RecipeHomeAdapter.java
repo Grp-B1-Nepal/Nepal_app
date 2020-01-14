@@ -42,8 +42,8 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
 
     @Override
     public void onBindViewHolder(recipelistVH holder, int position) {
-
-            holder.recImg.setImageResource(recipeList.get(position).getRecipeImg());
+            int identifier = context.getResources().getIdentifier(recipeList.get(position).getRecipeImg(),"drawable",context.getPackageName());
+            holder.recImg.setImageResource(identifier);
             holder.recName.setText(recipeList.get(position).getRecipeName());
             holder.btn.setOnClickListener(new View.OnClickListener() {
                 @Override

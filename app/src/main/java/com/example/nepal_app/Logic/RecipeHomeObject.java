@@ -1,62 +1,24 @@
 package com.example.nepal_app.Logic;
 
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 public class RecipeHomeObject {
-
-    public RecipeHomeObject(String recipeName, int recipeImg, Button btnViewRecipe, Button btnFavorite) {
-
+    public RecipeHomeObject(String recipeName, String recipeImg) {
         this.recipeName = recipeName;
         this.recipeImg = recipeImg;
-        this.btnViewRecipe = btnViewRecipe;
-        this.btnFavorite = btnFavorite;
-
     }
 
     public String getRecipeName() {
         return recipeName;
     }
 
-    public void setRecipeName(String recipeName) {
-        this.recipeName = recipeName;
-    }
-
     private String recipeName;
 
-    public int getRecipeImg() {
+    public String getRecipeImg() {
         return recipeImg;
     }
 
-    public void setRecipeImg(int recipeImg) {
-        this.recipeImg = recipeImg;
-    }
-
-    private int recipeImg;
-
-    public Button getBtnViewRecipe() {
-        return btnViewRecipe;
-    }
-
-    public void setBtnViewRecipe(Button btnViewRecipe) {
-        this.btnViewRecipe = btnViewRecipe;
-    }
-
-    private Button btnViewRecipe;
-
-    public Button getBtnFavorite() {
-        return btnFavorite;
-    }
-
-    public void setBtnFavorite(Button btnFavorite) {
-        this.btnFavorite = btnFavorite;
-    }
-
-    private Button btnFavorite;
+    private String recipeImg;
 
     private boolean expanded;
-
 
     public boolean isExpanded() {
         return expanded;
@@ -71,8 +33,6 @@ public class RecipeHomeObject {
         return "RecipeHomeObject{" +
                 "recipeName=" + recipeName +
                 ", recipeImg=" + recipeImg +
-                ", btnViewRecipe=" + btnViewRecipe +
-                ", btnFavorite=" + btnFavorite +
                 '}';
     }
 

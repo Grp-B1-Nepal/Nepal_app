@@ -1,5 +1,6 @@
 package com.example.nepal_app.Logic.Adaptor;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,10 +21,12 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
     List<CategoryObject> categoryList;
     List<Integer> btnIcons;
+    Context context;
 
-    public CategoryAdapter(List<CategoryObject> categoryList, List<Integer> btnIcons) {
+    public CategoryAdapter(List<CategoryObject> categoryList, List<Integer> btnIcons, Context context) {
         this.categoryList = categoryList;
         this.btnIcons = btnIcons;
+        this.context = context;
     }
 
     @Override
@@ -43,7 +46,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         );
         layoutManager.setInitialPrefetchItemCount(categoryList.get(position).getRecipeList().size());
 
-        RecipeHomeAdapter recipeAdapter = new RecipeHomeAdapter(categoryList.get(position).getRecipeList());
+        RecipeHomeAdapter recipeAdapter = new RecipeHomeAdapter(categoryList.get(position).getRecipeList(), context);
 
         holder.rvRecipe.setLayoutManager(layoutManager);
         holder.rvRecipe.setAdapter(recipeAdapter);

@@ -53,15 +53,12 @@ public class MainActivity extends AppCompatActivity {
         NotificationCompat.Builder builder = createNotification();
 // notify viser beskeden.
         notificationManager.notify(notificationId, builder.build());
-
 //I think the intent is the notification itself
         Intent myIntent = new Intent(MainActivity.this, MyReciever.class);
         pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, myIntent,0);
 //Alarm manageren er den der sender beskeden ud.
         AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
         //alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
-
-
 
         setContentView(R.layout.activity_main);
         openFragment(new HomeFragment());

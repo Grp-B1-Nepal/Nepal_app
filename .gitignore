@@ -23,7 +23,7 @@ out/
 # Gradle files
 .gradle
 .gradle/
-build/
+app/build/*
 
 # Signing files
 .signing/
@@ -38,7 +38,7 @@ proguard/
 *.log
 
 # Android Studio
-/*/build/
+/*/build/*
 /*/local.properties
 /*/out
 /*/*/build

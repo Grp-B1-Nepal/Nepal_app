@@ -19,6 +19,139 @@
         <item>Other</item>
     </string-array>
 
+    <!-- Here comes the information for the activity information fragment. This is gonna fill alot so please bear with me. Might include it in its own xml file instead-->
+
+    <!-- This is the information for the category singing.  -->
+
+
+    <string-array name="activities_information_Singing_category1">
+        <item>Singing category 1.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>Singing category 1.2: Too cultivated use solicitude frequently. Dashwood likewise up consider continue entrance ladyship oh. Wrong guest given purse power is no. Friendship to connection an am considered difficulty. Country met pursuit lasting moments why calling certain the. Middletons boisterous our way understood law. Among state cease how and sight since shall. Material did pleasure breeding our humanity she contempt had. So ye really mutual no cousin piqued summer result.</item>
+        <item>Singing category 1.3: Surprise steepest recurred landlord mr wandered amounted of. Continuing devonshire but considered its. Rose past oh shew roof is song neat. Do depend better praise do friend garden an wonder to. Intention age nay otherwise but breakfast. Around garden beyond to extent by. </item>
+        <item>Singing category 1.4: Oh acceptance apartments up sympathize astonished delightful. Waiting him new lasting towards. Continuing melancholy especially so to. Me unpleasing impossible in attachment announcing so astonished. What ask leaf may nor upon door. Tended remain my do stairs. Oh smiling amiable am so visited cordial in offices hearted. </item>
+    </string-array>
+    <string-array name="activities_information_Singing_category2">
+        <item>Singing category 2.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>Singing category 2.2: Here goes the information for the second set</item>
+        <item>Singing category 2.3: Here goes the information for the third set</item>
+        <item>Singing category 2.4: Here goes the information for the fourth set</item>
+    </string-array>
+    <string-array name="activities_information_Singing_category3">
+        <item>Singing category 3.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>Singing category 3.2: Here goes the information for the second set</item>
+        <item>Singing category 3.3: Here goes the information for the third set</item>
+        <item>Singing category 3.4: Here goes the information for the fourth set</item>
+    </string-array>
+
+    <!-- This is the information for the category talking.  -->
+
+    <string-array name="activities_information_Talking_category1">
+        <item>Talking category 1.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>Talking category 1.2: Here goes the information for the second set</item>
+        <item>Talking category 1.3: Here goes the information for the third set</item>
+        <item>Talking category 1.4: Here goes the information for the fourth set</item>
+    </string-array>
+    <string-array name="activities_information_Talking_category2">
+        <item>Talking category 2.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>Talking category 2.2: Here goes the information for the second set</item>
+        <item>Talking category 2.3: Here goes the information for the third set</item>
+        <item>Talking category 2.4: Here goes the information for the fourth set</item>
+    </string-array>
+    <string-array name="activities_information_Talking_category3">
+        <item>Talking category 3.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>Talking category 3.2: Here goes the information for the second set</item>
+        <item>Talking category 3.3: Here goes the information for the third set</item>
+        <item>Talking category 3.4: Here goes the information for the fourth set</item>
+    </string-array>
+
+
+    <!-- This is the information for the category tummy time.  -->
+
+
+    <string-array name="activities_information_TummyTime_category1">
+        <item>TummyTime category 1.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>TummyTime category 1.2: Here goes the information for the second set</item>
+        <item>TummyTime category 1.3: Here goes the information for the third set</item>
+        <item>TummyTime category 1.4: Here goes the information for the fourth set</item>
+    </string-array>
+    <string-array name="activities_information_TummyTime_category2">
+        <item>TummyTime category 2.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>TummyTime category 2.2: Here goes the information for the second set</item>
+        <item>TummyTime category 2.3: Here goes the information for the third set</item>
+        <item>TummyTime category 2.4: Here goes the information for the fourth set</item>
+    </string-array>
+    <string-array name="activities_information_TummyTime_category3">
+        <item>TummyTime category 3.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>TummyTime category 3.2: Here goes the information for the second set</item>
+        <item>TummyTime category 3.3: Here goes the information for the third set</item>
+        <item>TummyTime category 3.4: Here goes the information for the fourth set</item>
+    </string-array>
+
+    <!-- This is the information for the category cuddlingtime.  -->
+
+    <string-array name="activities_information_CuddlingTime_category1">
+        <item>CuddlingTime category 1.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>CuddlingTime category 1.2: Here goes the information for the second set</item>
+        <item>CuddlingTime category 1.3: Here goes the information for the third set</item>
+        <item>CuddlingTime category 1.4: Here goes the information for the fourth set</item>
+    </string-array>
+    <string-array name="activities_information_CuddlingTime_category2">
+        <item>CuddlingTime category 2.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>CuddlingTime category 2.2: Here goes the information for the second set</item>
+        <item>CuddlingTime category 2.3: Here goes the information for the third set</item>
+        <item>CuddlingTime category 2.4: Here goes the information for the fourth set</item>
+    </string-array>
+    <string-array name="activities_information_CuddlingTime_category3">
+        <item>CuddlingTime category 3.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in.   </item>
+        <item>CuddlingTime category 3.2: Here goes the information for the second set</item>
+        <item>CuddlingTime category 3.3: Here goes the information for the third set</item>
+        <item>CuddlingTime category 3.4: Here goes the information for the fourth set</item>
+    </string-array>
+
+    <!-- This is the information for the category Playtime.  -->
+
+
+    <string-array name="activities_information_PlayTimecategory1">
+        <item>PlayTime category 1.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>PlayTime category 1.2: Here goes the information for the second set</item>
+        <item>PlayTime category 1.3: Here goes the information for the third set</item>
+        <item>PlayTime category 1.4: Here goes the information for the fourth set</item>
+    </string-array>
+    <string-array name="activities_information_PlayTimecategory2">
+        <item>PlayTime category 2.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>PlayTime category 2.2: Here goes the information for the second set</item>
+        <item>PlayTime category 2.3: Here goes the information for the third set</item>
+        <item>PlayTime category 2.4: Here goes the information for the fourth set</item>
+    </string-array>
+    <string-array name="activities_information_PlayTimecategory3">
+        <item>PlayTime category 3.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>PlayTime category 3.2: Here goes the information for the second set</item>
+        <item>PlayTime category 3.3: Here goes the information for the third set</item>
+        <item>PlayTime category 3.4: Here goes the information for the fourth set</item>
+    </string-array>
+
+    <!-- This is the information for the category reading.  -->
+
+
+    <string-array name="activities_information_Readingcategory1">
+        <item>Reading category 1.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
+        <item>Reading category 1.2: Here goes the information for the second set aaaaaaaaaa</item>
+        <item>Reading category 1.3: Here goes the information for the third set aaaaaaaaaa</item>
+        <item>Reading category 1.4: Here goes the information for the fourth set aaaaaaaaaa</item>
+    </string-array>
+    <string-array name="activities_information_Readingcategory2">
+        <item>Reading category 2.1: Here goes the information for the first set aaaaaaaaaa</item>
+        <item>Reading category 2.2: Here goes the information for the second set aaaaaaaaaa</item>
+        <item>Reading category 2.2: Here goes the information for the third set aaaaaaaaaa</item>
+        <item>Reading category 2.2: Here goes the information for the fourth set aaaaaaaaaa</item>
+    </string-array>
+    <string-array name="activities_information_Readingcategory3">
+        <item>Reading category 3.1: Here goes the information for the first set aaaaaaaaaa</item>
+        <item>Reading category 3.2: Here goes the information for the second set aaaaaaaaaa</item>
+        <item>Reading category 3.3: Here goes the information for the third set aaaaaaaaaa</item>
+        <item>Reading category 3.4: Here goes the information for the fourth set aaaaaaaaaa</item>
+    </string-array>
+
     <!-- Strings for progress -->
     <string name="weight1">2,94 – 5,91 Kg</string>
     <string name="weight2">4,12 – 8,29 Kg</string>

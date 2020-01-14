@@ -25,7 +25,7 @@ public class ProfileFragment extends Fragment {
     private String[] birthday;
     private FloatingActionButton addChildButton;
     private ChildInfo childInfo;
-    private int[] progress;
+    private long[] progress;
 
 
 
@@ -89,14 +89,17 @@ public class ProfileFragment extends Fragment {
      */
     private void progress(){
         Date d = new Date();
-        progress = new int[childArr.size()];
+        progress = new long[childArr.size()];
         for (int i = 0; i <childArr.size() ; i++) {
             d.getDate();
             d.setHours(0);
             d.setMinutes(0);
             long b = d.getTime();
-            progress[i] = (int) (b - childArr.get(i).getBirthday());
-            int a = (int) Math.ceil(progress[i]/(1000*60*60*24));
+            long q =childArr.get(i).getBirthday();
+            Date p = new Date();
+            p.setTime(q);
+            progress[i] =  (b - q);
+            long a = (long) Math.floor(progress[i]/(1000*60*60*24));
             progress[i] = a;
         }
     }

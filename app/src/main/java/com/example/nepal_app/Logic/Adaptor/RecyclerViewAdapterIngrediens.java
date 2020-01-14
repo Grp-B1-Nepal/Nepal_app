@@ -10,24 +10,26 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nepal_app.Logic.Factory.RecipeInfo;
+import com.example.nepal_app.Logic.RecipeObj;
 import com.example.nepal_app.R;
 
-import java.util.ArrayList;
-
-public class RecyclerViewAdapterRecipe extends RecyclerView.Adapter<RecyclerViewAdapterRecipe.ViewHolder> {
+public class RecyclerViewAdapterIngrediens extends RecyclerView.Adapter<RecyclerViewAdapterIngrediens.ViewHolder> {
     private static final String TAG = "RecyclerViewAdapter";
-    private ArrayList<Integer> foodImage;
-    private ArrayList<String> foodName;
+
+    private RecipeInfo recipeInfo;
+    private RecipeObj recipeObj;
     private Context context;
 
-    public RecyclerViewAdapterRecipe(Context context, ArrayList<Integer> foodImage, ArrayList<String> foodName) {
-        this.foodImage = foodImage;
-        this.foodName = foodName;
+    public RecyclerViewAdapterIngrediens(Context context, RecipeObj recipeObj) {
+        this.recipeObj = recipeObj;
         this.context = context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        recipeInfo = RecipeInfo.getInstance();
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem,parent,false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
@@ -36,25 +38,24 @@ public class RecyclerViewAdapterRecipe extends RecyclerView.Adapter<RecyclerView
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Log.d(TAG, "OnBindViewHolder: called.");
-
-        holder.foodName.setText(foodName.get(position));
-        holder.foodImage.setImageResource(foodImage.get(position));
+        holder.ingrediensTxt.setText(recipeObj.getIngrediens(position));
+        int identifier = context.getResources().getIdentifier(recipeObj.getImages(position),"drawable",context.getPackageName());
+        holder.ingrediensImage.setImageResource(identifier);
     }
 
     @Override
     public int getItemCount() {
-        return foodImage.size();
+        return recipeObj.getRecipeArrayListSizeIngrediens();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView foodImage;
-        TextView foodName;
+        ImageView ingrediensImage;
+        TextView ingrediensTxt;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            foodImage = itemView.findViewById(R.id.layoutListItemImage);
-            foodName = itemView.findViewById(R.id.layoutListItemFoodName);
-
+            ingrediensImage = itemView.findViewById(R.id.layoutListItemImage);
+            ingrediensTxt = itemView.findViewById(R.id.layoutListItemFoodName);
         }
     }
 }

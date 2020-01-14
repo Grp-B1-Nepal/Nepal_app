@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_hide_motion_spec.xml.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\animator\\design_fab_hide_motion_spec.xml"
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_child_picture_small.PNG.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable\\child_picture_small.PNG"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\animator_design_fab_hide_motion_spec.xml.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\animator\\design_fab_hide_motion_spec.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_activity_reading.jpg.flat",
@@ -20,12 +20,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\raw_recipestts.mp3.flat",
-        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\raw\\recipestts.mp3"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\raw_recipestts.mp3.flat",
+        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\raw\\recipestts.mp3"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_child_element.xml.flat",
@@ -44,16 +44,16 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\ddf6a25e6e3e5e2af441269b48288beb\\appcompat-resources-1.1.0\\res\\drawable\\abc_vector_test.xml"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_reho_common.png.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-hdpi\\ic_reho_common.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\ddf6a25e6e3e5e2af441269b48288beb\\appcompat-resources-1.1.0\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_full_star.png.flat",
@@ -248,12 +248,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\drawable\\mtrl_tabs_default_indicator.xml"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_progress.xml.flat",
-        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-anydpi\\ic_progress.xml"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_progress_frontpage_image.png.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable\\progress_frontpage_image.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_progress.xml.flat",
+        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-anydpi\\ic_progress.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_tooltip.xml.flat",
@@ -276,12 +276,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\animator\\mtrl_chip_state_list_anim.xml"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_tick_mark_material.xml.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_food_background.xml.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable\\ic_food_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_tick_mark_material.xml.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -364,12 +364,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\interpolator\\fast_out_slow_in.xml"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_profile.png.flat",
-        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-hdpi\\ic_profile.png"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_profile.png.flat",
+        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-hdpi\\ic_profile.png"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -408,16 +408,16 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\drawable\\mtrl_ic_arrow_drop_down.xml"
     },
     {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_recipes_frontpage_image.png.flat",
+        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable\\recipes_frontpage_image.png"
+    },
+    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_on_primary_text_btn_text_color_selector.xml.flat",
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\color\\mtrl_on_primary_text_btn_text_color_selector.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_name.png.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-hdpi\\ic_action_name.png"
-    },
-    {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_recipes_frontpage_image.png.flat",
-        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable\\recipes_frontpage_image.png"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_out.xml.flat",
@@ -564,12 +564,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_alert_select_dialog_item.xml.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\layout\\mtrl_alert_select_dialog_item.xml"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_food.png.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_food.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_alert_select_dialog_item.xml.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\layout\\mtrl_alert_select_dialog_item.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -664,20 +664,20 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_picker_header_toggle.xml.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\layout\\mtrl_picker_header_toggle.xml"
-    },
-    {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_radio_on_mtrl.xml.flat",
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable\\btn_radio_on_mtrl.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_radio_to_off_mtrl_dot_group_animation.xml.flat",
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\anim\\btn_radio_to_off_mtrl_dot_group_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_picker_header_toggle.xml.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\layout\\mtrl_picker_header_toggle.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_text_view_without_line_height.xml.flat",
@@ -808,12 +808,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\xml\\standalone_badge_gravity_bottom_start.xml"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_photo_library_black_24dp.xml.flat",
-        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable\\ic_photo_library_black_24dp.xml"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_food.png.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\mipmap-mdpi\\ic_food.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_photo_library_black_24dp.xml.flat",
+        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable\\ic_photo_library_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_extended_fab_bg_color_selector.xml.flat",
@@ -1404,12 +1404,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_reho_search.png.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-hdpi\\ic_reho_search.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -1724,16 +1724,16 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-ldrtl-xxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_reho_heart.png.flat",
+        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-mdpi\\ic_reho_heart.png"
+    },
+    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_notification_action_background.xml.flat",
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\e9dab9c67c1ee3668e0bbf86c6d8cbd8\\core-1.1.0\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_full_star.png.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\mipmap-hdpi\\full_star.png"
-    },
-    {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_reho_heart.png.flat",
-        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-mdpi\\ic_reho_heart.png"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_indicator_text_color.xml.flat",
@@ -1796,12 +1796,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_recipe.png.flat",
-        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-mdpi\\ic_recipe.png"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_activities_frontpage_image.png.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable\\activities_frontpage_image.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_recipe.png.flat",
+        "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-mdpi\\ic_recipe.png"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
@@ -2736,12 +2736,12 @@
         "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\layout\\mtrl_picker_fullscreen.xml"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_layout.xml.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_reho_recommended.png.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-hdpi\\ic_reho_recommended.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_layout.xml.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_header.xml.flat",
@@ -2972,12 +2972,12 @@
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable\\fp_speaker.png"
     },
     {
-        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu_item.xml.flat",
-        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\layout\\design_navigation_menu_item.xml"
-    },
-    {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_reho_heart.png.flat",
         "source": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\src\\main\\res\\drawable-xhdpi\\ic_reho_heart.png"
+    },
+    {
+        "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu_item.xml.flat",
+        "source": "C:\\Users\\Nober\\.gradle\\caches\\transforms-2\\files-2.1\\89960a8f9b5e73731627972c56f94153\\material-1.2.0-alpha02\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
         "merged": "C:\\Users\\Nober\\AndroidStudioProjects\\Nepal_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",

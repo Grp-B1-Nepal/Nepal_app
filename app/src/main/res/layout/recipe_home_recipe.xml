@@ -9,51 +9,52 @@
 
     <ImageView
         android:id="@+id/recipeImg2"
-        android:layout_width="386dp"
-        android:layout_height="108dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars[0]" />
 
     <Button
         android:id="@+id/recipeBtnView2"
-        android:layout_width="141dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="116dp"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
         android:background="@drawable/button_shape"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/view_recipe"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recipeImg2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipeName2" />
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/recipeImg2" />
 
     <Button
         android:id="@+id/recipeBtnLike2"
-        android:layout_width="43dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/like_button"
-        app:layout_constraintEnd_toStartOf="@+id/recipeBtnView2"
-        app:layout_constraintTop_toBottomOf="@+id/recipeImg2" />
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/favorite_empty_foreground"
+        app:layout_constraintStart_toEndOf="@+id/recipeBtnView2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/recipeName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="Hej"
-        android:textSize="24sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipeImg2" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/recipeImg2"
+        app:layout_constraintTop_toTopOf="@+id/recipeImg2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

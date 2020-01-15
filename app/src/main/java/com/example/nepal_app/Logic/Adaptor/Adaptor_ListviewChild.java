@@ -103,6 +103,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
                 //TODO maybe rephrase
                 Toast.makeText(context,"You change to " + childArr.get(position).getName(),Toast.LENGTH_LONG).show();
                 Collections.swap(childArr,position,0);
+                childInfo.setChildArr(childArr,context);
                 notifyDataSetChanged();
 
             }

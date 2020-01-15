@@ -18,6 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 public class ProfileFragment extends Fragment {
     private ListView list;
@@ -25,10 +26,6 @@ public class ProfileFragment extends Fragment {
     private FloatingActionButton addChildButton;
     private ChildInfo childInfo;
     private long[] progress;
-
-
-
-
     private ArrayList<ChildObj> childArr = new ArrayList<>();
 
 
@@ -49,14 +46,8 @@ public class ProfileFragment extends Fragment {
         //Checks if there is data in the list before setting the adaptor.
         if(birthday.length != 0 && childArr.size() != 0) {
             Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday, progress);
-
-
             list.setAdapter(adaptor);
         }
-
-
-
-
 
         //OnClickListner for the editor button
         addChildButton.setOnClickListener((something) -> {
@@ -87,14 +78,19 @@ public class ProfileFragment extends Fragment {
      * Calculate the age of the child
      */
     private void progress(){
+        Date d = new Date();
         progress = new long[childArr.size()];
-        long a = System.currentTimeMillis();
         for (int i = 0; i <childArr.size() ; i++) {
-            long b = childArr.get(i).getBirthday();
-            progress[i] = a - b;
-            progress[i] = progress[i]/(1000*60*60*24);
+            d.getDate();
+            d.setHours(0);
+            d.setMinutes(0);
+            long b = d.getTime();
+            long q =childArr.get(i).getBirthday();
+            Date p = new Date();
+            p.setTime(q);
+            progress[i] =  (b - q);
+            long a = (long) Math.floor(progress[i]/(1000*60*60*24));
+            progress[i] = a;
         }
-
-
     }
 }

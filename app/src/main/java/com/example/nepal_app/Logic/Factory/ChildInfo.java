@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import com.example.nepal_app.Datalayer.CacheSaving;
 import com.example.nepal_app.Logic.ChildObj;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ChildInfo {
     private static final ChildInfo ourInstance = new ChildInfo();
@@ -110,6 +111,29 @@ public class ChildInfo {
      * @param position
      */
     public void setPosition(int position) {this.position = position;}
+
+
+    /**
+     * Calculate how many months old the child is
+     */
+    public int monthProgress(){
+        long progress;
+        int monthAge;
+        Date date = new Date();
+        date.setHours(0);
+        date.setMinutes(0);
+        date.setSeconds(0);
+        long a = date.getTime();
+        Date p = new Date();
+        long b = childArr.get(getActiveChild()).getBirthday();
+        p.setTime(b);
+        progress = (a - b);
+        progress = progress/(1000*60*60*24);
+        progress = (int) Math.ceil(progress/30);
+        monthAge = (int) progress;
+        return monthAge;
+    }
+
 
     /**
      * Switch that returns the string of a month

@@ -28,17 +28,19 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
     private Context context;
     private RecipeInfo recipeInfo;
 
-    public RecipeHomeAdapter(List<RecipeHomeObject> recipeList) {
+    public RecipeHomeAdapter(List<RecipeHomeObject> recipeList, Context context) {
         this.recipeList = recipeList;
+        this.context = context;
     }
 
     @Override
     public recipelistVH onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v =  LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_home_recipe, parent, false);
-        context = parent.getContext();
+        View v =  LayoutInflater.from(context).inflate(R.layout.recipe_home_recipe, parent, false);
         recipeInfo = RecipeInfo.getInstance();
         return new recipelistVH(v);
     }
+
+
 
     @Override
     public void onBindViewHolder(recipelistVH holder, int position) {

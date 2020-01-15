@@ -20,6 +20,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -34,6 +35,7 @@ import com.example.nepal_app.R;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Objects;
 
 import static android.app.Activity.RESULT_OK;
@@ -46,7 +48,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private Bitmap   editBitmap;
     private String name, gender, birthday, oldName;
     private ArrayList<ChildObj> arr = new ArrayList<>();
-    private long newBirthday;
     private ChildInfo childInfo;
     private static final int PICK_IMAGE =100;
     private Uri imageUri = null;
@@ -92,7 +93,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
         name = arr.get(position).getName();
         gender = arr.get(position).getGender();
         birthday = getBirthday(position);
-        newBirthday = arr.get(position).getBirthday();
 
         Glide.with(this).load(childInfo.getBitmap(getContext(),name)).
                 apply(RequestOptions.circleCropTransform())
@@ -128,22 +128,30 @@ public class EditChild extends Fragment implements View.OnClickListener {
             if (editBitmap != null) {
                 childInfo.setBitmap(editBitmap, name, getContext());
             }
-
             childInfo.setChildArr(arr, getContext());
-
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
+
         } else if (buttonBirthday.equals(v)) {
             showDateDialog();
+
         } else if (buttonImage.equals(v)) {
             Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
             startActivityForResult(gallery, PICK_IMAGE);
+
         } else if (buttonBack.equals(v)) {
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
+
+            //TODO fix active child when deleting
         } else if (buttonDelete.equals(v)) {
             childInfo.deleteChildImage(position, getContext());
-            arr.remove(position);
+            if (arr.get(position).getActive()){
+                arr.remove(position);
+                arr.get(0).setActive(true);
+            } else
+                arr.remove(position);
+
             childInfo.setChildArr(arr, getContext());
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
@@ -172,11 +180,20 @@ public class EditChild extends Fragment implements View.OnClickListener {
      * @param day
      */
     private void onDateSet(DatePicker view, int year, int month, int day) {
-        Calendar c = Calendar.getInstance();
-        c.set(year,month,day);
-        buttonBirthday.setText(childInfo.monthText((month+1)) + " " + day + " " + year);
-        newBirthday = c.getTimeInMillis();
-        arr.get(position).setBirthday(newBirthday);
+        Date date = new Date();
+        //Minus because of Java API
+        date.setYear(year-1900);
+        date.setDate(day);
+        date.setMonth(month);
+        date.setMinutes(0);
+        date.setHours(0);
+        date.setSeconds(0);
+        if (date.getTime() <= System.currentTimeMillis()) {
+            buttonBirthday.setText(childInfo.monthText((month + 1)) + " " + day + " " + year);
+            arr.get(position).setBirthday(date.getTime());
+        }else {
+            Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();
+        }
     }
 
     /**

@@ -54,7 +54,8 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private ImageView image;
     private ConstraintLayout buttonImage;
     private Spinner genders;
-
+    private Date childDate = new Date();
+    private int year,month,day;
 
 
 
@@ -133,6 +134,10 @@ public class EditChild extends Fragment implements View.OnClickListener {
             fm.popBackStack();
 
         } else if (buttonBirthday.equals(v)) {
+            childDate.setTime(arr.get(position).getBirthday());
+            year = childDate.getYear()+1900;
+            month = childDate.getMonth();
+            day = childDate.getDate();
             showDateDialog();
 
         } else if (buttonImage.equals(v)) {
@@ -143,7 +148,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
 
-            //TODO fix active child when deleting
+
         } else if (buttonDelete.equals(v)) {
             childInfo.deleteChildImage(position, getContext());
 
@@ -168,9 +173,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private void showDateDialog(){
         DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),
                 this::onDateSet,
-                Calendar.getInstance().get(Calendar.YEAR),
-                Calendar.getInstance().get(Calendar.MONTH),
-                Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
+                year,
+                month,
+                day
         );
         datePickerDialog.show();
     }

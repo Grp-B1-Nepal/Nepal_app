@@ -25,18 +25,18 @@ public class RecipeHome extends Fragment {
 
     List<CategoryObject> categoryList;
     List<Integer> btnIcons;
-    List<RecipeHomeObject> recipeList, chickenList;
+    public List<RecipeHomeObject> recipeList, favoriteList;
 
     public void fillLists() {
         recipeInfo = recipeInfo.getInstance();
 
         recipeList = recipeInfo.getRecipeList(getContext());
         categoryList = new ArrayList<>();
-        chickenList = new ArrayList<>();
+        favoriteList = new ArrayList<>();
         btnIcons = new ArrayList<>();
 
         categoryList.add(new CategoryObject("Recommended", recipeList));
-        categoryList.add(new CategoryObject("Favorites", recipeList));
+        categoryList.add(new CategoryObject("Favorites", favoriteList));
         categoryList.add(new CategoryObject("Snacks", recipeList));
         categoryList.add(new CategoryObject("Common", recipeList));
         categoryList.add(new CategoryObject("Search", recipeList));

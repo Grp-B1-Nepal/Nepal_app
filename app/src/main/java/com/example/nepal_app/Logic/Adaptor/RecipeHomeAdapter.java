@@ -2,6 +2,7 @@ package com.example.nepal_app.Logic.Adaptor;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +18,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
 import com.example.nepal_app.Logic.RecipeHomeObject;
+import com.example.nepal_app.Logic.RecipeObj;
 import com.example.nepal_app.MainActivity;
 import com.example.nepal_app.R;
+import com.example.nepal_app.UI.Fragments.Recipes.RecipeHome;
 import com.example.nepal_app.UI.Fragments.Recipes.Recipe_fragment;
 
 import java.util.List;
@@ -27,6 +30,9 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
     List<RecipeHomeObject> recipeList;
     private Context context;
     private RecipeInfo recipeInfo;
+    private boolean isClicked = false;
+    //private RecipeInfo recipeInfo;
+
 
     public RecipeHomeAdapter(List<RecipeHomeObject> recipeList, Context context) {
         this.recipeList = recipeList;
@@ -62,6 +68,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                 }
             });
 
+
     }
 
     @Override
@@ -69,11 +76,11 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
         return recipeList.size();
     }
 
-    public class recipelistVH extends RecyclerView.ViewHolder {
+    public class recipelistVH extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView recName;
         ImageView recImg;
-        Button btn;
+        Button btn, fav;
 
         public recipelistVH(View itemView) {
             super(itemView);
@@ -81,7 +88,30 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
             recName = itemView.findViewById(R.id.recipeName2);
             recImg = itemView.findViewById(R.id.recipeImg2);
             btn = itemView.findViewById(R.id.recipeBtnView2);
+            fav = itemView.findViewById(R.id.recipeBtnLike2);
+
+            fav.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (v.getId() == R.id.recipeBtnLike2) {
+                isClicked = !isClicked;
+                v.setBackgroundResource(isClicked ? R.drawable.favorite_filled_foreground : R.drawable.favorite_empty_foreground);
+            }
+
 
         }
+    }
+
+    public void addToFavoriteArray(int position) {
+        recipeInfo = recipeInfo.getInstance();
+        RecipeObj recipe = recipeInfo.getRecipe(position, context);
+        RecipeHome rh = new RecipeHome();
+        //rh.favoriteList.add(recipe);
+    }
+
+    public void removeFromFavoriteArray(int position) {
+        recipeInfo = recipeInfo.getInstance();
     }
 }

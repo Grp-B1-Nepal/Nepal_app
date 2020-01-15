@@ -61,6 +61,22 @@ public class RecipeJSONParsing extends AppCompatActivity {
         return recipeHomeObjects;
     }
 
+    public RecipeHomeObject loadSingleHomeRecipe(int pos, Context context) {
+        RecipeHomeObject recipe;
+        String name, image;
+        name = "";
+        image = "";
+        JSONArray jsonArr = readJSON(context);
+        try {
+            name = jsonArr.getJSONObject(pos).getString("name");
+            image = jsonArr.getJSONObject(pos).getString("image");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        recipe = new RecipeHomeObject(name, image);
+        return recipe;
+    }
+
     public RecipeObj loadRecipe(int position, Context context) {
         String name = "";
         ArrayList<String> images = new ArrayList<>();

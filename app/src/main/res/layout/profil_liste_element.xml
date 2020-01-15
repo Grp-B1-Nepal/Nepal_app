@@ -89,8 +89,11 @@
         android:id="@+id/active"
         android:layout_width="45dp"
         android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/progressBar2"
-        app:layout_constraintTop_toTopOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/star_on" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

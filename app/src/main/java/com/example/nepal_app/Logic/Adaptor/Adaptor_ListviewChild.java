@@ -29,6 +29,7 @@ import com.example.nepal_app.Logic.ChildObj;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Inspiration taken from https://www.youtube.com/watch?v=q2XA0Pe2W04
@@ -84,8 +85,8 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
 
         viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(childInfo.getBitmap(getContext(),childArr.get(position).getName()),120,120,false));
         viewHolder.name.setText(childArr.get(position).getName());
-        viewHolder.birthday.setText(birthday[position]);
-        viewHolder.gender.setText(childArr.get(position).getGender());
+        viewHolder.birthday.setText("Birthday: " + birthday[position]);
+        viewHolder.gender.setText("Gender: " + childArr.get(position).getGender());
         viewHolder.progress.setText(progress[position] + " days old");
         viewHolder.progressBar.setProgress((int) progress[position]);
 
@@ -101,6 +102,8 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
                 //Updates the adaptor after the change
                 //TODO maybe rephrase
                 Toast.makeText(context,"You change to " + childArr.get(position).getName(),Toast.LENGTH_LONG).show();
+                Collections.swap(childArr,position,0);
+                childInfo.setChildArr(childArr,context);
                 notifyDataSetChanged();
 
             }

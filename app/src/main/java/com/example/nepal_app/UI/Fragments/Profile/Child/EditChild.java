@@ -20,6 +20,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -187,8 +188,12 @@ public class EditChild extends Fragment implements View.OnClickListener {
         date.setMinutes(0);
         date.setHours(0);
         date.setSeconds(0);
-        buttonBirthday.setText(childInfo.monthText((month+1)) + " " + day + " " + year);
-        arr.get(position).setBirthday(date.getTime());
+        if (date.getTime() <= System.currentTimeMillis()) {
+            buttonBirthday.setText(childInfo.monthText((month + 1)) + " " + day + " " + year);
+            arr.get(position).setBirthday(date.getTime());
+        }else {
+            Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();
+        }
     }
 
     /**

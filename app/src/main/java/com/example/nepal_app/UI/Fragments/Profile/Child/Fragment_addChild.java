@@ -214,8 +214,12 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         date.setMinutes(0);
         date.setHours(0);
         date.setSeconds(0);
-        pick_date.setText(childInfo.monthText((month+1)) + " " + day + " " + year);
-        currentDate = date.getTime();
+        if (date.getTime() <= System.currentTimeMillis()) {
+            pick_date.setText(childInfo.monthText((month + 1)) + " " + day + " " + year);
+            currentDate = date.getTime();
+        } else {
+            Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();
+        }
     }
 
     public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){

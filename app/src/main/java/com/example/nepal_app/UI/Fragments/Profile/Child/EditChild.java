@@ -146,9 +146,12 @@ public class EditChild extends Fragment implements View.OnClickListener {
             //TODO fix active child when deleting
         } else if (buttonDelete.equals(v)) {
             childInfo.deleteChildImage(position, getContext());
+
             if (arr.get(position).getActive()){
                 arr.remove(position);
-                arr.get(0).setActive(true);
+                if (arr.size() > 0){
+                    arr.get(0).setActive(true);
+                }
             } else
                 arr.remove(position);
 

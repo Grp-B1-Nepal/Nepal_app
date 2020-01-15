@@ -135,6 +135,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
 
         } else if (buttonBirthday.equals(v)) {
             childDate.setTime(arr.get(position).getBirthday());
+            //plus because of Java API
             year = childDate.getYear()+1900;
             month = childDate.getMonth();
             day = childDate.getDate();
@@ -264,6 +265,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
             e.printStackTrace();
         }
     }
+
     public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
         int rotate = 0;
         try {

@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
@@ -18,14 +18,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 public class ProfileFragment extends Fragment {
     private ListView list;
-    private String[] birthday;
     private FloatingActionButton addChildButton;
     private ChildInfo childInfo;
-    private long[] progress;
+    private TextView activeChild;
+
     private ArrayList<ChildObj> childArr = new ArrayList<>();
 
 
@@ -40,12 +39,14 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         addChildButton = view.findViewById(R.id.floatingActionButton4);
         list = view.findViewById(R.id.list);
-        getBirthday();
-        progress();
+        activeChild = view.findViewById(R.id.active_child);
+        if (childArr.size() == 0){
+            activeChild.setVisibility(View.INVISIBLE);
+        }
 
         //Checks if there is data in the list before setting the adaptor.
-        if(birthday.length != 0 && childArr.size() != 0) {
-            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, birthday, progress);
+        if(childArr != null) {
+            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, childInfo.getBirthdayString(), childInfo.progressAge());
             list.setAdapter(adaptor);
         }
 
@@ -55,42 +56,5 @@ public class ProfileFragment extends Fragment {
         });
 
         return view;
-    }
-
-    /**
-     * Sets the birthday to the correct format to in the string[] birthday
-     */
-    private void getBirthday() {
-        Calendar calendar = Calendar.getInstance();
-        birthday = new String[childArr.size()];
-        String date1, date2, date3;
-
-        for (int i = 0; i < childArr.size(); i++) {
-            calendar.setTimeInMillis(childArr.get(i).getBirthday());
-            date1 = calendar.getTime().toString().substring(4, 10);
-            date2 = calendar.getTime().toString().substring(30, 34);
-            date3 = date1 + " " + date2;
-            birthday[i] = date3;
-        }
-    }
-
-    /**
-     * Calculate the age of the child
-     */
-    private void progress(){
-        Date d = new Date();
-        progress = new long[childArr.size()];
-        for (int i = 0; i <childArr.size() ; i++) {
-            d.getDate();
-            d.setHours(0);
-            d.setMinutes(0);
-            long b = d.getTime();
-            long q =childArr.get(i).getBirthday();
-            Date p = new Date();
-            p.setTime(q);
-            progress[i] =  (b - q);
-            long a = (long) Math.floor(progress[i]/(1000*60*60*24));
-            progress[i] = a;
-        }
     }
 }

@@ -3,9 +3,6 @@ package com.example.nepal_app.Logic.Adaptor;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.media.ExifInterface;
-import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +24,6 @@ import com.example.nepal_app.UI.Fragments.Profile.Child.EditChild;
 import com.example.nepal_app.R;
 import com.example.nepal_app.Logic.ChildObj;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -85,8 +81,8 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
 
         viewHolder.childrenImage.setImageBitmap(Bitmap.createScaledBitmap(childInfo.getBitmap(getContext(),childArr.get(position).getName()),120,120,false));
         viewHolder.name.setText(childArr.get(position).getName());
-        viewHolder.birthday.setText("Birthday: " + birthday[position]);
-        viewHolder.gender.setText("Gender: " + childArr.get(position).getGender());
+        viewHolder.birthday.setText(birthday[position]);
+        viewHolder.gender.setText(childArr.get(position).getGender());
         viewHolder.progress.setText(progress[position] + " days old");
         viewHolder.progressBar.setProgress((int) progress[position]);
 
@@ -98,20 +94,21 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
                     childArr.get(i).setActive(false);
                 }
                 childArr.get(position).setActive(true);
-                childInfo.setChildArr(childArr,getContext());
-                //Updates the adaptor after the change
+
                 //TODO maybe rephrase
                 Toast.makeText(context,"You change to " + childArr.get(position).getName(),Toast.LENGTH_LONG).show();
                 Collections.swap(childArr,position,0);
                 childInfo.setChildArr(childArr,context);
+                //Updates the adaptor after the change
+                progress = childInfo.progressAge();
+                birthday = childInfo.getBirthdayString();
                 notifyDataSetChanged();
-
             }
         });
         if (childArr.get(position).getActive()){
-            viewHolder.active.setImageResource(R.drawable.full_star_foreground);
+            viewHolder.active.setImageResource(R.drawable.full_star_fill);
         } else
-            viewHolder.active.setImageResource(R.drawable.empty_star);
+            viewHolder.active.setImageResource(R.drawable.empty_star_fill);
 
 
 

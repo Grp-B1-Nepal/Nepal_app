@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import com.example.nepal_app.Datalayer.CacheSaving;
 import com.example.nepal_app.Logic.ChildObj;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class ChildInfo {
@@ -134,6 +135,43 @@ public class ChildInfo {
         return monthAge;
     }
 
+    /**
+     * Calculate the age of the child
+     */
+    public long[] progressAge(){
+        Date d = new Date();
+        long[] progress = new long[childArr.size()];
+        for (int i = 0; i <childArr.size() ; i++) {
+            d.getDate();
+            d.setHours(0);
+            d.setMinutes(0);
+            long b = d.getTime();
+            long q =childArr.get(i).getBirthday();
+            Date p = new Date();
+            p.setTime(q);
+            progress[i] =  (b - q);
+            long a = (long) Math.floor(progress[i]/(1000*60*60*24));
+            progress[i] = a;
+        }
+        return progress;
+    }
+
+    /**
+     * Sets the birthday to the correct format to in the string[] birthday
+     */
+    public String[] getBirthdayString() {
+        Calendar calendar = Calendar.getInstance();
+        String[] birthday = new String[childArr.size()];
+        String date1, date2, date3;
+        for (int i = 0; i < childArr.size(); i++) {
+            calendar.setTimeInMillis(childArr.get(i).getBirthday());
+            date1 = calendar.getTime().toString().substring(4, 10);
+            date2 = calendar.getTime().toString().substring(30, 34);
+            date3 = date1 + " " + date2;
+            birthday[i] = date3;
+        }
+        return birthday;
+    }
 
     /**
      * Switch that returns the string of a month

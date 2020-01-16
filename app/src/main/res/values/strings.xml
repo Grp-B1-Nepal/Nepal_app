@@ -152,7 +152,7 @@
         <item>Reading category 3.4: Here goes the information for the fourth set aaaaaaaaaa</item>
     </string-array>
 
-    <!-- Strings for progress -->
+    <!-- Strings for progressAge -->
     <string name="weight1">2,94 – 5,91 Kg</string>
     <string name="weight2">4,12 – 8,29 Kg</string>
     <string name="weight3">4,82 – 9,03 Kg</string>
@@ -286,5 +286,7 @@ You and your partner can help your baby’s social and emotional development by 
     <string name="info2_11">Social and emotional development</string>
     <string name="info2_12">Social and emotional development</string>
     <string name="number">1.</string>
+
+    <string name="resToastText">Oops, the app has crashed.</string>
 
 </resources>

@@ -13,17 +13,9 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class CacheSaving {
-    private static final CacheSaving ourInstance = new CacheSaving();
     private ArrayList<ChildObj> childArr = new ArrayList<>();
     private Bitmap bitmap;
 
-    private CacheSaving(){
-
-    }
-
-    public static CacheSaving getInstance() {
-        return ourInstance;
-    }
 
     public void saveChild(Context context, ArrayList<ChildObj> arr){
         SharedPreferences sharedPreferences = context.getSharedPreferences("Children", Context.MODE_PRIVATE);

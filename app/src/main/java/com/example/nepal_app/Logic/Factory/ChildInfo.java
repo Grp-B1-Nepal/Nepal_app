@@ -11,7 +11,7 @@ import java.util.Date;
 public class ChildInfo {
     private static final ChildInfo ourInstance = new ChildInfo();
     private ArrayList<ChildObj> childArr = new ArrayList<>();
-    private CacheSaving cacheSaving = CacheSaving.getInstance();
+    private CacheSaving cacheSaving = new CacheSaving();
     private Bitmap bitmap;
     private int position;
 

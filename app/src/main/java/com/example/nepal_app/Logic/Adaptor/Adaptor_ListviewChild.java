@@ -22,7 +22,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.UI.Fragments.Profile.Child.EditChild;
 import com.example.nepal_app.R;
-import com.example.nepal_app.Logic.ChildObj;
+import com.example.nepal_app.Logic.Objects.ChildObj;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
-import com.example.nepal_app.Logic.RecipeObj;
+import com.example.nepal_app.Logic.Objects.RecipeObj;
 import com.example.nepal_app.R;
 
 public class RecyclerViewAdapterIngrediens extends RecyclerView.Adapter<RecyclerViewAdapterIngrediens.ViewHolder> {

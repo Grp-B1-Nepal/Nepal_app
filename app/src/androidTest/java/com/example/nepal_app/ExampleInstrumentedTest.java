@@ -20,8 +20,6 @@ import static org.junit.Assert.*;
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
-    ChildInfo childInfo = ChildInfo.getInstance();
-    CacheSaving cacheSaving;
 
     @Test
     public void useAppContext() {

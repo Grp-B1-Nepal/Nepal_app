@@ -17,6 +17,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
+import com.example.nepal_app.Logic.FavoriteRecipes;
 import com.example.nepal_app.Logic.RecipeHomeObject;
 import com.example.nepal_app.Logic.RecipeObj;
 import com.example.nepal_app.MainActivity;
@@ -31,7 +32,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
     private Context context;
     private RecipeInfo recipeInfo;
     private boolean isClicked = false;
-    //private RecipeInfo recipeInfo;
 
 
     public RecipeHomeAdapter(List<RecipeHomeObject> recipeList, Context context) {
@@ -68,7 +68,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                 }
             });
 
-
     }
 
     @Override
@@ -99,19 +98,29 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                 isClicked = !isClicked;
                 v.setBackgroundResource(isClicked ? R.drawable.favorite_filled_foreground : R.drawable.favorite_empty_foreground);
             }
+            if (v.getId() == R.id.recipeBtnLike2) {
+                if (isClicked){
+                    addToFavoriteArray(getAdapterPosition());
+                    //notifyItemInserted(getAdapterPosition());
+                } else {
+                    removeFromFavoriteArray(getAdapterPosition());
+                    //notifyItemRemoved(getAdapterPosition());
+                }
+
+            }
 
 
         }
     }
 
     public void addToFavoriteArray(int position) {
-        recipeInfo = recipeInfo.getInstance();
-        RecipeObj recipe = recipeInfo.getRecipe(position, context);
-        RecipeHome rh = new RecipeHome();
-        //rh.favoriteList.add(recipe);
+        RecipeHomeObject recipe = recipeInfo.getSingleHomeRecipe(position, context);
+        FavoriteRecipes.getInstance().favoriteList.add(recipe);
+
     }
 
     public void removeFromFavoriteArray(int position) {
-        recipeInfo = recipeInfo.getInstance();
+        RecipeHomeObject recipe = recipeInfo.getSingleHomeRecipe(position, context);
+        FavoriteRecipes.getInstance().favoriteList.remove(recipe);
     }
 }

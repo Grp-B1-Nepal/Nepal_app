@@ -14,6 +14,7 @@ import android.widget.Button;
 import com.example.nepal_app.Logic.Adaptor.CategoryAdapter;
 import com.example.nepal_app.Logic.CategoryObject;
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
+import com.example.nepal_app.Logic.FavoriteRecipes;
 import com.example.nepal_app.Logic.RecipeHomeObject;
 import com.example.nepal_app.R;
 
@@ -32,7 +33,7 @@ public class RecipeHome extends Fragment {
 
         recipeList = recipeInfo.getRecipeList(getContext());
         categoryList = new ArrayList<>();
-        favoriteList = new ArrayList<>();
+        favoriteList = FavoriteRecipes.getInstance().favoriteList;
         btnIcons = new ArrayList<>();
 
         categoryList.add(new CategoryObject("Recommended", recipeList));
@@ -73,6 +74,8 @@ public class RecipeHome extends Fragment {
         return v;
 
     }
+
+
 
 
 }

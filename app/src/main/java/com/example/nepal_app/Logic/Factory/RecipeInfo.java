@@ -30,6 +30,12 @@ public class RecipeInfo {
         return recipeHomeObjects;
     }
 
+    public RecipeHomeObject getSingleHomeRecipe (int pos, Context context) {
+        RecipeHomeObject recipe = recipeJSONParsing.loadSingleHomeRecipe(pos, context);
+
+        return recipe;
+    }
+
     public void setRecipe(RecipeObj recipe) {
         this.recipe = recipe;
     }

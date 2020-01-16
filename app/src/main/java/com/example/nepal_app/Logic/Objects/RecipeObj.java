@@ -1,4 +1,4 @@
-package com.example.nepal_app.Logic;
+package com.example.nepal_app.Logic.Objects;
 
 import java.util.ArrayList;
 

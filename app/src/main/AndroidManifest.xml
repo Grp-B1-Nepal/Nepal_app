@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".baseApplication">
+        android:name=".Logic.CrashReport.baseApplication">
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">

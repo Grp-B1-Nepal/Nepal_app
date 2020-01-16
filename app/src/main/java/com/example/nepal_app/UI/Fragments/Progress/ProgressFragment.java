@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.nepal_app.Logic.ChildObj;
+import com.example.nepal_app.Logic.Objects.ChildObj;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
 
@@ -76,10 +76,11 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         childInfo = ChildInfo.getInstance();
 
         chillArr = childInfo.getChildArr(getContext());
-        imageChild = childInfo.getBitmap(getContext(),chillArr.get(childInfo.getActiveChild()).getName());
-        monthAge = childInfo.monthProgress();
+
 
         if (chillArr.size() != 0){
+            imageChild = childInfo.getBitmap(getContext(),chillArr.get(childInfo.getActiveChild()).getName());
+            monthAge = childInfo.monthProgress();
             updateInfo(monthAge);
             image.setImageBitmap(imageChild);
 

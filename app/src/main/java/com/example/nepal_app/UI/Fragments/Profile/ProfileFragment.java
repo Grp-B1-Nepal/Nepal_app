@@ -12,12 +12,11 @@ import androidx.fragment.app.Fragment;
 import com.example.nepal_app.Logic.Adaptor.Adaptor_ListviewChild;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
-import com.example.nepal_app.Logic.ChildObj;
+import com.example.nepal_app.Logic.Objects.ChildObj;
 import com.example.nepal_app.UI.Fragments.Profile.Child.Fragment_addChild;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class ProfileFragment extends Fragment {
     private ListView list;

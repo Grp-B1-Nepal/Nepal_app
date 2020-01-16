@@ -81,5 +81,7 @@ public class ChildTest  {
         byte[] byteArrLoad = byteArrayOutputStreamLoad.toByteArray();
 
         assertArrayEquals(byteArrBitmap,byteArrLoad);
+
+        cacheSaving.deleteImage(newName,context);
     }
 }

@@ -27,10 +27,10 @@
             android:id="@+id/list"
             android:layout_width="409dp"
             android:layout_height="659dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="46dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/profile_headline" />
 
         <TextView
             android:id="@+id/profile_headline"

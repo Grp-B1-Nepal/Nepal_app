@@ -3,45 +3,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     android:background="@color/mainBackgroundColor">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <TextView
-        android:id="@+id/recipeTitleText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="2.5dp"
-        android:gravity="center"
-        android:text="CHIKKA MASALA"
-        android:textSize="20sp"/>
 
-    <Button
-        android:id="@+id/recipeLikedButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/like"/>
+        <TextView
+            android:id="@+id/recipeTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/evenDarkerDark"
+            android:gravity="center"
+            android:text="CHIKKA MASALA"
+            android:textSize="25sp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="1dp"
-        android:layout_below="@id/recipeLikedButton"
-        android:id="@+id/recyclerv_view">
-    </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/ingrediensTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="22sp"
+            android:text="Ingrediens: "
+            android:textColor="@color/redDark" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="1dp"
-        android:layout_below="@id/recyclerv_view"
-        android:id="@+id/recyclerv_view1">
-    </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_below="@id/ingrediensTitle"
+            android:id="@+id/recyclerv_view">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/directionsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="22sp"
+            android:text="Directions: "
+            android:textColor="@color/redDark" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_below="@id/directionsTitle"
+            android:id="@+id/recyclerv_view1">
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

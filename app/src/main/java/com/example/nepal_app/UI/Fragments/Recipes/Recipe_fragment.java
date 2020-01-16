@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +24,7 @@ public class Recipe_fragment extends Fragment {
     private int position;
     private RecipeInfo recipeInfo;
     private RecipeObj recipeObj;
+    private TextView header;
     RecyclerViewAdapterIngrediens adapter;
     RecyclerViewAdapterDirections adapter1;
     RecyclerView recyclerView;
@@ -53,9 +55,10 @@ public class Recipe_fragment extends Fragment {
         // Inflate the layout for this fragment
         rod = inflater.inflate(R.layout.activity_recipe, container, false);
 
+        header = rod.findViewById(R.id.recipeTitleText);
+        header.setText(recipeObj.getName());
         initRecyclerViewIngrediens();
         initRecyclerViewDirections();
-
         return rod;
     }
 
@@ -75,6 +78,5 @@ public class Recipe_fragment extends Fragment {
         adapter1 = new RecyclerViewAdapterDirections(getActivity(), recipeObj);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter1);
-
     }
 }

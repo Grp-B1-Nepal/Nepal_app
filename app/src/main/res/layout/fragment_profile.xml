@@ -27,7 +27,7 @@
             android:id="@+id/list"
             android:layout_width="409dp"
             android:layout_height="659dp"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="100dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -49,12 +49,12 @@
             android:id="@+id/active_child"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
-            android:layout_marginTop="48dp"
             android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
             android:text="Current child"
             android:textColor="@android:color/black"
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/list"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

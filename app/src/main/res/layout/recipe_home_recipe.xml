@@ -34,13 +34,15 @@
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toEndOf="@+id/recipeImg2" />
 
-    <Button
+    <ToggleButton
         android:id="@+id/recipeBtnLike2"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="3dp"
         android:background="@drawable/favorite_empty_foreground"
+        android:textOff=" "
+        android:textOn=" "
         app:layout_constraintStart_toEndOf="@+id/recipeBtnView2"
         app:layout_constraintTop_toTopOf="parent" />
 

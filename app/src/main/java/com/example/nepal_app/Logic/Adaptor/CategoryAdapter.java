@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,11 +16,13 @@ import com.example.nepal_app.Logic.Objects.CategoryObject;
 import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
 import com.example.nepal_app.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.categoryVH> {
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.categoryVH> implements Filterable {
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
     List<CategoryObject> categoryList;
+    List<CategoryObject> categoryListFull;
     List<Integer> btnIcons;
     Context context;
 
@@ -26,6 +30,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         this.categoryList = categoryList;
         this.btnIcons = btnIcons;
         this.context = context;
+        categoryListFull = new ArrayList<>(categoryList);
     }
 
     @Override
@@ -84,4 +89,39 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         }
     }
 
+    @Override
+    public Filter getFilter() {
+        return categoryFilter;
+    }
+
+    private Filter categoryFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<CategoryObject> filteredList = new ArrayList<>();
+
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(categoryListFull);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for (CategoryObject item : categoryListFull) {
+                    if (item.getRecipeList().toString().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+            return results;
+
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            categoryList.clear();
+            categoryList.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
 }

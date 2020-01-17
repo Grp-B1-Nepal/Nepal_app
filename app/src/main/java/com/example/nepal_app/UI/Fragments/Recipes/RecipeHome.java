@@ -1,31 +1,24 @@
 package com.example.nepal_app.UI.Fragments.Recipes;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.SearchManager;
-import android.content.ComponentName;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 
 import com.example.nepal_app.Logic.Adaptor.CategoryAdapter;
-import com.example.nepal_app.Logic.Adaptor.RecipeHomeAdapter;
 import com.example.nepal_app.Logic.Objects.CategoryObject;
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
 
 import com.example.nepal_app.Logic.FavoriteRecipes;
 import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
 
-import com.example.nepal_app.MainActivity;
 import com.example.nepal_app.R;
 
 import java.util.ArrayList;
@@ -67,21 +60,26 @@ public class RecipeHome extends Fragment {
         final FragmentActivity c = getActivity();
         final RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recipeRecView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(c);
-        recyclerView.setLayoutManager(layoutManager);
-        new Thread(new Runnable() {
+        final CategoryAdapter adapter = new CategoryAdapter(categoryList, btnIcons, getContext());
+        recyclerView.setAdapter(adapter);
+
+        SearchView searchView = getView().findViewById(R.id.searchViewBo);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public void run() {
-                final CategoryAdapter adapter = new CategoryAdapter(categoryList, btnIcons, getContext());
-                c.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        recyclerView.setAdapter(adapter);
-                    }
-                });
+            public boolean onQueryTextSubmit(String query) {
+                return false;
             }
-        }).start();
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+
         return v;
 
     }
+
 
 }

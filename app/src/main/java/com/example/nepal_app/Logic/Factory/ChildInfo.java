@@ -39,8 +39,9 @@ public class ChildInfo {
      * @return the arraylist
      */
     public ArrayList<ChildObj> getChildArr(Context context) {
-        childArr.clear();
-        childArr = cacheSaving.loadChild(context);
+        if (childArr.size() == 0) {
+            childArr = cacheSaving.loadChild(context);
+        }
         return childArr;
     }
 

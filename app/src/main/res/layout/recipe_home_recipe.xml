@@ -23,16 +23,16 @@
         android:id="@+id/recipeBtnView2"
         android:layout_width="85dp"
         android:layout_height="30dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_shape"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/view_recipe"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/recipeImg2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toEndOf="@+id/recipeImg2" />
+        app:layout_constraintStart_toEndOf="@+id/recipeImg2"
+        app:layout_constraintTop_toBottomOf="@+id/recipeName2" />
 
     <ToggleButton
         android:id="@+id/recipeBtnLike2"
@@ -50,12 +50,11 @@
         android:id="@+id/recipeName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="Hej"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/recipeImg2"
         app:layout_constraintTop_toTopOf="@+id/recipeImg2" />
 

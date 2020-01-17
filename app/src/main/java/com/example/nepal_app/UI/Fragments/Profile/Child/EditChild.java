@@ -28,7 +28,7 @@ import androidx.fragment.app.FragmentManager;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.nepal_app.Logic.ChildObj;
+import com.example.nepal_app.Logic.Objects.ChildObj;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
 
@@ -54,7 +54,8 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private ImageView image;
     private ConstraintLayout buttonImage;
     private Spinner genders;
-
+    private Date childDate = new Date();
+    private int year,month,day;
 
 
 
@@ -133,6 +134,11 @@ public class EditChild extends Fragment implements View.OnClickListener {
             fm.popBackStack();
 
         } else if (buttonBirthday.equals(v)) {
+            childDate.setTime(arr.get(position).getBirthday());
+            //plus because of Java API
+            year = childDate.getYear()+1900;
+            month = childDate.getMonth();
+            day = childDate.getDate();
             showDateDialog();
 
         } else if (buttonImage.equals(v)) {
@@ -143,12 +149,15 @@ public class EditChild extends Fragment implements View.OnClickListener {
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();
 
-            //TODO fix active child when deleting
+
         } else if (buttonDelete.equals(v)) {
             childInfo.deleteChildImage(position, getContext());
+
             if (arr.get(position).getActive()){
                 arr.remove(position);
-                arr.get(0).setActive(true);
+                if (arr.size() > 0){
+                    arr.get(0).setActive(true);
+                }
             } else
                 arr.remove(position);
 
@@ -165,9 +174,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private void showDateDialog(){
         DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),
                 this::onDateSet,
-                Calendar.getInstance().get(Calendar.YEAR),
-                Calendar.getInstance().get(Calendar.MONTH),
-                Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
+                year,
+                month,
+                day
         );
         datePickerDialog.show();
     }
@@ -256,6 +265,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
             e.printStackTrace();
         }
     }
+
     public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
         int rotate = 0;
         try {

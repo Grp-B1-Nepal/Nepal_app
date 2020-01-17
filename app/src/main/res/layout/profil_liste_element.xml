@@ -9,14 +9,15 @@
 
     <TextView
         android:id="@+id/name"
-        android:layout_width="wrap_content"
+        android:layout_width="165dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
         android:text="Martha"
         android:textColor="#0A0101"
         android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/image_children" />
+        app:layout_constraintStart_toEndOf="@+id/image_children"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/image_children"
@@ -35,18 +36,21 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
         android:max="1000"
         android:progress="70"
         android:progressBackgroundTint="#0C0201"
         android:progressTint="@color/colorPrimary"
         android:visibility="visible"
-        app:layout_constraintStart_toStartOf="@id/name"
-        app:layout_constraintTop_toTopOf="@+id/edit" />
+        app:layout_constraintStart_toEndOf="@+id/edit"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
 
     <Button
         android:id="@+id/edit"
         android:layout_width="85dp"
         android:layout_height="25dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="3dp"
         android:background="@drawable/button_shape"
         android:bottomLeftRadius="30dp"
@@ -57,43 +61,45 @@
         android:textColor="#FFFFFF"
         android:topLeftRadius="30dp"
         android:topRightRadius="30dp"
-        app:layout_constraintStart_toStartOf="@+id/image_children"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_children" />
 
     <TextView
         android:id="@+id/num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="700"
+        android:layout_marginStart="95dp"
+        android:text="700 days old"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/progressBar2"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar2" />
+        app:layout_constraintStart_toEndOf="@+id/image_children" />
 
     <TextView
         android:id="@+id/birthday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:text="12/11/19"
-        app:layout_constraintStart_toStartOf="@id/name"
+        app:layout_constraintStart_toEndOf="@+id/image_children"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
         android:id="@+id/gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:text="girl"
-        app:layout_constraintStart_toStartOf="@+id/birthday"
+        app:layout_constraintStart_toEndOf="@+id/image_children"
         app:layout_constraintTop_toBottomOf="@+id/birthday" />
 
     <ImageView
         android:id="@+id/active"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/progressBar2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/name"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/star_on" />
+        app:srcCompat="@drawable/full_star_fill" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

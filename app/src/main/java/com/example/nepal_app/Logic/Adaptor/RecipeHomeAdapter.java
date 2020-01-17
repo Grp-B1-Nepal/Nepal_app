@@ -15,8 +15,12 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
+<<<<<<< HEAD
 import com.example.nepal_app.Logic.FavoriteRecipes;
 import com.example.nepal_app.Logic.RecipeHomeObject;
+=======
+import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
+>>>>>>> 01aefab8f25f34202feeea6940b47517530749c7
 import com.example.nepal_app.MainActivity;
 import com.example.nepal_app.R;
 import com.example.nepal_app.UI.Fragments.Recipes.Recipe_fragment;
@@ -37,14 +41,19 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
 
     @Override
     public recipelistVH onCreateViewHolder(ViewGroup parent, int viewType) {
+<<<<<<< HEAD
         View v = LayoutInflater.from(context).inflate(R.layout.recipe_home_recipe, parent, false);
         recipeInfo = RecipeInfo.getInstance();
+=======
+        View v =  LayoutInflater.from(context).inflate(R.layout.recipe_home_recipe, parent, false);
+>>>>>>> 01aefab8f25f34202feeea6940b47517530749c7
         return new recipelistVH(v);
     }
 
 
     @Override
     public void onBindViewHolder(recipelistVH holder, int position) {
+<<<<<<< HEAD
         int identifier = context.getResources().getIdentifier(recipeList.get(position).getRecipeImg(), "drawable", context.getPackageName());
         holder.recImg.setImageResource(identifier);
         holder.recName.setText(recipeList.get(position).getRecipeName());
@@ -59,6 +68,24 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                     transaction.replace(R.id.container, recipeFragment);
                     transaction.addToBackStack(null);
                     transaction.commit();
+=======
+            int identifier = context.getResources().getIdentifier(recipeList.get(position).getRecipeImg(),"drawable",context.getPackageName());
+            holder.recImg.setImageResource(identifier);
+            holder.recName.setText(recipeList.get(position).getRecipeName());
+            holder.btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (position < recipeList.size()) {
+                        recipeInfo = RecipeInfo.getInstance();
+                        recipeInfo.setPostionRecipe(position);
+                        Fragment recipeFragment = new Recipe_fragment();
+                        MainActivity mainActivity = (MainActivity) context;
+                        FragmentTransaction transaction = mainActivity.getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container,recipeFragment);
+                        transaction.addToBackStack(null);
+                        transaction.commit();
+                    }
+>>>>>>> 01aefab8f25f34202feeea6940b47517530749c7
                 }
             }
         });

@@ -125,13 +125,8 @@ public class ChildInfo {
         date.setHours(0);
         date.setMinutes(0);
         date.setSeconds(0);
-        long a = date.getTime();
-        Date p = new Date();
-        long b = childArr.get(getActiveChild()).getBirthday();
-        p.setTime(b);
-        progress = (a - b);
-        progress = progress/(1000*60*60*24);
-        progress = (int) Math.ceil(progress/30);
+        progress =  date.getTime() - childArr.get(getActiveChild()).getBirthday();
+        progress = (int) Math.ceil(progress/(1000*60*60*24))/30;
         monthAge = (int) progress;
         return monthAge;
     }
@@ -141,16 +136,12 @@ public class ChildInfo {
      */
     public long[] getProgressAge(){
         Date d = new Date();
+        d.getDate();
+        d.setHours(0);
+        d.setMinutes(0);
         long[] progress = new long[childArr.size()];
         for (int i = 0; i <childArr.size() ; i++) {
-            d.getDate();
-            d.setHours(0);
-            d.setMinutes(0);
-            long b = d.getTime();
-            long q =childArr.get(i).getBirthday();
-            Date p = new Date();
-            p.setTime(q);
-            progress[i] =  (b - q);
+            progress[i] =  d.getTime() - childArr.get(i).getBirthday();
             long a = (long) Math.floor(progress[i]/(1000*60*60*24));
             progress[i] = a;
         }

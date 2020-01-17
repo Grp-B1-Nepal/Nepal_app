@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
 import com.example.nepal_app.Logic.Adaptor.RecyclerViewAdapterDirections;
 import com.example.nepal_app.Logic.Adaptor.RecyclerViewAdapterIngrediens;
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
-import com.example.nepal_app.Logic.RecipeObj;
+import com.example.nepal_app.Logic.Objects.RecipeObj;
 import com.example.nepal_app.R;
 
 public class Recipe_fragment extends Fragment {

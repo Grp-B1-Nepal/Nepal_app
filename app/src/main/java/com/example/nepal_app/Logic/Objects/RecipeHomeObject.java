@@ -1,4 +1,4 @@
-package com.example.nepal_app.Logic;
+package com.example.nepal_app.Logic.Objects;
 
 public class RecipeHomeObject {
     public RecipeHomeObject(String recipeName, String recipeImg) {

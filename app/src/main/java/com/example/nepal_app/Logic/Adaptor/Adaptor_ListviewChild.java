@@ -22,7 +22,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.UI.Fragments.Profile.Child.EditChild;
 import com.example.nepal_app.R;
-import com.example.nepal_app.Logic.ChildObj;
+import com.example.nepal_app.Logic.Objects.ChildObj;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -86,25 +86,26 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         viewHolder.progress.setText(progress[position] + " days old");
         viewHolder.progressBar.setProgress((int) progress[position]);
 
+        if(childArr.size() > 1 ) {
+            viewHolder.active.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    for (int i = 0; i < childArr.size(); i++) {
+                        childArr.get(i).setActive(false);
+                    }
+                    childArr.get(position).setActive(true);
 
-        viewHolder.active.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                for (int i = 0; i <childArr.size() ; i++) {
-                    childArr.get(i).setActive(false);
+                    //TODO maybe rephrase
+                    Toast.makeText(context, "You change to " + childArr.get(position).getName(), Toast.LENGTH_LONG).show();
+                    Collections.swap(childArr, position, 0);
+                    childInfo.setChildArr(childArr, context);
+                    //Updates the adaptor after the change
+                    progress = childInfo.progressAge();
+                    birthday = childInfo.getBirthdayString();
+                    notifyDataSetChanged();
                 }
-                childArr.get(position).setActive(true);
-
-                //TODO maybe rephrase
-                Toast.makeText(context,"You change to " + childArr.get(position).getName(),Toast.LENGTH_LONG).show();
-                Collections.swap(childArr,position,0);
-                childInfo.setChildArr(childArr,context);
-                //Updates the adaptor after the change
-                progress = childInfo.progressAge();
-                birthday = childInfo.getBirthdayString();
-                notifyDataSetChanged();
-            }
-        });
+            });
+        }
         if (childArr.get(position).getActive()){
             viewHolder.active.setImageResource(R.drawable.full_star_fill);
         } else

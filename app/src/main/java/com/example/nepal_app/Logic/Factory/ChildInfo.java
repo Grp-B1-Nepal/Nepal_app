@@ -73,13 +73,14 @@ public class ChildInfo {
      * @return the position in the array the child is located.
      */
     public int getActiveChild(){
-        int position = -1;
-        for (int i = 0; i <childArr.size() ; i++) {
-            if (childArr.get(i).getActive()){
-                position = i;
+        int i = 0;
+        for (ChildObj a:childArr) {
+            if (a.getActive()){
+                return i;
             }
+            i++;
         }
-        return position;
+        return 0;
     }
 
     /**

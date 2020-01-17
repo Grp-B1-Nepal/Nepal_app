@@ -123,11 +123,6 @@ public class NotificationScheduler {
         Intent notificationIntent = new Intent(context, cls);
         notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
-        stackBuilder.addParentStack(cls);
-        stackBuilder.addNextIntent(notificationIntent);
-
-        PendingIntent pendingIntent = stackBuilder.getPendingIntent(DAILY_REMINDER_REQUEST_CODE, PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.person_add_icon)
@@ -136,7 +131,6 @@ public class NotificationScheduler {
                 .setSound(alarmSound)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 // Set the intent that will fire when the user taps the notification
-                .setContentIntent(pendingIntent)
                 .setAutoCancel(true);
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(DAILY_REMINDER_REQUEST_CODE, builder.build());

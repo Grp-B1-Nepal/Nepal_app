@@ -1,5 +1,7 @@
 package com.example.nepal_app.UI.Fragments.Recipes;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import com.example.nepal_app.Logic.Adaptor.CategoryAdapter;
 import com.example.nepal_app.Logic.Objects.CategoryObject;
@@ -28,6 +31,7 @@ public class RecipeHome extends Fragment {
     List<CategoryObject> categoryList;
     List<Integer> btnIcons;
     public List<RecipeHomeObject> recipeList, favoriteList;
+    SearchView searchView;
 
     public void fillLists() {
         recipeInfo = recipeInfo.getInstance();
@@ -41,13 +45,11 @@ public class RecipeHome extends Fragment {
         categoryList.add(new CategoryObject("Favorites", favoriteList));
         categoryList.add(new CategoryObject("Snacks", recipeList));
         categoryList.add(new CategoryObject("Common", recipeList));
-        categoryList.add(new CategoryObject("Search", recipeList));
 
         btnIcons.add(R.drawable.ic_reho_recommended);
         btnIcons.add(R.drawable.ic_reho_heart);
         btnIcons.add(R.drawable.ic_reho_snack);
         btnIcons.add(R.drawable.ic_reho_common);
-        btnIcons.add(R.drawable.ic_reho_search);
     }
 
     @Override
@@ -72,11 +74,9 @@ public class RecipeHome extends Fragment {
             }
         }).start();
 
+
         return v;
 
     }
-
-
-
 
 }

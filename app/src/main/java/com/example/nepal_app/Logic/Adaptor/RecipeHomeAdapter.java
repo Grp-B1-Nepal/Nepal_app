@@ -28,7 +28,7 @@ import com.example.nepal_app.UI.Fragments.Recipes.Recipe_fragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.recipelistVH> implements Filterable {
+public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.recipelistVH>{
     List<RecipeHomeObject> recipeList;
     List<RecipeHomeObject> recipeListFull;
     private Context context;
@@ -38,7 +38,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
     public RecipeHomeAdapter(List<RecipeHomeObject> recipeList, Context context) {
         this.recipeList = recipeList;
         this.context = context;
-        recipeListFull = new ArrayList<>(recipeList);
+        //recipeListFull = new ArrayList<>(recipeList);
     }
 
     @Override
@@ -127,40 +127,4 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
             FavoriteRecipes.getInstance().favoriteList.remove(index);
         }
     }
-
-    @Override
-    public Filter getFilter() {
-        return recipeFilter;
-    }
-
-    private Filter recipeFilter = new Filter() {
-
-        @Override
-        protected FilterResults performFiltering(CharSequence constraint) {
-            List<RecipeHomeObject> filteredList = new ArrayList<>();
-
-            if (constraint == null || constraint.length() == 0) {
-                filteredList.addAll(recipeListFull);
-            } else {
-                String filterPattern = constraint.toString().toLowerCase().trim();
-
-                for (RecipeHomeObject item : recipeListFull) {
-                    if (item.getRecipeName().toLowerCase().contains(filterPattern)) {
-                        filteredList.add(item);
-                    }
-                }
-            }
-
-            FilterResults results = new FilterResults();
-            results.values = filteredList;
-            return results;
-        }
-
-        @Override
-        protected void publishResults(CharSequence constraint, FilterResults results) {
-            recipeList.clear();
-            recipeList.addAll((List)results.values);
-            notifyDataSetChanged();
-        }
-    };
 }

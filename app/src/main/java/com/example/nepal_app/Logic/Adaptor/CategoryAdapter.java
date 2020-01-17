@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Objects.CategoryObject;
+import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
 import com.example.nepal_app.R;
 
 import java.util.List;
@@ -61,7 +62,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
 
     public class categoryVH extends RecyclerView.ViewHolder {
         Button category;
-        //ConstraintLayout expandableLayout;
         RecyclerView rvRecipe;
 
         public categoryVH(View itemView) {

@@ -68,27 +68,20 @@ public class RecipeHome extends Fragment {
         final RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recipeRecView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(c);
         recyclerView.setLayoutManager(layoutManager);
-        final CategoryAdapter adapter = new CategoryAdapter(categoryList, btnIcons, getContext());
-        recyclerView.setAdapter(adapter);
-
-        searchView = (SearchView) getView().findViewById(R.id.searchView);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-
+        new Thread(new Runnable() {
             @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
+            public void run() {
+                final CategoryAdapter adapter = new CategoryAdapter(categoryList, btnIcons, getContext());
+                c.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        recyclerView.setAdapter(adapter);
+                    }
+                });
             }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                adapter.getFilter(newText);
-                return false;
-            }
-        });
-
+        }).start();
         return v;
 
     }
 
-    }
 }

@@ -13,6 +13,7 @@ public class RecipeInfo {
     private int recipePostion;
     private RecipeObj recipe;
     private ArrayList<RecipeHomeObject> recipeHomeObjects;
+    private String image;
 
     private RecipeJSONParsing recipeJSONParsing = RecipeJSONParsing.getInstance();
 
@@ -28,6 +29,11 @@ public class RecipeInfo {
         recipeHomeObjects = recipeJSONParsing.loadRecipeList(context);
 
         return recipeHomeObjects;
+    }
+
+    public String getRecipeImage(int positon,Context context) {
+        image = recipeJSONParsing.loadImage(positon,context);
+        return image;
     }
 
     public void setRecipe(RecipeObj recipe) {

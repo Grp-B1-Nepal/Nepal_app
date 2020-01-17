@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,12 +16,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/montserrat_bold"
-            android:textColor="@color/evenDarkerDark"
-            android:gravity="center"
-            android:text="CHIKKA MASALA"
-            android:textSize="25sp" />
+            android:textColor="#333333"
+            android:gravity="start"
+            android:text="@string/recipeName"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:id="@+id/recipeImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitXY"
+
+            app:srcCompat="@drawable/banana_cake" />
 
         <TextView
             android:id="@+id/ingrediensTitle"
@@ -32,7 +43,7 @@
             android:layout_marginEnd="10dp"
             android:paddingBottom="5dp"
             android:fontFamily="@font/montserrat_bold"
-            android:textSize="22sp"
+            android:textSize="25sp"
             android:text="Ingrediens: "
             android:textColor="@color/redDark" />
 
@@ -54,7 +65,7 @@
             android:layout_marginEnd="10dp"
             android:paddingBottom="5dp"
             android:fontFamily="@font/montserrat_bold"
-            android:textSize="22sp"
+            android:textSize="25sp"
             android:text="Directions: "
             android:textColor="@color/redDark" />
 
@@ -65,5 +76,6 @@
             android:layout_below="@id/directionsTitle"
             android:id="@+id/recyclerv_view1">
         </androidx.recyclerview.widget.RecyclerView>
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

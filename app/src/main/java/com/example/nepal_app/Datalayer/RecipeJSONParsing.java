@@ -19,9 +19,6 @@ public class RecipeJSONParsing extends AppCompatActivity {
     private static final RecipeJSONParsing RecipeJSONParsinInstans = new RecipeJSONParsing();
     public static RecipeJSONParsing getInstance(){return RecipeJSONParsinInstans;}
 
-    /* ONLY useful if we need to obtain/save all recipes at once.
-    private ArrayList<RecipeObj> recipes = new ArrayList<>();*/
-
     private RecipeJSONParsing() { }
 
     public JSONArray readJSON(Context context) {
@@ -60,6 +57,19 @@ public class RecipeJSONParsing extends AppCompatActivity {
         }
 
         return recipeHomeObjects;
+    }
+
+    public String loadImage(int position, Context context) {
+        String picture = "";
+
+        try {
+            JSONArray jsonArray = readJSON(context);
+            picture = jsonArray.getJSONObject(position).getString("image");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return picture;
     }
 
     public RecipeObj loadRecipe(int position, Context context) {

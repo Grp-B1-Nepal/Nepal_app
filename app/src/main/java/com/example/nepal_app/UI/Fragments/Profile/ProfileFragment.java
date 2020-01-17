@@ -45,7 +45,7 @@ public class ProfileFragment extends Fragment {
 
         //Checks if there is data in the list before setting the adaptor.
         if(childArr != null) {
-            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, childInfo.getBirthdayString(), childInfo.progressAge());
+            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, childInfo.getBirthdayString(), childInfo.getProgressAge());
             list.setAdapter(adaptor);
         }
 

@@ -55,6 +55,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             if(rod == null) {
             rod = inflater.inflate(R.layout.homepage_layout_new, container, false);
 
+
             //setting up buttons
             activitiesB = rod.findViewById(R.id.activitesButton);
             activitesSound = rod.findViewById(R.id.activitesSpeaker);
@@ -74,6 +75,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             progressSound.setOnClickListener(this);
             recipesB.setOnClickListener(this);
             recipesSound.setOnClickListener(this);
+
+
 
             }
         return rod;

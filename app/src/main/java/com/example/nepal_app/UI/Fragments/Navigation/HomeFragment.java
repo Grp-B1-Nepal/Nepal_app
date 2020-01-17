@@ -129,7 +129,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             transaction.addToBackStack(null);
             transaction.commit();
         } else if (v == profileSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.activitiestts);
+            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.profiletts);
             mp.start();
             mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override

@@ -1,12 +1,11 @@
 package com.example.nepal_app.Datalayer;
 
 import android.content.Context;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.nepal_app.Logic.RecipeHomeObject;
-import com.example.nepal_app.Logic.RecipeObj;
+import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
+import com.example.nepal_app.Logic.Objects.RecipeObj;
 
 import org.json.JSONArray;
 import org.json.JSONException;

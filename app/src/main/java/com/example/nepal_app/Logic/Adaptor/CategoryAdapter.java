@@ -33,7 +33,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         recipeListFull = new ArrayList<>();
         for (int i = 0; i < categoryList.size(); i++) {
             recipeListFull.addAll(categoryList.get(i).getRecipeList());
-
         }
 
     }

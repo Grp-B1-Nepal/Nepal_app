@@ -28,7 +28,7 @@ public class NotificationScheduler {
 
     public static final int DAILY_REMINDER_REQUEST_CODE=100;
     public static final String TAG="NotificationScheduler";
-    private static String CHANNEL_ID = "channelID";
+    private static String CHANNEL_ID = "the100goldendaysNepalB1";
     static int notificationId = 1;
 
     public static void setReminder(Context context, Class<?> cls) {
@@ -37,7 +37,7 @@ public class NotificationScheduler {
         System.out.println("setReminder: start");
 
         // cancel already scheduled reminders
-        //cancelReminder(context,cls);
+        // cancelReminder(context,cls);
 
         //Componentname and package manager im not sure what does.
         ComponentName receiver = new ComponentName(context, cls);
@@ -48,11 +48,60 @@ public class NotificationScheduler {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, DAILY_REMINDER_REQUEST_CODE, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager am = (AlarmManager) context.getSystemService(ALARM_SERVICE);
 
-        long daysinmillisec = 0; //1000*60*60*24*30; //This is how many milliseconds a day is. Right now it triggers 30 days after download and 30 days after that.
-        am.setInexactRepeating(AlarmManager.RTC_WAKEUP, daysinmillisec, daysinmillisec, pendingIntent);
+        long daysinmillisec = 1000*60*60*24*14; //This is how many milliseconds a day is. Right now it triggers 30 days after download and 30 days after that.
+        // Gets the current time because that is the current date.
+        am.setInexactRepeating(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis() + daysinmillisec, Calendar.getInstance().getTimeInMillis() + daysinmillisec, pendingIntent);
 
         Log.d(TAG, "setReminder: end");
         System.out.println("setReminder: end");
+    }
+
+    /**
+     * Not sure if i need this one or not, it was in an example i found.
+     * - s185031 Gustav
+     * @param context
+     * @param cls
+     */
+    public static void cancelReminder(Context context,Class<?> cls) {
+        // Disable a receiver
+        ComponentName receiver = new ComponentName(context, cls);
+        PackageManager pm = context.getPackageManager();
+        pm.setComponentEnabledSetting(receiver, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+        Intent intent1 = new Intent(context, cls);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, DAILY_REMINDER_REQUEST_CODE, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager am = (AlarmManager) context.getSystemService(ALARM_SERVICE);
+        am.cancel(pendingIntent);
+        pendingIntent.cancel();
+    }
+
+    /**
+     * Method taken  from androids offical documentation.
+     *
+     * @param context
+     * @return
+     */
+    public static void createNotification(Context context) {
+        // Create an explicit intent for an Activity in your app
+
+        Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+
+        Intent intent = new Intent(context, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+                .setSmallIcon(R.drawable.person_add_icon)
+                .setSound(alarmSound)
+                .setContentTitle("Hej Nicklas!")
+                .setContentText("Det er weekend i dag!")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                // Set the intent that will fire when the user taps the notification
+                // Right now we only have one activity which means it will trigger the main activity.
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true);
+
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.notify(DAILY_REMINDER_REQUEST_CODE, builder.build());
     }
 
     /**
@@ -86,60 +135,7 @@ public class NotificationScheduler {
                 // Set the intent that will fire when the user taps the notification
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);
-
-
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(DAILY_REMINDER_REQUEST_CODE, builder.build());
     }
-
-    /**
-     * Not sure if i need this one or not, it was in an example i found.
-     * - s185031 Gustav
-     * @param context
-     * @param cls
-     */
-    public static void cancelReminder(Context context,Class<?> cls) {
-
-        // Disable a receiver
-        ComponentName receiver = new ComponentName(context, cls);
-        PackageManager pm = context.getPackageManager();
-        pm.setComponentEnabledSetting(receiver, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-        Intent intent1 = new Intent(context, cls);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, DAILY_REMINDER_REQUEST_CODE, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager am = (AlarmManager) context.getSystemService(ALARM_SERVICE);
-        am.cancel(pendingIntent);
-        pendingIntent.cancel();
-
-    }
-
-    /**
-     * Method taken  from androids offical documentation.
-     *
-     * @param context
-     * @return
-     */
-    public static void createNotification(Context context) {
-        // Create an explicit intent for an Activity in your app
-
-        Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-
-        Intent intent = new Intent(context, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
-
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
-                .setSmallIcon(R.drawable.person_add_icon)
-                .setSound(alarmSound)
-                .setContentTitle("Hej Nicklas!")
-                .setContentText("Det er weekend i dag!")
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                // Set the intent that will fire when the user taps the notification
-                .setContentIntent(pendingIntent)
-                .setAutoCancel(true);
-
-        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.notify(DAILY_REMINDER_REQUEST_CODE, builder.build());
-    }
-
-
 }

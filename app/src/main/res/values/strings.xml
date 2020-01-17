@@ -285,7 +285,9 @@ You and your partner can help your baby’s social and emotional development by 
     <string name="info2_10">Social and emotional development</string>
     <string name="info2_11">Social and emotional development</string>
     <string name="info2_12">Social and emotional development</string>
+    <string name="number">1.</string>
 
     <string name="resToastText">Oops, the app has crashed.</string>
+    <string name="recipeName">CHIKKA MASALA</string>
 
 </resources>

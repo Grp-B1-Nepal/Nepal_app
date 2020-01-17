@@ -19,25 +19,24 @@ public class RecipeJSONParsing extends AppCompatActivity {
     private static final RecipeJSONParsing RecipeJSONParsinInstans = new RecipeJSONParsing();
     public static RecipeJSONParsing getInstance(){return RecipeJSONParsinInstans;}
 
-    /* ONLY useful if we need to obtain/save all recipes at once.
-    private ArrayList<RecipeObj> recipes = new ArrayList<>();*/
-
     private RecipeJSONParsing() { }
 
     public JSONArray readJSON(Context context) {
         JSONArray jsonArray = null;
         try {
+            //opens and read the JSON file located in our assets folder.
             InputStream is = context.getAssets().open("recipes.json");
             byte b[] = new byte[is.available()];
             is.read(b);
             String str = new String(b, "UTF-8");
-
             jsonArray = new JSONArray(str);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        //returns the JSON as array
         return jsonArray;
     }
 
@@ -47,6 +46,7 @@ public class RecipeJSONParsing extends AppCompatActivity {
         String name, image;
 
         try {
+            // Retrieves the name and images from each recipe in our JSON file.
             for (int i = 0; i < jsonArray.length(); i++) {
                 name = jsonArray.getJSONObject(i).getString("name");
                 image = jsonArray.getJSONObject(i).getString("image");
@@ -56,23 +56,33 @@ public class RecipeJSONParsing extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
         return recipeHomeObjects;
     }
 
+    public String loadImage(int position, Context context) {
+        String picture = "";
+
+        try {
+            JSONArray jsonArray = readJSON(context);
+            picture = jsonArray.getJSONObject(position).getString("image");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return picture;
+    }
+
     public RecipeObj loadRecipe(int position, Context context) {
-        String name = "";
+        String recipeName = "";
         ArrayList<String> images = new ArrayList<>();
         ArrayList<String> ingrediens = new ArrayList<>();
         ArrayList<String> directions = new ArrayList<>();
         try {
             JSONArray jsonArray = readJSON(context);
+            recipeName = jsonArray.getJSONObject(position).getString("name");
 
-            JSONObject json = jsonArray.getJSONObject(position);
-            name = json.getString("name");
-
-            JSONArray mainRecipeTxt = json.getJSONArray("recipe");
-            JSONObject mainRecipeObject = mainRecipeTxt.getJSONObject(0);
+            //Finds right recipe, then goes into the recipe itself and then save it from the start.
+            JSONObject mainRecipeObject = jsonArray.getJSONObject(position).getJSONArray("recipe").getJSONObject(0);
 
             for (int i = 0; i < mainRecipeObject.length(); i++) {
                 String item;
@@ -101,7 +111,7 @@ public class RecipeJSONParsing extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        RecipeObj recipe = new RecipeObj(name,images,ingrediens,directions);
+        RecipeObj recipe = new RecipeObj(recipeName,images,ingrediens,directions);
         return recipe;
     }
 }

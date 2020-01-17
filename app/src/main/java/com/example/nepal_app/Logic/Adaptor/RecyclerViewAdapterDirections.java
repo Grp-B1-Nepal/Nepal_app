@@ -39,6 +39,8 @@ public class RecyclerViewAdapterDirections extends RecyclerView.Adapter<Recycler
         Log.d(TAG, "OnBindViewHolder: called.");
 
         holder.ingrediensTxt.setText(recipeObj.getDirections(position));
+        int num = position +1;
+        holder.number.setText(num + ".");
     }
 
     @Override
@@ -48,10 +50,12 @@ public class RecyclerViewAdapterDirections extends RecyclerView.Adapter<Recycler
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView ingrediensTxt;
+        TextView number;
 
         public ViewHolder(View itemView) {
             super(itemView);
             ingrediensTxt = itemView.findViewById(R.id.layoutListItemDirections);
+            number = itemView.findViewById(R.id.recipeDirectionsTxtView);
         }
     }
 }

@@ -98,16 +98,21 @@ public class NotificationScheduler {
         //Returns the correct information from strings based on an int.
         Collections.addAll(stringlist,context.getResources().getStringArray(R.array.Push_descriptions));
 
+        String descriptionstring = stringlist.get(0);
+
+        if (ChildInfo.getInstance().getChildArr(context).size() != 0) {
+            descriptionstring = stringlist.get(ChildInfo.getInstance().getMonthProgress());
+        }
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.mom_icon)
                 .setSound(alarmSound)
                 .setContentTitle("New information in the app!")
-                .setContentText(stringlist.get(ChildInfo.getInstance().getMonthProgress()))
+                .setContentText(descriptionstring)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true)
-        // Set the intent that will fire when the user taps the notification
+                // Set the intent that will fire when the user taps the notification
                 // Right now we only have one activity which means it will trigger the main activity.
                 .setStyle(new NotificationCompat.BigTextStyle());
 

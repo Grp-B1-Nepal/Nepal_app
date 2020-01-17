@@ -115,49 +115,51 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
             months58.setOnClickListener(this);
             months912.setOnClickListener(this);
 
-            //Months04 is chosen to be the default selection.
-            //here i could probably do something else that is much more suitable for the task by using saved instace state or something like that.
-            //This remembers what button was pressed if a user goes back to this view.
-            childInfo = ChildInfo.getInstance();
-            childList = childInfo.getChildArr(getContext());
+            topbuttoncheck();
 
-            //If the childlist is 0 we just want this one shown
-            if (childList.size() == 0 ) {
-                months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-            //Agerange will only be 0 the first time you enter, therefore we need it to select based upon the age of the current child.
-            } else if (agerange == 0){
-                childInfo.getMonthProgress();
-                switch (childInfo.getMonthProgress()) {
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                        agerange = 1;
-                        months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-                        break;
-                    case 5:
-                    case 6:
-                    case 7:
-                    case 8:
-                        agerange = 2;
-                        months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-                        break;
-
-                    default:
-                        agerange = 3;
-                        months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-                        break;
-                }
-                //theese 3 if statements serve their purpose upon back pressed. It remembers the it when another fragment is inflated to remember the users selection.
-                } else if (agerange == 1) {
-                    months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-                } else if (agerange == 2) {
-                    months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-                } else if (agerange == 3) {
-                    months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-                }
         }
             return rod;
+    }
+
+    public void topbuttoncheck () {
+
+        childInfo = ChildInfo.getInstance();
+        childList = childInfo.getChildArr(getContext());
+        //If the childlist is 0 we just want this one shown
+        if (childList.size() == 0 ) {
+            months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            //Agerange will only be 0 the first time you enter, therefore we need it to select based upon the age of the current child.
+        } else if (agerange == 0){
+            childInfo.getMonthProgress();
+            switch (childInfo.getMonthProgress()) {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    agerange = 1;
+                    months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                    break;
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                    agerange = 2;
+                    months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                    break;
+
+                default:
+                    agerange = 3;
+                    months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                    break;
+            }
+            //theese 3 if statements serve their purpose upon back pressed. It remembers the it when another fragment is inflated to remember the users selection.
+        } else if (agerange == 1) {
+            months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+        } else if (agerange == 2) {
+            months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+        } else if (agerange == 3) {
+            months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+        }
     }
 
     //TODO do something about the sound list, find out what the good way to go about it is. Can i save multiple raw files in an array?

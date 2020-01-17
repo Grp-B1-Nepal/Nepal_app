@@ -13,9 +13,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 
+import com.example.nepal_app.Logic.Factory.ChildInfo;
+import com.example.nepal_app.Logic.Objects.ChildObj;
 import com.example.nepal_app.R;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * This fragment is shown when the user navigates to the activities. It can be achieved from the front page or the navigation bar.
@@ -32,8 +35,10 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
     private ImageView Singing, Talking, Tummy_Time, Cuddling_Time, Play_Time, Reading, SoundSinging, SoundTalking, SoundTummy_Time, SoundCuddling_Time, SoundPlay_Time, SoundReading;
     private View rod;
     private Button months04, months58, months912;
-    private int agerange = 1;
+    private int agerange = 0;
     private int imagenum = 0;
+    private ChildInfo childInfo;
+    private ArrayList<ChildObj> childList = new ArrayList<>();
 
 
     public ActivitiesFragment() {
@@ -113,13 +118,43 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
             //Months04 is chosen to be the default selection.
             //here i could probably do something else that is much more suitable for the task by using saved instace state or something like that.
             //This remembers what button was pressed if a user goes back to this view.
-            if (agerange == 1) {
+            childInfo = ChildInfo.getInstance();
+            childList = childInfo.getChildArr(getContext());
+
+
+            if (childList.size() == 0 ) {
                 months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-            } else if (agerange == 2) {
-                months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-            } else if (agerange == 3) {
-                months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-            }
+
+            } else if (agerange == 0){
+                childInfo.getMonthProgress();
+                switch (childInfo.getMonthProgress()) {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        agerange = 1;
+                        months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                        break;
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                        agerange = 2;
+                        months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                        break;
+
+                    default:
+                        agerange = 3;
+                        months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                        break;
+                }
+                } else if (agerange == 1) {
+                    months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                } else if (agerange == 2) {
+                    months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                } else if (agerange == 3) {
+                    months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                }
         }
             return rod;
     }

@@ -59,7 +59,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                     }
                 }
             });
-
     }
 
     @Override

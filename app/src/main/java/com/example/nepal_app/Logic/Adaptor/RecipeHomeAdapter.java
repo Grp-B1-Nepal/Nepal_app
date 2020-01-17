@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -26,8 +28,9 @@ import com.example.nepal_app.UI.Fragments.Recipes.Recipe_fragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.recipelistVH> {
+public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.recipelistVH> implements Filterable {
     List<RecipeHomeObject> recipeList;
+    List<RecipeHomeObject> recipeListFull;
     private Context context;
     private RecipeInfo recipeInfo;
 
@@ -35,6 +38,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
     public RecipeHomeAdapter(List<RecipeHomeObject> recipeList, Context context) {
         this.recipeList = recipeList;
         this.context = context;
+        recipeListFull = new ArrayList<>(recipeList);
     }
 
     @Override
@@ -42,7 +46,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
 
         View v = LayoutInflater.from(context).inflate(R.layout.recipe_home_recipe, parent, false);
         recipeInfo = RecipeInfo.getInstance();
-
 
         return new recipelistVH(v);
     }
@@ -65,8 +68,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                     transaction.replace(R.id.container, recipeFragment);
                     transaction.addToBackStack(null);
                     transaction.commit();
-
-
                  }
 
             }
@@ -126,4 +127,40 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
             FavoriteRecipes.getInstance().favoriteList.remove(index);
         }
     }
+
+    @Override
+    public Filter getFilter() {
+        return recipeFilter;
+    }
+
+    private Filter recipeFilter = new Filter() {
+
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<RecipeHomeObject> filteredList = new ArrayList<>();
+
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(recipeListFull);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for (RecipeHomeObject item : recipeListFull) {
+                    if (item.getRecipeName().toLowerCase().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            recipeList.clear();
+            recipeList.addAll((List)results.values);
+            notifyDataSetChanged();
+        }
+    };
 }

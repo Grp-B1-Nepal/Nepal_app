@@ -30,7 +30,6 @@ import java.util.List;
 
 public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.recipelistVH>{
     List<RecipeHomeObject> recipeList;
-    List<RecipeHomeObject> recipeListFull;
     private Context context;
     private RecipeInfo recipeInfo;
 
@@ -38,7 +37,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
     public RecipeHomeAdapter(List<RecipeHomeObject> recipeList, Context context) {
         this.recipeList = recipeList;
         this.context = context;
-        //recipeListFull = new ArrayList<>(recipeList);
     }
 
     @Override

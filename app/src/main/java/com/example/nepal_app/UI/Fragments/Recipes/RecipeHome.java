@@ -1,5 +1,7 @@
 package com.example.nepal_app.UI.Fragments.Recipes;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +12,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.SearchView;
 
 import com.example.nepal_app.Logic.Adaptor.CategoryAdapter;
@@ -30,8 +33,7 @@ public class RecipeHome extends Fragment {
     List<CategoryObject> categoryList;
     List<Integer> btnIcons;
     public List<RecipeHomeObject> recipeList, favoriteList;
-    SearchView searchView;
-    SearchManager searchManager;
+    EditText searchField;
 
     public void fillLists() {
         recipeInfo = recipeInfo.getInstance();
@@ -60,26 +62,17 @@ public class RecipeHome extends Fragment {
         final FragmentActivity c = getActivity();
         final RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recipeRecView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(c);
+        recyclerView.setLayoutManager(layoutManager);
         final CategoryAdapter adapter = new CategoryAdapter(categoryList, btnIcons, getContext());
         recyclerView.setAdapter(adapter);
-
-        SearchView searchView = getView().findViewById(R.id.searchViewBo);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                adapter.getFilter().filter(newText);
-                return false;
-            }
-        });
 
         return v;
 
     }
 
-
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        searchField = getView().findViewById(R.id.searchField);
+    }
 }

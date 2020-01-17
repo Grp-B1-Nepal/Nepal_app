@@ -3,8 +3,8 @@ package com.example.nepal_app.Logic.Factory;
 import android.content.Context;
 
 import com.example.nepal_app.Datalayer.RecipeJSONParsing;
-import com.example.nepal_app.Logic.RecipeHomeObject;
-import com.example.nepal_app.Logic.RecipeObj;
+import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
+import com.example.nepal_app.Logic.Objects.RecipeObj;
 
 import java.util.ArrayList;
 

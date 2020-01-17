@@ -9,13 +9,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.nepal_app.Logic.Adaptor.CategoryAdapter;
-import com.example.nepal_app.Logic.CategoryObject;
+import com.example.nepal_app.Logic.Objects.CategoryObject;
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
+
 import com.example.nepal_app.Logic.FavoriteRecipes;
-import com.example.nepal_app.Logic.RecipeHomeObject;
+import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
+
 import com.example.nepal_app.R;
 
 import java.util.ArrayList;

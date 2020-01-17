@@ -31,7 +31,7 @@ import androidx.fragment.app.FragmentManager;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.nepal_app.Logic.ChildObj;
+import com.example.nepal_app.Logic.Objects.ChildObj;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
 

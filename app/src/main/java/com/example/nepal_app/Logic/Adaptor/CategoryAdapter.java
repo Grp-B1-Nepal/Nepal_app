@@ -7,13 +7,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.nepal_app.Logic.CategoryObject;
+import com.example.nepal_app.Logic.Objects.CategoryObject;
 import com.example.nepal_app.R;
-import com.example.nepal_app.UI.Fragments.Recipes.RecipeHome;
 
 import java.util.List;
 

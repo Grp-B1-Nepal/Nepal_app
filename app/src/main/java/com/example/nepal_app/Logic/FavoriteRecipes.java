@@ -1,5 +1,7 @@
 package com.example.nepal_app.Logic;
 
+import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
+
 import java.util.ArrayList;
 
 public class FavoriteRecipes {

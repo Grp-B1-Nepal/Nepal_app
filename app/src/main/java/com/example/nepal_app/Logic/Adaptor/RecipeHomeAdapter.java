@@ -15,8 +15,10 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
+
 import com.example.nepal_app.Logic.FavoriteRecipes;
-import com.example.nepal_app.Logic.RecipeHomeObject;
+import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
+
 import com.example.nepal_app.MainActivity;
 import com.example.nepal_app.R;
 import com.example.nepal_app.UI.Fragments.Recipes.Recipe_fragment;
@@ -37,14 +39,18 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
 
     @Override
     public recipelistVH onCreateViewHolder(ViewGroup parent, int viewType) {
+
         View v = LayoutInflater.from(context).inflate(R.layout.recipe_home_recipe, parent, false);
         recipeInfo = RecipeInfo.getInstance();
+
+
         return new recipelistVH(v);
     }
 
 
     @Override
     public void onBindViewHolder(recipelistVH holder, int position) {
+
         int identifier = context.getResources().getIdentifier(recipeList.get(position).getRecipeImg(), "drawable", context.getPackageName());
         holder.recImg.setImageResource(identifier);
         holder.recName.setText(recipeList.get(position).getRecipeName());
@@ -59,10 +65,12 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                     transaction.replace(R.id.container, recipeFragment);
                     transaction.addToBackStack(null);
                     transaction.commit();
-                }
+
+
+                 }
+
             }
         });
-
     }
 
     @Override

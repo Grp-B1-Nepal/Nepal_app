@@ -98,8 +98,9 @@ public class NotificationScheduler {
         //Returns the correct information from strings based on an int.
         Collections.addAll(stringlist,context.getResources().getStringArray(R.array.Push_descriptions));
 
+        //Needs some form of baseline such that it doesn't throw an array out of bounds longer down if there are no children.
         String descriptionstring = stringlist.get(0);
-
+        //This finds the correct information from the string ressource array.
         if (ChildInfo.getInstance().getChildArr(context).size() != 0) {
             descriptionstring = stringlist.get(ChildInfo.getInstance().getMonthProgress());
         }

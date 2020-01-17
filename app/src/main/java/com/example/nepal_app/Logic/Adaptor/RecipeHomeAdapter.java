@@ -91,6 +91,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                     if (isChecked) {
                         fav.setBackgroundResource(R.drawable.favorite_filled_foreground);
                         addToFavoriteArray(getAdapterPosition());
+                        notifyDataSetChanged();
                     } else {
                         fav.setBackgroundResource(R.drawable.favorite_empty_foreground);
                         removeFromFavoriteArray(getAdapterPosition());
@@ -107,13 +108,13 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
         }
 
         public void removeFromFavoriteArray(int position) {
-            ArrayList<RecipeHomeObject> listBo = FavoriteRecipes.getInstance().favoriteList;
-            ArrayList<String> listBoNames = new ArrayList<>();
-            for (int i = 0; i < listBo.size(); i++) {
-                listBoNames.add(listBo.get(i).getRecipeName());
+            ArrayList<RecipeHomeObject> listTemp = FavoriteRecipes.getInstance().favoriteList;
+            ArrayList<String> listTempNames = new ArrayList<>();
+            for (int i = 0; i < listTemp.size(); i++) {
+                listTempNames.add(listTemp.get(i).getRecipeName());
             }
             RecipeHomeObject recipe = recipeInfo.getSingleHomeRecipe(position, context);
-            int index = listBoNames.indexOf(recipe.getRecipeName());
+            int index = listTempNames.indexOf(recipe.getRecipeName());
             FavoriteRecipes.getInstance().favoriteList.remove(index);
         }
     }

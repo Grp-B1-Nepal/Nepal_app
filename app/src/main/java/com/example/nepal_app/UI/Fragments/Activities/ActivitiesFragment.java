@@ -121,10 +121,10 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
             childInfo = ChildInfo.getInstance();
             childList = childInfo.getChildArr(getContext());
 
-
+            //If the childlist is 0 we just want this one shown
             if (childList.size() == 0 ) {
                 months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
-
+            //Agerange will only be 0 the first time you enter, therefore we need it to select based upon the age of the current child.
             } else if (agerange == 0){
                 childInfo.getMonthProgress();
                 switch (childInfo.getMonthProgress()) {
@@ -148,6 +148,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
                         months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
                         break;
                 }
+                //theese 3 if statements serve their purpose upon back pressed. It remembers the it when another fragment is inflated to remember the users selection.
                 } else if (agerange == 1) {
                     months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
                 } else if (agerange == 2) {
@@ -166,7 +167,6 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
         if (v == Singing || v == Talking || v == Tummy_Time || v == Cuddling_Time || v == Play_Time || v == Reading) {
             //There are two different things supposed to be done on click and both the different types are image views, therefore this huge if statement.
             //For now the soundlist is just a sample. This has to be different based on agerange and the button clicked, when sound files are generated.
-
             Fragment information_fragment = new fragment_activity_information(onclickactivity(v));
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.container, information_fragment);

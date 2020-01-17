@@ -89,8 +89,6 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                     .into(image);
         }
 
-
-
         // Inflate the layout for this fragment
         return rod;
     }

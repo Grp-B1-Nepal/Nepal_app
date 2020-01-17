@@ -14,13 +14,13 @@ public class MyReciever extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         // TODO Auto-generated method stub
-        Log.d(TAG, "onReceive: start" + Calendar.getInstance().get(Calendar.MINUTE) + "minutes " + Calendar.getInstance().get(Calendar.DATE));
+        Log.d(TAG, "onReceive: start" + Calendar.getInstance().get(Calendar.MINUTE) + " minutes " + Calendar.getInstance().getTimeInMillis()%10);
         //Theese if statements makes sure that it starts up agian if the telefon reboots.
         if (intent.getAction() != null && context != null) {
             if (intent.getAction().equalsIgnoreCase(Intent.ACTION_BOOT_COMPLETED)) {
                 // Set the alarm here.
                 Log.d(TAG, "onReceive: BOOT_COMPLETED");
-                NotificationScheduler.setReminder(context, MyReciever.class);
+                NotificationScheduler.showNotification(context, MyReciever.class, "a", "a");
                 return;
             }
         }

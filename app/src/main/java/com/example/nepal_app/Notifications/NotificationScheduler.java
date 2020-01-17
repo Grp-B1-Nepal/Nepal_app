@@ -8,6 +8,7 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -37,10 +38,10 @@ public class NotificationScheduler {
         System.out.println("setReminder: start");
 
         // cancel already scheduled reminders
-        // cancelReminder(context,cls);
+        cancelReminder(context,cls);
 
-        //Componentname and package manager im not sure what does.
-        ComponentName receiver = new ComponentName(context, cls);
+        //This enables the reciever across restart.     https://developer.android.com/training/scheduling/alarms.html
+        ComponentName receiver = new ComponentName(context, MyReciever.class);
         PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(receiver, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
 
@@ -50,7 +51,8 @@ public class NotificationScheduler {
 
         long daysinmillisec = 1000*60*60*24*14; //This is how many milliseconds a day is. Right now it triggers 30 days after download and 30 days after that.
         // Gets the current time because that is the current date.
-        am.setInexactRepeating(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis() + daysinmillisec, Calendar.getInstance().getTimeInMillis() + daysinmillisec, pendingIntent);
+        //Calendar.getInstance().getTimeInMillis() + daysinmillisec
+        am.setInexactRepeating(AlarmManager.RTC_WAKEUP, 0, Calendar.getInstance().getTimeInMillis() + daysinmillisec, pendingIntent);
 
         Log.d(TAG, "setReminder: end");
         System.out.println("setReminder: end");
@@ -90,15 +92,16 @@ public class NotificationScheduler {
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
-                .setSmallIcon(R.drawable.person_add_icon)
+                .setSmallIcon(R.drawable.mom_icon)
                 .setSound(alarmSound)
-                .setContentTitle("Hej Nicklas!")
-                .setContentText("Det er weekend i dag!")
+                .setContentTitle("New information in the app!")
+                .setContentText("You child should be taken to the local doctor now, click the notification to open the app for more info!")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                // Set the intent that will fire when the user taps the notification
-                // Right now we only have one activity which means it will trigger the main activity.
                 .setContentIntent(pendingIntent)
-                .setAutoCancel(true);
+                .setAutoCancel(true)
+        // Set the intent that will fire when the user taps the notification
+                // Right now we only have one activity which means it will trigger the main activity.
+                .setStyle(new NotificationCompat.BigTextStyle());
 
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(DAILY_REMINDER_REQUEST_CODE, builder.build());

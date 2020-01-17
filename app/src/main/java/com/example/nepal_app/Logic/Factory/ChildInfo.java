@@ -218,9 +218,7 @@ public class ChildInfo {
             case 12:
                 month = "Dec";
                 break;
-
         }
-
         return month;
     }
 }

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final int DAILY_REMINDER_REQUEST_CODE=100;
 
-    private String CHANNEL_ID = "channelID";
+    private String CHANNEL_ID = "the100goldendaysNepalB1";
     //får måske brug for det her  https://stackoverflow.com/questions/3009059/android-pending-intent-notification-problem  int requestID = (int) System.currentTimeMillis();
 
     @Override
@@ -28,9 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Create notification channel skal være og det gør ikke noget at den bliver kaldt hver gang.
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+        //if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             createNotificationChannel();
-        }
         NotificationScheduler.setReminder(this, MyReciever.class);
         //TODO den skal ikke schedule en ny hvis der allerede er schedulet en.
         openFragment(new HomeFragment());

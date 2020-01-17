@@ -215,7 +215,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         date.setHours(0);
         date.setSeconds(0);
         if (date.getTime() <= System.currentTimeMillis()) {
-            pick_date.setText(childInfo.monthText((month + 1)) + " " + day + " " + year);
+            pick_date.setText(childInfo.getMonthText((month + 1)) + " " + day + " " + year);
             currentDate = date.getTime();
         } else {
             Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();

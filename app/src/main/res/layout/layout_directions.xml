@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
     android:padding="10dp"
     android:id="@+id/parent_layout"
-    android:background="@color/mainBackgroundColor">
+    android:background="@color/justWhite">
 
     <TextView
         android:id="@+id/layoutListItemDirections"
@@ -16,8 +18,27 @@
         android:text="2 x eggs"
         android:background="@color/justWhite"
         android:layout_marginBottom="2dp"
+        android:fontFamily="@font/montserrat"
         android:paddingTop="10dp"
         android:paddingBottom="5dp"
-        android:textColor="#80A53F"
-        android:textSize="17sp" />
+        android:paddingStart="5dp"
+        android:textColor="#333333"
+        android:textSize="17sp"
+        android:textAlignment="textStart"
+        android:layout_toEndOf="@+id/recipeDirectionsTxtView"/>
+
+    <TextView
+        android:id="@+id/recipeDirectionsTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="@color/justWhite"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingTop="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:text="@string/number" />
 </RelativeLayout>

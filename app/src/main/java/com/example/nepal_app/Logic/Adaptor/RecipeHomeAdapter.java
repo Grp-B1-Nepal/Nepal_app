@@ -17,7 +17,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
-
 import com.example.nepal_app.Logic.FavoriteRecipes;
 import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
 

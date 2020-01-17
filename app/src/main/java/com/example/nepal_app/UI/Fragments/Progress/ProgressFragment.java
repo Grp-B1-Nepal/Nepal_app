@@ -28,7 +28,7 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
     private View rod;
     private Bitmap imageChild;
     private ChildInfo childInfo;
-    private ArrayList<ChildObj> chillArr = new ArrayList<>();
+    private ArrayList<ChildObj> childArr = new ArrayList<>();
 
 
     @Override
@@ -75,11 +75,11 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
 
         childInfo = ChildInfo.getInstance();
 
-        chillArr = childInfo.getChildArr(getContext());
+        childArr = childInfo.getChildArr(getContext());
 
 
-        if (chillArr.size() != 0){
-            imageChild = childInfo.getBitmap(getContext(),chillArr.get(childInfo.getActiveChild()).getName());
+        if (childArr.size() != 0){
+            imageChild = childInfo.getBitmap(getContext(),childArr.get(childInfo.getActiveChild()).getName());
             monthAge = childInfo.getMonthProgress();
             updateInfo(monthAge);
             image.setImageBitmap(imageChild);

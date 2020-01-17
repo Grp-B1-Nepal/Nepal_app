@@ -11,6 +11,11 @@ import java.util.Calendar;
 public class MyReciever extends BroadcastReceiver {
     String TAG = "AlarmReceiver";
 
+    /**
+     * On recieve is the automatic method called when it's triggered by the alarm manager in the sceduleNotification in the notification scheduler method.
+     * @param context
+     * @param intent
+     */
     @Override
     public void onReceive(Context context, Intent intent) {
         // TODO Auto-generated method stub
@@ -20,11 +25,11 @@ public class MyReciever extends BroadcastReceiver {
             if (intent.getAction().equalsIgnoreCase(Intent.ACTION_BOOT_COMPLETED)) {
                 // Set the alarm here.
                 Log.d(TAG, "onReceive: BOOT_COMPLETED");
-                NotificationScheduler.showNotification(context, MyReciever.class, "a", "a");
+                NotificationScheduler.createNotification(context);
                 return;
             }
         }
-        //Trigger the notification
+        //Triggers the notification
         NotificationScheduler.createNotification(context);
         Log.d(TAG, "onReceive: end");
     }

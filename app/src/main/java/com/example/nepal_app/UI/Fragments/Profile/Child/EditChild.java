@@ -198,7 +198,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         date.setHours(0);
         date.setSeconds(0);
         if (date.getTime() <= System.currentTimeMillis()) {
-            buttonBirthday.setText(childInfo.monthText((month + 1)) + " " + day + " " + year);
+            buttonBirthday.setText(childInfo.getMonthText((month + 1)) + " " + day + " " + year);
             arr.get(position).setBirthday(date.getTime());
         }else {
             Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();

@@ -80,7 +80,7 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
 
         if (chillArr.size() != 0){
             imageChild = childInfo.getBitmap(getContext(),chillArr.get(childInfo.getActiveChild()).getName());
-            monthAge = childInfo.monthProgress();
+            monthAge = childInfo.getMonthProgress();
             updateInfo(monthAge);
             image.setImageBitmap(imageChild);
 

@@ -117,7 +117,7 @@ public class ChildInfo {
     /**
      * Calculate how many months old the child is
      */
-    public int monthProgress(){
+    public int getMonthProgress(){
         long progress;
         int monthAge;
         Date date = new Date();
@@ -138,7 +138,7 @@ public class ChildInfo {
     /**
      * Calculate the age of the child
      */
-    public long[] progressAge(){
+    public long[] getProgressAge(){
         Date d = new Date();
         long[] progress = new long[childArr.size()];
         for (int i = 0; i <childArr.size() ; i++) {
@@ -178,7 +178,7 @@ public class ChildInfo {
      * @param intMonth
      * @return
      */
-    public String monthText(int intMonth){
+    public String getMonthText(int intMonth){
         String month = null;
 
         switch (intMonth){
@@ -218,9 +218,7 @@ public class ChildInfo {
             case 12:
                 month = "Dec";
                 break;
-
         }
-
         return month;
     }
 }

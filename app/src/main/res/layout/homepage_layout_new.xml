@@ -172,15 +172,6 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginBottom="15dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView6"
-                    app:srcCompat="@drawable/mom_icon" />
-
-                <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="180dp"
                     android:layout_height="70dp"

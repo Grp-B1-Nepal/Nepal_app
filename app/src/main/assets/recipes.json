@@ -1,6 +1,6 @@
 [
   {
-  "name": "BANANA CAKE", "image": "banana_cake",
+  "name": "BANANA CAKE", "image": "banana_cake", "favorite": "false",
   "recipe": [
       {
         "images": [
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "name": "Chicken in a box", "image": "recipehome_chicken",
+    "name": "Chicken in a box", "image": "recipehome_chicken", "favorite": "false",
     "recipe": [
       {
         "images": [
@@ -74,7 +74,7 @@
     ]
   },
   {
-    "name": "Banana in a box", "image": "recipehome_bananas",
+    "name": "Banana in a box", "image": "recipehome_bananas", "favorite": "false",
     "recipe": [
       {
         "images": [

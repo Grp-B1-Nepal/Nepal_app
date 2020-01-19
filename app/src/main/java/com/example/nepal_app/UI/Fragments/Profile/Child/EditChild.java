@@ -45,7 +45,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private int position;
     private Button buttonBirthday, buttonBack, buttonSave, buttonDelete;
     private EditText editName;
-    private Bitmap   editBitmap;
+    private Bitmap editBitmap;
     private String name, gender, birthday, oldName;
     private ArrayList<ChildObj> arr = new ArrayList<>();
     private ChildInfo childInfo;
@@ -65,6 +65,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
 
         childInfo = ChildInfo.getInstance();
+
 
         position = childInfo.getPosition();
         editName = view2.findViewById(R.id.name);
@@ -87,17 +88,18 @@ public class EditChild extends Fragment implements View.OnClickListener {
         image = view2.findViewById(R.id.downloaded_picture);
         image.setVisibility(View.VISIBLE);
 
-
         arr = childInfo.getChildArr(getContext());
         //Gets the objects from the ChillObj in the arr
-        oldName = arr.get(position).getName();
+
         name = arr.get(position).getName();
+        oldName = arr.get(position).getName();
         gender = arr.get(position).getGender();
         birthday = getBirthday(position);
 
-        Glide.with(this).load(childInfo.getBitmap(getContext(),name)).
-                apply(RequestOptions.circleCropTransform())
+        Glide.with(this).load(childInfo.getBitmap(getContext(),name))
+                .apply(RequestOptions.circleCropTransform())
                 .into(image);
+
 
         //Sets up known info
         image.setImageBitmap(childInfo.getBitmap(getContext(),name));

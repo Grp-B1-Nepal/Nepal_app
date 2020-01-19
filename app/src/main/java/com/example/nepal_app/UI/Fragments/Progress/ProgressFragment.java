@@ -24,7 +24,6 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
     ImageView image;
     TextView info, age, height, weight, head, info2;
     private Button b1, b2, b3, b4, b5, b6, b7, b8,b9,b10,b11,b12;
-    private int monthAge;
     private View rod;
     private Bitmap imageChild;
     private ChildInfo childInfo;
@@ -71,7 +70,6 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         b12.setOnClickListener(this);
 
         b1.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-        updateInfo(1);
 
         childInfo = ChildInfo.getInstance();
 
@@ -80,16 +78,13 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
 
         if (childArr.size() != 0){
             imageChild = childInfo.getBitmap(getContext(),childArr.get(childInfo.getActiveChild()).getName());
-            monthAge = childInfo.getMonthProgress();
-            updateInfo(monthAge);
+            updateInfo(childInfo.getMonthProgress());
             image.setImageBitmap(imageChild);
 
             Glide.with(this).load(imageChild).
                     apply(RequestOptions.circleCropTransform())
                     .into(image);
         }
-
-
 
         // Inflate the layout for this fragment
         return rod;
@@ -138,126 +133,129 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         b12.setBackground(getResources().getDrawable(R.drawable.scroll_buttons));
     }
     public void updateInfo(int agerange){
-        if (agerange <= 1){
-            resetColors();
-            b1.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight1);
-            height.setText(R.string.height1);
-            age.setText(R.string.age1);
-            head.setText(R.string.head1);
-            info.setText(R.string.info1_1);
-            info2.setText(R.string.info2_1);
-        }
-        if (agerange == 2){
-            resetColors();
-            b2.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight2);
-            height.setText(R.string.height2);
-            age.setText(R.string.age2);
-            head.setText(R.string.head2);
-            info.setText(R.string.info1_2);
-            info2.setText(R.string.info2_2);
-        }
-        if (agerange == 3){
-            resetColors();
-            b3.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight3);
-            height.setText(R.string.height3);
-            age.setText(R.string.age3);
-            head.setText(R.string.head3);
-            info.setText(R.string.info1_3);
-            info2.setText(R.string.info2_3);
-        }
-        if (agerange == 4){
-            resetColors();
-            b4.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight4);
-            height.setText(R.string.height4);
-            age.setText(R.string.age4);
-            head.setText(R.string.head4);
-            info.setText(R.string.info1_4);
-            info2.setText(R.string.info2_4);
-        }
-        if (agerange == 5){
-            resetColors();
-            b5.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight5);
-            height.setText(R.string.height5);
-            age.setText(R.string.age5);
-            head.setText(R.string.head5);
-            info.setText(R.string.info1_5);
-            info2.setText(R.string.info2_5);
-        }
-        if (agerange == 6){
-            resetColors();
-            b6.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight6);
-            height.setText(R.string.height6);
-            age.setText(R.string.age6);
-            head.setText(R.string.head6);
-            info.setText(R.string.info1_6);
-            info2.setText(R.string.info2_6);
-        }
-        if (agerange == 7){
-            resetColors();
-            b7.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight7);
-            height.setText(R.string.height7);
-            age.setText(R.string.age7);
-            head.setText(R.string.head7);
-            info.setText(R.string.info1_7);
-            info2.setText(R.string.info2_7
-            );
-        }
-        if (agerange == 8){
-            resetColors();
-            b8.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight8);
-            height.setText(R.string.height8);
-            age.setText(R.string.age8);
-            head.setText(R.string.head8);
-            info.setText(R.string.info1_8);
-            info2.setText(R.string.info2_8);
-        }
-        if (agerange == 9){
-            resetColors();
-            b9.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight9);
-            height.setText(R.string.height9);
-            age.setText(R.string.age9);
-            head.setText(R.string.head9);
-            info.setText(R.string.info1_9);
-            info2.setText(R.string.info2_9);
-        }
-        if (agerange == 10){
-            resetColors();
-            b10.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight10);
-            height.setText(R.string.height10);
-            age.setText(R.string.age10);
-            head.setText(R.string.head10);
-            info.setText(R.string.info1_10);
-            info2.setText(R.string.info2_10);
-        }
-        if (agerange == 11){
-            resetColors();
-            b11.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight11);
-            height.setText(R.string.height11);
-            age.setText(R.string.age11);
-            head.setText(R.string.head11);
-            info.setText(R.string.info1_11);
-            info2.setText(R.string.info2_11);
-        }
-        if (agerange >= 12){
-            resetColors();
-            b12.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
-            weight.setText(R.string.weight12);
-            height.setText(R.string.height12);
-            age.setText(R.string.age12);
-            head.setText(R.string.head12);
-            info.setText(R.string.info1_12);
-            info2.setText(R.string.info2_12);
+
+        switch (agerange){
+            case 0:
+            case 1:
+                b1.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight1);
+                height.setText(R.string.height1);
+                age.setText(R.string.age1);
+                head.setText(R.string.head1);
+                info.setText(R.string.info1_1);
+                info2.setText(R.string.info2_1);
+                break;
+            case 2:
+                resetColors();
+                b2.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight2);
+                height.setText(R.string.height2);
+                age.setText(R.string.age2);
+                head.setText(R.string.head2);
+                info.setText(R.string.info1_2);
+                info2.setText(R.string.info2_2);
+                break;
+            case 3:
+                resetColors();
+                b3.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight3);
+                height.setText(R.string.height3);
+                age.setText(R.string.age3);
+                head.setText(R.string.head3);
+                info.setText(R.string.info1_3);
+                info2.setText(R.string.info2_3);
+                break;
+            case 4:
+                resetColors();
+                b4.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight4);
+                height.setText(R.string.height4);
+                age.setText(R.string.age4);
+                head.setText(R.string.head4);
+                info.setText(R.string.info1_4);
+                info2.setText(R.string.info2_4);
+                break;
+            case 5:
+                resetColors();
+                b5.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight5);
+                height.setText(R.string.height5);
+                age.setText(R.string.age5);
+                head.setText(R.string.head5);
+                info.setText(R.string.info1_5);
+                info2.setText(R.string.info2_5);
+                break;
+            case 6:
+                resetColors();
+                b6.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight6);
+                height.setText(R.string.height6);
+                age.setText(R.string.age6);
+                head.setText(R.string.head6);
+                info.setText(R.string.info1_6);
+                info2.setText(R.string.info2_6);
+                break;
+            case 7:
+                resetColors();
+                b7.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight7);
+                height.setText(R.string.height7);
+                age.setText(R.string.age7);
+                head.setText(R.string.head7);
+                info.setText(R.string.info1_7);
+                info2.setText(R.string.info2_7);
+                break;
+            case 8:
+                resetColors();
+                b8.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight8);
+                height.setText(R.string.height8);
+                age.setText(R.string.age8);
+                head.setText(R.string.head8);
+                info.setText(R.string.info1_8);
+                info2.setText(R.string.info2_8);
+                break;
+            case 9:
+                resetColors();
+                b9.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight9);
+                height.setText(R.string.height9);
+                age.setText(R.string.age9);
+                head.setText(R.string.head9);
+                info.setText(R.string.info1_9);
+                info2.setText(R.string.info2_9);
+                break;
+            case 10:
+                resetColors();
+                b10.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight10);
+                height.setText(R.string.height10);
+                age.setText(R.string.age10);
+                head.setText(R.string.head10);
+                info.setText(R.string.info1_10);
+                info2.setText(R.string.info2_10);
+                break;
+            case 11:
+                resetColors();
+                b11.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight11);
+                height.setText(R.string.height11);
+                age.setText(R.string.age11);
+                head.setText(R.string.head11);
+                info.setText(R.string.info1_11);
+                info2.setText(R.string.info2_11);
+                break;
+            case 12:
+            default:
+                resetColors();
+                b12.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
+                weight.setText(R.string.weight12);
+                height.setText(R.string.height12);
+                age.setText(R.string.age12);
+                head.setText(R.string.head12);
+                info.setText(R.string.info1_12);
+                info2.setText(R.string.info2_12);
+
         }
     }
 }

@@ -23,6 +23,20 @@
 
     <!-- This is the information for the category singing.  -->
 
+    <string-array name="Push_descriptions">
+        <item>You should take your child to the doctor string 1, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+
+    </string-array>
 
     <string-array name="activities_information_Singing_category1">
         <item>Singing category 1.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>

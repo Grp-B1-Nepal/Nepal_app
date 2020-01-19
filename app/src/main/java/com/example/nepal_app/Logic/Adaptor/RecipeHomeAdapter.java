@@ -33,6 +33,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
     @Override
     public recipelistVH onCreateViewHolder(ViewGroup parent, int viewType) {
         View v =  LayoutInflater.from(context).inflate(R.layout.recipe_home_recipe, parent, false);
+        //recipeInfo = RecipeInfo.getInstance();
         return new recipelistVH(v);
     }
 
@@ -58,7 +59,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                     }
                 }
             });
-
     }
 
     @Override

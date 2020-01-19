@@ -36,7 +36,7 @@ public class ChildTest  {
 
         cacheSaving.saveChild(context,childArr);
         childArr.clear();
-        childArr = cacheSaving.loadChild(context);
+        childArr = childInfo.getChildArr(context);
 
         assertEquals(childArr.size(),1);
         assertEquals(childArr.get(0).getName(),"Monkey");
@@ -50,13 +50,13 @@ public class ChildTest  {
         childArr = cacheSaving.loadChild(context);
         assertEquals(childArr.size(),0);
 
-
-        bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.activity_playtime);
         String name = "Monkey";
+        assertNull(cacheSaving.loadImage(context,name));
+        bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.activity_playtime);
         cacheSaving.saveImage(context,name,bitmap);
         //Can't check if it's been saved because of the change of size because of memory use
         //works with debugger
-
+        assertNotNull(cacheSaving.loadChild(context));
         cacheSaving.deleteImage(name,context);
         bitmap = cacheSaving.loadImage(context,name);
         assertNull(bitmap);
@@ -69,7 +69,7 @@ public class ChildTest  {
         bitmap = cacheSaving.loadImage(context,name);
         childInfo.newNameImage(context,name,newName);
         Bitmap imageNewName = cacheSaving.loadImage(context,newName);
-
+        assertNull(cacheSaving.loadImage(context,name));
         //Compress the bitmap to a byte[] to compare them with assertArrayEquals
         //Because assertEquals fails because of the id
         ByteArrayOutputStream byteArrayOutputStreamBitmap = new ByteArrayOutputStream();

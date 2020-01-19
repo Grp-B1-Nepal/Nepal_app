@@ -99,7 +99,7 @@ public class CacheSaving {
      */
     public ArrayList<ChildObj> loadChild(Context context) {
 
-        SharedPreferences sharedPreferences =  context.getSharedPreferences("Children", Context.MODE_PRIVATE);;
+        SharedPreferences sharedPreferences =  context.getSharedPreferences("Children", Context.MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sharedPreferences.getString("ChildArr", null);
         Type type = new TypeToken<ArrayList<ChildObj>>() {

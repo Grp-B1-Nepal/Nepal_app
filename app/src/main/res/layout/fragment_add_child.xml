@@ -111,7 +111,7 @@
             android:layout_marginTop="5dp"
             android:background="@drawable/buttonshape"
             android:ems="10"
-            android:hint="Write name"
+            android:hint="नाम लेख्नुहोस्"
             android:inputType="textCapSentences"
             android:maxLength="50"
             android:paddingStart="10dp"
@@ -130,7 +130,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/button_shape"
-            android:text="Save"
+            android:text="बचत गर्नुहोस्"
             android:textColor="#F3EDED"
             app:layout_constraintStart_toEndOf="@+id/button_deleteChild"
             app:layout_constraintTop_toBottomOf="@+id/picture" />

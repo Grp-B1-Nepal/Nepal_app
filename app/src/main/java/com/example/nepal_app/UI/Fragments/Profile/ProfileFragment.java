@@ -50,7 +50,6 @@ public class ProfileFragment extends Fragment {
         addChildButton.setOnClickListener((something) -> {
             getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();
         });
-
         return view;
     }
 }

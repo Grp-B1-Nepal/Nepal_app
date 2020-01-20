@@ -38,6 +38,7 @@ public class RecipeHome extends Fragment {
     EditText searchField;
 
     public void fillLists() {
+        //initiate views.
         recipeInfo = recipeInfo.getInstance();
         recipeRecommendedList = new ArrayList<>();
         recipeSnacksList = new ArrayList<>();

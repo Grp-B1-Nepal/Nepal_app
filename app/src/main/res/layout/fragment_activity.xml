@@ -16,6 +16,8 @@
         android:text="0-4 months"
         android:textColor="#FF6E6E"
         android:textSize="11dp"
+        android:fontFamily="@font/montserrat"
+
         app:layout_constraintEnd_toStartOf="@+id/activities_button58months"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,6 +32,7 @@
         android:text="5-8 months"
         android:textColor="#FF6E6E"
         android:textSize="11dp"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintEnd_toStartOf="@+id/activities_button912months"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activities_button04months"
@@ -44,6 +47,7 @@
         android:text="9-12 months"
         android:textColor="#FF6E6E"
         android:textSize="11dp"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activities_button58months"
@@ -88,6 +92,7 @@
                 android:layout_height="25dp"
                 android:text="Singing"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewSinging"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewSinging" />
 
@@ -129,6 +134,7 @@
                 android:layout_height="25dp"
                 android:text="Talking"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewTalking"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewTalking" />
 
@@ -169,6 +175,7 @@
                 android:layout_height="25dp"
                 android:text="Tummy time"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewTummyTime"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewTummyTime" />
 
@@ -217,6 +224,7 @@
                 android:layout_height="25dp"
                 android:text="Play Time"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewPlayTime"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewPlayTime" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -258,6 +266,7 @@
                 android:layout_height="25dp"
                 android:text="Cuddling Time"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewCuddlingTime"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewCuddlingTime" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -291,6 +300,7 @@
                 android:layout_height="25dp"
                 android:text="Reading"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewReading"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewReading" />
 

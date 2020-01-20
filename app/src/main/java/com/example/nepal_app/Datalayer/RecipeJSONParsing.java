@@ -19,6 +19,11 @@ public class RecipeJSONParsing extends AppCompatActivity {
     private static final RecipeJSONParsing RecipeJSONParsinInstans = new RecipeJSONParsing();
     public static RecipeJSONParsing getInstance(){return RecipeJSONParsinInstans;}
 
+    /**
+     * Return an array read from JSON, Case sensitive.
+     * @param context
+     * @return
+     */
     public JSONArray readJSON(Context context) {
         JSONArray jsonArray = null;
         try {
@@ -38,6 +43,12 @@ public class RecipeJSONParsing extends AppCompatActivity {
         return jsonArray;
     }
 
+    /**
+     * Finds a recipe with different tag, Strings are case sensitive and should match the ones in the JSON file
+     * @param context
+     * @param tag
+     * @return
+     */
     public ArrayList<RecipeHomeObject> loadRecipeListByTag(Context context, String tag) {
         ArrayList<RecipeHomeObject> recipeHomeObjects = new ArrayList<>();
         JSONArray jsonArray = readJSON(context);
@@ -72,15 +83,6 @@ public class RecipeJSONParsing extends AppCompatActivity {
                         }
                     }
                     break;
-                case "favorite":
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        if (jsonArray.getJSONObject(i).getBoolean("favorite")) {
-                            name = jsonArray.getJSONObject(i).getString("name");
-                            image = jsonArray.getJSONObject(i).getString("image");
-                            recipeHomeObjects.add(new RecipeHomeObject(name,image));
-                        }
-                    }
-                    break;
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -95,7 +97,6 @@ public class RecipeJSONParsing extends AppCompatActivity {
      * @param context
      * @return
      */
-
     public RecipeHomeObject loadSingleHomeRecipe(int pos, Context context) {
         RecipeHomeObject recipe;
         String name, image;

@@ -48,6 +48,7 @@
             android:textColor="@android:color/black"
             android:textSize="28sp"
             android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
             app:layout_constraintBottom_toTopOf="@+id/list"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -64,6 +65,7 @@
             android:textColor="@android:color/black"
             android:textSize="14sp"
             android:textStyle="italic"
+            android:fontFamily="@font/montserrat"
             app:layout_constraintBottom_toTopOf="@+id/list"
             app:layout_constraintEnd_toEndOf="parent" />
         android:textSize="15sp"

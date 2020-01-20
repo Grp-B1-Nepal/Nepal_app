@@ -16,6 +16,7 @@ import org.acra.annotation.AcraToast;
 import org.acra.data.StringFormat;
 import org.acra.sender.HttpSender;
 
+//Custom application class, to make sure that ACRA crash reporting always loads no matter where in the app you are.
 //Crash reporting to http domain, change this to your http, using ACRA 3rd part software.
 @AcraCore(buildConfigClass = BuildConfig.class,
             reportFormat = StringFormat.JSON)
@@ -40,6 +41,7 @@ public class baseApplication extends Application {
         super.onLowMemory();
     }
 
+    //only method overwritten, simply initiates ACRA to enable crash reporting.
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);

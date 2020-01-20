@@ -1,4 +1,4 @@
-package com.example.nepal_app.Logic.CrashReport;
+package com.example.nepal_app;
 
 import android.app.Application;
 import android.content.Context;

@@ -17,6 +17,7 @@
         android:drawableTop="@drawable/ic_reho_recommended"
         android:text="textOnBtn"
         android:textColor="#FFFFFF"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.577"
         app:layout_constraintStart_toStartOf="parent"

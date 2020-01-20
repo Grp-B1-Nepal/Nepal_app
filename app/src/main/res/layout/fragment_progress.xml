@@ -52,6 +52,7 @@
                     android:text="Development"
                     android:textSize="22dp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +63,7 @@
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
                     android:text="Your baby is past the newborn phase, and you may be feeling more relaxed about caring for your darling. You and your partner are probably learning about your baby’s likes and dislikes. While there is still a lot to learn, you may be starting to feel more confident in your parenting skills."
+                    android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -80,6 +82,7 @@
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
                     android:text="Your baby is past the newborn phase, and you may be feeling more relaxed about caring for your darling. You and your partner are probably learning about your baby’s likes and dislikes. While there is still a lot to learn, you may be starting to feel more confident in your parenting skills."
+                    android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +96,7 @@
                     android:text="Your 2 month old baby"
                     android:textSize="22dp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -123,6 +127,7 @@
                         android:text="Weight"
                         android:textSize="16sp"
                         android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
                         app:layout_constraintStart_toStartOf="@+id/progress_weight"
                         app:layout_constraintTop_toBottomOf="@+id/progress_height" />
 
@@ -130,10 +135,10 @@
                         android:id="@+id/progress_weight"
                         android:layout_width="wrap_content"
                         android:layout_height="19dp"
-
                         android:gravity="center"
                         android:text="4,12 - 8,29 kg"
                         android:textSize="14sp"
+                        android:fontFamily="@font/montserrat"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
@@ -144,7 +149,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:gravity="center"
-
+                        android:fontFamily="@font/montserrat"
                         android:text="7,77 - 7,77 cm"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -160,6 +165,7 @@
                         android:text="Height"
                         android:textSize="16sp"
                         android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
                         app:layout_constraintStart_toStartOf="@+id/progress_height"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -190,6 +196,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="1"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -198,6 +205,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="2"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -206,6 +214,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="3"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -214,6 +223,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="4"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -222,6 +232,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="5"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -230,6 +241,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="6"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -238,6 +250,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="7"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -246,6 +259,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="8"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -254,6 +268,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="9"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -262,6 +277,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="10"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -270,6 +286,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="11"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -278,6 +295,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="12"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
             </LinearLayout>
         </HorizontalScrollView>

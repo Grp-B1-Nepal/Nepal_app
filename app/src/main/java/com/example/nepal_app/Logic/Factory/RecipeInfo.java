@@ -10,10 +10,10 @@ import java.util.ArrayList;
 
 public class RecipeInfo {
     private static final RecipeInfo Recipeinstans = new RecipeInfo();
-    private int recipePostion;
     private RecipeObj recipe;
     private ArrayList<RecipeHomeObject> recipeHomeObjects;
     private String image;
+    private String name;
 
     private RecipeJSONParsing recipeJSONParsing = RecipeJSONParsing.getInstance();
 
@@ -31,7 +31,6 @@ public class RecipeInfo {
 
     public RecipeHomeObject getSingleHomeRecipe (int pos, Context context) {
         RecipeHomeObject recipe = recipeJSONParsing.loadSingleHomeRecipe(pos, context);
-
         return recipe;
     }
 
@@ -40,12 +39,27 @@ public class RecipeInfo {
         return image;
     }
 
-    public static RecipeInfo getInstance(){return Recipeinstans;}
+    public int getRecipePosition(Context context, String recipeName) {
+        return recipeJSONParsing.getPositionStringMatch(context,recipeName);
+    }
 
-    public int getPostionRecipe(){
-        return recipePostion;
+    public String getRecipeName() {
+        return name;
     }
-    public void setPostionRecipe(int postionRecipe){
-        this.recipePostion = postionRecipe;
+
+    public int getPosFromName(String name, Context context) {
+       ArrayList<RecipeHomeObject> recList = recipeJSONParsing.loadRecipeListByTag(context, "loadAll");
+       for (int i = 0; i < recList.size(); i++) {
+           if (recList.get(i).getRecipeName().equals(name)) {
+               return i;
+           }
+       }
+       return 0;
     }
+
+    public void setRecipeName(String name) {
+        this.name = name;
+    }
+
+    public static RecipeInfo getInstance(){return Recipeinstans;}
 }

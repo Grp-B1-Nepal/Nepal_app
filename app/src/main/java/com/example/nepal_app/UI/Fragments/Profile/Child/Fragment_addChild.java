@@ -45,14 +45,13 @@ import static android.app.Activity.RESULT_OK;
 
 
 public class Fragment_addChild extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
-    private Button save, pick_date, deleteButton,buttonBack, picture;
+    private Button save, pick_date,buttonBack;
     private EditText name;
     private ImageView  preview;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
     private long currentDate;
     private static final int PICK_IMAGE =100;
     private Spinner genders;
-    private Uri imageUri = null;
     private ChildInfo childInfo;
     private Bitmap bitmap;
 
@@ -70,7 +69,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
 
         View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
         save = view2.findViewById(R.id.save_button);
-        picture = view2.findViewById(R.id.picture);
+        Button picture = view2.findViewById(R.id.picture);
         name = view2.findViewById(R.id.name);
         pick_date = view2.findViewById(R.id.pickdate_button);
         preview = view2.findViewById(R.id.downloaded_picture);
@@ -78,7 +77,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         genders = view2.findViewById(R.id.gender_spinner);
         pick_date.setOnClickListener(this);
         save.setOnClickListener(this);
-        deleteButton = view2.findViewById(R.id.button_deleteChild);
+        Button deleteButton = view2.findViewById(R.id.button_deleteChild);
         deleteButton.setVisibility(View.INVISIBLE);
         buttonBack = view2.findViewById(R.id.button_editBack);
         buttonBack.setOnClickListener(this);
@@ -115,7 +114,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         try {
 
             if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
-                imageUri = data.getData();
+                Uri imageUri = data.getData();
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = bitmap;
                 bitmap = Bitmap.createBitmap(bitmapTemp, 0,0, bitmap.getWidth(),bitmap.getHeight(),matrix,true);
@@ -151,10 +150,13 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
 
     @Override
     public void onClick(View v) {
-
         if (v == save){
-            if (String.valueOf(name.getText()).equals("") || currentDate == 0 || bitmap == null || genders.getSelectedItem().equals("…")) {
+            if (String.valueOf(name.getText()).equals("") || currentDate == 0 || bitmap == null ||
+                    genders.getSelectedItem().equals("…")) {
 
+                if(childInfo.nameInUse(String.valueOf(name.getText()))){
+                    name.setError("Name already in use");
+                }
                 if (String.valueOf(name.getText()).equals("")){
                     name.setError("Please fill the name of the child");
                 }
@@ -168,7 +170,10 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                     Toast.makeText(getContext(),"Select a gender",Toast.LENGTH_LONG).show();
                 }
             } else {
-                if (childArr.size() != 0) {
+                if (childInfo.nameInUse(String.valueOf(name.getText()))){
+                    name.setError("Name already in use");
+                    return;
+                } else  if (childArr.size() != 0) {
                     childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem()),false));
                 } else
                     childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem()),true));
@@ -222,8 +227,10 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         }
     }
 
+
+
     //Rotate image
-    public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
+    private int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
         int rotate = 0;
         try {
             context.getContentResolver().notifyChange(imageUri, null);

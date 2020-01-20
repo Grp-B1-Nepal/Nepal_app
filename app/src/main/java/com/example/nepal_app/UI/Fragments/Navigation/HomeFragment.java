@@ -94,7 +94,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             transaction.addToBackStack(null);
             transaction.commit();
         } else if (v == recipesSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.recipestts);
+            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_recipe);
             mp.start();
             mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
@@ -103,7 +103,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 }
             });
         } else if (v == progressSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.progresstts);
+            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_progress);
             mp.start();
             mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
@@ -112,7 +112,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 }
             });
         } else if (v == activitesSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.activitiestts);
+            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_activity);
             mp.start();
             mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
@@ -126,7 +126,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             transaction.addToBackStack(null);
             transaction.commit();
         } else if (v == profileSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.profiletts);
+            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_profile);
             mp.start();
             mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override

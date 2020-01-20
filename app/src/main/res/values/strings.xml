@@ -14,9 +14,9 @@
     <string name="view_recipe">View</string>
     <string-array name="spinner">
         <item> …</item>
-        <item>Boy</item>
-        <item>Girl</item>
-        <item>Other</item>
+        <item>केटा</item>
+        <item>केटी</item>
+        <item>अन्य</item>
     </string-array>
 
     <!-- Here comes the information for the activity information fragment. This is gonna fill alot so please bear with me. Might include it in its own xml file instead-->

@@ -45,7 +45,7 @@ import static android.app.Activity.RESULT_OK;
 
 
 public class Fragment_addChild extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
-    private Button save, pick_date, deleteButton,buttonBack;
+    private Button save, pick_date, deleteButton,buttonBack, picture;
     private EditText name;
     private ImageView  preview;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
@@ -54,7 +54,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     private Spinner genders;
     private Uri imageUri = null;
     private ChildInfo childInfo;
-    private ConstraintLayout picture;
     private Bitmap bitmap;
 
 
@@ -120,7 +119,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = bitmap;
                 bitmap = Bitmap.createBitmap(bitmapTemp, 0,0, bitmap.getWidth(),bitmap.getHeight(),matrix,true);
-                bitmap = Bitmap.createScaledBitmap(bitmap,200,200,true);
+                bitmap = Bitmap.createScaledBitmap(bitmap,200,300,true);
 
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
 

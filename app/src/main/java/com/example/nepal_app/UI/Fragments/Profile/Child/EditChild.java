@@ -43,7 +43,7 @@ import static android.app.Activity.RESULT_OK;
 
 public class EditChild extends Fragment implements View.OnClickListener {
     private int position;
-    private Button buttonBirthday, buttonBack, buttonSave, buttonDelete;
+    private Button buttonBirthday, buttonBack, buttonSave, buttonDelete, buttonImage;
     private EditText editName;
     private Bitmap editBitmap;
     private String name, gender, birthday, oldName;
@@ -52,10 +52,12 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private static final int PICK_IMAGE =100;
     private Uri imageUri = null;
     private ImageView image;
-    private ConstraintLayout buttonImage;
     private Spinner genders;
     private Date childDate = new Date();
     private int year,month,day;
+    private Matrix mat = new Matrix();
+    private float rot;
+    private String path;
 
 
 
@@ -95,6 +97,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
         oldName = arr.get(position).getName();
         gender = arr.get(position).getGender();
         birthday = getBirthday(position);
+
+        rot = getCameraPhotoOrientation(getContext(), imageUri, path);
+        mat.setRotate(rot);
 
         Glide.with(this).load(childInfo.getBitmap(getContext(),name))
                 .apply(RequestOptions.circleCropTransform())
@@ -240,7 +245,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
                 editBitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = editBitmap;
                 editBitmap = Bitmap.createBitmap(bitmapTemp, 0,0, editBitmap.getWidth(),editBitmap.getHeight(),matrix,true);
-                editBitmap = Bitmap.createScaledBitmap(editBitmap,200,200,true);
+                editBitmap = Bitmap.createScaledBitmap(editBitmap,200,300,true);
 
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
 

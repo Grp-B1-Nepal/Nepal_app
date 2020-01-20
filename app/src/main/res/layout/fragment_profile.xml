@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".UI.Fragments.Profile.ProfileFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,20 +29,25 @@
 
         <ListView
             android:id="@+id/list"
-            android:layout_width="409dp"
-            android:layout_height="659dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="130dp"
+            android:divider="@null"
+            android:dividerHeight="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/active_child" />
+            app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/active_child" />
 
         <TextView
             android:id="@+id/profile_headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:text="Children"
             android:textColor="@android:color/black"
             android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/list"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,12 +57,17 @@
             android:id="@+id/active_child"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="3dp"
             android:text="Current child"
             android:textColor="@android:color/black"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_headline" />
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/list"
+            app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_headline" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>

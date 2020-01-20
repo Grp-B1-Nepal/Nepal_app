@@ -6,8 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -58,6 +56,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
             @Override
             public void onClick(View v) {
                 if (position < recipeList.size()) {
+                    recipeInfo = recipeInfo.getInstance();
                     recipeInfo.setRecipeName(recipeList.get(position).getRecipeName());
                     Fragment recipeFragment = new Recipe_fragment();
                     MainActivity mainActivity = (MainActivity) context;

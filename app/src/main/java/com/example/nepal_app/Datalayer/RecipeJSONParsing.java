@@ -81,13 +81,6 @@ public class RecipeJSONParsing extends AppCompatActivity {
                         }
                     }
                     break;
-                case "loadAll":
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        name = jsonArray.getJSONObject(i).getString("name");
-                        image = jsonArray.getJSONObject(i).getString("image");
-                        recipeHomeObjects.add(new RecipeHomeObject(name,image));
-                    }
-                    break;
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -95,6 +88,13 @@ public class RecipeJSONParsing extends AppCompatActivity {
 
         return recipeHomeObjects;
     }
+
+    /**
+     * Given a position, then finds a single home recipe
+     * @param pos
+     * @param context
+     * @return
+     */
 
     public RecipeHomeObject loadSingleHomeRecipe(int pos, Context context) {
         RecipeHomeObject recipe;
@@ -180,17 +180,12 @@ public class RecipeJSONParsing extends AppCompatActivity {
         return picture;
     }
 
-    public void changeFavoriteStatus(Context context,int position,String value) {
-        JSONArray jsonArray = readJSON(context);
-
-        try {
-            JSONObject favorite = jsonArray.getJSONObject(position).getJSONObject("favorite");
-            favorite.put("favorite", value);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
-
+    /**
+     * Finds position in JSON file corresponding to the given recipe name
+     * @param context
+     * @param recipeName
+     * @return
+     */
     public int getPositionStringMatch(Context context, String recipeName) {
         JSONArray jsonArray = readJSON(context);
         int position = 0;

@@ -44,7 +44,6 @@ public class RecipeHome extends Fragment {
         recipeCommonList = new ArrayList<>();
         categoryList = new ArrayList<>();
         favoriteList = FavoriteRecipes.getInstance().favoriteList;
-        mainList = recipeInfo.getRecipeListByTag(getContext(),"loadAll");
         btnIcons = new ArrayList<>();
 
         //Loads all recipes with tag recommended

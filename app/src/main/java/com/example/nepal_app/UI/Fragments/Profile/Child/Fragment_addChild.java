@@ -119,7 +119,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = bitmap;
                 bitmap = Bitmap.createBitmap(bitmapTemp, 0,0, bitmap.getWidth(),bitmap.getHeight(),matrix,true);
-                bitmap = Bitmap.createScaledBitmap(bitmap,200,200,true);
+                bitmap = Bitmap.createScaledBitmap(bitmap,200,300,true);
 
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
 

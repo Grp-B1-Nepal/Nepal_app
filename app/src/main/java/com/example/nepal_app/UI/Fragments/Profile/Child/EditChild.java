@@ -55,6 +55,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private Spinner genders;
     private Date childDate = new Date();
     private int year,month,day;
+    private Matrix mat = new Matrix();
+    private float rot;
+    private String path;
 
 
 
@@ -94,6 +97,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
         oldName = arr.get(position).getName();
         gender = arr.get(position).getGender();
         birthday = getBirthday(position);
+
+        rot = getCameraPhotoOrientation(getContext(), imageUri, path);
+        mat.setRotate(rot);
 
         Glide.with(this).load(childInfo.getBitmap(getContext(),name))
                 .apply(RequestOptions.circleCropTransform())
@@ -239,7 +245,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
                 editBitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = editBitmap;
                 editBitmap = Bitmap.createBitmap(bitmapTemp, 0,0, editBitmap.getWidth(),editBitmap.getHeight(),matrix,true);
-                editBitmap = Bitmap.createScaledBitmap(editBitmap,200,200,true);
+                editBitmap = Bitmap.createScaledBitmap(editBitmap,200,300,true);
 
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
 

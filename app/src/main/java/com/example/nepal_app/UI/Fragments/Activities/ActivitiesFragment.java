@@ -127,7 +127,9 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
         childList = childInfo.getChildArr(getContext());
         //If the childlist is 0 we just want this one shown
         if (childList.size() == 0 ) {
-            months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            //months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            months04.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
+
             //Agerange will only be 0 the first time you enter, therefore we need it to select based upon the age of the current child.
         } else if (agerange == 0){
             childInfo.getMonthProgress();
@@ -137,28 +139,28 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
                 case 3:
                 case 4:
                     agerange = 1;
-                    months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                    months04.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
                     break;
                 case 5:
                 case 6:
                 case 7:
                 case 8:
                     agerange = 2;
-                    months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                    months58.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
                     break;
 
                 default:
                     agerange = 3;
-                    months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                    months912.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
                     break;
             }
             //theese 3 if statements serve their purpose upon back pressed. It remembers the it when another fragment is inflated to remember the users selection.
         } else if (agerange == 1) {
-            months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            months04.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
         } else if (agerange == 2) {
-            months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            months58.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
         } else if (agerange == 3) {
-            months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            months58.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
         }
     }
 
@@ -179,20 +181,22 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 //TODO add some sound files
         } else if (v == months04 || v == months58 || v == months912) {
             //Resets the color of all the buttons before it paints the background on one of them.
-            months04.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
-            months58.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
-            months912.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
+            months04.setBackground(getResources().getDrawable(R.drawable.buttonshape));
+            months58.setBackground(getResources().getDrawable(R.drawable.buttonshape));
+            months912.setBackground(getResources().getDrawable(R.drawable.buttonshape));
+
 
             //Paints the background and changes the informationnum range number. The number is passed on to the next fragment such that it knows what information it should get.
             if (v == months04) {
                 agerange = 1;
-                v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                v.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
+
             } else if (v == months58) {
                 agerange = 2;
-                v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                v.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
             } else if (v == months912) {
                 agerange = 3;
-                v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                v.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
             }
         }
     }

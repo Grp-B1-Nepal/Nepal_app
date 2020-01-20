@@ -22,6 +22,7 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
     ArrayList<String> informationtext;
     public MediaPlayer mediaPlayer= new MediaPlayer();
     public ArrayList<Integer> sounds;
+    private Boolean isSoundPlaying = false;
     private Context mcontext;
 
     public ActivityAdapter(int speakerimage, ArrayList<String> informationtext, ArrayList<Integer> sounds) {
@@ -79,15 +80,19 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
         @Override
         public void onClick(View v) {
             if (getLayoutPosition() == 0 ) {
-                //TODO when more sound files are added it has to pick between them. Right now it's also only the speaker talking.
-                mediaPlayer = MediaPlayer.create(mcontext, sounds.get(0));
-                mediaPlayer.start();
-                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mediaPlayer) {
-                        mediaPlayer.release();
-                    }
-                });
+                if(!isSoundPlaying) {
+                    //TODO when more sound files are added it has to pick between them. Right now it's also only the speaker talking.
+                    isSoundPlaying = true;
+                    mediaPlayer = MediaPlayer.create(mcontext, sounds.get(0));
+                    mediaPlayer.start();
+                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                            isSoundPlaying = false;
+                        }
+                    });
+                }
             }
         }
     }

@@ -25,6 +25,7 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
     ImageView image, speakerbutton1, speakerbutton2;
     TextView info, age, height, weight, head, info2;
     private Button b1, b2, b3, b4, b5, b6, b7, b8,b9,b10,b11,b12;
+    private Boolean isSoundPlaying = false;
     private View rod;
     private Bitmap imageChild;
     private ChildInfo childInfo;
@@ -127,22 +128,30 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             updateInfo(12);
         } else if (v == speakerbutton1) {
             MediaPlayer mp = MediaPlayer.create(getActivity(), soundfile1);
-            mp.start();
-            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.release();
-                }
-            });
+            if(!isSoundPlaying) {
+                isSoundPlaying = true;
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        isSoundPlaying = false;
+                    }
+                });
+            }
         } else if (v == speakerbutton2) {
             MediaPlayer mp = MediaPlayer.create(getActivity(), soundfile2);
-            mp.start();
-            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.release();
-                }
-            });
+            if(!isSoundPlaying) {
+                isSoundPlaying = true;
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        isSoundPlaying = false;
+                    }
+                });
+            }
         }
     }
 

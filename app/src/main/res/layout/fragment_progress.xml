@@ -62,7 +62,7 @@
                     android:id="@+id/fragmentProgress_InfoText2"
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
-                    android:text="Your baby is past the newborn phase, and you may be feeling more relaxed about caring for your darling. You and your partner are probably learning about your baby’s likes and dislikes. While there is still a lot to learn, you may be starting to feel more confident in your parenting skills."
+                    android:text="तपाईंको बच्चा लगभग एक महिनाको भयो! चाँडै तपाईं आफ्नो सानो एक मनोरन्जन गर्न हुनेछ। अहिल्यै अहिल्यै यो सबै खान र सुत्नको बारेमा छ।"
                     android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -81,7 +81,10 @@
                     android:id="@+id/fragmentProgress_InfoText"
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
-                    android:text="Your baby is past the newborn phase, and you may be feeling more relaxed about caring for your darling. You and your partner are probably learning about your baby’s likes and dislikes. While there is still a lot to learn, you may be starting to feel more confident in your parenting skills."
+                    android:text="तपाइँ खाना पचाउने वरिपरि बुनियादी ढाँचाको अधिक देख्न सक्नुहुन्छ।
+         तपाईंको बच्चालाई अझै पनि रातमा क्लस्टर-फिडिंग आवश्यक पर्दछ जब उसले धेरै खाना चाहिन्छ
+         अर्को दिनको लागि पर्याप्त छ। तर तपाइँ यो पनि भन्न सक्नुहुन्छ कि तपाइँको बच्चा भोकाएको छ कि छैन, डायपर परिवर्तन चाहिन्छ
+         वा कोलिक छ। तपाईं अब साँझमा केहि लामो पोषण दिन को लागी प्रयास गर्न सक्नुहुन्छ ताकि तपाईं अझ निन्द्रामा जान सक्नुहुन्छ"
                     android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rvRep"
-    android:layout_width="match_parent"
+    android:layout_width="345dp"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
@@ -21,34 +21,37 @@
 
     <Button
         android:id="@+id/recipeBtnView2"
-        android:layout_width="85dp"
+        android:layout_width="60dp"
         android:layout_height="35dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
         android:background="@drawable/button_shape"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/view_recipe"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/recipeImg2"
-        app:layout_constraintTop_toBottomOf="@+id/recipeName2" />
+        app:layout_constraintBottom_toBottomOf="@+id/recipeImg2"
+        app:layout_constraintStart_toEndOf="@+id/recipeImg2" />
 
-    <Button
+    <ToggleButton
         android:id="@+id/recipeBtnLike2"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/favorite_empty_foreground"
+        android:textOff=" "
+        android:textOn=" "
         app:layout_constraintStart_toEndOf="@+id/recipeBtnView2"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/favorite_empty_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/recipeName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
+        android:layout_marginStart="10dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="Hej"
         android:textSize="18sp"

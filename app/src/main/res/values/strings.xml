@@ -167,31 +167,31 @@
     </string-array>
 
     <!-- Strings for getProgressAge -->
-    <string name="weight1">2,94 – 5,91 Kg</string>
-    <string name="weight2">4,12 – 8,29 Kg</string>
-    <string name="weight3">4,82 – 9,03 Kg</string>
-    <string name="weight4">5,34 – 9,65 Kg</string>
-    <string name="weight5">5,77 – 10,17 Kg</string>
-    <string name="weight6">6,12 – 10,64 Kg</string>
-    <string name="weight7">6,41 – 11,07 Kg</string>
-    <string name="weight8">6,68 – 11,43 Kg</string>
-    <string name="weight9">6,9 – 11,78 Kg</string>
-    <string name="weight10">7,11 – 12,1 Kg</string>
-    <string name="weight11">7,29 – 12,42 Kg</string>
-    <string name="weight12">7,47 – 12,72 Kg</string>
+    <string name="weight1">2,94 – 5,91 किलो</string>
+    <string name="weight2">4,12 – 8,29 किलो</string>
+    <string name="weight3">4,82 – 9,03 किलो</string>
+    <string name="weight4">5,34 – 9,65 किलो</string>
+    <string name="weight5">5,77 – 10,17 किलो</string>
+    <string name="weight6">6,12 – 10,64 किलो</string>
+    <string name="weight7">6,41 – 11,07 किलो</string>
+    <string name="weight8">6,68 – 11,43 किलो</string>
+    <string name="weight9">6,9 – 11,78 किलो</string>
+    <string name="weight10">7,11 – 12,1 किलो</string>
+    <string name="weight11">7,29 – 12,42 किलो</string>
+    <string name="weight12">7,47 – 12,72 किलो</string>
 
-    <string name="height1">49,0 – 58,9 cm</string>
-    <string name="height2">53,7 – 66,1 cm</string>
-    <string name="height3">56,6 – 68.6 cm</string>
-    <string name="height4">59,0 – 70,7 cm</string>
-    <string name="height5">61,0 – 72,5 cm</string>
-    <string name="height6">62,6 – 74,2 cm</string>
-    <string name="height7">64,1 – 75,8 cm</string>
-    <string name="height8">65,5 – 77,2 cm</string>
-    <string name="height9">66,8 – 78,6 cm</string>
-    <string name="height10">68,0 – 80,0 cm</string>
-    <string name="height11">69,2 – 81,3 cm</string>
-    <string name="height12">70,3 – 12,72 cm</string>
+    <string name="height1">49,0 – 58,9 सेमी</string>
+    <string name="height2">53,7 – 66,1 सेमी</string>
+    <string name="height3">56,6 – 68.6 सेमी</string>
+    <string name="height4">59,0 – 70,7 सेमी</string>
+    <string name="height5">61,0 – 72,5 सेमी</string>
+    <string name="height6">62,6 – 74,2 सेमी</string>
+    <string name="height7">64,1 – 75,8 सेमी</string>
+    <string name="height8">65,5 – 77,2 सेमी</string>
+    <string name="height9">66,8 – 78,6 सेमी</string>
+    <string name="height10">68,0 – 80,0 सेमी</string>
+    <string name="height11">69,2 – 81,3 सेमी</string>
+    <string name="height12">70,3 – 12,72 सेमी</string>
 
     <string name="age1">तपाईंको १ महिनाको बच्चा</string>
     <string name="age2">तपाईंको दुई महिनाको बच्चा</string>
@@ -206,18 +206,18 @@
     <string name="age11">तपाईंको एलिभेन महिनाको बच्चा</string>
     <string name="age12">तपाईंको बाह्र महिनाको बच्चा</string>
 
-    <string name="head1">Feeding pattern</string>
-    <string name="head2">Development</string>
-    <string name="head3">Development</string>
-    <string name="head4">Development</string>
-    <string name="head5">Development</string>
-    <string name="head6">Development</string>
-    <string name="head7">Development</string>
-    <string name="head8">Development</string>
-    <string name="head9">Development</string>
-    <string name="head10">Development</string>
-    <string name="head11">Development</string>
-    <string name="head12">Development</string>
+    <string name="head1">खुट्टा बान्की</string>
+    <string name="head2">विकास</string>
+    <string name="head3">विकास</string>
+    <string name="head4">विकास</string>
+    <string name="head5">विकास</string>
+    <string name="head6">विकास</string>
+    <string name="head7">विकास</string>
+    <string name="head8">विकास</string>
+    <string name="head9">विकास</string>
+    <string name="head10">विकास</string>
+    <string name="head11">विकास</string>
+    <string name="head12">विकास</string>
 
     <string name="info1_1">तपाईंको बच्चा लगभग एक महिनाको भयो! चाँडै तपाईं आफ्नो सानो एक मनोरन्जन गर्न हुनेछ। अहिल्यै अहिल्यै यो सबै खान र सुत्नको बारेमा छ।</string>
     <string name="info1_2">सामाजिक र भावनात्मक विकास</string>

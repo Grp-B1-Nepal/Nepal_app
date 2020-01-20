@@ -86,6 +86,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
             category = itemView.findViewById(R.id.btnCategory);
             rvRecipe = itemView.findViewById(R.id.recviewRecipe);
 
+
             category.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

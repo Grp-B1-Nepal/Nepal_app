@@ -68,6 +68,25 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
 
             }
         });
+
+        holder.fav.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    String recipeName = recipeInfo.getRecipeName();
+                    int position = recipeInfo.getRecipePosition(context,recipeName);
+                    holder.fav.setBackgroundResource(R.drawable.favorite_filled_foreground);
+                    holder.addToFavoriteArray(position);
+                    notifyDataSetChanged();
+                } else {
+                    String recipeName = recipeInfo.getRecipeName();
+                    int position = recipeInfo.getRecipePosition(context, recipeName);
+                    holder.fav.setBackgroundResource(R.drawable.favorite_empty_foreground);
+                    holder.removeFromFavoriteArray(position);
+                    notifyDataSetChanged();
+                }
+            }
+        });
     }
 
     @Override
@@ -89,23 +108,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
             recImg = itemView.findViewById(R.id.recipeImg2);
             btn = itemView.findViewById(R.id.recipeBtnView2);
             fav = itemView.findViewById(R.id.recipeBtnLike2);
-
-            fav.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked) {
-                        String recipeName = recipeInfo.getRecipeName();
-                        int position = recipeInfo.getRecipePosition(context,recipeName);
-                        fav.setBackgroundResource(R.drawable.favorite_filled_foreground);
-                        addToFavoriteArray(position);
-                        notifyDataSetChanged();
-                    } else {
-                        fav.setBackgroundResource(R.drawable.favorite_empty_foreground);
-                        removeFromFavoriteArray(getAdapterPosition());
-                        notifyDataSetChanged();
-                    }
-                }
-            });
 
         }
 

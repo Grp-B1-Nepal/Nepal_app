@@ -1,6 +1,7 @@
 package com.example.nepal_app.UI.Fragments.Progress;
 
 import android.graphics.Bitmap;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,13 +22,14 @@ import java.util.ArrayList;
 
 
 public class ProgressFragment extends Fragment implements View.OnClickListener {
-    ImageView image;
+    ImageView image, speakerbutton1, speakerbutton2;
     TextView info, age, height, weight, head, info2;
     private Button b1, b2, b3, b4, b5, b6, b7, b8,b9,b10,b11,b12;
     private View rod;
     private Bitmap imageChild;
     private ChildInfo childInfo;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
+    private int soundfile1, soundfile2;
 
 
     @Override
@@ -42,6 +44,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         height = rod.findViewById(R.id.progress_height);
         weight = rod.findViewById(R.id.progress_weight);
         image = rod.findViewById(R.id.fragmentProgress_imageView);
+        speakerbutton1 = rod.findViewById(R.id.fragment_progress_speaker1);
+        speakerbutton2 = rod.findViewById(R.id.fragment_progress_speaker2);
 
         b1 = rod.findViewById(R.id.b1);
         b2 = rod.findViewById(R.id.b2);
@@ -55,6 +59,9 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         b10 = rod.findViewById(R.id.b10);
         b11 = rod.findViewById(R.id.b11);
         b12 = rod.findViewById(R.id.b12);
+
+        speakerbutton1.setOnClickListener(this);
+        speakerbutton2.setOnClickListener(this);
 
         b1.setOnClickListener(this);
         b2.setOnClickListener(this);
@@ -116,6 +123,24 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             updateInfo(11);
         } else if (v == b12) {
             updateInfo(12);
+        } else if (v == speakerbutton1) {
+            MediaPlayer mp = MediaPlayer.create(getActivity(), soundfile1);
+            mp.start();
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    mp.release();
+                }
+            });
+        } else if (v == speakerbutton2) {
+            MediaPlayer mp = MediaPlayer.create(getActivity(), soundfile2);
+            mp.start();
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    mp.release();
+                }
+            });
         }
     }
 
@@ -148,6 +173,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head1);
                 info.setText(R.string.info1_1);
                 info2.setText(R.string.info2_1);
+                soundfile1 = R.raw.development_info1_1;
+                soundfile2 = R.raw.development_info2_1;
                 break;
             case 2:
                 resetColors();
@@ -158,6 +185,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head2);
                 info.setText(R.string.info1_2);
                 info2.setText(R.string.info2_2);
+                soundfile1 = R.raw.development_info1_2;
+                soundfile2 = R.raw.development_info2_2;
                 break;
             case 3:
                 resetColors();
@@ -168,6 +197,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head3);
                 info.setText(R.string.info1_3);
                 info2.setText(R.string.info2_3);
+                soundfile1 = R.raw.development_info1_3;
+                soundfile2 = R.raw.development_info2_3;
                 break;
             case 4:
                 resetColors();
@@ -178,6 +209,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head4);
                 info.setText(R.string.info1_4);
                 info2.setText(R.string.info2_4);
+                soundfile1 = R.raw.development_info1_4;
+                soundfile2 = R.raw.development_info2_4;
                 break;
             case 5:
                 resetColors();
@@ -188,6 +221,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head5);
                 info.setText(R.string.info1_5);
                 info2.setText(R.string.info2_5);
+                soundfile1 = R.raw.development_info1_5;
+                soundfile2 = R.raw.development_info2_5;
                 break;
             case 6:
                 resetColors();
@@ -198,6 +233,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head6);
                 info.setText(R.string.info1_6);
                 info2.setText(R.string.info2_6);
+                soundfile1 = R.raw.development_info1_6;
+                soundfile2 = R.raw.development_info2_6;
                 break;
             case 7:
                 resetColors();
@@ -208,6 +245,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head7);
                 info.setText(R.string.info1_7);
                 info2.setText(R.string.info2_7);
+                soundfile1 = R.raw.development_info1_7;
+                soundfile2 = R.raw.development_info2_789;
                 break;
             case 8:
                 resetColors();
@@ -218,6 +257,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head8);
                 info.setText(R.string.info1_8);
                 info2.setText(R.string.info2_8);
+                soundfile1 = R.raw.development_info1_8;
+                soundfile2 = R.raw.development_info2_789;
                 break;
             case 9:
                 resetColors();
@@ -228,6 +269,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head9);
                 info.setText(R.string.info1_9);
                 info2.setText(R.string.info2_9);
+                soundfile1 = R.raw.development_info1_9;
+                soundfile2 = R.raw.development_info2_789;
                 break;
             case 10:
                 resetColors();
@@ -238,6 +281,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head10);
                 info.setText(R.string.info1_10);
                 info2.setText(R.string.info2_10);
+                soundfile1 = R.raw.development_info1_10;
+                soundfile2 = R.raw.development_info2_789;
                 break;
             case 11:
                 resetColors();
@@ -248,6 +293,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head11);
                 info.setText(R.string.info1_11);
                 info2.setText(R.string.info2_11);
+                soundfile1 = R.raw.development_info1_11;
+                soundfile2 = R.raw.development_info2_789;
                 break;
             case 12:
             default:
@@ -259,6 +306,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 head.setText(R.string.head12);
                 info.setText(R.string.info1_12);
                 info2.setText(R.string.info2_12);
+                soundfile1 = R.raw.development_info1_12;
+                soundfile2 = R.raw.development_info2_789;
 
         }
     }

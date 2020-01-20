@@ -2,13 +2,10 @@ package com.example.nepal_app.UI.Fragments.Navigation;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -53,7 +50,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
 
             if(rod == null) {
-            rod = inflater.inflate(R.layout.homepage_layout_new, container, false);
+            rod = inflater.inflate(R.layout.fragment_homepage, container, false);
 
             //setting up buttons
             activitiesB = rod.findViewById(R.id.activitesButton);

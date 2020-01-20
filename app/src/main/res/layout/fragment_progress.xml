@@ -38,7 +38,7 @@
                 tools:layout_editor_absoluteY="119dp">
 
                 <ImageView
-                    android:id="@+id/speakerActivity3"
+                    android:id="@+id/fragment_progress_speaker2"
                     android:layout_width="28dp"
                     android:layout_height="31dp"
                     app:layout_constraintEnd_toEndOf="@+id/fragmentProgress_InfoText2"
@@ -56,7 +56,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/speakerActivity2" />
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_progress_speaker1" />
 
                 <TextView
                     android:id="@+id/fragmentProgress_InfoText2"
@@ -70,7 +70,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/fragmentProgress_Headline2" />
 
                 <ImageView
-                    android:id="@+id/speakerActivity2"
+                    android:id="@+id/fragment_progress_speaker1"
                     android:layout_width="28dp"
                     android:layout_height="31dp"
                     app:layout_constraintEnd_toEndOf="@+id/fragmentProgress_InfoText"

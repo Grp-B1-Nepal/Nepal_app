@@ -225,6 +225,12 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
             activityPOJO.setHeadlinetext("Singing for your child and it's benefits");
 
             if (agerange == 1) {
+                soundlist.clear();
+                soundlist.add(R.raw.singing11);
+                soundlist.add(R.raw.singing12);
+                soundlist.add(R.raw.singing13);
+                soundlist.add(R.raw.singing14);
+
                 activityPOJO.setInformationnum(R.array.activities_information_Singing_category1);
                 activityPOJO.setSoundnumberlist(soundlist);
             } else if (agerange == 2) {

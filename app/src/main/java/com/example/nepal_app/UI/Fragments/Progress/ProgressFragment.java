@@ -166,6 +166,7 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         switch (agerange){
             case 0:
             case 1:
+                resetColors();
                 b1.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
                 weight.setText(R.string.weight1);
                 height.setText(R.string.height1);

@@ -83,6 +83,12 @@ public class RecipeJSONParsing extends AppCompatActivity {
                         }
                     }
                     break;
+                case "loadAll":
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        name = jsonArray.getJSONObject(i).getString("name");
+                        image = jsonArray.getJSONObject(i).getString("image");
+                        recipeHomeObjects.add(new RecipeHomeObject(name, image));
+                    }
             }
         } catch (JSONException e) {
             e.printStackTrace();

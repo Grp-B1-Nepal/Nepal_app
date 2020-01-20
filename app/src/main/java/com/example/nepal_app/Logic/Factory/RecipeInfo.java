@@ -47,6 +47,16 @@ public class RecipeInfo {
         return name;
     }
 
+    public int getPosFromName(String name, Context context) {
+       ArrayList<RecipeHomeObject> recList = recipeJSONParsing.loadRecipeListByTag(context, "loadAll");
+       for (int i = 0; i < recList.size(); i++) {
+           if (recList.get(i).getRecipeName().equals(name)) {
+               return i;
+           }
+       }
+       return 0;
+    }
+
     public void setRecipeName(String name) {
         this.name = name;
     }

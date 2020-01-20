@@ -53,11 +53,11 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
         holder.recImg.setImageResource(identifier);
         holder.recName.setText(recipeList.get(position).getRecipeName());
         recipeInfo = recipeInfo.getInstance();
-        recipeInfo.setRecipeName(recipeList.get(position).getRecipeName());
         holder.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (position < recipeList.size()) {
+                    recipeInfo.setRecipeName(recipeList.get(position).getRecipeName());
                     Fragment recipeFragment = new Recipe_fragment();
                     MainActivity mainActivity = (MainActivity) context;
                     FragmentTransaction transaction = mainActivity.getSupportFragmentManager().beginTransaction();
@@ -69,24 +69,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
             }
         });
 
-        holder.fav.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    String recipeName = recipeInfo.getRecipeName();
-                    int position = recipeInfo.getRecipePosition(context,recipeName);
-                    holder.fav.setBackgroundResource(R.drawable.favorite_filled_foreground);
-                    holder.addToFavoriteArray(position);
-                    notifyDataSetChanged();
-                } else {
-                    String recipeName = recipeInfo.getRecipeName();
-                    int position = recipeInfo.getRecipePosition(context, recipeName);
-                    holder.fav.setBackgroundResource(R.drawable.favorite_empty_foreground);
-                    holder.removeFromFavoriteArray(position);
-                    notifyDataSetChanged();
-                }
-            }
-        });
     }
 
     @Override
@@ -109,23 +91,29 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
             btn = itemView.findViewById(R.id.recipeBtnView2);
             fav = itemView.findViewById(R.id.recipeBtnLike2);
 
+
+            fav.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+
+                        int adaptPos = getAdapterPosition();
+                        FavoriteRecipes.getInstance().favoriteList.add(recipeList.get(adaptPos));
+                        fav.setBackgroundResource(R.drawable.favorite_filled_foreground);
+                        notifyDataSetChanged();
+                    } else {
+
+                        int adaptPos = getAdapterPosition();
+                        RecipeHomeObject recipe = recipeList.get(adaptPos);
+                        int index = FavoriteRecipes.getInstance().favoriteList.indexOf(recipe);
+                        FavoriteRecipes.getInstance().favoriteList.remove(index);
+                        fav.setBackgroundResource(R.drawable.favorite_empty_foreground);
+                        notifyDataSetChanged();
+                    }
+                }
+            });
+
         }
 
-        public void addToFavoriteArray(int position) {
-            RecipeHomeObject recipe = recipeInfo.getSingleHomeRecipe(position, context);
-            FavoriteRecipes.getInstance().favoriteList.add(recipe);
-
-        }
-
-        public void removeFromFavoriteArray(int position) {
-            ArrayList<RecipeHomeObject> listTemp = FavoriteRecipes.getInstance().favoriteList;
-            ArrayList<String> listTempNames = new ArrayList<>();
-            for (int i = 0; i < listTemp.size(); i++) {
-                listTempNames.add(listTemp.get(i).getRecipeName());
-            }
-            RecipeHomeObject recipe = recipeInfo.getSingleHomeRecipe(position, context);
-            int index = listTempNames.indexOf(recipe.getRecipeName());
-            FavoriteRecipes.getInstance().favoriteList.remove(index);
-        }
     }
 }

@@ -52,12 +52,12 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
         int identifier = context.getResources().getIdentifier(recipeList.get(position).getRecipeImg(), "drawable", context.getPackageName());
         holder.recImg.setImageResource(identifier);
         holder.recName.setText(recipeList.get(position).getRecipeName());
+        recipeInfo = recipeInfo.getInstance();
+        recipeInfo.setRecipeName(recipeList.get(position).getRecipeName());
         holder.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (position < recipeList.size()) {
-                    recipeInfo = recipeInfo.getInstance();
-                    recipeInfo.setRecipeName(recipeList.get(position).getRecipeName());
                     Fragment recipeFragment = new Recipe_fragment();
                     MainActivity mainActivity = (MainActivity) context;
                     FragmentTransaction transaction = mainActivity.getSupportFragmentManager().beginTransaction();
@@ -94,8 +94,10 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
+                        String recipeName = recipeInfo.getRecipeName();
+                        int position = recipeInfo.getRecipePosition(context,recipeName);
                         fav.setBackgroundResource(R.drawable.favorite_filled_foreground);
-                        addToFavoriteArray(getAdapterPosition());
+                        addToFavoriteArray(position);
                         notifyDataSetChanged();
                     } else {
                         fav.setBackgroundResource(R.drawable.favorite_empty_foreground);

@@ -75,6 +75,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
+        //Gets round image
         Glide.with(getContext()).load(childInfo.getBitmap(getContext(), childArr.get(position).getName())).
                 apply(RequestOptions.circleCropTransform())
                 .into(viewHolder.childrenImage);

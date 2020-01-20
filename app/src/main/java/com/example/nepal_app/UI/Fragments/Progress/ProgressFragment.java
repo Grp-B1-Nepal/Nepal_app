@@ -72,15 +72,16 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         b1.setBackground(getResources().getDrawable(R.drawable.scroll_buttons_pressed));
 
         childInfo = ChildInfo.getInstance();
-
         childArr = childInfo.getChildArr(getContext());
 
 
+        //If there is a chosen active child, set he child info on the page
         if (childArr.size() != 0){
             imageChild = childInfo.getBitmap(getContext(),childArr.get(childInfo.getActiveChild()).getName());
             updateInfo(childInfo.getMonthProgress());
             image.setImageBitmap(imageChild);
 
+            //Round image
             Glide.with(this).load(imageChild).
                     apply(RequestOptions.circleCropTransform())
                     .into(image);
@@ -118,6 +119,7 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         }
     }
 
+    //Marks all buttons as unpressed
     public void resetColors() {
         b1.setBackground(getResources().getDrawable(R.drawable.scroll_buttons));
         b2.setBackground(getResources().getDrawable(R.drawable.scroll_buttons));
@@ -132,6 +134,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         b11.setBackground(getResources().getDrawable(R.drawable.scroll_buttons));
         b12.setBackground(getResources().getDrawable(R.drawable.scroll_buttons));
     }
+
+    // Methode for setting text, pressed button.
     public void updateInfo(int agerange){
 
         switch (agerange){

@@ -130,6 +130,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 filePath = cursor.getString(columnIndex);
                 cursor.close();
 
+                //Rotate image
                 degree = getCameraPhotoOrientation(getContext(), imageUri, filePath);
                 matrix.setRotate(degree);
 
@@ -221,6 +222,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         }
     }
 
+    //Rotate image
     public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
         int rotate = 0;
         try {

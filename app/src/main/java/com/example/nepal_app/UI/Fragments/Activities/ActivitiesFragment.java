@@ -35,7 +35,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
     private ImageView Singing, Talking, Tummy_Time, Cuddling_Time, Play_Time, Reading, SoundSinging, SoundTalking, SoundTummy_Time, SoundCuddling_Time, SoundPlay_Time, SoundReading;
     private View rod;
     private Button months04, months58, months912;
-    private int agerange = 0;
+    private int agerange = 1;
     private int imagenum = 0;
     private ChildInfo childInfo;
     private ArrayList<ChildObj> childList = new ArrayList<>();

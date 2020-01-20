@@ -111,7 +111,7 @@
     ]
   },
   {
-    "name": "Ubuntu Cake", "image": "banana_cake", "tag": "recommended",
+    "name": "Chocolate Cake", "image": "cake1", "tag": "recommended",
     "recipe": [
       {
         "images": [
@@ -148,7 +148,7 @@
     ]
   },
   {
-    "name": "Cinnamon Cake", "image": "banana_cake", "tag": "snack",
+    "name": "Vanilla Cake", "image": "cake2", "tag": "snack",
     "recipe": [
       {
         "images": [
@@ -185,7 +185,7 @@
     ]
   },
   {
-    "name": "Julekage", "image": "banana_cake", "tag": "snack",
+    "name": "Princess Dream", "image": "cake3", "tag": "snack",
     "recipe": [
       {
         "images": [
@@ -222,7 +222,7 @@
     ]
   },
   {
-    "name": "Nøddekage", "image": "banana_cake", "tag": "common",
+    "name": "Chocolate Dream", "image": "cake4", "tag": "common",
     "recipe": [
       {
         "images": [
@@ -259,7 +259,7 @@
     ]
   },
   {
-    "name": "Gulerodskage", "image": "banana_cake", "tag": "common",
+    "name": "Fruit Cake", "image": "cake5", "tag": "common",
     "recipe": [
       {
         "images": [
@@ -296,7 +296,7 @@
     ]
   },
   {
-    "name": "Chokoladekage", "image": "banana_cake", "tag": "common",
+    "name": "Berry Cake", "image": "cake6", "tag": "common",
     "recipe": [
       {
         "images": [
@@ -333,7 +333,7 @@
     ]
   },
   {
-    "name": "Niklas hade kage", "image": "banana_cake", "tag": "recommended",
+    "name": "Crispy Cake", "image": "cake7", "tag": "recommended",
     "recipe": [
       {
         "images": [
@@ -370,7 +370,7 @@
     ]
   },
   {
-    "name": "NIKLAS ynglings kage", "image": "banana_cake", "tag": "snack",
+    "name": "Red Velvet Cake", "image": "cake8", "tag": "snack",
     "recipe": [
       {
         "images": [

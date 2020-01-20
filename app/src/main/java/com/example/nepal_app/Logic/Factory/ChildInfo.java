@@ -83,6 +83,17 @@ public class ChildInfo {
         return 0;
     }
 
+
+
+    public boolean nameInUse(String name){
+        for (ChildObj childName :childArr ) {
+            if(childName.getName().equals(String.valueOf(name))){
+                return true;
+            }
+        }
+        return false;
+    }
+
     /**
      * Deletes the child
      * @param position Postion where the child is saved

@@ -153,8 +153,12 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     public void onClick(View v) {
 
         if (v == save){
-            if (String.valueOf(name.getText()).equals("") || currentDate == 0 || bitmap == null || genders.getSelectedItem().equals("…")) {
+            if (String.valueOf(name.getText()).equals("") || currentDate == 0 || bitmap == null ||
+                    genders.getSelectedItem().equals("…")) {
 
+                if(childInfo.nameInUse(String.valueOf(name.getText()))){
+                    name.setError("Name already in use");
+                }
                 if (String.valueOf(name.getText()).equals("")){
                     name.setError("Please fill the name of the child");
                 }
@@ -168,7 +172,10 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                     Toast.makeText(getContext(),"Select a gender",Toast.LENGTH_LONG).show();
                 }
             } else {
-                if (childArr.size() != 0) {
+                if (childInfo.nameInUse(String.valueOf(name.getText()))){
+                    name.setError("Name already in use");
+                    return;
+                } else  if (childArr.size() != 0) {
                     childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem()),false));
                 } else
                     childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem()),true));
@@ -221,6 +228,8 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();
         }
     }
+
+
 
     //Rotate image
     public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){

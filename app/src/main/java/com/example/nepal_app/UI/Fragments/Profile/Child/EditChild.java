@@ -121,6 +121,12 @@ public class EditChild extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (buttonSave.equals(v)) {
+
+            if(childInfo.nameInUse(String.valueOf(editName.getText()))){
+                editName.setError("Name already in use");
+                return;
+            }
+
             if (!(String.valueOf(editName.getText()).equals(""))) {
                 name = String.valueOf(editName.getText());
                 arr.get(position).setName(name);

@@ -26,7 +26,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
 
     private ImageButton activitiesB, activitesSound, profileB, profileSound,
-            progressB, progressSound, recipesB, recipesSound;
+            progressB, progressSound, recipesB, recipesSound, quizB, quizSound, comicB, comicSound;
     private View rod;
     private Boolean isSoundPlaying = false;
 
@@ -62,6 +62,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             progressSound = rod.findViewById(R.id.progressSpeaker);
             recipesB = rod.findViewById(R.id.recipesButton);
             recipesSound = rod.findViewById(R.id.recipesSpeaker);
+            quizB = rod.findViewById(R.id.quizButton);
+            quizSound = rod.findViewById(R.id.quizSpeaker);
+            comicB = rod.findViewById(R.id.comicButton);
+            comicSound = rod.findViewById(R.id.comicSpeaker);
 
             //setting up onclicklisteners
             activitiesB.setOnClickListener(this);
@@ -72,6 +76,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             progressSound.setOnClickListener(this);
             recipesB.setOnClickListener(this);
             recipesSound.setOnClickListener(this);
+            quizB.setOnClickListener(this);
+            quizSound.setOnClickListener(this);
+            comicB.setOnClickListener(this);
+            comicSound.setOnClickListener(this);
 
             }
         return rod;
@@ -151,6 +159,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     }
                 });
             }
+        } else if (v == comicB) {
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.container, new UDFragment());
+            transaction.addToBackStack(null);
+            transaction.commit();
+        } else if (v == quizB) {
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.container, new UDFragment());
+            transaction.addToBackStack(null);
+            transaction.commit();
         }
     }
 }

@@ -27,6 +27,7 @@ public class RecipeHome extends Fragment {
     List<RecipeHomeObject> recipeList, chickenList;
 
     public void fillLists() {
+        //initiate views.
         recipeInfo = recipeInfo.getInstance();
 
         recipeList = recipeInfo.getRecipeList(getContext());

@@ -101,9 +101,8 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
                     Collections.swap(childArr, position, 0);
                     childInfo.setChildArr(childArr, context);
                     //Updates the adaptor after the change
-                    progress = childInfo.getProgressAge();
-                    birthday = childInfo.getBirthdayString();
                     notifyDataSetChanged();
+
                 }
             });
         }

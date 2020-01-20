@@ -1,6 +1,5 @@
 package com.example.nepal_app.Logic.Adaptor;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,13 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
-import com.example.nepal_app.Logic.RecipeHomeObject;
+import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
 import com.example.nepal_app.MainActivity;
 import com.example.nepal_app.R;
 import com.example.nepal_app.UI.Fragments.Recipes.Recipe_fragment;
@@ -36,6 +33,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
     @Override
     public recipelistVH onCreateViewHolder(ViewGroup parent, int viewType) {
         View v =  LayoutInflater.from(context).inflate(R.layout.recipe_home_recipe, parent, false);
+        //recipeInfo = RecipeInfo.getInstance();
         return new recipelistVH(v);
     }
 
@@ -61,7 +59,6 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                     }
                 }
             });
-
     }
 
     @Override

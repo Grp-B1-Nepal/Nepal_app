@@ -12,12 +12,11 @@ import androidx.fragment.app.Fragment;
 import com.example.nepal_app.Logic.Adaptor.Adaptor_ListviewChild;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
-import com.example.nepal_app.Logic.ChildObj;
+import com.example.nepal_app.Logic.Objects.ChildObj;
 import com.example.nepal_app.UI.Fragments.Profile.Child.Fragment_addChild;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class ProfileFragment extends Fragment {
     private ListView list;
@@ -40,13 +39,14 @@ public class ProfileFragment extends Fragment {
         addChildButton = view.findViewById(R.id.floatingActionButton4);
         list = view.findViewById(R.id.list);
         activeChild = view.findViewById(R.id.active_child);
+
         if (childArr.size() == 0){
             activeChild.setVisibility(View.INVISIBLE);
         }
 
         //Checks if there is data in the list before setting the adaptor.
         if(childArr != null) {
-            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, childInfo.getBirthdayString(), childInfo.progressAge());
+            Adaptor_ListviewChild adaptor = new Adaptor_ListviewChild(getContext(), childArr, childInfo.getBirthdayString(), childInfo.getProgressAge());
             list.setAdapter(adaptor);
         }
 

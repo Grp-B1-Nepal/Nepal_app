@@ -31,7 +31,7 @@ import androidx.fragment.app.FragmentManager;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.nepal_app.Logic.ChildObj;
+import com.example.nepal_app.Logic.Objects.ChildObj;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
 
@@ -45,7 +45,7 @@ import static android.app.Activity.RESULT_OK;
 
 
 public class Fragment_addChild extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
-    private Button save, pick_date, deleteButton,buttonBack;
+    private Button save, pick_date, deleteButton,buttonBack, picture;
     private EditText name;
     private ImageView  preview;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
@@ -54,7 +54,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     private Spinner genders;
     private Uri imageUri = null;
     private ChildInfo childInfo;
-    private ConstraintLayout picture;
     private Bitmap bitmap;
 
 
@@ -120,7 +119,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = bitmap;
                 bitmap = Bitmap.createBitmap(bitmapTemp, 0,0, bitmap.getWidth(),bitmap.getHeight(),matrix,true);
-                bitmap = Bitmap.createScaledBitmap(bitmap,200,200,true);
+                bitmap = Bitmap.createScaledBitmap(bitmap,200,300,true);
 
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
 
@@ -131,6 +130,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 filePath = cursor.getString(columnIndex);
                 cursor.close();
 
+                //Rotate image
                 degree = getCameraPhotoOrientation(getContext(), imageUri, filePath);
                 matrix.setRotate(degree);
 
@@ -215,13 +215,14 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         date.setHours(0);
         date.setSeconds(0);
         if (date.getTime() <= System.currentTimeMillis()) {
-            pick_date.setText(childInfo.monthText((month + 1)) + " " + day + " " + year);
+            pick_date.setText(childInfo.getMonthText((month + 1)) + " " + day + " " + year);
             currentDate = date.getTime();
         } else {
             Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();
         }
     }
 
+    //Rotate image
     public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
         int rotate = 0;
         try {

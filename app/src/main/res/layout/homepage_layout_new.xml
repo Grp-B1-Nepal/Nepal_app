@@ -15,17 +15,45 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="#05800880"
-            android:foregroundTint="#00AC0909">
+            android:foregroundTint="#00AC0909"
+            android:paddingBottom="5dp">
 
             <ImageButton
-                android:id="@+id/activitesButton"
+                android:id="@+id/quizButton"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:background="@drawable/button_shape_home"
-                app:layout_constraintEnd_toStartOf="@id/activitesSpeaker"
+                android:src="@drawable/quiz_frontpage_image"
+                app:layout_constraintEnd_toStartOf="@id/recipesSpeaker"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recipesButton" />
+
+            <ImageButton
+                android:id="@+id/comicButton"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_shape_home"
+                android:src="@drawable/comic"
+                app:layout_constraintEnd_toStartOf="@id/recipesSpeaker"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quizButton" />
+
+            <ImageButton
+                android:id="@+id/activitesButton"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/button_shape_home"
+                app:layout_constraintEnd_toStartOf="@+id/activitesSpeaker"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
                 app:srcCompat="@drawable/activities_frontpage_image" />
@@ -34,17 +62,17 @@
                 android:id="@+id/activitesSpeaker"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
                 android:background="@drawable/button_shape_home"
                 android:src="@drawable/speaker_fp_foreground"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/activitesButton"
-                app:layout_constraintTop_toTopOf="@+id/activitesButton" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
             <ImageButton
                 android:id="@+id/profileButton"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
@@ -63,13 +91,12 @@
                 android:background="@drawable/button_shape_home"
                 android:src="@drawable/speaker_fp_foreground"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/profileButton"
-                app:layout_constraintTop_toBottomOf="@id/activitesButton" />
+                app:layout_constraintTop_toBottomOf="@+id/activitesSpeaker" />
 
             <ImageButton
                 android:id="@+id/progressButton"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
@@ -88,13 +115,12 @@
                 android:background="@drawable/button_shape_home"
                 android:src="@drawable/speaker_fp_foreground"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/progressButton"
-                app:layout_constraintTop_toBottomOf="@id/profileSpeaker" />
+                app:layout_constraintTop_toBottomOf="@+id/profileSpeaker" />
 
             <ImageButton
                 android:id="@+id/recipesButton"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
@@ -113,12 +139,33 @@
                 android:background="@drawable/button_shape_home"
                 android:src="@drawable/speaker_fp_foreground"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/recipesButton"
-                app:layout_constraintTop_toBottomOf="@id/progressSpeaker" />
+                app:layout_constraintTop_toBottomOf="@+id/progressSpeaker" />
+
+            <ImageButton
+                android:id="@+id/comicSpeaker"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_shape_home"
+                android:src="@drawable/speaker_fp_foreground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quizSpeaker" />
+
+            <ImageButton
+                android:id="@+id/quizSpeaker"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_shape_home"
+                android:src="@drawable/speaker_fp_foreground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recipesSpeaker" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="130dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -126,29 +173,23 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="90dp"
+                    android:id="@+id/imageView6"
+                    android:layout_width="210dp"
                     android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/home_name"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/mom_icon" />
-
-                <TextView
-                    android:id="@+id/home_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1000 Days"
-                    android:textColor="#130202"
-                    android:textColorHint="#B90707"
-                    android:textIsSelectable="false"
-                    android:textSize="36sp"
-                    android:textStyle="italic"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/trans_1000xcf" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="70dp"
+                    android:layout_height="130dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mom_icon2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

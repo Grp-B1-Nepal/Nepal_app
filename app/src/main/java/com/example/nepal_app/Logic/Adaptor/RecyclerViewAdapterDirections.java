@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
-import com.example.nepal_app.Logic.RecipeObj;
+import com.example.nepal_app.Logic.Objects.RecipeObj;
 import com.example.nepal_app.R;
 
 public class RecyclerViewAdapterDirections extends RecyclerView.Adapter<RecyclerViewAdapterDirections.ViewHolder> {
@@ -39,6 +39,8 @@ public class RecyclerViewAdapterDirections extends RecyclerView.Adapter<Recycler
         Log.d(TAG, "OnBindViewHolder: called.");
 
         holder.ingrediensTxt.setText(recipeObj.getDirections(position));
+        int num = position +1;
+        holder.number.setText(num + ".");
     }
 
     @Override
@@ -48,10 +50,12 @@ public class RecyclerViewAdapterDirections extends RecyclerView.Adapter<Recycler
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView ingrediensTxt;
+        TextView number;
 
         public ViewHolder(View itemView) {
             super(itemView);
             ingrediensTxt = itemView.findViewById(R.id.layoutListItemDirections);
+            number = itemView.findViewById(R.id.recipeDirectionsTxtView);
         }
     }
 }

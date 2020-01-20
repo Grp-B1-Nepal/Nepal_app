@@ -3,8 +3,8 @@ package com.example.nepal_app.Logic.Factory;
 import android.content.Context;
 
 import com.example.nepal_app.Datalayer.RecipeJSONParsing;
-import com.example.nepal_app.Logic.RecipeHomeObject;
-import com.example.nepal_app.Logic.RecipeObj;
+import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
+import com.example.nepal_app.Logic.Objects.RecipeObj;
 
 import java.util.ArrayList;
 
@@ -13,6 +13,7 @@ public class RecipeInfo {
     private int recipePostion;
     private RecipeObj recipe;
     private ArrayList<RecipeHomeObject> recipeHomeObjects;
+    private String image;
 
     private RecipeJSONParsing recipeJSONParsing = RecipeJSONParsing.getInstance();
 
@@ -28,6 +29,11 @@ public class RecipeInfo {
         recipeHomeObjects = recipeJSONParsing.loadRecipeList(context);
 
         return recipeHomeObjects;
+    }
+
+    public String getRecipeImage(int positon,Context context) {
+        image = recipeJSONParsing.loadImage(positon,context);
+        return image;
     }
 
     public void setRecipe(RecipeObj recipe) {

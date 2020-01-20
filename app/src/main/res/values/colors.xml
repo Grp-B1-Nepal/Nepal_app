@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="redLight">#dd4b4b</color>
+    <color name="redLightLight">#db2424</color>
     <color name="colorPrimary">#CE1919</color>
     <color name="colorPrimaryDark">#DD1515</color>
-    <color name="colorAccent">#CE1919</color>
+    <color name="colorAccent">#b11111</color>
     <color name="redDark">#a51414</color>
     <color name="redDarkDark">#841010</color>
     <color name="evenDarkerDark">#6a0d0d</color>
@@ -10,4 +12,5 @@
     <color name="justWhite">#FFFFFF</color>
     <color name="mainBackgroundColor">#F3F3F3</color>
     <color name="buttongrey">#E0E0E0</color>
+    <color name="hint">#817E7E</color>
 </resources>

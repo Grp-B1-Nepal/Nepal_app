@@ -5,29 +5,17 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
-import com.example.nepal_app.Logic.ChildObj;
-import com.example.nepal_app.R;
+import com.example.nepal_app.Logic.Objects.ChildObj;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.io.ByteArrayOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class CacheSaving {
-    private static final CacheSaving ourInstance = new CacheSaving();
     private ArrayList<ChildObj> childArr = new ArrayList<>();
     private Bitmap bitmap;
 
-    private CacheSaving(){
-
-    }
-
-    public static CacheSaving getInstance() {
-        return ourInstance;
-    }
 
     public void saveChild(Context context, ArrayList<ChildObj> arr){
         SharedPreferences sharedPreferences = context.getSharedPreferences("Children", Context.MODE_PRIVATE);
@@ -92,6 +80,7 @@ public class CacheSaving {
      * @return the bitmap
      */
     public Bitmap loadImage(Context context, String name){
+
         Bitmap bitmap = null;
         SharedPreferences settings = context.getSharedPreferences("Image", Context.MODE_PRIVATE);
         String loadedImage = settings.getString(name, null);
@@ -109,7 +98,8 @@ public class CacheSaving {
      * @return the arraylist
      */
     public ArrayList<ChildObj> loadChild(Context context) {
-        SharedPreferences sharedPreferences =  context.getSharedPreferences("Children", Context.MODE_PRIVATE);;
+
+        SharedPreferences sharedPreferences =  context.getSharedPreferences("Children", Context.MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sharedPreferences.getString("ChildArr", null);
         Type type = new TypeToken<ArrayList<ChildObj>>() {

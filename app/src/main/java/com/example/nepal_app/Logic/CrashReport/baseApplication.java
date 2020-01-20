@@ -1,10 +1,13 @@
-package com.example.nepal_app;
+package com.example.nepal_app.Logic.CrashReport;
 
 import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
 
 import androidx.annotation.NonNull;
+
+import com.example.nepal_app.BuildConfig;
+import com.example.nepal_app.R;
 
 import org.acra.ACRA;
 import org.acra.annotation.AcraCore;

@@ -40,17 +40,56 @@ public class RecipeJSONParsing extends AppCompatActivity {
         return jsonArray;
     }
 
-    public ArrayList<RecipeHomeObject> loadRecipeList(Context context) {
+    public ArrayList<RecipeHomeObject> loadRecipeListByTag(Context context, String tag) {
         ArrayList<RecipeHomeObject> recipeHomeObjects = new ArrayList<>();
         JSONArray jsonArray = readJSON(context);
         String name, image;
 
         try {
-            // Retrieves the name and images from each recipe in our JSON file.
-            for (int i = 0; i < jsonArray.length(); i++) {
-                name = jsonArray.getJSONObject(i).getString("name");
-                image = jsonArray.getJSONObject(i).getString("image");
-                recipeHomeObjects.add(new RecipeHomeObject(name,image));
+            switch (tag) {
+                case "recommended":
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        if (jsonArray.getJSONObject(i).getString("tag").equals("recommended")) {
+                            name = jsonArray.getJSONObject(i).getString("name");
+                            image = jsonArray.getJSONObject(i).getString("image");
+                            recipeHomeObjects.add(new RecipeHomeObject(name,image));
+                        }
+                    }
+                    break;
+                case "common":
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        if (jsonArray.getJSONObject(i).getString("tag").equals("common")) {
+                            name = jsonArray.getJSONObject(i).getString("name");
+                            image = jsonArray.getJSONObject(i).getString("image");
+                            recipeHomeObjects.add(new RecipeHomeObject(name,image));
+                        }
+                    }
+                    break;
+                case "snack":
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        if (jsonArray.getJSONObject(i).getString("tag").equals("snack")) {
+                            name = jsonArray.getJSONObject(i).getString("name");
+                            image = jsonArray.getJSONObject(i).getString("image");
+                            recipeHomeObjects.add(new RecipeHomeObject(name,image));
+                        }
+                    }
+                    break;
+                case "favorite":
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        if (jsonArray.getJSONObject(i).getBoolean("favorite")) {
+                            name = jsonArray.getJSONObject(i).getString("name");
+                            image = jsonArray.getJSONObject(i).getString("image");
+                            recipeHomeObjects.add(new RecipeHomeObject(name,image));
+                        }
+                    }
+                    break;
+                case "loadAll":
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        name = jsonArray.getJSONObject(i).getString("name");
+                        image = jsonArray.getJSONObject(i).getString("image");
+                        recipeHomeObjects.add(new RecipeHomeObject(name,image));
+                    }
+                    break;
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -75,19 +114,12 @@ public class RecipeJSONParsing extends AppCompatActivity {
         return recipe;
     }
 
-    public String loadImage(int position, Context context) {
-        String picture = "";
-
-        try {
-            JSONArray jsonArray = readJSON(context);
-            picture = jsonArray.getJSONObject(position).getString("image");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        return picture;
-    }
-
+    /**
+     * Loads essential info from JSON to display in recipe.
+     * @param position
+     * @param context
+     * @return recipeObj which can be used for several things.
+     */
     public RecipeObj loadRecipe(int position, Context context) {
         String recipeName = "";
         ArrayList<String> images = new ArrayList<>();
@@ -129,5 +161,35 @@ public class RecipeJSONParsing extends AppCompatActivity {
 
         RecipeObj recipe = new RecipeObj(recipeName,images,ingrediens,directions);
         return recipe;
+    }
+
+    /**
+     * Loads image from JSON file
+     * @param position
+     * @param context
+     * @return picture found
+     */
+    public String loadImage(int position, Context context) {
+        String picture = "";
+
+        try {
+            JSONArray jsonArray = readJSON(context);
+            picture = jsonArray.getJSONObject(position).getString("image");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return picture;
+    }
+
+    public void changeFavoriteStatus(Context context,int position,String value) {
+        JSONArray jsonArray = readJSON(context);
+
+        try {
+            JSONObject favorite = jsonArray.getJSONObject(position).getJSONObject("favorite");
+            favorite.put("favorite", value);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -19,8 +19,6 @@ public class RecipeJSONParsing extends AppCompatActivity {
     private static final RecipeJSONParsing RecipeJSONParsinInstans = new RecipeJSONParsing();
     public static RecipeJSONParsing getInstance(){return RecipeJSONParsinInstans;}
 
-    private RecipeJSONParsing() { }
-
     public JSONArray readJSON(Context context) {
         JSONArray jsonArray = null;
         try {

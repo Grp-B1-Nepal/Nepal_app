@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 public class RecipeInfo {
     private static final RecipeInfo Recipeinstans = new RecipeInfo();
-    private int recipePosition;
     private RecipeObj recipe;
     private ArrayList<RecipeHomeObject> recipeHomeObjects;
     private String image;
@@ -32,7 +31,6 @@ public class RecipeInfo {
 
     public RecipeHomeObject getSingleHomeRecipe (int pos, Context context) {
         RecipeHomeObject recipe = recipeJSONParsing.loadSingleHomeRecipe(pos, context);
-
         return recipe;
     }
 
@@ -45,15 +43,6 @@ public class RecipeInfo {
         return recipeJSONParsing.getPositionStringMatch(context,recipeName);
     }
 
-    public static RecipeInfo getInstance(){return Recipeinstans;}
-
-    public int getPostionRecipe(){
-        return recipePosition;
-    }
-    public void setPostionRecipe(int postionRecipe){
-        this.recipePosition = postionRecipe;
-    }
-
     public String getRecipeName() {
         return name;
     }
@@ -61,4 +50,6 @@ public class RecipeInfo {
     public void setRecipeName(String name) {
         this.name = name;
     }
+
+    public static RecipeInfo getInstance(){return Recipeinstans;}
 }

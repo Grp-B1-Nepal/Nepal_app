@@ -28,6 +28,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private ImageButton activitiesB, activitesSound, profileB, profileSound,
             progressB, progressSound, recipesB, recipesSound;
     private View rod;
+    private Boolean isSoundPlaying = false;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -94,46 +95,62 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             transaction.addToBackStack(null);
             transaction.commit();
         } else if (v == recipesSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.recipestts);
-            mp.start();
-            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.release();
-                }
-            });
+            if (!isSoundPlaying) {
+                isSoundPlaying = true;
+                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.recipestts);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        isSoundPlaying = false;
+                    }
+                });
+            }
         } else if (v == progressSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.progresstts);
-            mp.start();
-            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.release();
-                }
-            });
+            if (!isSoundPlaying) {
+                isSoundPlaying = true;
+                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.progresstts);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        isSoundPlaying = false;
+                    }
+                });
+            }
         } else if (v == activitesSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.activitiestts);
-            mp.start();
-            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.release();
-                }
-            });
+            if(!isSoundPlaying) {
+                isSoundPlaying = true;
+                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.activitiestts);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        isSoundPlaying = false;
+                    }
+                });
+            }
         } else if (v == profileB) {
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction.replace(R.id.container, new ProfileFragment());
             transaction.addToBackStack(null);
             transaction.commit();
         } else if (v == profileSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.profiletts);
-            mp.start();
-            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.release();
-                }
-            });
+            if(!isSoundPlaying) {
+                isSoundPlaying = true;
+                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.profiletts);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        isSoundPlaying = false;
+                    }
+                });
+            }
         }
     }
 }

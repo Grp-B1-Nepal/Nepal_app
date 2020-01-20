@@ -92,6 +92,8 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
             Glide.with(this).load(imageChild).
                     apply(RequestOptions.circleCropTransform())
                     .into(image);
+        } else {
+            updateInfo(1);
         }
 
         // Inflate the layout for this fragment

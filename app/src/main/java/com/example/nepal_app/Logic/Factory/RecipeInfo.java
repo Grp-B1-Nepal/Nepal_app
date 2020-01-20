@@ -21,14 +21,18 @@ public class RecipeInfo {
 
     public RecipeObj getRecipe(int position, Context context) {
         recipe = recipeJSONParsing.loadRecipe(position,context);
-
         return recipe;
     }
 
-    public ArrayList<RecipeHomeObject> getRecipeList(Context context) {
-        recipeHomeObjects = recipeJSONParsing.loadRecipeList(context);
-
+    public ArrayList<RecipeHomeObject> getRecipeListByTag(Context context, String tag) {
+        recipeHomeObjects = recipeJSONParsing.loadRecipeListByTag(context, tag);
         return recipeHomeObjects;
+    }
+
+    public RecipeHomeObject getSingleHomeRecipe (int pos, Context context) {
+        RecipeHomeObject recipe = recipeJSONParsing.loadSingleHomeRecipe(pos, context);
+
+        return recipe;
     }
 
     public String getRecipeImage(int positon,Context context) {
@@ -36,14 +40,9 @@ public class RecipeInfo {
         return image;
     }
 
-    public void setRecipe(RecipeObj recipe) {
-        this.recipe = recipe;
-    }
-
     public static RecipeInfo getInstance(){return Recipeinstans;}
 
     public int getPostionRecipe(){
-
         return recipePostion;
     }
     public void setPostionRecipe(int postionRecipe){

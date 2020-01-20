@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +25,9 @@ public class Recipe_fragment extends Fragment {
     private int position;
     private RecipeInfo recipeInfo;
     private RecipeObj recipeObj;
+    private TextView header;
+    private ImageView recipeImage;
+    private String imageHolder;
     RecyclerViewAdapterIngrediens adapter;
     RecyclerViewAdapterDirections adapter1;
     RecyclerView recyclerView;
@@ -42,9 +47,12 @@ public class Recipe_fragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        //Saves data into our variables.
         recipeInfo = recipeInfo.getInstance();
         position = recipeInfo.getPostionRecipe();
         recipeObj = recipeInfo.getRecipe(position,getContext());
+        imageHolder = recipeInfo.getRecipeImage(position,getContext());
     }
 
     @Override
@@ -53,9 +61,17 @@ public class Recipe_fragment extends Fragment {
         // Inflate the layout for this fragment
         rod = inflater.inflate(R.layout.activity_recipe, container, false);
 
+        header = rod.findViewById(R.id.recipeTitleText);
+        recipeImage = rod.findViewById(R.id.recipeImage);
+
+        // Sets recipeImage for individual recipe
+        int identifier = getContext().getResources().getIdentifier(imageHolder,"drawable",getContext().getPackageName());
+        recipeImage.setImageResource(identifier);
+
+        //sets header
+        header.setText(recipeObj.getName());
         initRecyclerViewIngrediens();
         initRecyclerViewDirections();
-
         return rod;
     }
 
@@ -75,6 +91,5 @@ public class Recipe_fragment extends Fragment {
         adapter1 = new RecyclerViewAdapterDirections(getActivity(), recipeObj);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter1);
-
     }
 }

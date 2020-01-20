@@ -27,6 +27,7 @@
             android:layout_marginBottom="8dp"
             android:gravity="center"
             android:text="Headline"
+            android:textColor="#F50C0000"
             android:textSize="32dp"
             android:textStyle="bold" />
 

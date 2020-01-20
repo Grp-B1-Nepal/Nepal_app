@@ -22,7 +22,7 @@
     <Button
         android:id="@+id/recipeBtnView2"
         android:layout_width="85dp"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
         android:layout_marginStart="84dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/button_shape"

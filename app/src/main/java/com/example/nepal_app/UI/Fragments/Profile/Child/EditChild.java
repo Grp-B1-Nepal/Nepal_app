@@ -43,19 +43,21 @@ import static android.app.Activity.RESULT_OK;
 
 public class EditChild extends Fragment implements View.OnClickListener {
     private int position;
-    private Button buttonBirthday, buttonBack, buttonSave, buttonDelete;
+    private Button buttonBirthday, buttonBack, buttonSave, buttonDelete, buttonImage;
     private EditText editName;
-    private Bitmap   editBitmap;
+    private Bitmap editBitmap;
     private String name, gender, birthday, oldName;
     private ArrayList<ChildObj> arr = new ArrayList<>();
     private ChildInfo childInfo;
     private static final int PICK_IMAGE =100;
     private Uri imageUri = null;
     private ImageView image;
-    private ConstraintLayout buttonImage;
     private Spinner genders;
     private Date childDate = new Date();
     private int year,month,day;
+    private Matrix mat = new Matrix();
+    private float rot;
+    private String path;
 
 
 
@@ -65,6 +67,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
 
         childInfo = ChildInfo.getInstance();
+
 
         position = childInfo.getPosition();
         editName = view2.findViewById(R.id.name);
@@ -87,17 +90,21 @@ public class EditChild extends Fragment implements View.OnClickListener {
         image = view2.findViewById(R.id.downloaded_picture);
         image.setVisibility(View.VISIBLE);
 
-
         arr = childInfo.getChildArr(getContext());
         //Gets the objects from the ChillObj in the arr
-        oldName = arr.get(position).getName();
+
         name = arr.get(position).getName();
+        oldName = arr.get(position).getName();
         gender = arr.get(position).getGender();
         birthday = getBirthday(position);
 
-        Glide.with(this).load(childInfo.getBitmap(getContext(),name)).
-                apply(RequestOptions.circleCropTransform())
+        rot = getCameraPhotoOrientation(getContext(), imageUri, path);
+        mat.setRotate(rot);
+
+        Glide.with(this).load(childInfo.getBitmap(getContext(),name))
+                .apply(RequestOptions.circleCropTransform())
                 .into(image);
+
 
         //Sets up known info
         image.setImageBitmap(childInfo.getBitmap(getContext(),name));
@@ -198,7 +205,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         date.setHours(0);
         date.setSeconds(0);
         if (date.getTime() <= System.currentTimeMillis()) {
-            buttonBirthday.setText(childInfo.monthText((month + 1)) + " " + day + " " + year);
+            buttonBirthday.setText(childInfo.getMonthText((month + 1)) + " " + day + " " + year);
             arr.get(position).setBirthday(date.getTime());
         }else {
             Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();
@@ -238,7 +245,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
                 editBitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = editBitmap;
                 editBitmap = Bitmap.createBitmap(bitmapTemp, 0,0, editBitmap.getWidth(),editBitmap.getHeight(),matrix,true);
-                editBitmap = Bitmap.createScaledBitmap(editBitmap,200,200,true);
+                editBitmap = Bitmap.createScaledBitmap(editBitmap,200,300,true);
 
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
 

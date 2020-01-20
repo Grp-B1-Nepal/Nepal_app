@@ -13,7 +13,7 @@
     <string name="todo">TODO</string>
     <string name="view_recipe">View Recipe</string>
     <string-array name="spinner">
-        <item>…</item>
+        <item> …</item>
         <item>Boy</item>
         <item>Girl</item>
         <item>Other</item>
@@ -23,6 +23,20 @@
 
     <!-- This is the information for the category singing.  -->
 
+    <string-array name="Push_descriptions">
+        <item>You should take your child to the doctor string 1, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+
+    </string-array>
 
     <string-array name="activities_information_Singing_category1">
         <item>Singing category 1.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
@@ -152,7 +166,7 @@
         <item>Reading category 3.4: Here goes the information for the fourth set aaaaaaaaaa</item>
     </string-array>
 
-    <!-- Strings for progressAge -->
+    <!-- Strings for getProgressAge -->
     <string name="weight1">2,94 – 5,91 Kg</string>
     <string name="weight2">4,12 – 8,29 Kg</string>
     <string name="weight3">4,82 – 9,03 Kg</string>
@@ -285,7 +299,9 @@ You and your partner can help your baby’s social and emotional development by 
     <string name="info2_10">Social and emotional development</string>
     <string name="info2_11">Social and emotional development</string>
     <string name="info2_12">Social and emotional development</string>
+    <string name="number">1.</string>
 
     <string name="resToastText">Oops, the app has crashed.</string>
+    <string name="recipeName">CHIKKA MASALA</string>
 
 </resources>

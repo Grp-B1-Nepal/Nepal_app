@@ -39,8 +39,9 @@ public class ChildInfo {
      * @return the arraylist
      */
     public ArrayList<ChildObj> getChildArr(Context context) {
-        childArr.clear();
-        childArr = cacheSaving.loadChild(context);
+        if (childArr.size() == 0) {
+            childArr = cacheSaving.loadChild(context);
+        }
         return childArr;
     }
 
@@ -72,13 +73,14 @@ public class ChildInfo {
      * @return the position in the array the child is located.
      */
     public int getActiveChild(){
-        int position = -1;
-        for (int i = 0; i <childArr.size() ; i++) {
-            if (childArr.get(i).getActive()){
-                position = i;
+        int i = 0;
+        for (ChildObj a:childArr) {
+            if (a.getActive()){
+                return i;
             }
+            i++;
         }
-        return position;
+        return 0;
     }
 
     /**
@@ -117,20 +119,15 @@ public class ChildInfo {
     /**
      * Calculate how many months old the child is
      */
-    public int monthProgress(){
+    public int getMonthProgress(){
         long progress;
         int monthAge;
         Date date = new Date();
         date.setHours(0);
         date.setMinutes(0);
         date.setSeconds(0);
-        long a = date.getTime();
-        Date p = new Date();
-        long b = childArr.get(getActiveChild()).getBirthday();
-        p.setTime(b);
-        progress = (a - b);
-        progress = progress/(1000*60*60*24);
-        progress = (int) Math.ceil(progress/30);
+        progress =  date.getTime() - childArr.get(getActiveChild()).getBirthday();
+        progress = (int) Math.ceil(progress/(1000*60*60*24))/30;
         monthAge = (int) progress;
         return monthAge;
     }
@@ -138,18 +135,14 @@ public class ChildInfo {
     /**
      * Calculate the age of the child
      */
-    public long[] progressAge(){
+    public long[] getProgressAge(){
         Date d = new Date();
+        d.getDate();
+        d.setHours(0);
+        d.setMinutes(0);
         long[] progress = new long[childArr.size()];
         for (int i = 0; i <childArr.size() ; i++) {
-            d.getDate();
-            d.setHours(0);
-            d.setMinutes(0);
-            long b = d.getTime();
-            long q =childArr.get(i).getBirthday();
-            Date p = new Date();
-            p.setTime(q);
-            progress[i] =  (b - q);
+            progress[i] =  d.getTime() - childArr.get(i).getBirthday();
             long a = (long) Math.floor(progress[i]/(1000*60*60*24));
             progress[i] = a;
         }
@@ -178,7 +171,7 @@ public class ChildInfo {
      * @param intMonth
      * @return
      */
-    public String monthText(int intMonth){
+    public String getMonthText(int intMonth){
         String month = null;
 
         switch (intMonth){
@@ -218,9 +211,7 @@ public class ChildInfo {
             case 12:
                 month = "Dec";
                 break;
-
         }
-
         return month;
     }
 }

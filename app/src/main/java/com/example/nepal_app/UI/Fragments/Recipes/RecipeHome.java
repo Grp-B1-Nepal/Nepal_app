@@ -34,36 +34,36 @@ public class RecipeHome extends Fragment {
 
     List<CategoryObject> categoryList;
     List<Integer> btnIcons;
-    public List<RecipeHomeObject> recipeList, favoriteList, mainList;
+    public List<RecipeHomeObject> recipeRecommendedList, recipeSnacksList, recipeCommonList, recipeFavoritesList, favoriteList, mainList;
     EditText searchField;
 
     public void fillLists() {
         recipeInfo = recipeInfo.getInstance();
+        recipeRecommendedList = new ArrayList<>();
+        recipeSnacksList = new ArrayList<>();
+        recipeCommonList = new ArrayList<>();
         categoryList = new ArrayList<>();
         favoriteList = FavoriteRecipes.getInstance().favoriteList;
         mainList = recipeInfo.getRecipeListByTag(getContext(),"loadAll");
         btnIcons = new ArrayList<>();
 
-        categoryList.add(new CategoryObject("Recommended", recipeList));
-        categoryList.add(new CategoryObject("Favorites", favoriteList));
-        //Loads all recipes with tag snack
-        recipeList = recipeInfo.getRecipeListByTag(getContext(),"snack");
-        categoryList.add(new CategoryObject("Snacks", recipeList));
-
         //Loads all recipes with tag recommended
-        recipeList = recipeInfo.getRecipeListByTag(getContext(),"recommended");
-        categoryList.add(new CategoryObject("Recommended", recipeList));
-
-        // Loads all recipes with tag common
-        recipeList = recipeInfo.getRecipeListByTag(getContext(),"common");
-        categoryList.add(new CategoryObject("Common", recipeList));
+        recipeRecommendedList = recipeInfo.getRecipeListByTag(getContext(),"recommended");
+        categoryList.add(new CategoryObject("Recommended", recipeRecommendedList));
 
         // Loads all recipes with returns true on favorite
-        recipeList = recipeInfo.getRecipeListByTag(getContext(),"favorite");
-        categoryList.add(new CategoryObject("Favorites", recipeList));
+        recipeFavoritesList = recipeInfo.getRecipeListByTag(getContext(),"favorite");
+        categoryList.add(new CategoryObject("Favorites", recipeFavoritesList));
+
+        //Loads all recipes with tag snack
+        recipeSnacksList = recipeInfo.getRecipeListByTag(getContext(),"snack");
+        categoryList.add(new CategoryObject("Snacks", recipeSnacksList));
 
 
-        categoryList.add(new CategoryObject("Search", recipeList));
+        // Loads all recipes with tag common
+        recipeCommonList = recipeInfo.getRecipeListByTag(getContext(),"common");
+        categoryList.add(new CategoryObject("Common", recipeCommonList));
+
 
         btnIcons.add(R.drawable.ic_reho_recommended);
         btnIcons.add(R.drawable.ic_reho_heart);

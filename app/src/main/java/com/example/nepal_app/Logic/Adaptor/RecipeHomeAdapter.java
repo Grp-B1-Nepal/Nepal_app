@@ -101,6 +101,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
                     } else {
                         fav.setBackgroundResource(R.drawable.favorite_empty_foreground);
                         removeFromFavoriteArray(getAdapterPosition());
+                        notifyDataSetChanged();
                     }
                 }
             });

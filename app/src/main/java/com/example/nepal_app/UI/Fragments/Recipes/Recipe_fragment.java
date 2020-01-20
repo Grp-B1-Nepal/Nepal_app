@@ -23,6 +23,7 @@ public class Recipe_fragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private int position;
+    private String recipeName;
     private RecipeInfo recipeInfo;
     private RecipeObj recipeObj;
     private TextView header;
@@ -50,7 +51,8 @@ public class Recipe_fragment extends Fragment {
 
         //Saves data into our variables.
         recipeInfo = recipeInfo.getInstance();
-        position = recipeInfo.getPostionRecipe();
+        recipeName = recipeInfo.getRecipeName();
+        position = recipeInfo.getRecipePosition(getContext(),recipeName);
         recipeObj = recipeInfo.getRecipe(position,getContext());
         imageHolder = recipeInfo.getRecipeImage(position,getContext());
     }

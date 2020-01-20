@@ -58,6 +58,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
             @Override
             public void onClick(View v) {
                 if (position < recipeList.size()) {
+                    recipeInfo.setRecipeName(recipeList.get(position).getRecipeName());
                     recipeInfo.setPostionRecipe(position);
                     Fragment recipeFragment = new Recipe_fragment();
                     MainActivity mainActivity = (MainActivity) context;

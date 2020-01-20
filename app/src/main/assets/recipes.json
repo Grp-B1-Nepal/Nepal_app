@@ -1,6 +1,6 @@
 [
   {
-  "name": "BANANA CAKE", "image": "banana_cake", "tag": "snack",  "favorite": false,
+  "name": "BANANA CAKE", "image": "banana_cake", "tag": "snack",  "favorite": true,
   "recipe": [
       {
         "images": [

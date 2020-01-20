@@ -192,4 +192,22 @@ public class RecipeJSONParsing extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    public int getPositionStringMatch(Context context, String recipeName) {
+        JSONArray jsonArray = readJSON(context);
+        int position = 0;
+
+        for (int i = 0; i < jsonArray.length(); i++) {
+            try {
+                if(jsonArray.getJSONObject(i).getString("name").equals(recipeName)) {
+                    return position;
+                } else {
+                    position++;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return 0;
+    }
 }

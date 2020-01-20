@@ -10,10 +10,11 @@ import java.util.ArrayList;
 
 public class RecipeInfo {
     private static final RecipeInfo Recipeinstans = new RecipeInfo();
-    private int recipePostion;
+    private int recipePosition;
     private RecipeObj recipe;
     private ArrayList<RecipeHomeObject> recipeHomeObjects;
     private String image;
+    private String name;
 
     private RecipeJSONParsing recipeJSONParsing = RecipeJSONParsing.getInstance();
 
@@ -40,12 +41,24 @@ public class RecipeInfo {
         return image;
     }
 
+    public int getRecipePosition(Context context, String recipeName) {
+        return recipeJSONParsing.getPositionStringMatch(context,recipeName);
+    }
+
     public static RecipeInfo getInstance(){return Recipeinstans;}
 
     public int getPostionRecipe(){
-        return recipePostion;
+        return recipePosition;
     }
     public void setPostionRecipe(int postionRecipe){
-        this.recipePostion = postionRecipe;
+        this.recipePosition = postionRecipe;
+    }
+
+    public String getRecipeName() {
+        return name;
+    }
+
+    public void setRecipeName(String name) {
+        this.name = name;
     }
 }

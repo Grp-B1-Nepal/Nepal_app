@@ -45,7 +45,7 @@ import static android.app.Activity.RESULT_OK;
 
 
 public class Fragment_addChild extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
-    private Button save, pick_date, deleteButton,buttonBack;
+    private Button save, pick_date, deleteButton,buttonBack, picture;
     private EditText name;
     private ImageView  preview;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
@@ -54,7 +54,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
     private Spinner genders;
     private Uri imageUri = null;
     private ChildInfo childInfo;
-    private ConstraintLayout picture;
     private Bitmap bitmap;
 
 

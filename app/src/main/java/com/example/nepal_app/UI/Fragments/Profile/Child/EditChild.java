@@ -43,7 +43,7 @@ import static android.app.Activity.RESULT_OK;
 
 public class EditChild extends Fragment implements View.OnClickListener {
     private int position;
-    private Button buttonBirthday, buttonBack, buttonSave, buttonDelete;
+    private Button buttonBirthday, buttonBack, buttonSave, buttonDelete, buttonImage;
     private EditText editName;
     private Bitmap editBitmap;
     private String name, gender, birthday, oldName;
@@ -52,7 +52,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private static final int PICK_IMAGE =100;
     private Uri imageUri = null;
     private ImageView image;
-    private ConstraintLayout buttonImage;
     private Spinner genders;
     private Date childDate = new Date();
     private int year,month,day;

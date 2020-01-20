@@ -5,19 +5,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Objects.CategoryObject;
+import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
 import com.example.nepal_app.R;
+import com.example.nepal_app.UI.Fragments.Recipes.RecipeHome;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.categoryVH> {
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.categoryVH> implements Filterable{
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
     List<CategoryObject> categoryList;
+    List<RecipeHomeObject> recipeListFull;
     List<Integer> btnIcons;
     Context context;
 
@@ -25,6 +31,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         this.categoryList = categoryList;
         this.btnIcons = btnIcons;
         this.context = context;
+        recipeListFull = new ArrayList<>();
+        for (int i = 0; i < categoryList.size(); i++) {
+            recipeListFull.addAll(categoryList.get(i).getRecipeList());
+        }
+
     }
 
     @Override
@@ -61,7 +72,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
 
     public class categoryVH extends RecyclerView.ViewHolder {
         Button category;
-        //ConstraintLayout expandableLayout;
         RecyclerView rvRecipe;
 
         public categoryVH(View itemView) {
@@ -84,4 +94,39 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         }
     }
 
+    @Override
+    public Filter getFilter() {
+        return theFilter;
+    }
+    Filter theFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<RecipeHomeObject> filteredList = new ArrayList<>();
+
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(recipeListFull);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for (RecipeHomeObject item : recipeListFull) {
+                    if (item.getRecipeName().toLowerCase().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            for (int i = 0; i < categoryList.size(); i++) {
+                categoryList.get(i).getRecipeList().clear();
+                categoryList.get(i).setRecipeList((List)results.values);
+                notifyDataSetChanged();
+            }
+        }
+    };
 }

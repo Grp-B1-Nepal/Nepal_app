@@ -34,6 +34,7 @@
             android:layout_marginTop="130dp"
             android:divider="@null"
             android:dividerHeight="0dp"
+            style="@style/scrollbar_shape_style"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

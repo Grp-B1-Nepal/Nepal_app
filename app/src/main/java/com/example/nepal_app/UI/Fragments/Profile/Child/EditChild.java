@@ -56,9 +56,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
     private Date childDate = new Date();
     private int year,month,day;
     private Matrix mat = new Matrix();
-    private float rot;
-    private String path;
-
 
 
     @Override
@@ -98,9 +95,8 @@ public class EditChild extends Fragment implements View.OnClickListener {
         gender = arr.get(position).getGender();
         birthday = getBirthday(position);
 
-        rot = getCameraPhotoOrientation(getContext(), imageUri, path);
-        mat.setRotate(rot);
 
+        //Round image
         Glide.with(this).load(childInfo.getBitmap(getContext(),name))
                 .apply(RequestOptions.circleCropTransform())
                 .into(image);
@@ -112,6 +108,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
         buttonBirthday.setText(birthday);
 
 
+        //Adapter and spinner layout
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(getContext(),R.layout.spinner_layout,getResources().getStringArray(R.array.spinner));
         myAdapter.setDropDownViewResource(R.layout.spinner_layout);
         genders.setAdapter(myAdapter);
@@ -256,6 +253,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
                 filePath = cursor.getString(columnIndex);
                 cursor.close();
 
+                //Rotation of image
                 degree = getCameraPhotoOrientation(getContext(), imageUri, filePath);
                 matrix.setRotate(degree);
 
@@ -273,6 +271,8 @@ public class EditChild extends Fragment implements View.OnClickListener {
         }
     }
 
+
+    //Rotation image
     public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
         int rotate = 0;
         try {

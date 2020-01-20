@@ -39,6 +39,7 @@ public class ProfileFragment extends Fragment {
         addChildButton = view.findViewById(R.id.floatingActionButton4);
         list = view.findViewById(R.id.list);
         activeChild = view.findViewById(R.id.active_child);
+
         if (childArr.size() == 0){
             activeChild.setVisibility(View.INVISIBLE);
         }

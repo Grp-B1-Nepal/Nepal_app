@@ -26,6 +26,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:text="Headline"
             android:textColor="#F50C0000"

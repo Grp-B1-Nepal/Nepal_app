@@ -38,7 +38,7 @@
                 tools:layout_editor_absoluteY="119dp">
 
                 <ImageView
-                    android:id="@+id/speakerActivity3"
+                    android:id="@+id/fragment_progress_speaker2"
                     android:layout_width="28dp"
                     android:layout_height="31dp"
                     app:layout_constraintEnd_toEndOf="@+id/fragmentProgress_InfoText2"
@@ -49,26 +49,28 @@
                     android:id="@+id/fragmentProgress_Headline2"
                     android:layout_width="330dp"
                     android:layout_height="30dp"
-                    android:text="Development"
+                    android:text="विकास"
                     android:textSize="22dp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/speakerActivity2" />
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_progress_speaker1" />
 
                 <TextView
                     android:id="@+id/fragmentProgress_InfoText2"
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
-                    android:text="Your baby is past the newborn phase, and you may be feeling more relaxed about caring for your darling. You and your partner are probably learning about your baby’s likes and dislikes. While there is still a lot to learn, you may be starting to feel more confident in your parenting skills."
+                    android:text="तपाईंको बच्चा लगभग एक महिनाको भयो! चाँडै तपाईं आफ्नो सानो एक मनोरन्जन गर्न हुनेछ। अहिल्यै अहिल्यै यो सबै खान र सुत्नको बारेमा छ।"
+                    android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/fragmentProgress_Headline2" />
 
                 <ImageView
-                    android:id="@+id/speakerActivity2"
+                    android:id="@+id/fragment_progress_speaker1"
                     android:layout_width="28dp"
                     android:layout_height="31dp"
                     app:layout_constraintEnd_toEndOf="@+id/fragmentProgress_InfoText"
@@ -79,7 +81,11 @@
                     android:id="@+id/fragmentProgress_InfoText"
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
-                    android:text="Your baby is past the newborn phase, and you may be feeling more relaxed about caring for your darling. You and your partner are probably learning about your baby’s likes and dislikes. While there is still a lot to learn, you may be starting to feel more confident in your parenting skills."
+                    android:text="तपाइँ खाना पचाउने वरिपरि बुनियादी ढाँचाको अधिक देख्न सक्नुहुन्छ।
+         तपाईंको बच्चालाई अझै पनि रातमा क्लस्टर-फिडिंग आवश्यक पर्दछ जब उसले धेरै खाना चाहिन्छ
+         अर्को दिनको लागि पर्याप्त छ। तर तपाइँ यो पनि भन्न सक्नुहुन्छ कि तपाइँको बच्चा भोकाएको छ कि छैन, डायपर परिवर्तन चाहिन्छ
+         वा कोलिक छ। तपाईं अब साँझमा केहि लामो पोषण दिन को लागी प्रयास गर्न सक्नुहुन्छ ताकि तपाईं अझ निन्द्रामा जान सक्नुहुन्छ"
+                    android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -90,9 +96,10 @@
                     android:layout_width="330dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="40dp"
-                    android:text="Your 2 month old baby"
+                    android:text="तपाईंको दुई महिनाको बच्चा"
                     android:textSize="22dp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -120,9 +127,10 @@
                         android:layout_width="80dp"
                         android:layout_height="20dp"
                         android:layout_marginTop="5dp"
-                        android:text="Weight"
+                        android:text="तौल"
                         android:textSize="16sp"
                         android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
                         app:layout_constraintStart_toStartOf="@+id/progress_weight"
                         app:layout_constraintTop_toBottomOf="@+id/progress_height" />
 
@@ -130,10 +138,10 @@
                         android:id="@+id/progress_weight"
                         android:layout_width="wrap_content"
                         android:layout_height="19dp"
-
                         android:gravity="center"
-                        android:text="4,12 - 8,29 kg"
+                        android:text="4,12 - 8,29 किलो"
                         android:textSize="14sp"
+                        android:fontFamily="@font/montserrat"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
@@ -144,8 +152,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:gravity="center"
-
-                        android:text="7,77 - 7,77 cm"
+                        android:fontFamily="@font/montserrat"
+                        android:text="7,77 - 7,77 सेंटीमीटर"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
@@ -157,9 +165,10 @@
                         android:layout_width="80dp"
                         android:layout_height="20dp"
                         android:layout_marginTop="30dp"
-                        android:text="Height"
+                        android:text="उचाई"
                         android:textSize="16sp"
                         android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
                         app:layout_constraintStart_toStartOf="@+id/progress_height"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -190,6 +199,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="1"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -198,6 +208,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="2"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -206,6 +217,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="3"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -214,6 +226,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="4"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -222,6 +235,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="5"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -230,6 +244,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="6"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -238,6 +253,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="7"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -246,6 +262,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="8"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -254,6 +271,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="9"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -262,6 +280,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="10"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -270,6 +289,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="11"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
 
                 <Button
@@ -278,6 +298,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/scroll_buttons"
                     android:text="12"
+                    android:fontFamily="@font/montserrat"
                     android:textColor="#F8FFFFFF" />
             </LinearLayout>
         </HorizontalScrollView>

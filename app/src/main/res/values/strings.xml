@@ -11,7 +11,7 @@
     <string name="delicious_homemade_dal_bhat_with_curry_and_rice_perfect_for_everyday_meal">Delicious homemade dal bhat with curry and rice. Perfect for everyday meal.</string>
     <string name="_45_min">45 min</string>
     <string name="todo">TODO</string>
-    <string name="view_recipe">View Recipe</string>
+    <string name="view_recipe">View</string>
     <string-array name="spinner">
         <item> …</item>
         <item>Boy</item>

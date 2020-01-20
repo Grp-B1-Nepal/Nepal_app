@@ -12,7 +12,6 @@ public class ChildInfo {
     private static final ChildInfo ourInstance = new ChildInfo();
     private ArrayList<ChildObj> childArr = new ArrayList<>();
     private CacheSaving cacheSaving = new CacheSaving();
-    private Bitmap bitmap;
     private int position;
 
     private ChildInfo() {
@@ -63,8 +62,7 @@ public class ChildInfo {
      * @param context
      */
     public void setBitmap(Bitmap bitmaps,String name, Context context){
-        this.bitmap = bitmaps;
-        cacheSaving.saveImage(context,name, bitmap);
+        cacheSaving.saveImage(context,name, bitmaps);
 
     }
 
@@ -84,10 +82,14 @@ public class ChildInfo {
     }
 
 
-
+    /**
+     * Checks if the name is already in use
+     * @param name name is the name it has to compare with
+     * @return
+     */
     public boolean nameInUse(String name){
         for (ChildObj childName :childArr ) {
-            if(childName.getName().equals(String.valueOf(name))){
+            if(childName.getName().equals(name)){
                 return true;
             }
         }
@@ -119,6 +121,7 @@ public class ChildInfo {
      * @return the position
      */
     public int getPosition(){return position;}
+
 
     /**
      * Setter for position

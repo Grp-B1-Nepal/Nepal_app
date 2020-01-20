@@ -21,8 +21,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -122,20 +120,23 @@ public class EditChild extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         if (buttonSave.equals(v)) {
 
+            //Checks if name is already in use
             if(childInfo.nameInUse(String.valueOf(editName.getText()))){
                 editName.setError("Name already in use");
                 return;
             }
-
+            //Checks if the name tag isn't empty
             if (!(String.valueOf(editName.getText()).equals(""))) {
                 name = String.valueOf(editName.getText());
                 arr.get(position).setName(name);
                 childInfo.newNameImage(getContext(), oldName, name);
             }
+            //Checks if it's not equal to it's the default value "..."
             if (!(genders.getSelectedItem().equals("…"))) {
                 gender = String.valueOf(genders.getSelectedItem());
                 arr.get(position).setGender(gender);
             }
+            //checks if the bitmap has ben set
             if (editBitmap != null) {
                 childInfo.setBitmap(editBitmap, name, getContext());
             }
@@ -278,8 +279,10 @@ public class EditChild extends Fragment implements View.OnClickListener {
     }
 
 
-    //Rotation image
-    public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
+    /**
+     * Rotation image
+     */
+    private int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
         int rotate = 0;
         try {
             context.getContentResolver().notifyChange(imageUri, null);

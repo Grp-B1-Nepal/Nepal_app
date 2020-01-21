@@ -31,7 +31,7 @@ import java.util.Collections;
  * Inspiration taken from https://www.youtube.com/watch?v=q2XA0Pe2W04
  */
 
-public class Adaptor_ListviewChild extends ArrayAdapter<String> {
+public class    Adaptor_ListviewChild extends ArrayAdapter<String> {
 
     private Context context;
     private ArrayList<ChildObj> childArr;
@@ -100,6 +100,8 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
                     Toast.makeText(context, "तपाईं परिवर्तन गर्नुहोस् " + childArr.get(position).getName(), Toast.LENGTH_SHORT).show();
                     Collections.swap(childArr, position, 0);
                     childInfo.setChildArr(childArr, context);
+                    progress = childInfo.getProgressAge();
+                    birthday = childInfo.getBirthdayString();
                     //Updates the adaptor after the change
                     notifyDataSetChanged();
 

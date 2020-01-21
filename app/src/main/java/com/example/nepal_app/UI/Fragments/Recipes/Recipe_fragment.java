@@ -69,7 +69,7 @@ public class Recipe_fragment extends Fragment {
         recipeImage.setImageResource(identifier);
 
         //sets header
-        header.setText(recipeObj.getName());
+        header.setText(recipeObj.getRecipeName());
         initRecyclerViewIngrediens();
         initRecyclerViewDirections();
         return rod;

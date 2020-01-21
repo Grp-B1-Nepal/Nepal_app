@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    style="@style/scrollbar_shape_style">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,8 +26,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:text="Headline"
+            android:textColor="#F50C0000"
             android:textSize="32dp"
             android:textStyle="bold" />
 

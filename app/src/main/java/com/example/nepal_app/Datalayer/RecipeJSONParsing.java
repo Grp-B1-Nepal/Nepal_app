@@ -19,8 +19,11 @@ public class RecipeJSONParsing extends AppCompatActivity {
     private static final RecipeJSONParsing RecipeJSONParsinInstans = new RecipeJSONParsing();
     public static RecipeJSONParsing getInstance(){return RecipeJSONParsinInstans;}
 
-    private RecipeJSONParsing() { }
-
+    /**
+     * Return an array read from JSON, Case sensitive.
+     * @param context
+     * @return
+     */
     public JSONArray readJSON(Context context) {
         JSONArray jsonArray = null;
         try {
@@ -40,17 +43,52 @@ public class RecipeJSONParsing extends AppCompatActivity {
         return jsonArray;
     }
 
-    public ArrayList<RecipeHomeObject> loadRecipeList(Context context) {
+    /**
+     * Finds a recipe with different tag, Strings are case sensitive and should match the ones in the JSON file
+     * @param context
+     * @param tag
+     * @return
+     */
+    public ArrayList<RecipeHomeObject> loadRecipeListByTag(Context context, String tag) {
         ArrayList<RecipeHomeObject> recipeHomeObjects = new ArrayList<>();
         JSONArray jsonArray = readJSON(context);
         String name, image;
 
         try {
-            // Retrieves the name and images from each recipe in our JSON file.
-            for (int i = 0; i < jsonArray.length(); i++) {
-                name = jsonArray.getJSONObject(i).getString("name");
-                image = jsonArray.getJSONObject(i).getString("image");
-                recipeHomeObjects.add(new RecipeHomeObject(name,image));
+            switch (tag) {
+                case "recommended":
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        if (jsonArray.getJSONObject(i).getString("tag").equals("recommended")) {
+                            name = jsonArray.getJSONObject(i).getString("name");
+                            image = jsonArray.getJSONObject(i).getString("image");
+                            recipeHomeObjects.add(new RecipeHomeObject(name,image));
+                        }
+                    }
+                    break;
+                case "common":
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        if (jsonArray.getJSONObject(i).getString("tag").equals("common")) {
+                            name = jsonArray.getJSONObject(i).getString("name");
+                            image = jsonArray.getJSONObject(i).getString("image");
+                            recipeHomeObjects.add(new RecipeHomeObject(name,image));
+                        }
+                    }
+                    break;
+                case "snack":
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        if (jsonArray.getJSONObject(i).getString("tag").equals("snack")) {
+                            name = jsonArray.getJSONObject(i).getString("name");
+                            image = jsonArray.getJSONObject(i).getString("image");
+                            recipeHomeObjects.add(new RecipeHomeObject(name,image));
+                        }
+                    }
+                    break;
+                case "loadAll":
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        name = jsonArray.getJSONObject(i).getString("name");
+                        image = jsonArray.getJSONObject(i).getString("image");
+                        recipeHomeObjects.add(new RecipeHomeObject(name, image));
+                    }
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -59,19 +97,34 @@ public class RecipeJSONParsing extends AppCompatActivity {
         return recipeHomeObjects;
     }
 
-    public String loadImage(int position, Context context) {
-        String picture = "";
-
+    /**
+     * Given a position, then finds a single home recipe
+     * @param pos
+     * @param context
+     * @return
+     */
+    public RecipeHomeObject loadSingleHomeRecipe(int pos, Context context) {
+        RecipeHomeObject recipe;
+        String name, image;
+        name = "";
+        image = "";
+        JSONArray jsonArr = readJSON(context);
         try {
-            JSONArray jsonArray = readJSON(context);
-            picture = jsonArray.getJSONObject(position).getString("image");
+            name = jsonArr.getJSONObject(pos).getString("name");
+            image = jsonArr.getJSONObject(pos).getString("image");
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        return picture;
+        recipe = new RecipeHomeObject(name, image);
+        return recipe;
     }
 
+    /**
+     * Loads essential info from JSON to display in recipe.
+     * @param position
+     * @param context
+     * @return recipeObj which can be used for several things.
+     */
     public RecipeObj loadRecipe(int position, Context context) {
         String recipeName = "";
         ArrayList<String> images = new ArrayList<>();
@@ -113,5 +166,48 @@ public class RecipeJSONParsing extends AppCompatActivity {
 
         RecipeObj recipe = new RecipeObj(recipeName,images,ingrediens,directions);
         return recipe;
+    }
+
+    /**
+     * Loads image from JSON file
+     * @param position
+     * @param context
+     * @return picture found
+     */
+    public String loadImage(int position, Context context) {
+        String picture = "";
+
+        try {
+            JSONArray jsonArray = readJSON(context);
+            picture = jsonArray.getJSONObject(position).getString("image");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return picture;
+    }
+
+    /**
+     * Finds position in JSON file corresponding to the given recipe name
+     * @param context
+     * @param recipeName
+     * @return
+     */
+    public int getPositionStringMatch(Context context, String recipeName) {
+        JSONArray jsonArray = readJSON(context);
+        int position = 0;
+
+        for (int i = 0; i < jsonArray.length(); i++) {
+            try {
+                if(jsonArray.getJSONObject(i).getString("name").equals(recipeName)) {
+                    return position;
+                } else {
+                    position++;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return 0;
     }
 }

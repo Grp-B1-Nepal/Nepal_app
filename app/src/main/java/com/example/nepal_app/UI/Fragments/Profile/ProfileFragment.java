@@ -19,10 +19,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 
 public class ProfileFragment extends Fragment {
-    private ListView list;
-    private FloatingActionButton addChildButton;
-    private ChildInfo childInfo;
-    private TextView activeChild;
 
     private ArrayList<ChildObj> childArr = new ArrayList<>();
 
@@ -30,15 +26,16 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        childInfo = ChildInfo.getInstance();
+        ChildInfo childInfo = ChildInfo.getInstance();
 
         //Gets the childArr from the singleton class
         childArr = childInfo.getChildArr(getContext());
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        addChildButton = view.findViewById(R.id.floatingActionButton4);
-        list = view.findViewById(R.id.list);
-        activeChild = view.findViewById(R.id.active_child);
+        FloatingActionButton addChildButton = view.findViewById(R.id.floatingActionButton4);
+        ListView list = view.findViewById(R.id.list);
+        TextView activeChild = view.findViewById(R.id.active_child);
+
         if (childArr.size() == 0){
             activeChild.setVisibility(View.INVISIBLE);
         }
@@ -53,7 +50,6 @@ public class ProfileFragment extends Fragment {
         addChildButton.setOnClickListener((something) -> {
             getFragmentManager().beginTransaction().replace(R.id.container, new Fragment_addChild()).addToBackStack(null).commit();
         });
-
         return view;
     }
 }

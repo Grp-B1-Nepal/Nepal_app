@@ -2,13 +2,10 @@ package com.example.nepal_app.UI.Fragments.Navigation;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -29,8 +26,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
 
     private ImageButton activitiesB, activitesSound, profileB, profileSound,
-            progressB, progressSound, recipesB, recipesSound;
+            progressB, progressSound, recipesB, recipesSound, quizB, quizSound, comicB, comicSound;
     private View rod;
+    private Boolean isSoundPlaying = false;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -53,8 +51,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
 
             if(rod == null) {
-            rod = inflater.inflate(R.layout.homepage_layout_new, container, false);
-
+            rod = inflater.inflate(R.layout.fragment_homepage, container, false);
 
             //setting up buttons
             activitiesB = rod.findViewById(R.id.activitesButton);
@@ -65,6 +62,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             progressSound = rod.findViewById(R.id.progressSpeaker);
             recipesB = rod.findViewById(R.id.recipesButton);
             recipesSound = rod.findViewById(R.id.recipesSpeaker);
+            quizB = rod.findViewById(R.id.quizButton);
+            quizSound = rod.findViewById(R.id.quizSpeaker);
+            comicB = rod.findViewById(R.id.comicButton);
+            comicSound = rod.findViewById(R.id.comicSpeaker);
 
             //setting up onclicklisteners
             activitiesB.setOnClickListener(this);
@@ -75,8 +76,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             progressSound.setOnClickListener(this);
             recipesB.setOnClickListener(this);
             recipesSound.setOnClickListener(this);
-
-
+            quizB.setOnClickListener(this);
+            quizSound.setOnClickListener(this);
+            comicB.setOnClickListener(this);
+            comicSound.setOnClickListener(this);
 
             }
         return rod;
@@ -100,46 +103,72 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             transaction.addToBackStack(null);
             transaction.commit();
         } else if (v == recipesSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.recipestts);
-            mp.start();
-            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.release();
-                }
-            });
+            if (!isSoundPlaying) {
+                isSoundPlaying = true;
+                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_recipe);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        isSoundPlaying = false;
+                    }
+                });
+            }
         } else if (v == progressSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.progresstts);
-            mp.start();
-            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.release();
-                }
-            });
+            if (!isSoundPlaying) {
+                isSoundPlaying = true;
+                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_progress);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        isSoundPlaying = false;
+                    }
+                });
+            }
         } else if (v == activitesSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.activitiestts);
-            mp.start();
-            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.release();
-                }
-            });
+            if(!isSoundPlaying) {
+                isSoundPlaying = true;
+                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_activity);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        isSoundPlaying = false;
+                    }
+                });
+            }
         } else if (v == profileB) {
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction.replace(R.id.container, new ProfileFragment());
             transaction.addToBackStack(null);
             transaction.commit();
         } else if (v == profileSound) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.profiletts);
-            mp.start();
-            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    mp.release();
-                }
-            });
+            if(!isSoundPlaying) {
+                isSoundPlaying = true;
+                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_profile);
+                mp.start();
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        isSoundPlaying = false;
+                    }
+                });
+            }
+        } else if (v == comicB) {
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.container, new UDFragment());
+            transaction.addToBackStack(null);
+            transaction.commit();
+        } else if (v == quizB) {
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.container, new UDFragment());
+            transaction.addToBackStack(null);
+            transaction.commit();
         }
     }
 }

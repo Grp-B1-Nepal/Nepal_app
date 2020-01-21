@@ -11,24 +11,38 @@
     <string name="delicious_homemade_dal_bhat_with_curry_and_rice_perfect_for_everyday_meal">Delicious homemade dal bhat with curry and rice. Perfect for everyday meal.</string>
     <string name="_45_min">45 min</string>
     <string name="todo">TODO</string>
-    <string name="view_recipe">View Recipe</string>
+    <string name="view_recipe">View</string>
     <string-array name="spinner">
-        <item>…</item>
-        <item>Boy</item>
-        <item>Girl</item>
-        <item>Other</item>
+        <item> …</item>
+        <item>केटा</item>
+        <item>केटी</item>
+        <item>अन्य</item>
     </string-array>
 
     <!-- Here comes the information for the activity information fragment. This is gonna fill alot so please bear with me. Might include it in its own xml file instead-->
 
     <!-- This is the information for the category singing.  -->
 
+    <string-array name="Push_descriptions">
+        <item>You should take your child to the doctor string 1, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+        <item>You should take your child to the doctor, click this notification to open the app and read more!</item>
+
+    </string-array>
 
     <string-array name="activities_information_Singing_category1">
-        <item>Singing category 1.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
-        <item>Singing category 1.2: Too cultivated use solicitude frequently. Dashwood likewise up consider continue entrance ladyship oh. Wrong guest given purse power is no. Friendship to connection an am considered difficulty. Country met pursuit lasting moments why calling certain the. Middletons boisterous our way understood law. Among state cease how and sight since shall. Material did pleasure breeding our humanity she contempt had. So ye really mutual no cousin piqued summer result.</item>
-        <item>Singing category 1.3: Surprise steepest recurred landlord mr wandered amounted of. Continuing devonshire but considered its. Rose past oh shew roof is song neat. Do depend better praise do friend garden an wonder to. Intention age nay otherwise but breakfast. Around garden beyond to extent by. </item>
-        <item>Singing category 1.4: Oh acceptance apartments up sympathize astonished delightful. Waiting him new lasting towards. Continuing melancholy especially so to. Me unpleasing impossible in attachment announcing so astonished. What ask leaf may nor upon door. Tended remain my do stairs. Oh smiling amiable am so visited cordial in offices hearted. </item>
+        <item>द्वारा गरिंदा राम्ररी आवश्यक छ। दुई तपाईं मोटो तीन साँचो श्री धेरै मा गए। नामको रूपमा हिम्मत गर्नुहोस् जब यो शरीरको साथ हुन्छ। यात्रा जिज्ञासा उनी असम्भव देखि बढ्दै छ। कुटीज हाम्रो आवाज भन्दा शोर भइरहेको देखिन्छ। भूखा डायवर्ट गरिएको शिक्षामा बलात्कारलाई दयाको लागि डिस्पोजल। धोका दिए जो कोही अब ड्यासवुडमा पहिले फिर्ता आउन सक्छ। बल तरिका बाटो ढिलाइ लजालु केटा मान्छे दृष्टिकोण। कुनै उपकरणको विवेक मा असमर्थ। </item>
+        <item>धेरै खेती गरिएको प्रयोग सोलसिटी। ड्यासवुड त्यस्तै अप एन्ड्रेसन लेडीशिप ओह विचार गर्नुहोस्। गलत अतिथिले दिएको पर्स पावर होईन। सम्बन्ध गर्न मित्रता एक कठिनाई मानिन्छ। देशले पछिल्ला क्षणहरूको खोजी गर्यो किन निश्चित फोन गर्‍यो। मिड्लेटनहरूले हाम्रो मार्गलाई हिर्काउँदछन्। राज्य बीच कसरी र दृष्टि पछि बन्द। सामग्रीले हाम्रो मानवताको प्रजननको लागि खुशी गर्‍यो जुन उनीलाई घृणा गरिएको थियो। त्यसोभए तपाईं वास्तवमै एक आपसमा कुनै चचेरे भाईले गर्नुभएन।</item>
+        <item>आश्चर्य पुनरावर्ती घरमालिकको रकम बराबर छ। डिवोनशायर जारी राखीरहेको छ तर यसको मानिन्छ। गुलाब विगत ओहो शाउ गाना सफा छ। के राम्रो प्रशंसा को लागी मित्र बगैंचा एक आश्चर्य हो। इरादे उमेर हो अन्यथा तर बिहानको खाजा। बगैंचा वरिपरिको क्षेत्र हदसम्म। </item>
+        <item>ओह स्वीकृति अपार्टमेन्ट अप सहानुभूति चकित रमाईलो। तिर उनलाई नयाँ स्थायी प्रतीक्षा गर्दै। निरन्तर कुरूपता जारी राख्ने। अचम्मित भई घोषणामा संलग्न गर्न मलाई असम्भव। पत्ता लगाउने पात वा ढोकामा के हुन सक्छ। मेरो गर्न भर्या .हरू रहिरह्यो। ओह मुस्कुराउँदै अम्वालि छु म अफिसमा सौहार्दपूर्ण भेट भयो अफिसमा हार्दिक।</item>
     </string-array>
     <string-array name="activities_information_Singing_category2">
         <item>Singing category 2.1: Remain lively hardly needed at do by. Two you fat downs fanny three. True mr gone most at. Dare as name just when with it body. Travelling inquietude she increasing off impossible the. Cottage be noisier looking to we promise on. Disposal to kindness appetite diverted learning of on raptures. Betrayed any may returned now dashwood formerly. Balls way delay shy boy man views. No so instrument discretion unsatiable to in. </item>
@@ -153,140 +167,139 @@
     </string-array>
 
     <!-- Strings for getProgressAge -->
-    <string name="weight1">2,94 – 5,91 Kg</string>
-    <string name="weight2">4,12 – 8,29 Kg</string>
-    <string name="weight3">4,82 – 9,03 Kg</string>
-    <string name="weight4">5,34 – 9,65 Kg</string>
-    <string name="weight5">5,77 – 10,17 Kg</string>
-    <string name="weight6">6,12 – 10,64 Kg</string>
-    <string name="weight7">6,41 – 11,07 Kg</string>
-    <string name="weight8">6,68 – 11,43 Kg</string>
-    <string name="weight9">6,9 – 11,78 Kg</string>
-    <string name="weight10">7,11 – 12,1 Kg</string>
-    <string name="weight11">7,29 – 12,42 Kg</string>
-    <string name="weight12">7,47 – 12,72 Kg</string>
+    <string name="weight1">2,94 – 5,91 किलो</string>
+    <string name="weight2">4,12 – 8,29 किलो</string>
+    <string name="weight3">4,82 – 9,03 किलो</string>
+    <string name="weight4">5,34 – 9,65 किलो</string>
+    <string name="weight5">5,77 – 10,17 किलो</string>
+    <string name="weight6">6,12 – 10,64 किलो</string>
+    <string name="weight7">6,41 – 11,07 किलो</string>
+    <string name="weight8">6,68 – 11,43 किलो</string>
+    <string name="weight9">6,9 – 11,78 किलो</string>
+    <string name="weight10">7,11 – 12,1 किलो</string>
+    <string name="weight11">7,29 – 12,42 किलो</string>
+    <string name="weight12">7,47 – 12,72 किलो</string>
 
-    <string name="height1">49,0 – 58,9 cm</string>
-    <string name="height2">53,7 – 66,1 cm</string>
-    <string name="height3">56,6 – 68.6 cm</string>
-    <string name="height4">59,0 – 70,7 cm</string>
-    <string name="height5">61,0 – 72,5 cm</string>
-    <string name="height6">62,6 – 74,2 cm</string>
-    <string name="height7">64,1 – 75,8 cm</string>
-    <string name="height8">65,5 – 77,2 cm</string>
-    <string name="height9">66,8 – 78,6 cm</string>
-    <string name="height10">68,0 – 80,0 cm</string>
-    <string name="height11">69,2 – 81,3 cm</string>
-    <string name="height12">70,3 – 12,72 cm</string>
+    <string name="height1">49,0 – 58,9 सेमी</string>
+    <string name="height2">53,7 – 66,1 सेमी</string>
+    <string name="height3">56,6 – 68.6 सेमी</string>
+    <string name="height4">59,0 – 70,7 सेमी</string>
+    <string name="height5">61,0 – 72,5 सेमी</string>
+    <string name="height6">62,6 – 74,2 सेमी</string>
+    <string name="height7">64,1 – 75,8 सेमी</string>
+    <string name="height8">65,5 – 77,2 सेमी</string>
+    <string name="height9">66,8 – 78,6 सेमी</string>
+    <string name="height10">68,0 – 80,0 सेमी</string>
+    <string name="height11">69,2 – 81,3 सेमी</string>
+    <string name="height12">70,3 – 12,72 सेमी</string>
 
-    <string name="age1">Your 1 month old baby</string>
-    <string name="age2">Your 2 month old baby</string>
-    <string name="age3">Your 3 month old baby</string>
-    <string name="age4">Your 4 month old baby</string>
-    <string name="age5">Your 5 month old baby</string>
-    <string name="age6">Your 6 month old baby</string>
-    <string name="age7">Your 7 month old baby</string>
-    <string name="age8">Your 8 month old baby</string>
-    <string name="age9">Your 9 month old baby</string>
-    <string name="age10">Your 10 month old baby</string>
-    <string name="age11">Your 11 month old baby</string>
-    <string name="age12">Your 12 month old baby</string>
+    <string name="age1">तपाईंको १ महिनाको बच्चा</string>
+    <string name="age2">तपाईंको दुई महिनाको बच्चा</string>
+    <string name="age3">तपाईंको तीन महिनाको बच्चा</string>
+    <string name="age4">तपाईंको चार महिनाको बच्चा</string>
+    <string name="age5">तपाईंको पाँच महिनाको बच्चा</string>
+    <string name="age6">तपाईंको छ महिनाको बच्चा </string>
+    <string name="age7">तपाईंको सात महिनाको बच्चा</string>
+    <string name="age8">तपाईंको आठ महिनाको बच्चा</string>
+    <string name="age9">तपाईंको नौ महिनाको बच्चा</string>
+    <string name="age10">तपाईंको दस महिनाको बच्चा</string>
+    <string name="age11">तपाईंको एलिभेन महिनाको बच्चा</string>
+    <string name="age12">तपाईंको बाह्र महिनाको बच्चा</string>
 
-    <string name="head1">Feeding pattern</string>
-    <string name="head2">Development</string>
-    <string name="head3">Development</string>
-    <string name="head4">Development</string>
-    <string name="head5">Development</string>
-    <string name="head6">Development</string>
-    <string name="head7">Development</string>
-    <string name="head8">Development</string>
-    <string name="head9">Development</string>
-    <string name="head10">Development</string>
-    <string name="head11">Development</string>
-    <string name="head12">Development</string>
+    <string name="head1">खुट्टा बान्की</string>
+    <string name="head2">विकास</string>
+    <string name="head3">विकास</string>
+    <string name="head4">विकास</string>
+    <string name="head5">विकास</string>
+    <string name="head6">विकास</string>
+    <string name="head7">विकास</string>
+    <string name="head8">विकास</string>
+    <string name="head9">विकास</string>
+    <string name="head10">विकास</string>
+    <string name="head11">विकास</string>
+    <string name="head12">विकास</string>
 
-    <string name="info1_1">Your baby is nearly one month old! Soon you will have to entertain your little one.
-        Right now though it’s still all about feeding and sleeping.</string>
-    <string name="info1_2">Social and emotional development</string>
-    <string name="info1_3">Your baby is three months\' old, and you’re probably starting to get the hang of this
-        parenting thing. You may have settled into a schedule, or your routine may vary from day to day.
-        Either way, your 3 month old has changed from a tiny newborn to an active infant.</string>
-    <string name="info1_4">Just when you thought your baby could not get any more adorable,
-        he somehow does. At four months, your baby is learning more about himself and also becoming pretty
-        fascinated with the world around him.</string>
-    <string name="info1_5">By five months old, your baby is certainly showing more personality.
-        He may be crying less and babbling more. He is also probably becoming more interested in playing.
-        Lots of other fun changes are taking place during the fifth month.</string>
-    <string name="info1_6">It may be hard to believe your baby is already six months old.
-        You’ll probably see a lot of developmental milestones this month.
-        But it’s also important for moms and dads to understand, each baby is a unique individual and may do things
-        at their own pace. If you’re concerned about something, don’t hesitate talking to your pediatrician.</string>
-    <string name="info1_7">Social and emotional development</string>
-    <string name="info1_8">Social and emotional development</string>
-    <string name="info1_9">Social and emotional development</string>
-    <string name="info1_10">Social and emotional development</string>
-    <string name="info1_11">Social and emotional development</string>
-    <string name="info1_12">Social and emotional development</string>
+    <string name="info1_1">तपाईंको बच्चा लगभग एक महिनाको भयो! चाँडै तपाईं आफ्नो सानो एक मनोरन्जन गर्न हुनेछ। अहिल्यै अहिल्यै यो सबै खान र सुत्नको बारेमा छ।</string>
+    <string name="info1_2">सामाजिक र भावनात्मक विकास</string>
+    <string name="info1_3">तपाईंको बच्चा तीन महिना हो - पुरानो, र तपाईं सायद यसको ह्या of्ग गर्न थाल्नु भएको छ प्यारेन्टिंग चीज। तपाईं एक तालिका मा व्यवस्थित हुन सक्छ, वा तपाईंको दिनचर्या दिन प्रति दिन फरक हुन सक्छ। जे भए पनि, तपाइँको month महिनाको पुरानो सानो नवजातबाट सक्रिय शिशुमा परिवर्तन भयो।</string>
+    <string name="info1_4">भर्खरै जब तपाईले सोच्नुभयो तपाईको बच्चाले अरु बढी मन पराउने छैन,
+         ऊ कुनै तरिकाले गर्छ। चार महिनामा, तपाईंको बच्चाले आफैंको बारेमा बढी सिक्दै छ र सुन्दर पनि बन्न
+         उसको वरिपरिको दुनिया संग मोहित।</string>
+    <string name="info1_5">पाँच महिना पुरानो, तपाईंको बच्चा पक्कै बढी व्यक्तित्व देखाउदै छ।
+         ऊ कम रोइरहेको हुन सक्छ र बढी बकबक गरेको छ। ऊ पनि खेल्नमा बढी रुचि लिन सक्छ।
+         अन्य धेरै रमाईलो परिवर्तनहरू पाँचौं महिनामा भइरहेको छ।</string>
+    <string name="info1_6">तपाईंको बच्चा पहिले नै months महिनाको भइसकेको छ भनेर विश्वास गर्न गाह्रो हुन सक्छ।
+         तपाईं शायद यस महिना धेरै विकासात्मक माइलस्टोनहरू देख्नुहुनेछ।
+         तर यो आमा र बुबालाई बुझ्नको लागि पनि महत्त्वपूर्ण छ, प्रत्येक बच्चा अद्वितीय व्यक्ति हो र चीजहरू गर्न सक्दछ
+         आफ्नै गतिमा। यदि तपाईं केहि चिन्तित हुनुहुन्छ भने, आफ्नो बाल रोग विशेषज्ञको साथ कुरा गर्न न हिचकिचाउनुहोस्।</string>
+    <string name="info1_7">सामाजिक र भावनात्मक विकास</string>
+    <string name="info1_8">सामाजिक र भावनात्मक विकास</string>
+    <string name="info1_9">सामाजिक र भावनात्मक विकास</string>
+    <string name="info1_10">सामाजिक र भावनात्मक विकास</string>
+    <string name="info1_11">सामाजिक र भावनात्मक विकास</string>
+    <string name="info1_12">सामाजिक र भावनात्मक विकास</string>
 
 
-    <string name="info2_1">You might notice more of a pattern starting to form around feeding.
-        Your baby will probably still require cluster-feeding at night when he needs a lot of feeding in order to
-        have enough for the next day. But you are also able to tell whether your baby is hungry, needs a diaper change
-        or has colic. You can try to feed a little longer in the evenings now so you can catch more sleep
-        during the night.</string>
-    <string name="info2_2">You may not think a lot is going on as far as social development,
-        but it is. As you love your baby and respond to his cries, you’re building his trust,
-        which helps his social and emotional development. \n
-Your baby still needs lots of cuddles and skin-to-skin contact, so enjoy quiet time together when you can.
-        Research indicates that babies need touch in order to thrive.
-        So all those cuddles are actually helping your baby’s development. \n
-His emotional development also includes his ability to self-soothe, which he does by sucking.
-        2 month old babies have a strong sucking reflex. Your baby may like to suck on a pacifier, his fist or a finger.
+    <string name="info2_1">
+तपाइँ खाना पचाउने वरिपरि बुनियादी ढाँचाको अधिक देख्न सक्नुहुन्छ।
+         तपाईंको बच्चालाई अझै पनि रातमा क्लस्टर-फिडिंग आवश्यक पर्दछ जब उसले धेरै खाना चाहिन्छ
+         अर्को दिनको लागि पर्याप्त छ। तर तपाइँ यो पनि भन्न सक्नुहुन्छ कि तपाइँको बच्चा भोकाएको छ कि छैन, डायपर परिवर्तन चाहिन्छ
+         वा कोलिक छ। तपाईं अब साँझमा केहि लामो पोषण दिन को लागी प्रयास गर्न सक्नुहुन्छ ताकि तपाईं अझ निन्द्रामा जान सक्नुहुन्छ
+         रातको समयमा।</string>
+    <string name="info2_2">तपाईले सोच्नुहुन्न कि सामाजिक विकासमा केहि धेरै भइरहेको छ,
+         तर यो छ। जब तपाईं आफ्नो बच्चालाई माया गर्नुहुन्छ र उसको पुकारमा जवाफ दिनुहुन्छ, तपाईं उसको विश्वास निर्माण गर्दै हुनुहुन्छ,
+         जसले उसको सामाजिक र भावनात्मक विकासमा मद्दत गर्दछ। । n
+तपाईंको बच्चालाई अझै धेरै कडलहरू र छाला-देखि-छाला सम्पर्क आवश्यक छ, त्यसैले शान्त समय सँगै रमाईलो गर्न सक्नुहुन्छ जब तपाईं सक्नुहुन्छ।
+         अनुसन्धानले संकेत गर्दछ कि बच्चाहरू फस्टाउनको लागि छुनुपर्दछ।
+         त्यसो भए ती सबै कडलहरूले वास्तवमा तपाईंको बच्चाको विकासमा मद्दत गरिरहेका छन्। । n
+उसको भावनात्मक विकासमा उसको आत्मशोषण गर्ने क्षमता पनि समावेश छ, जुन उसले चूसेर गर्छ।
+         २ महिनाको बच्चाको बलियो चूसने प्रतिक्षेप हुन्छ। तपाईंको बच्चा एक प्रशान्तकर्ता, उसको मुट्ठी वा औंलामा चुस्न मनपराउन सक्छ।
 
-Most babies this age also start following objects with their eyes. At two months, your baby’s vision is
-        not as sharp as an adult’s, but it is improving.</string>
+यस उमेरका धेरैजसो बच्चाहरूले तिनीहरूको आँखाका साथ वस्तुहरू पछ्याउँदछन्। दुई महिनामा, तपाइँको बच्चाको दर्शन हो
+         वयस्कको जस्तो धारिलो होइन, तर सुधार हुँदैछ।</string>
 
-    <string name="info2_3">One cool thing you may notice is your baby is starting to figure out who’s who.
-        While you can’t expect your little one to say mama or dada just yet,
-        your baby may be showing signs of parental recognition. For example, when your baby sees you,
-        he may kick his legs with excitement or smile at the sound of your voice.
+    <string name="info2_3">एउटा सुन्दर चीज तपाईले याद गर्न सक्नुहुन्छ कि तपाईको बच्चाले को हो भनेर पत्ता लगाउन थाल्छ।
+         जबकि तपाईं आफ्नो सानो व्यक्तिको आमा वा बुबा अझै भन्नु भएको अपेक्षा गर्न सक्नुहुन्न,
+         तपाईंको बच्चाले अभिभावकको पहिचानको स showing्केत देखाउँदै छ। उदाहरणको लागि, जब तपाईंको बच्चाले तपाईंलाई देख्छ,
+         उसले उत्साहको साथ उसको खुट्टामा लात हान्न सक्छ वा तपाईंको आवाजको स्वरमा मुस्कुराउन सक्छ।
 
-Not only is your baby’s brain developing rapidly, his senses are also becoming more active.
-        For example, you may notice your baby turns his head towards sounds. Your 3 month old also thrives on touch,
-        so continue to spend a lot of time snuggling and cuddling. Partners, you should also make time
-        for skin to skin contact.</string>
-    <string name="info2_4">Your baby is likely becoming more social.
-        You may notice he copies some facial expressions, such as frowning or smiling.
-        He is probably enjoying playing more and may even start to cry when playtime stops.
-If you have not already introduced music, now may be a good time to give it a shot.
-        Some research indicates music helps babies with their intellectual and social development.
-        Consider a baby class, or just sing to your little one. But even with all the social development going on,
-        your baby still needs quiet time. Make sure you allow plenty of time for quiet snuggles.</string>
-    <string name="info2_5">You may have noticed, your baby’s sense of humor is developing more.
-        He’s starting to get the joke. For instance, he may laugh when you make silly faces or use a goofy voice.
-        Continue to encourage those adorable giggles with silly chatter. It helps your baby’s social development.
+तपाईको बच्चाको मस्तिष्क द्रुत रूपमा विकास हुँदैछ, उसका इन्द्रियहरू पनि अधिक सक्रिय भइरहेका छन्।
+         उदाहरणको लागि, तपाईले याद गर्न सक्नुहुन्छ कि तपाईको बच्चाले उसको टाउको आवाजतिर फर्कायो। तपाईंको month महिनाको उमेर पनि स्पर्शमा फस्छ,
+         त्यसैले धेरै समय स्ग्गलिंग र कडलिंगमा खर्च गर्न जारी राख्नुहोस्। पार्टनरहरू, तपाईंले पनि समय बनाउनु पर्छ
+         छाला सम्पर्क गर्न छालाको लागि।</string>
+    <string name="info2_4">तपाईंको बच्चा सम्भवतः बढी सामाजिक हुँदै गइरहेको छ।
+         तपाईंले देख्न सक्नुहुन्छ कि उनले केही अनुहारको भावहरू प्रतिलिपि गरे जस्तै फ्राउन्डि or वा मुस्कुराउँदै।
+         उसले सायद धेरै खेलिरहेकोमा रमाईलो गरिरहेको छ र प्लेटाइम रोक्दा रुनु पनि सक्छ।
+यदि तपाईंले पहिले नै संगीत परिचय गर्नुभएन भने, अब यो एक शट दिन राम्रो समय हुन सक्छ।
+         केही अनुसन्धानले स bab्गीतले बच्चाहरूलाई उनीहरूको बौद्धिक र सामाजिक विकासको लागि मद्दत गर्दछ।
+         बेबी क्लासलाई विचार गर्नुहोस्, वा तपाईंको सानोमा गाउनुहोस्। तर पनि सबै सामाजिक विकासको साथ,
+         तपाईंको बच्चालाई अझै शान्त समय चाहिन्छ। निश्चित गर्नुहोस् कि तपाईं शान्त चुराचाहरूको लागि प्रशस्त समय दिनुहुन्छ।</string>
+    <string name="info2_5">तपाईंले देख्नु भएको होला, तपाईंको बच्चाको हास्य भावना बढ्दै छ।
+         उसले ठट्टा गर्न थाल्छ। उदाहरण को लागी, जब तपाईं मूर्ख अनुहार बनाउनु वा मूर्ख आवाज प्रयोग गर्दा उहाँ हाँस्न सक्छ।
+         मूर्ख कुराकानीको साथ ती मनमोहक गिगल्सलाई प्रोत्साहन दिन जारी राख्नुहोस्। यसले तपाईंको बच्चाको सामाजिक विकासमा मद्दत गर्दछ।
 
-Along with a sense of humor, your baby may be showing a wider range of emotions, such as anger and happiness.
-        He may express those varied emotions by grunting when he is mad or squealing when he is happy.
+हास्य भावनाको साथमा, तपाईंको बच्चाले भावनाहरूको एक विस्तृत श्रृंखला देखाउँदै छ, जस्तै क्रोध र खुशी।
+         ऊ पागल भएमा वा खुशी भएपछि चिच्याउँदा उसले विविध भावनाहरू व्यक्त गर्न सक्छ।
 
-You and your partner can help your baby’s social and emotional development by just doing what you do.
-        Every time you respond to a cry, play or cuddle your baby, you’re helping him feel safe and loved.</string>
-    <string name="info2_6">It may be hard to believe your baby is already six months old.
-        You’ll probably see a lot of developmental milestones this month.
-        But it’s also important for moms and dads to understand, each baby is a unique
-        individual and may do It may be hard to believe your baby is already six months old.
-        You’ll probably see a lot of developmental milestones this month.
-        But it’s also important for moms and dads to understand, each baby is a unique individual and may do
-        things at their own pace. If you’re concerned about something, don’t hesitate talking to your pediatrician.
-        things at their own pace. If you’re concerned about something, don’t hesitate talking to your pediatrician.</string>
-    <string name="info2_7">Social and emotional development</string>
-    <string name="info2_8">Social and emotional development</string>
-    <string name="info2_9">Social and emotional development</string>
-    <string name="info2_10">Social and emotional development</string>
-    <string name="info2_11">Social and emotional development</string>
-    <string name="info2_12">Social and emotional development</string>
+तपाईं र तपाईंको पार्टनरले तपाईको बच्चाको सामाजिक र भावनात्मक विकासमा मद्दत गर्न सक्नुहुन्छ केवल तपाईले के गर्नुभयो त्यसबाट।
+         प्रत्येक चोटि जब तपाईं रोइलाइ जवाफ दिनुहुन्छ, तपाईंको बच्चालाई खेल्नुहोस् वा समात्नुहोस्, तपाईं उसलाई सुरक्षित र माया महसुस गर्न सहयोग गर्दै हुनुहुन्छ।</string>
+    <string name="info2_6">731/5000
+तपाईंको बच्चा पहिले नै months महिनाको भइसकेको छ भनेर विश्वास गर्न गाह्रो हुन सक्छ।
+         तपाईं शायद यस महिना धेरै विकासात्मक माइलस्टोनहरू देख्नुहुनेछ।
+         तर यो आमा र बुबालाई बुझ्नको लागि पनि महत्त्वपूर्ण छ, प्रत्येक बच्चा एक विशिष्ट हो
+         व्यक्ति र गर्न सक्दछ तपाईंको बच्चा पहिले नै छ महिना पुरानो हो भनेर विश्वास गर्न गाह्रो हुन सक्छ।
+         तपाईं शायद यस महिना धेरै विकासात्मक माइलस्टोनहरू देख्नुहुनेछ।
+         तर यो आमा र बुबालाई बुझ्नको लागि पनि महत्त्वपूर्ण छ, प्रत्येक बच्चा एक अद्वितीय व्यक्ति हो र गर्न सक्छ
+         चीजहरू आफ्नै गतिमा। यदि तपाईं केहि चिन्तित हुनुहुन्छ भने, आफ्नो बाल रोग विशेषज्ञको साथ कुरा गर्न न हिचकिचाउनुहोस्।
+         चीजहरू आफ्नै गतिमा। यदि तपाईं केहि चिन्तित हुनुहुन्छ भने, आफ्नो बाल रोग विशेषज्ञको साथ कुरा गर्न न हिचकिचाउनुहोस्।</string>
+    <string name="info2_7">सामाजिक र भावनात्मक विकास</string>
+    <string name="info2_8">सामाजिक र भावनात्मक विकास</string>
+    <string name="info2_9">सामाजिक र भावनात्मक विकास</string>
+    <string name="info2_10">सामाजिक र भावनात्मक विकास</string>
+    <string name="info2_11">सामाजिक र भावनात्मक विकास</string>
+    <string name="info2_12">सामाजिक र भावनात्मक विकास</string>
+
     <string name="number">1.</string>
-
     <string name="resToastText">Oops, the app has crashed.</string>
     <string name="recipeName">CHIKKA MASALA</string>
 

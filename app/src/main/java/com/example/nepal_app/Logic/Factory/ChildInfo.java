@@ -12,7 +12,6 @@ public class ChildInfo {
     private static final ChildInfo ourInstance = new ChildInfo();
     private ArrayList<ChildObj> childArr = new ArrayList<>();
     private CacheSaving cacheSaving = new CacheSaving();
-    private Bitmap bitmap;
     private int position;
 
     private ChildInfo() {
@@ -63,8 +62,7 @@ public class ChildInfo {
      * @param context
      */
     public void setBitmap(Bitmap bitmaps,String name, Context context){
-        this.bitmap = bitmaps;
-        cacheSaving.saveImage(context,name, bitmap);
+        cacheSaving.saveImage(context,name, bitmaps);
 
     }
 
@@ -73,13 +71,29 @@ public class ChildInfo {
      * @return the position in the array the child is located.
      */
     public int getActiveChild(){
-        int position = -1;
-        for (int i = 0; i <childArr.size() ; i++) {
-            if (childArr.get(i).getActive()){
-                position = i;
+        int i = 0;
+        for (ChildObj a:childArr) {
+            if (a.getActive()){
+                return i;
+            }
+            i++;
+        }
+        return 0;
+    }
+
+
+    /**
+     * Checks if the name is already in use
+     * @param name name is the name it has to compare with
+     * @return
+     */
+    public boolean nameInUse(String name){
+        for (ChildObj childName :childArr ) {
+            if(childName.getName().equals(name)){
+                return true;
             }
         }
-        return position;
+        return false;
     }
 
     /**
@@ -108,6 +122,7 @@ public class ChildInfo {
      */
     public int getPosition(){return position;}
 
+
     /**
      * Setter for position
      * @param position
@@ -125,13 +140,8 @@ public class ChildInfo {
         date.setHours(0);
         date.setMinutes(0);
         date.setSeconds(0);
-        long a = date.getTime();
-        Date p = new Date();
-        long b = childArr.get(getActiveChild()).getBirthday();
-        p.setTime(b);
-        progress = (a - b);
-        progress = progress/(1000*60*60*24);
-        progress = (int) Math.ceil(progress/30);
+        progress =  date.getTime() - childArr.get(getActiveChild()).getBirthday();
+        progress = (int) Math.ceil(progress/(1000*60*60*24))/30;
         monthAge = (int) progress;
         return monthAge;
     }
@@ -141,16 +151,12 @@ public class ChildInfo {
      */
     public long[] getProgressAge(){
         Date d = new Date();
+        d.getDate();
+        d.setHours(0);
+        d.setMinutes(0);
         long[] progress = new long[childArr.size()];
         for (int i = 0; i <childArr.size() ; i++) {
-            d.getDate();
-            d.setHours(0);
-            d.setMinutes(0);
-            long b = d.getTime();
-            long q =childArr.get(i).getBirthday();
-            Date p = new Date();
-            p.setTime(q);
-            progress[i] =  (b - q);
+            progress[i] =  d.getTime() - childArr.get(i).getBirthday();
             long a = (long) Math.floor(progress[i]/(1000*60*60*24));
             progress[i] = a;
         }

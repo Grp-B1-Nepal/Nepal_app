@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/btnCategory"
-        android:layout_width="350sp"
+        android:layout_width="345sp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -17,20 +17,22 @@
         android:drawableTop="@drawable/ic_reho_recommended"
         android:text="textOnBtn"
         android:textColor="#FFFFFF"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.577"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recviewRecipe"
-        android:layout_width="368dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/btnCategory"
         app:layout_constraintTop_toBottomOf="@+id/btnCategory" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

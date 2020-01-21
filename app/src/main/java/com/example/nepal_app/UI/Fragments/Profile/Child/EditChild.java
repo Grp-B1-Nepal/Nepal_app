@@ -72,7 +72,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
 
         buttonBirthday = view2.findViewById(R.id.pickdate_button);
         buttonImage = view2.findViewById(R.id.picture);
-        buttonBack = view2.findViewById(R.id.button_editBack);
         buttonSave = view2.findViewById(R.id.save_button);
         buttonDelete = view2.findViewById(R.id.button_deleteChild);
 
@@ -157,11 +156,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
             Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
             startActivityForResult(gallery, PICK_IMAGE);
 
-        } else if (buttonBack.equals(v)) {
-            FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
-            fm.popBackStack();
-
-
         } else if (buttonDelete.equals(v)) {
             childInfo.deleteChildImage(position, getContext());
 
@@ -240,9 +234,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
      */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Bitmap bitmapTemp;
-        float degree;
         Matrix matrix = new Matrix();
-        String filePath;
         try {
 
             if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
@@ -250,15 +242,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
                 editBitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = editBitmap;
 
-
-                String[] filePathColumn = {MediaStore.Images.Media.DATA};
-
-                Cursor cursor = getActivity().getContentResolver().query(imageUri, filePathColumn, null, null, null);
-                cursor.moveToFirst();
-
-                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                filePath = cursor.getString(columnIndex);
-                cursor.close();
 
                 //Rotation of image
                 if(editBitmap.getWidth() > editBitmap.getHeight()) {
@@ -283,37 +266,5 @@ public class EditChild extends Fragment implements View.OnClickListener {
         }
     }
 
-
-    /**
-     * Rotation image
-     */
-    private int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
-        int rotate = 0;
-        try {
-            context.getContentResolver().notifyChange(imageUri, null);
-            File imageFile = new File(imagePath);
-
-            ExifInterface exif = new ExifInterface(imageFile.getAbsolutePath());
-            int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-
-            switch (orientation) {
-                case ExifInterface.ORIENTATION_ROTATE_270:
-                    rotate = 270;
-                    break;
-                case ExifInterface.ORIENTATION_ROTATE_180:
-                    rotate = 180;
-                    break;
-                case ExifInterface.ORIENTATION_ROTATE_90:
-                    rotate = 90;
-                    break;
-            }
-
-            Log.i("RotateImage", "Exif orientation: " + orientation);
-            Log.i("RotateImage", "Rotate value: " + rotate);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return rotate;
-    }
 
 }

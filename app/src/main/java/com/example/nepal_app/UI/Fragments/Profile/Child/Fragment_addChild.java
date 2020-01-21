@@ -86,7 +86,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         save.setOnClickListener(this);
         Button deleteButton = view2.findViewById(R.id.button_deleteChild);
         deleteButton.setVisibility(View.INVISIBLE);
-        buttonBack = view2.findViewById(R.id.button_editBack);
         buttonBack.setOnClickListener(this);
 
         childInfo = ChildInfo.getInstance();
@@ -184,9 +183,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             }
         } else if (v == pick_date) {
             showDateDialog();
-        } else if (v == buttonBack){
-            FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
-            fm.popBackStack();
         }
     }
 

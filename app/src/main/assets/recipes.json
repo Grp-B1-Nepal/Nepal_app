@@ -1,18 +1,18 @@
 [
   {
-  "name": "NEPALESE POTATO, TOMATO AND PEA CURRY", "image": "dab", "tag": "recommended",
+  "name": "VEGGIE CURRY", "image": "curryrec", "tag": "recommended",
   "recipe": [
       {
         "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
+          "ingredient_oil",
+          "ingredient_onion",
+          "ingredient_blackpepper",
+          "ingredient_chili",
+          "ingredient_garlic",
+          "ingredient_ginger",
+          "ingredient_turmeric",
+          "ingredient_salt",
+          "ingredient_potato"
         ],
         "ingrediens": [
           "1 tablespoon cooking oil",
@@ -37,371 +37,311 @@
     ]
   },
   {
-    "name": "NEPALI CHICKEN TARKARI AND PEA CURRY", "image": "dish", "tag": "recommended",
+    "name": "CHICKEN MOMOS", "image": "dish1", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
+          "ingredient_flour",
+          "ingredient_oil",
+          "ingredient_onion",
+          "ingredient_garlic",
+          "ingredient_ginger",
+          "ingredient_carrot",
+          "ingredient_coriander",
+          "ingredient_garammasala",
+          "ingredient_cumin",
+          "ingredient_blackpepper",
+          "ingredient_salt"
         ],
         "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
-          "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
+          "100g flour",
+          "1 tablespoon oil",
+          "1/2 medium onion, finely chopped",
+          "2 large garlic cloves, finely grated",
+          "12g piece peeled ginger, finely grated",
+          "60g carrot, finely grated and excess liquid squeezed out",
+          "1/3 cup finely chopped coriander stalks",
+          "1 tablespoon garam masala",
+          "1 tablespoon ground cumin",
+          "1/2 tablespoon black pepper",
+          "1/2 tablespoon salt"
         ],
         "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
+          "To make the dough, combine the flour and 100- 120 ml cold water in a bowl until the mixture comes together. Knead until smooth and soft, then cover with a damp tea towel and allow to rest while you make the filling.",
+          "Place all the filling ingredients in a large bowl and combine well. To check the seasoning, fry off a little bit of the filling in a frying pan, taste and adjust as necessary.",
+          "Place a large steamer on to boil and line the steamer tray with a disc of lightly greased baking paper.",
+          "Roll the dough into a log on your work surface, then cut into 20- 22 even pieces. Working with one piece of dough at a time and keeping the rest covered with a tea towel to prevent drying out, shape into a ball, then roll out on a lightly floured surface into a very thin circle about 6 -7 cm in diameter.  Place a generous teaspoon of the filling in the centre and enclose the filling. I take the momo in my right hand and use my thumb and forefinger to enclose the filling by gathering the edges of the dough and pleating as I stick them together. Make sure the filling stays away from the edges. Place directly into the steamer basket, seam-side up. Repeat with the remaining dough and filling. Once they are all done, place the momo in the steamer, cover and steam for 12-14 minutes or until the dough is no longer sticky.",
+          "To make the dipping sauce, heat a chargrill pan over high heat and cook the tomatoes and chillies, turning occasionally until the skin has blackened. When cool enough to handle, peel and chop the tomatoes, then seed and chop the chillies. Heat the oil in a small frying pan over low heat. Add the garlic and cook for 30 seconds or until fragrant and beginning to colour. Add the ginger, sugar, tomato, chilli and vinegar. Season to taste and combine well, then serve warm or at room temperature with the hot momo."
         ]
       }
     ]
   },
   {
-    "name": "NEPALI CHICKEN TARKARI PEA CURRY", "image": "dish", "tag": "recommended",
+    "name": "VEGETABLE PAKORA", "image": "dish2", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
+          "ingredient_onion",
+          "ingredient_cabbage",
+          "ingredient_potato",
+          "ingredient_spinach",
+          "ingredient_chili",
+          "ingredient_cumin",
+          "ingredient_coriander",
+          "ingredient_garammasala",
+          "ingredient_salt",
+          "ingredient_oil"
         ],
         "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
-          "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
+          "1 onion, sliced thinly",
+          "100g cabbage, very thinly sliced",
+          "100g potatoes, grated",
+          "50g baby spinach leaves",
+          "2 long green chillies, chopped",
+          "2 tablespoon ground cumin",
+          "2 tablespoon ground coriander",
+          "2 tablespoon garam masala",
+          "1 tablespoon salt",
+          "1l oil"
         ],
         "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
+          "For the tomato chutney, preheat oven to 160˚C. Place the tomatoes on a baking paper-lined tray and roast for 45 minutes-1 hour, or until very tender and a deep red colour. Remove the skins, place in a blender with the cumin, ground coriander, chilli and salt, and blend until smooth.",
+          "Preheat oil to 180˚C. Place the onion, cabbage, potato, spinach, green chilli, cumin, coriander, garam masala and salt in a large bowl and mix. Sprinkle the besan or chickpea flour and mix well. Gradually add about 150 ml water, and continue mixing until the vegetables stick to each other and you are able to shape them.",
+          "Gently place pieces of the pakora mixture (about 1 tbsp each) into the hot oil and fry in batches for 3-4 minutes, turning gently until golden. Remove the pakora with a slotted spoon and place on a paper towel to soak up excess oil. Serve hot with coriander and tomato chutney."
         ]
       }
     ]
   },
   {
-    "name": "NEPALESE POTATO, TOMATO", "image": "dab", "tag": "recommended",
+    "name": "LAMB SEKUWA", "image": "lambsekuwa", "tag": "snack",
     "recipe": [
       {
         "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
+          "ingredient_salt",
+          "ingredient_lemon",
+          "ingredient_turmeric",
+          "ingredient_garammasala",
+          "ingredient_ginger",
+          "ingredient_garlic",
+          "ingredient_chili",
+          "ingredient_yogurt",
+          "ingredient_lamb",
+          "ingredient_butter",
+          "ingredient_salt"
         ],
         "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
           "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
+          "1 tablespoon lemon juice",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon garam masala",
+          "1 tablespoon ginger, finely chopped",
+          "1 tablespoon garlic, finely chopped",
+          "2 small fresh green chillies, finely chopped",
+          "1/2 cup plain yogurt",
+          "1kg lamb leg",
+          "2 tablespoon butter",
+          "1 teaspoon salt"
         ],
         "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
+          "You will need to begin this recipe one day ahead, to marinate the meat overnight.",
+          "Combine all the marinade ingredients in a mixing bowl, add the lamb, and mix well, making sure that each piece is coated. Cover and refrigerate for at least 8 hours.\n\n",
+          "Preheat a charcoal barbeque or chargrill to medium-high heat. Remove the lamb from the marinade, and thread onto the skewers. Grill for 8-10 minutes turning frequently and basting with the melted butter or ghee, or until the lamb is brown on all sides and cooked through.",
+          "Remove from grill, season to taste and drizzle with lemon juice. Serve immediately with beaten rice, tomato pickle or other condiments."
         ]
       }
     ]
   },
   {
-    "name": "NEPALI CHICKEN TARKARI, TOMATO", "image": "dish", "tag": "recommended",
+    "name": "GWARAMARI BREAD", "image": "nepalesegwaramari", "tag": "snack",
     "recipe": [
       {
         "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
+          "ingredient_flour",
+          "ingredient_bakingpowder",
+          "ingredient_ginger",
+          "ingredient_garlic",
+          "ingredient_cumin",
+          "ingredient_coriander",
+          "ingredient_salt",
+          "ingredient_blackpepper",
+          "ingredient_oil",
+          "ingredient_water"
         ],
         "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
+          "250g flour",
+          "1 teaspoon baking powder",
+          "1/4 teaspoon finely grated fresh ginger",
+          "1/4 teaspoon finely grated garlic",
+          "1/4 teaspoon ground cumin",
+          "1/4 teaspoon ground coriander",
           "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
+          "1 teaspoon black pepper",
+          "1l oil",
+          "1 cup of water"
         ],
         "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
+          "Combine the flour, baking powder, ginger, garlic, cumin, coriander, and salt and pepper in a mixing bowl. Carefully add the water, stirring continuously, until the flour becomes a thick paste. Cover the bowl with plastic wrap and place in the fridge overnight.",
+          "Heat the oil in a deep saucepan to 190ºC. Stir the dough with a large metal spoon to deflate. When oil is ready, take a small ladleful (about 30g or 1 ½ tbsp) of the dough, make a small ball, place it gently into the oil, being careful of the hot oil. Fry for 4-5 minutes or until golden brown and crisp on the outside.",
+          "Remove the gwaramari from the oil with a slotted spoon. Rest on paper towel to drain excess oil. Serve hot with tea or chutney."
         ]
       }
     ]
   },
   {
-    "name": "NEPALI CHICKEN TARKARI", "image": "dab", "tag": "recommended",
+    "name": "AALOO TAMA", "image": "aaloo_tamba", "tag": "snack",
     "recipe": [
       {
         "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
+          "ingredient_blackbeans",
+          "ingredient_oil",
+          "ingredient_onion",
+          "ingredient_ginger",
+          "ingredient_potato",
+          "ingredient_cumin",
+          "ingredient_coriander",
+          "ingredient_chili",
+          "ingredient_bamboo"
         ],
         "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
-          "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
+          "95g dried black-eyed beans",
+          "2 tablespoon oil",
+          "1/2 onion, sliced",
+          "1/2 teaspoon finely grated ginger",
+          "2 potatos, peeled and diced",
+          "2 teaspoon ground cumin",
+          "2 teaspoon ground coriander",
+          "2 teaspoon chili flakes",
+          "50g bamboo shoots"
         ],
         "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
+          "Soak black-eyed beans overnight. Drain the water when ready to cook.",
+          "Pour oil into a saucepan and place over medium heat. Once the oil is hot, fry the onion, ginger and garlic until golden. Add the potato and soaked beans to the pan and fry for few minutes, stirring regularly, then add the cumin, ground coriander, chilli and salt. ",
+          "Once you smell the spicy aroma (1-2 minutes), add 1 litre (4 cups) boiling water and simmer until the potatoes and beans are tender.",
+          "Add bamboo shoots and simmer until warmed through. If using fresh bamboo shoots, simmer until tender. Garnish with coriander and serve."
         ]
       }
     ]
   },
   {
-    "name": "NEPALESE POTATO, TOMATO AND PEA CURRY", "image": "dish", "tag": "recommended",
+    "name": "AALOO KO ACHAR", "image": "aloo", "tag": "common",
     "recipe": [
       {
         "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
+          "ingredient_potato",
+          "ingredient_oil",
+          "ingredient_cumin",
+          "ingredient_turmeric",
+          "ingredient_coriander",
+          "ingredient_chili",
+          "ingredient_lemon",
+          "ingredient_salt"
         ],
         "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
-          "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
+          "6 potatos",
+          "1l oil",
+          "1/2 a cup of sesame seeds",
+          "1/2 a cup of cumin",
+          "1/5 tablespoon of turmeric",
+          "1 tablespoon of coriander",
+          "5 green chilis",
+          "1l of lemon juice",
+          "1 teaspoon salt"
         ],
         "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
+          "Boil potatoes, peel it and chop into quarters",
+          "Roast sesame seeds (Teel) (half cup) on a pan till it turns light brown and starts crackling, after which grind it in a food processor",
+          "Heat half cup of oil in frying pan and add about 30 – 40 methi seeds till it turns dark brown",
+          "Add cut green chilies (about 6 – 9 depending on your taste) light fry chilies for 20 seconds",
+          "Add spoonful of coriander, cumin and 1/5 of turmeric powder",
+          "Add the ground sesame seeds and salt to taste",
+          "Cook for a minute in low flame. Stir it continuously",
+          "Add the potatoes cook for about 3-4 minutes (stirring continuously)",
+          "Add half cup of fresh lime/lemon juice. Mix it very well",
+          "Garnish with fresh chopped coriander leaves"
         ]
       }
     ]
   },
   {
-    "name": "NEPALI CHICKEN TARKARI", "image": "dab", "tag": "recommended",
+    "name": "KWATI WITH CHICKEN", "image": "dish", "tag": "common",
     "recipe": [
       {
         "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
+          "ingredient_kwati",
+          "ingredient_chicken",
+          "ingredient_oil",
+          "ingredient_salt",
+          "ingredient_turmeric",
+          "ingredient_coriander",
+          "ingredient_cumin",
+          "ingredient_chili"
         ],
         "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
-          "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
+          "200g kwati",
+          "100g chicken",
+          "3 tablespoon oil",
+          "1 tablespoon salt",
+          "1/2 tablespoon turmeric",
+          "1/2 tablespoon coriander",
+          "1/2 tablespoon cumin ",
+          "1/2 tablespoon chilipowder"
         ],
         "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
+          "Soak Kwati for a night",
+          "If you want them to be sprout then soak it for 2 nights and drain it in a soft cloth for about 2 days.",
+          "When you see the right amount of sprouts in it (the amount you would like to have)",
+          "Heat the pressure cooker in the gas",
+          "Add some oil",
+          "When the oil is hot add some fenugreek and thyme seed",
+          "When they turn brown add red chilies",
+          "Add the Kwati in the pressure cooker",
+          "Fry it for few minutes then add turmeric and salt",
+          "Now add the small cut pieces of chicken in the cooker and let it cook for 5 to 7 minutes",
+          "Put the lid of the pressure cooker and let it have 5 whistles.",
+          "Take the cooker immediately out of the gas and take off the lid",
+          "Pour it in the pan and cook it until it is well cooked"
         ]
       }
     ]
   },
   {
-    "name": "NEPALESE POTATO, TOMATO", "image": "dish", "tag": "recommended",
+    "name": "KWATI WITH BEEF", "image": "dish", "tag": "common",
     "recipe": [
       {
         "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
+          "ingredient_kwati",
+          "ingredient_cow",
+          "ingredient_oil",
+          "ingredient_salt",
+          "ingredient_turmeric",
+          "ingredient_coriander",
+          "ingredient_cumin",
+          "ingredient_chili"
         ],
         "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
-          "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
+          "200g kwati",
+          "100g beef",
+          "3 tablespoon oil",
+          "1 tablespoon salt",
+          "1/2 tablespoon turmeric",
+          "1/2 tablespoon coriander",
+          "1/2 tablespoon cumin ",
+          "1/2 tablespoon chilipowder"
         ],
         "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
-        ]
-      }
-    ]
-  },
-  {
-    "name": "NEPALI CHICKEN TARKARI", "image": "dab", "tag": "recommended",
-    "recipe": [
-      {
-        "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
-        ],
-        "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
-          "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
-        ],
-        "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
-        ]
-      }
-    ]
-  },
-  {
-    "name": "NEPALESE POTATO", "image": "dab", "tag": "recommended",
-    "recipe": [
-      {
-        "images": [
-          "chicken",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "curry",
-          "pepper",
-          "chicken",
-          "chicken"
-        ],
-        "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
-          "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
-        ],
-        "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
+          "Soak Kwati for a night",
+          "If you want them to be sprout then soak it for 2 nights and drain it in a soft cloth for about 2 days.",
+          "When you see the right amount of sprouts in it (the amount you would like to have)",
+          "Heat the pressure cooker in the gas",
+          "Add some oil",
+          "When the oil is hot add some fenugreek and thyme seed",
+          "When they turn brown add red chilies",
+          "Add the Kwati in the pressure cooker",
+          "Fry it for few minutes then add turmeric and salt",
+          "Now add the small cut pieces of beef in the cooker and let it cook for 5 to 7 minutes",
+          "Put the lid of the pressure cooker and let it have 5 whistles.",
+          "Take the cooker immediately out of the gas and take off the lid",
+          "Pour it in the pan and cook it until it is well cooked"
         ]
       }
     ]

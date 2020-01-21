@@ -1,9 +1,11 @@
 package com.example.nepal_app.UI.Fragments.Profile.Child;
 
 
+import android.Manifest;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -26,6 +28,8 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -117,9 +121,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 Uri imageUri = data.getData();
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = bitmap;
-                bitmap = Bitmap.createBitmap(bitmapTemp, 0,0, bitmap.getWidth(),bitmap.getHeight(),matrix,true);
-                bitmap = Bitmap.createScaledBitmap(bitmap,200,300,true);
-
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
 
                 Cursor cursor = getActivity().getContentResolver().query(imageUri, filePathColumn, null, null, null);
@@ -130,8 +131,13 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                 cursor.close();
 
                 //Rotate image
-                degree = getCameraPhotoOrientation(getContext(), imageUri, filePath);
-                matrix.setRotate(degree);
+                if(bitmap.getWidth() > bitmap.getHeight()) {
+                    matrix.postRotate(90);
+                }
+
+                bitmap = Bitmap.createBitmap(bitmapTemp, 0,0, bitmap.getWidth(),bitmap.getHeight(),matrix,true);
+                bitmap = Bitmap.createScaledBitmap(bitmap,200,300,true);
+
 
                 //Get round image
                 Glide.with(this).load(bitmap).
@@ -226,39 +232,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();
         }
     }
-
-
-
-    //Rotate image
-    private int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
-        int rotate = 0;
-        try {
-            context.getContentResolver().notifyChange(imageUri, null);
-            File imageFile = new File(imagePath);
-
-            ExifInterface exif = new ExifInterface(imageFile.getAbsolutePath());
-            int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-
-            switch (orientation) {
-                case ExifInterface.ORIENTATION_ROTATE_270:
-                    rotate = 270;
-                    break;
-                case ExifInterface.ORIENTATION_ROTATE_180:
-                    rotate = 180;
-                    break;
-                case ExifInterface.ORIENTATION_ROTATE_90:
-                    rotate = 90;
-                    break;
-            }
-
-            Log.i("RotateImage", "Exif orientation: " + orientation);
-            Log.i("RotateImage", "Rotate value: " + rotate);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return rotate;
-    }
-
+    
 }
 
 

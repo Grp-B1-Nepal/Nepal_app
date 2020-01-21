@@ -46,7 +46,7 @@
             android:bottomLeftRadius="30dp"
             android:bottomRightRadius="30dp"
             android:drawableLeft="@drawable/ic_action_name"
-            android:text="जानकारी सम्पादन गर्नुहोस्"
+            android:text="जानकारी"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:topLeftRadius="30dp"

@@ -249,8 +249,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
                 imageUri = data.getData();
                 editBitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = editBitmap;
-                editBitmap = Bitmap.createBitmap(bitmapTemp, 0,0, editBitmap.getWidth(),editBitmap.getHeight(),matrix,true);
-                editBitmap = Bitmap.createScaledBitmap(editBitmap,200,300,true);
+
 
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
 
@@ -262,8 +261,13 @@ public class EditChild extends Fragment implements View.OnClickListener {
                 cursor.close();
 
                 //Rotation of image
-                degree = getCameraPhotoOrientation(getContext(), imageUri, filePath);
-                matrix.setRotate(degree);
+                if(editBitmap.getWidth() > editBitmap.getHeight()) {
+                    matrix.postRotate(90);
+                }
+
+
+                editBitmap = Bitmap.createBitmap(bitmapTemp, 0,0, editBitmap.getWidth(),editBitmap.getHeight(),matrix,true);
+                editBitmap = Bitmap.createScaledBitmap(editBitmap,200,300,true);
 
                 //Get round image
                 Glide.with(this).load(editBitmap).

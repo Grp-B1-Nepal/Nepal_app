@@ -232,7 +232,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();
         }
     }
-    
+
 }
 
 

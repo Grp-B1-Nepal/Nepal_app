@@ -26,6 +26,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
@@ -40,6 +41,8 @@ import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -112,23 +115,13 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
      */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Bitmap bitmapTemp;
-        float degree;
         Matrix matrix = new Matrix();
-        String filePath;
         try {
 
             if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
                 Uri imageUri = data.getData();
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = bitmap;
-                String[] filePathColumn = {MediaStore.Images.Media.DATA};
-
-                Cursor cursor = getActivity().getContentResolver().query(imageUri, filePathColumn, null, null, null);
-                cursor.moveToFirst();
-
-                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                filePath = cursor.getString(columnIndex);
-                cursor.close();
 
                 //Rotate image
                 if(bitmap.getWidth() > bitmap.getHeight()) {

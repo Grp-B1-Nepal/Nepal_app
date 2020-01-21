@@ -41,7 +41,7 @@ import static android.app.Activity.RESULT_OK;
 
 public class EditChild extends Fragment implements View.OnClickListener {
     private int position;
-    private Button buttonBirthday, buttonBack, buttonSave, buttonDelete, buttonImage;
+    private Button buttonBirthday, buttonSave, buttonDelete, buttonImage;
     private EditText editName;
     private Bitmap editBitmap;
     private String name, gender, birthday, oldName;
@@ -67,7 +67,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
         position = childInfo.getPosition();
         editName = view2.findViewById(R.id.name);
 
-
         genders = view2.findViewById(R.id.gender_spinner);
 
         buttonBirthday = view2.findViewById(R.id.pickdate_button);
@@ -78,7 +77,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
         buttonDelete.setOnClickListener(this);
         buttonBirthday.setOnClickListener(this);
         buttonImage.setOnClickListener(this);
-        buttonBack.setOnClickListener(this);
         buttonSave.setOnClickListener(this);
 
         image = view2.findViewById(R.id.downloaded_picture);
@@ -166,7 +164,6 @@ public class EditChild extends Fragment implements View.OnClickListener {
                 }
             } else
                 arr.remove(position);
-
             childInfo.setChildArr(arr, getContext());
             FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
             fm.popBackStack();

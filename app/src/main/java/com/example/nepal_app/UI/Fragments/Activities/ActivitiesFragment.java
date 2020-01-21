@@ -34,15 +34,13 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
     private int agerange = 1;
     private int imagenum = 0;
     private ChildInfo childInfo;
-    public MediaPlayer mediaPlayer= new MediaPlayer();
+    private MediaPlayer mediaPlayer= new MediaPlayer();
     private ArrayList<ChildObj> childList = new ArrayList<>();
 
 
     public ActivitiesFragment() {
         // Required empty public constructor
     }
-
-
 
 
     @Override
@@ -97,18 +95,15 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
     /**
      * This method checks which of the buttons in the top is marked. The top buttons are the three months choosing the age range.
      */
-    public void topbuttoncheck () {
+    private void topbuttoncheck() {
 
         childInfo = ChildInfo.getInstance();
         childList = childInfo.getChildArr(getContext());
         //If the childlist is 0 we just want this one shown
-        if (childList.size() == 0 ) {
-            //months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+        if (childList.size() == 0) {
             months04.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
-
             //Agerange will only be 0 the first time you enter, therefore we need it to select based upon the age of the current child.
-        } else if (agerange == 0){
-            childInfo.getMonthProgress();
+        } else {
             switch (childInfo.getMonthProgress()) {
                 case 1:
                 case 2:
@@ -130,13 +125,6 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
                     months912.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
                     break;
             }
-            //theese 3 if statements serve their purpose upon back pressed. It remembers the it when another fragment is inflated to remember the users selection.
-        } else if (agerange == 1) {
-            months04.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
-        } else if (agerange == 2) {
-            months58.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
-        } else if (agerange == 3) {
-            months58.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
         }
     }
 
@@ -382,32 +370,32 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
     // Little pogo for passing on the values to the adapter.
     final class ActivityPOJO {
-        public String headlinetext;
-        public int informationnum;
-        public ArrayList<Integer> soundnumberlist;
-        public int imagenum;
+        String headlinetext;
+        int informationnum;
+        ArrayList<Integer> soundnumberlist;
+        int imagenum;
 
-        public ActivityPOJO(String headlinetext, int informationnum, ArrayList<Integer> soundnumberlist, int imagenum) {
+        ActivityPOJO(String headlinetext, int informationnum, ArrayList<Integer> soundnumberlist, int imagenum) {
             this.headlinetext = headlinetext;
             this.informationnum = informationnum;
             this.soundnumberlist = soundnumberlist;
             this.imagenum = imagenum;
         }
 
-        public ArrayList<Integer> getSoundnumberlist() { return soundnumberlist; }
+        ArrayList<Integer> getSoundnumberlist() { return soundnumberlist; }
 
-        public int getImagenum() { return imagenum; }
+        int getImagenum() { return imagenum; }
 
-        public int getInformationnum() { return informationnum; }
+        int getInformationnum() { return informationnum; }
 
-        public String getHeadlinetext() { return headlinetext; }
+        String getHeadlinetext() { return headlinetext; }
 
-        public void setHeadlinetext(String headlinetext) { this.headlinetext = headlinetext; }
+        void setHeadlinetext(String headlinetext) { this.headlinetext = headlinetext; }
 
-        public void setInformationnum(int informationnum) { this.informationnum = informationnum; }
+        void setInformationnum(int informationnum) { this.informationnum = informationnum; }
 
-        public void setSoundnumberlist(ArrayList<Integer> soundnumberlist) { this.soundnumberlist = soundnumberlist; }
+        void setSoundnumberlist(ArrayList<Integer> soundnumberlist) { this.soundnumberlist = soundnumberlist; }
 
-        public void setImagenum(int imagenum) { this.imagenum = imagenum; }
+        void setImagenum(int imagenum) { this.imagenum = imagenum; }
     }
 }

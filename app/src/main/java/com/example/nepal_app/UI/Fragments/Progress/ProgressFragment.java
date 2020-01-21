@@ -320,7 +320,6 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
                 info2.setText(R.string.info2_12);
                 soundfile1 = R.raw.development_info1_12;
                 soundfile2 = R.raw.development_info2_789;
-
         }
     }
 }

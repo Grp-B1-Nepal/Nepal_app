@@ -1,407 +1,407 @@
 [
   {
-  "name": "BANANA CAKE", "image": "banana_cake", "tag": "recommended",
+  "name": "NEPALESE POTATO, TOMATO AND PEA CURRY", "image": "dab", "tag": "recommended",
   "recipe": [
       {
         "images": [
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "egg_image",
-          "recipehome_cake"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "1 1/2 cups all-purpose flour",
-          "2/3 cup white sugar",
-          "1 1/2 teaspoons baking powder",
-          "1/4 teaspoon salt",
-          "1 cup mashed bananas",
-          "1 egg",
-          "1/2 cup unsalted butter, melted",
-          "1/4 cup milk",
-          "3/4 cup semisweet chocolate chips"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
-          "In a large bowl, mix flour, sugar, baking powder and salt.",
-          "In a separate bowl, combine bananas, egg, melted butter and milk.",
-          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
-          "Stir in chocolate chips.",
-          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]
   },
   {
-    "name": "CHICKEN IN A BOX", "image": "recipehome_chicken", "tag": "snack",
+    "name": "NEPALI CHICKEN TARKARI AND PEA CURRY", "image": "dish", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "item2",
-          "item2",
-          "item2",
-          "item2",
-          "item2",
-          "item2",
-          "item2",
-          "item2",
-          "item2"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "directions2",
-          "directions2",
-          "directions2",
-          "directions2",
-          "directions2",
-          "directions2"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]
   },
   {
-    "name": "BANANA IN A BOX", "image": "recipehome_bananas", "tag": "common",
+    "name": "NEPALI CHICKEN TARKARI PEA CURRY", "image": "dish", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "item3",
-          "item3",
-          "item3",
-          "item3",
-          "item3",
-          "item3",
-          "item3",
-          "item3",
-          "item3"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "directions3",
-          "directions3",
-          "directions3",
-          "directions3",
-          "directions3",
-          "directions3"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]
   },
   {
-    "name": "Chocolate Cake", "image": "cake1", "tag": "recommended",
+    "name": "NEPALESE POTATO, TOMATO", "image": "dab", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "egg_image",
-          "recipehome_cake"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "1 1/2 cups all-purpose flour",
-          "2/3 cup white sugar",
-          "1 1/2 teaspoons baking powder",
-          "1/4 teaspoon salt",
-          "1 cup mashed bananas",
-          "1 egg",
-          "1/2 cup unsalted butter, melted",
-          "1/4 cup milk",
-          "3/4 cup semisweet chocolate chips"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
-          "In a large bowl, mix flour, sugar, baking powder and salt.",
-          "In a separate bowl, combine bananas, egg, melted butter and milk.",
-          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
-          "Stir in chocolate chips.",
-          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]
   },
   {
-    "name": "Vanilla Cake", "image": "cake2", "tag": "snack",
+    "name": "NEPALI CHICKEN TARKARI, TOMATO", "image": "dish", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "egg_image",
-          "recipehome_cake"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "1 1/2 cups all-purpose flour",
-          "2/3 cup white sugar",
-          "1 1/2 teaspoons baking powder",
-          "1/4 teaspoon salt",
-          "1 cup mashed bananas",
-          "1 egg",
-          "1/2 cup unsalted butter, melted",
-          "1/4 cup milk",
-          "3/4 cup semisweet chocolate chips"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
-          "In a large bowl, mix flour, sugar, baking powder and salt.",
-          "In a separate bowl, combine bananas, egg, melted butter and milk.",
-          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
-          "Stir in chocolate chips.",
-          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]
   },
   {
-    "name": "Princess Dream", "image": "cake3", "tag": "snack",
+    "name": "NEPALI CHICKEN TARKARI", "image": "dab", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "egg_image",
-          "recipehome_cake"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "1 1/2 cups all-purpose flour",
-          "2/3 cup white sugar",
-          "1 1/2 teaspoons baking powder",
-          "1/4 teaspoon salt",
-          "1 cup mashed bananas",
-          "1 egg",
-          "1/2 cup unsalted butter, melted",
-          "1/4 cup milk",
-          "3/4 cup semisweet chocolate chips"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
-          "In a large bowl, mix flour, sugar, baking powder and salt.",
-          "In a separate bowl, combine bananas, egg, melted butter and milk.",
-          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
-          "Stir in chocolate chips.",
-          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]
   },
   {
-    "name": "Chocolate Dream", "image": "cake4", "tag": "common",
+    "name": "NEPALESE POTATO, TOMATO AND PEA CURRY", "image": "dish", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "egg_image",
-          "recipehome_cake"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "1 1/2 cups all-purpose flour",
-          "2/3 cup white sugar",
-          "1 1/2 teaspoons baking powder",
-          "1/4 teaspoon salt",
-          "1 cup mashed bananas",
-          "1 egg",
-          "1/2 cup unsalted butter, melted",
-          "1/4 cup milk",
-          "3/4 cup semisweet chocolate chips"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
-          "In a large bowl, mix flour, sugar, baking powder and salt.",
-          "In a separate bowl, combine bananas, egg, melted butter and milk.",
-          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
-          "Stir in chocolate chips.",
-          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]
   },
   {
-    "name": "Fruit Cake", "image": "cake5", "tag": "common",
+    "name": "NEPALI CHICKEN TARKARI", "image": "dab", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "egg_image",
-          "recipehome_cake"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "1 1/2 cups all-purpose flour",
-          "2/3 cup white sugar",
-          "1 1/2 teaspoons baking powder",
-          "1/4 teaspoon salt",
-          "1 cup mashed bananas",
-          "1 egg",
-          "1/2 cup unsalted butter, melted",
-          "1/4 cup milk",
-          "3/4 cup semisweet chocolate chips"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
-          "In a large bowl, mix flour, sugar, baking powder and salt.",
-          "In a separate bowl, combine bananas, egg, melted butter and milk.",
-          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
-          "Stir in chocolate chips.",
-          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]
   },
   {
-    "name": "Berry Cake", "image": "cake6", "tag": "common",
+    "name": "NEPALESE POTATO, TOMATO", "image": "dish", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "egg_image",
-          "recipehome_cake"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "1 1/2 cups all-purpose flour",
-          "2/3 cup white sugar",
-          "1 1/2 teaspoons baking powder",
-          "1/4 teaspoon salt",
-          "1 cup mashed bananas",
-          "1 egg",
-          "1/2 cup unsalted butter, melted",
-          "1/4 cup milk",
-          "3/4 cup semisweet chocolate chips"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
-          "In a large bowl, mix flour, sugar, baking powder and salt.",
-          "In a separate bowl, combine bananas, egg, melted butter and milk.",
-          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
-          "Stir in chocolate chips.",
-          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]
   },
   {
-    "name": "Crispy Cake", "image": "cake7", "tag": "recommended",
+    "name": "NEPALI CHICKEN TARKARI", "image": "dab", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "egg_image",
-          "recipehome_cake"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "1 1/2 cups all-purpose flour",
-          "2/3 cup white sugar",
-          "1 1/2 teaspoons baking powder",
-          "1/4 teaspoon salt",
-          "1 cup mashed bananas",
-          "1 egg",
-          "1/2 cup unsalted butter, melted",
-          "1/4 cup milk",
-          "3/4 cup semisweet chocolate chips"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
-          "In a large bowl, mix flour, sugar, baking powder and salt.",
-          "In a separate bowl, combine bananas, egg, melted butter and milk.",
-          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
-          "Stir in chocolate chips.",
-          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]
   },
   {
-    "name": "Red Velvet Cake", "image": "cake8", "tag": "snack",
+    "name": "NEPALESE POTATO", "image": "dab", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "egg_image",
-          "recipehome_cake"
+          "chicken",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "curry",
+          "pepper",
+          "chicken",
+          "chicken"
         ],
         "ingrediens": [
-          "1 1/2 cups all-purpose flour",
-          "2/3 cup white sugar",
-          "1 1/2 teaspoons baking powder",
-          "1/4 teaspoon salt",
-          "1 cup mashed bananas",
-          "1 egg",
-          "1/2 cup unsalted butter, melted",
-          "1/4 cup milk",
-          "3/4 cup semisweet chocolate chips"
+          "1 tablespoon cooking oil",
+          "1 large onion, finely sliced",
+          "1/2 teaspoon ground black pepper",
+          "1-2 mild green chili",
+          "2 teaspoons garlic, chopped",
+          "1 teaspoon gingerroot, fresh grated",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon salt",
+          "2 cups potatoes, peeled and cubed"
         ],
         "directions": [
-          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
-          "In a large bowl, mix flour, sugar, baking powder and salt.",
-          "In a separate bowl, combine bananas, egg, melted butter and milk.",
-          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
-          "Stir in chocolate chips.",
-          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+          "Heat oil in a saucepan and fry onion until soft and golden.",
+          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
+          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
+          "Add the remaining ingredients and hot water.",
+          "Simmer until vegetables are cooked, thicken if necessary.",
+          "Serve with rice and accompaniments."
         ]
       }
     ]

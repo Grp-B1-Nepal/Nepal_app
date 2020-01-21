@@ -1,84 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profil_list"
     android:layout_width="match_parent"
-    android:layout_height="130dp"
-    android:padding="5dp">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="false"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Martha"
-        android:textColor="#0A0101"
-        android:textSize="18sp" />
 
-    <ImageView
-        android:id="@+id/image_children"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:visibility="visible"
-        app:srcCompat="@drawable/ellipse"
-        tools:visibility="visible" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="345dp"
+        android:layout_height="133dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/buttonshape_home"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/name"
-        android:layout_marginTop="105dp"
-        android:max="100"
-        android:progress="70"
-        android:progressBackgroundTint="#0C0201"
-        android:progressTint="@color/colorPrimary"
-        android:visibility="visible" />
+        <TextView
+            android:id="@+id/birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12/11/19"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
 
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="85dp"
-        android:layout_height="25dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/button_shape"
-        android:drawableLeft="@drawable/ic_action_name"
-        android:text="Edit info"
-        android:textAllCaps="false"
-        android:bottomRightRadius="30dp"
-        android:bottomLeftRadius="30dp"
-        android:topLeftRadius="30dp"
-        android:topRightRadius="30dp"
-        android:textColor="#FFFFFF" />
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="केटी"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/birthday" />
 
-    <TextView
-        android:id="@+id/num"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="240dp"
-        android:layout_marginTop="90dp"
-        android:text="700"
-        android:textColor="@color/colorPrimary" />
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/button_shape"
+            android:bottomLeftRadius="30dp"
+            android:bottomRightRadius="30dp"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:text="जानकारी"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:topLeftRadius="30dp"
+            android:topRightRadius="30dp"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="@+id/image_children"
+            app:layout_constraintTop_toBottomOf="@+id/image_children" />
 
-    <TextView
-        android:id="@+id/birthday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/name"
-        android:layout_marginTop="30dp"
-        android:text="12/11/19" />
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="700 दिन पुरानो"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar2" />
 
-    <TextView
-        android:id="@+id/gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/birthday"
-        android:layout_alignStart="@+id/birthday"
-        android:text="girl" />
+        <ImageView
+            android:id="@+id/image_children"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ellipse"
+            tools:visibility="visible" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="मार्था"
+            android:textColor="#0A0101"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toEndOf="@+id/image_children"
+            app:layout_constraintTop_toTopOf="@+id/image_children" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:max="1000"
+            android:progress="70"
+            android:progressBackgroundTint="#0C0201"
+            android:progressTint="@color/colorPrimary"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/edit"
+            app:layout_constraintStart_toStartOf="@+id/name" />
+
+        <ImageView
+            android:id="@+id/active"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/name"
+            app:layout_constraintStart_toEndOf="@+id/num"
+            app:srcCompat="@drawable/full_star_fill" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

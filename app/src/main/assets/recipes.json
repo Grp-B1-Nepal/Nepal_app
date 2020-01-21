@@ -1,0 +1,409 @@
+[
+  {
+  "name": "BANANA CAKE", "image": "banana_cake", "tag": "recommended",
+  "recipe": [
+      {
+        "images": [
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "egg_image",
+          "recipehome_cake"
+        ],
+        "ingrediens": [
+          "1 1/2 cups all-purpose flour",
+          "2/3 cup white sugar",
+          "1 1/2 teaspoons baking powder",
+          "1/4 teaspoon salt",
+          "1 cup mashed bananas",
+          "1 egg",
+          "1/2 cup unsalted butter, melted",
+          "1/4 cup milk",
+          "3/4 cup semisweet chocolate chips"
+        ],
+        "directions": [
+          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
+          "In a large bowl, mix flour, sugar, baking powder and salt.",
+          "In a separate bowl, combine bananas, egg, melted butter and milk.",
+          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
+          "Stir in chocolate chips.",
+          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CHICKEN IN A BOX", "image": "recipehome_chicken", "tag": "snack",
+    "recipe": [
+      {
+        "images": [
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image"
+        ],
+        "ingrediens": [
+          "item2",
+          "item2",
+          "item2",
+          "item2",
+          "item2",
+          "item2",
+          "item2",
+          "item2",
+          "item2"
+        ],
+        "directions": [
+          "directions2",
+          "directions2",
+          "directions2",
+          "directions2",
+          "directions2",
+          "directions2"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BANANA IN A BOX", "image": "recipehome_bananas", "tag": "common",
+    "recipe": [
+      {
+        "images": [
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image",
+          "egg_image"
+        ],
+        "ingrediens": [
+          "item3",
+          "item3",
+          "item3",
+          "item3",
+          "item3",
+          "item3",
+          "item3",
+          "item3",
+          "item3"
+        ],
+        "directions": [
+          "directions3",
+          "directions3",
+          "directions3",
+          "directions3",
+          "directions3",
+          "directions3"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chocolate Cake", "image": "cake1", "tag": "recommended",
+    "recipe": [
+      {
+        "images": [
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "egg_image",
+          "recipehome_cake"
+        ],
+        "ingrediens": [
+          "1 1/2 cups all-purpose flour",
+          "2/3 cup white sugar",
+          "1 1/2 teaspoons baking powder",
+          "1/4 teaspoon salt",
+          "1 cup mashed bananas",
+          "1 egg",
+          "1/2 cup unsalted butter, melted",
+          "1/4 cup milk",
+          "3/4 cup semisweet chocolate chips"
+        ],
+        "directions": [
+          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
+          "In a large bowl, mix flour, sugar, baking powder and salt.",
+          "In a separate bowl, combine bananas, egg, melted butter and milk.",
+          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
+          "Stir in chocolate chips.",
+          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vanilla Cake", "image": "cake2", "tag": "snack",
+    "recipe": [
+      {
+        "images": [
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "egg_image",
+          "recipehome_cake"
+        ],
+        "ingrediens": [
+          "1 1/2 cups all-purpose flour",
+          "2/3 cup white sugar",
+          "1 1/2 teaspoons baking powder",
+          "1/4 teaspoon salt",
+          "1 cup mashed bananas",
+          "1 egg",
+          "1/2 cup unsalted butter, melted",
+          "1/4 cup milk",
+          "3/4 cup semisweet chocolate chips"
+        ],
+        "directions": [
+          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
+          "In a large bowl, mix flour, sugar, baking powder and salt.",
+          "In a separate bowl, combine bananas, egg, melted butter and milk.",
+          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
+          "Stir in chocolate chips.",
+          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Princess Dream", "image": "cake3", "tag": "snack",
+    "recipe": [
+      {
+        "images": [
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "egg_image",
+          "recipehome_cake"
+        ],
+        "ingrediens": [
+          "1 1/2 cups all-purpose flour",
+          "2/3 cup white sugar",
+          "1 1/2 teaspoons baking powder",
+          "1/4 teaspoon salt",
+          "1 cup mashed bananas",
+          "1 egg",
+          "1/2 cup unsalted butter, melted",
+          "1/4 cup milk",
+          "3/4 cup semisweet chocolate chips"
+        ],
+        "directions": [
+          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
+          "In a large bowl, mix flour, sugar, baking powder and salt.",
+          "In a separate bowl, combine bananas, egg, melted butter and milk.",
+          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
+          "Stir in chocolate chips.",
+          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chocolate Dream", "image": "cake4", "tag": "common",
+    "recipe": [
+      {
+        "images": [
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "egg_image",
+          "recipehome_cake"
+        ],
+        "ingrediens": [
+          "1 1/2 cups all-purpose flour",
+          "2/3 cup white sugar",
+          "1 1/2 teaspoons baking powder",
+          "1/4 teaspoon salt",
+          "1 cup mashed bananas",
+          "1 egg",
+          "1/2 cup unsalted butter, melted",
+          "1/4 cup milk",
+          "3/4 cup semisweet chocolate chips"
+        ],
+        "directions": [
+          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
+          "In a large bowl, mix flour, sugar, baking powder and salt.",
+          "In a separate bowl, combine bananas, egg, melted butter and milk.",
+          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
+          "Stir in chocolate chips.",
+          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fruit Cake", "image": "cake5", "tag": "common",
+    "recipe": [
+      {
+        "images": [
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "egg_image",
+          "recipehome_cake"
+        ],
+        "ingrediens": [
+          "1 1/2 cups all-purpose flour",
+          "2/3 cup white sugar",
+          "1 1/2 teaspoons baking powder",
+          "1/4 teaspoon salt",
+          "1 cup mashed bananas",
+          "1 egg",
+          "1/2 cup unsalted butter, melted",
+          "1/4 cup milk",
+          "3/4 cup semisweet chocolate chips"
+        ],
+        "directions": [
+          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
+          "In a large bowl, mix flour, sugar, baking powder and salt.",
+          "In a separate bowl, combine bananas, egg, melted butter and milk.",
+          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
+          "Stir in chocolate chips.",
+          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Berry Cake", "image": "cake6", "tag": "common",
+    "recipe": [
+      {
+        "images": [
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "egg_image",
+          "recipehome_cake"
+        ],
+        "ingrediens": [
+          "1 1/2 cups all-purpose flour",
+          "2/3 cup white sugar",
+          "1 1/2 teaspoons baking powder",
+          "1/4 teaspoon salt",
+          "1 cup mashed bananas",
+          "1 egg",
+          "1/2 cup unsalted butter, melted",
+          "1/4 cup milk",
+          "3/4 cup semisweet chocolate chips"
+        ],
+        "directions": [
+          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
+          "In a large bowl, mix flour, sugar, baking powder and salt.",
+          "In a separate bowl, combine bananas, egg, melted butter and milk.",
+          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
+          "Stir in chocolate chips.",
+          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Crispy Cake", "image": "cake7", "tag": "recommended",
+    "recipe": [
+      {
+        "images": [
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "egg_image",
+          "recipehome_cake"
+        ],
+        "ingrediens": [
+          "1 1/2 cups all-purpose flour",
+          "2/3 cup white sugar",
+          "1 1/2 teaspoons baking powder",
+          "1/4 teaspoon salt",
+          "1 cup mashed bananas",
+          "1 egg",
+          "1/2 cup unsalted butter, melted",
+          "1/4 cup milk",
+          "3/4 cup semisweet chocolate chips"
+        ],
+        "directions": [
+          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
+          "In a large bowl, mix flour, sugar, baking powder and salt.",
+          "In a separate bowl, combine bananas, egg, melted butter and milk.",
+          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
+          "Stir in chocolate chips.",
+          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Red Velvet Cake", "image": "cake8", "tag": "snack",
+    "recipe": [
+      {
+        "images": [
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "recipehome_cake",
+          "egg_image",
+          "recipehome_cake"
+        ],
+        "ingrediens": [
+          "1 1/2 cups all-purpose flour",
+          "2/3 cup white sugar",
+          "1 1/2 teaspoons baking powder",
+          "1/4 teaspoon salt",
+          "1 cup mashed bananas",
+          "1 egg",
+          "1/2 cup unsalted butter, melted",
+          "1/4 cup milk",
+          "3/4 cup semisweet chocolate chips"
+        ],
+        "directions": [
+          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
+          "In a large bowl, mix flour, sugar, baking powder and salt.",
+          "In a separate bowl, combine bananas, egg, melted butter and milk.",
+          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
+          "Stir in chocolate chips.",
+          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+        ]
+      }
+    ]
+  }
+]

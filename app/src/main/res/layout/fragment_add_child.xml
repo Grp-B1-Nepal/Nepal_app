@@ -5,23 +5,30 @@
     android:id="@+id/addfrag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.child.Fragment_addChild">
+    tools:context=".UI.Fragments.Profile.Child.Fragment_addChild">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button_editBack"
-            android:layout_width="80dp"
+            android:id="@+id/picture"
+            android:layout_width="320dp"
             android:layout_height="40dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="40dp"
-            android:background="@drawable/button_shape"
-            android:text="Back"
-            android:textColor="#F2FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/button_deleteChild"
-            app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/buttonshape"
+            android:gravity="start|center_vertical"
+            android:paddingStart="10dp"
+            android:text="Choose image"
+            android:textAllCaps="false"
+            android:textColor="@color/hint"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle3" />
 
         <ImageView
             android:id="@+id/downloaded_picture"
@@ -33,93 +40,66 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/picture"
-            android:layout_width="321dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/layout_background_round_corners"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/downloaded_picture">
-
-            <TextView
-                android:id="@+id/picTex"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Choose picture"
-                android:textColor="#F7090101"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="10dp"
-                android:src="@drawable/ic_photo_library_black_24dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/picTex"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
         <TextView
             android:id="@+id/textViewTitle"
-            android:layout_width="381dp"
+            android:layout_width="320dp"
+            android:layout_height="31dp"
+            android:paddingStart="5dp"
+            android:text="Name"
+            android:textColor="#F80F0000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/downloaded_picture" />
+
+        <TextView
+            android:id="@+id/textViewTitle3"
+            android:layout_width="320dp"
             android:layout_height="31dp"
             android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:text="Name"
+            android:paddingStart="5dp"
+            android:text="Image"
+            android:textColor="#FA0A0000"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/picture" />
+            app:layout_constraintStart_toStartOf="@+id/picture"
+            app:layout_constraintTop_toBottomOf="@+id/pickdate_button" />
 
         <TextView
             android:id="@+id/textViewTitle2"
-            android:layout_width="381dp"
+            android:layout_width="320dp"
             android:layout_height="31dp"
             android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
+            android:paddingStart="5dp"
             android:text="Birthday"
+            android:textColor="#FC110000"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name" />
+            app:layout_constraintStart_toStartOf="@+id/pickdate_button"
+            app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
 
         <TextView
             android:id="@+id/textViewTitle4"
-            android:layout_width="381dp"
+            android:layout_width="320dp"
             android:layout_height="31dp"
             android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
+            android:paddingStart="5dp"
             android:text="Gender"
+            android:textColor="#F8090000"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pickdate_button" />
+            app:layout_constraintStart_toStartOf="@+id/gender_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
 
         <EditText
             android:id="@+id/name"
-            android:layout_width="321dp"
+            android:layout_width="320dp"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/layout_background_round_corners"
+            android:background="@drawable/buttonshape"
             android:ems="10"
-            android:gravity="center"
             android:hint="Write name"
             android:inputType="textCapSentences"
             android:maxLength="50"
-            android:textColor="#130101"
-            android:textColorHint="#130101"
+            android:paddingStart="10dp"
+            android:textColor="@color/hint"
+            android:textColorHint="@color/hint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -129,24 +109,27 @@
             android:id="@+id/save_button"
             android:layout_width="80dp"
             android:layout_height="40dp"
-            android:layout_marginStart="40dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/button_shape"
             android:text="Save"
             android:textColor="#F3EDED"
-            app:layout_constraintStart_toEndOf="@+id/button_deleteChild"
-            app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
+            app:layout_constraintEnd_toEndOf="@+id/picture"
+            app:layout_constraintTop_toBottomOf="@+id/picture" />
 
         <Button
             android:id="@+id/pickdate_button"
-            android:layout_width="318dp"
+            android:layout_width="320dp"
             android:layout_height="40dp"
             android:layout_marginStart="45dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="45dp"
-            android:background="@drawable/layout_background_round_corners"
+            android:background="@drawable/buttonshape"
+            android:gravity="start|center_vertical"
+            android:paddingStart="10dp"
             android:text="Pick date"
-            android:textColor="#070000"
+            android:textAllCaps="false"
+            android:textColor="@color/hint"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
@@ -154,14 +137,13 @@
 
         <Spinner
             android:id="@+id/gender_spinner"
-            android:layout_width="321dp"
+            android:layout_width="320dp"
             android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
+            android:layout_centerHorizontal="false"
             android:layout_centerVertical="true"
-            android:layout_marginStart="1dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="1dp"
-            android:background="@drawable/layout_background_round_corners"
+            android:background="@drawable/buttonshape"
+            android:paddingStart="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -172,13 +154,11 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/button_shape_back"
             android:text="Delete"
             android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
+            app:layout_constraintStart_toStartOf="@+id/picture"
+            app:layout_constraintTop_toBottomOf="@+id/picture" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

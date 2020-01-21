@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="15dp"
     android:id="@+id/parent_layout"
     android:background="@color/mainBackgroundColor">
 
@@ -12,23 +14,26 @@
         android:id="@+id/layoutListItemImage"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:paddingTop="5dp"
         tools:srcCompat="@tools:sample/avatars"
         android:background="@color/justWhite"/>
 
     <TextView
         android:id="@+id/layoutListItemFoodName"
+        android:fontFamily="@font/montserrat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/layoutListItemImage"
         android:gravity="center"
         android:text="2 x eggs"
+
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+
         android:background="@color/justWhite"
-        android:layout_marginBottom="2dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="5dp"
-        android:textColor="#80A53F"
-        android:textSize="17sp"
+        android:textColor="#333333"
+        android:textSize="20sp"
         />
 
 </RelativeLayout>

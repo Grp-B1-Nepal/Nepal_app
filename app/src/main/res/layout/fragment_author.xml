@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp">
+
+
+
+
+
+    <TextView
+        android:id="@+id/authorHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26dp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Gruppe B1 medlemmer" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/author_page_image"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="Anders-Richardt Eisenhardt s185146 \n Josephine Weirsøe s164177 \n Per Erik Fredrik Mejlsbye s185130 \n Nicklas Fritzen s180087 \n Jakob Mortensen s185134 \n Gustav Emil Nobert s185031"
+        android:textColor="#000000"
+        android:textSize="18dp" />
+</LinearLayout>

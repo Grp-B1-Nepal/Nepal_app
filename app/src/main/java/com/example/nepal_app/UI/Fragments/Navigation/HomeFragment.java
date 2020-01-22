@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.fragment.app.Fragment;
@@ -28,6 +29,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private ImageButton activitiesB, activitesSound, profileB, profileSound,
             progressB, progressSound, recipesB, recipesSound, quizB, quizSound, comicB, comicSound;
     private View rod;
+    private Button authorbutton;
     private Boolean isSoundPlaying = false;
 
     public HomeFragment() {
@@ -66,6 +68,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             quizSound = rod.findViewById(R.id.quizSpeaker);
             comicB = rod.findViewById(R.id.comicButton);
             comicSound = rod.findViewById(R.id.comicSpeaker);
+            authorbutton = rod.findViewById(R.id.authorbutton);
 
             //setting up onclicklisteners
             activitiesB.setOnClickListener(this);
@@ -80,6 +83,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             quizSound.setOnClickListener(this);
             comicB.setOnClickListener(this);
             comicSound.setOnClickListener(this);
+            authorbutton.setOnClickListener(this);
 
             }
         return rod;
@@ -167,6 +171,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         } else if (v == quizB) {
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction.replace(R.id.container, new UDFragment());
+            transaction.addToBackStack(null);
+            transaction.commit();
+        } else if (v == authorbutton) {
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.container, new authorfragment());
             transaction.addToBackStack(null);
             transaction.commit();
         }

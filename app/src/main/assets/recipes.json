@@ -188,7 +188,7 @@
     ]
   },
   {
-    "name": "AALOO TAMA", "image": "aaloo_tamba", "tag": "snack",
+    "name": "आलो टामा", "image": "aaloo_tamba", "tag": "snack",
     "recipe": [
       {
         "images": [
@@ -223,7 +223,7 @@
     ]
   },
   {
-    "name": "AALOO KO ACHAR", "image": "aloo", "tag": "common",
+    "name": "आलो को आचार", "image": "aloo", "tag": "common",
     "recipe": [
       {
         "images": [

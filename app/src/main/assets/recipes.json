@@ -1,6 +1,6 @@
 [
   {
-  "name": "NEPALESE POTATO, TOMATO AND PEA CURRY", "image": "dab", "tag": "recommended",
+  "name": "आलु टमाटर", "image": "dab", "tag": "recommended",
   "recipe": [
       {
         "images": [
@@ -15,23 +15,23 @@
           "chicken"
         ],
         "ingrediens": [
-          "1 tablespoon cooking oil",
-          "1 large onion, finely sliced",
-          "1/2 teaspoon ground black pepper",
-          "1-2 mild green chili",
-          "2 teaspoons garlic, chopped",
-          "1 teaspoon gingerroot, fresh grated",
-          "1/2 teaspoon ground turmeric",
-          "1 teaspoon salt",
-          "2 cups potatoes, peeled and cubed"
+          "1 चम्मच खाना पकाउने तेल",
+          "1 ठूलो प्याज, बारी बारीले काटियो",
+          "1/2 चम्मच जमीन कालो मिर्च",
+          "1-2 हल्का हरियो खोर्सानी",
+          "2 चम्मच लसुन, काटिएको",
+          "1 चम्मच अदुवा जरा, ताजा ग्रेटेड",
+          "1/2 चम्मच भुई हल्दी",
+          "1 चम्मच नुन",
+          "2 कप आलु, खुली र cubed"
         ],
         "directions": [
-          "Heat oil in a saucepan and fry onion until soft and golden.",
-          "Stir in pepper, chili, garlic, ginger, turmeric and salt.",
-          "Continue cooking for 2-3 minutes then add the potatoes; stir.",
-          "Add the remaining ingredients and hot water.",
-          "Simmer until vegetables are cooked, thicken if necessary.",
-          "Serve with rice and accompaniments."
+          "तेल सासप्यानमा तताउनुहोस् र प्याज नरम र सुनौलो नभएसम्म फ्राई गर्नुहोस्।",
+          "मिर्च, खोर्सानी, लसुन, अदुवा, हल्दी र नुन मा चलाउनुहोस्।",
+          "२- minutes मिनेट पकाउन जारी राख्नुहोस् त्यसपछि आलुहरू थप गर्नुहोस्; हलचल",
+          "बाँकी सामग्री र तातो पानी थप्नुहोस्।",
+          "तरकारी नपहुञ्जेलसम्म उमालेर, आवश्यक परे भने गाढा।",
+          "चामल र सँगै सेवा गर्नुहोस्।"
         ]
       }
     ]

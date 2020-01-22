@@ -18,8 +18,6 @@ import com.example.nepal_app.UI.Fragments.Navigation.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final int DAILY_REMINDER_REQUEST_CODE=100;
-
     private static final String CHANNEL_ID = "the100goldendaysNepalB1";
     //får måske brug for det her  https://stackoverflow.com/questions/3009059/android-pending-intent-notification-problem  int requestID = (int) System.currentTimeMillis();
 

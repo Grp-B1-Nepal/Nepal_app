@@ -21,6 +21,11 @@ import com.example.nepal_app.UI.Fragments.Recipes.Recipe_fragment;
 
 import java.util.List;
 
+/**
+ * This class is the adapter for the inner recyclerView. It is a list of recipe, consisting of a name, image and a button.
+ * The button opens up information about the selected recipe.
+ */
+
 public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.recipelistVH>{
     List<RecipeHomeObject> recipeList;
     private Context context;
@@ -73,6 +78,9 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
         return recipeList.size();
     }
 
+    /**
+     * This is the viewholder the adapter uses
+     */
     public class recipelistVH extends RecyclerView.ViewHolder {
 
         TextView recName;

@@ -26,6 +26,10 @@ import com.example.nepal_app.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This is the fragment for recipes.
+ */
+
 public class RecipeHome extends Fragment {
     private RecipeInfo recipeInfo;
 
@@ -35,6 +39,10 @@ public class RecipeHome extends Fragment {
     public List<RecipeHomeObject> recipeRecommendedList, recipeSnacksList, recipeCommonList; //This is List of recipes we want in the different categories
     EditText searchField; //This is the search bar in the top of the layout
 
+
+    /**
+     * This initialises all the data we use. We make use of the JSON file.
+     */
     public void fillLists() {
         //We get the recipeInfo instance and set all lists to be arraylists
         recipeInfo = recipeInfo.getInstance();

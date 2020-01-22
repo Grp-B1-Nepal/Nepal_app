@@ -54,16 +54,16 @@ public class RecipeHome extends Fragment {
 
         //Loads all recipes with tag recommended from JSON file
         recipeRecommendedList = recipeInfo.getRecipeListByTag(getContext(),"recommended");
-        categoryList.add(new CategoryObject("Recommended", recipeRecommendedList));
+        categoryList.add(new CategoryObject("सिफारिश गरिएको", recipeRecommendedList));
 
         //Loads all recipes with tag snack from JSON file
         recipeSnacksList = recipeInfo.getRecipeListByTag(getContext(),"snack");
-        categoryList.add(new CategoryObject("Snacks", recipeSnacksList));
+        categoryList.add(new CategoryObject("स्नैक्स", recipeSnacksList));
 
 
         //Loads all recipes with tag common from JSON file
         recipeCommonList = recipeInfo.getRecipeListByTag(getContext(),"common");
-        categoryList.add(new CategoryObject("Common", recipeCommonList));
+        categoryList.add(new CategoryObject("सामान्य", recipeCommonList));
 
         //Loads all images from drawables
         btnIcons.add(R.drawable.ic_reho_recommended);

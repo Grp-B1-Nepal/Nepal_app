@@ -4,7 +4,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="search_for_recipe">Search for recipe</string>
+    <string name="a">Search for recipe</string>
     <string name="recipe">Recipe #</string>
     <string name="dal_bhat">Dal Bhat</string>
     <string name="jan_13th_2018">Jan 13th, 2018</string>

@@ -16,7 +16,7 @@
         android:background="@drawable/buttonshape"
         android:drawableStart="@drawable/ic_reho_search"
         android:ems="10"
-        android:hint="@string/search_for_recipe"
+        android:hint="नुस्खा को लागी खोजी गर्नुहोस्"
         android:inputType="textPersonName"
         android:fontFamily="@font/montserrat"
         app:layout_constraintEnd_toEndOf="parent"

@@ -255,10 +255,10 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
         ActivityPOJO activityPOJO = new ActivityPOJO(" ", 0 ,arraylist, imagenum);
 
         ArrayList<Integer> soundlist = new ArrayList<>();
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
-        soundlist.add(R.raw.activitiestts);
+        soundlist.add(R.raw.homepage_activity);
+        soundlist.add(R.raw.homepage_activity);
+        soundlist.add(R.raw.homepage_activity);
+        soundlist.add(R.raw.homepage_activity);
 
         if (v == Singing) {
             imagenum = R.drawable.activity_singing;

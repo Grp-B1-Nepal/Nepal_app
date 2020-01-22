@@ -118,7 +118,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         } else if (v == progressSound) {
             if (!isSoundPlaying) {
                 isSoundPlaying = true;
-                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_progress);
+                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_development);
                 mp.start();
                 mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override

@@ -202,9 +202,9 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
 
     @Override
     /**
-     *Implements the onDateSet from the DatePickerDialog to get tha data picked date from the calendar
+     * Implements the onDateSet from the DatePickerDialog to get tha data picked date from the calendar
+     *
      */
-
     public void onDateSet(DatePicker view, int year, int month, int day) {
         Date date = new Date();
         //Minus because of Java API
@@ -221,4 +221,5 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();
         }
     }
+
 }

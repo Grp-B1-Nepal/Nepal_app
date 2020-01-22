@@ -54,7 +54,6 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
         holder.layout_speakerimage.setImageResource(speakerimage);
         //The image ressource is passed on by the activity, such that we know what image it is. This can probably be found in a different way tho.
         //Got confused because i couldn't find any nice way to do it.
-        //TODO improve the above line.
 
         holder.layout_informationtext.setText(informationtext.get(position));
 

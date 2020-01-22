@@ -18,7 +18,6 @@ public class MyReciever extends BroadcastReceiver {
      */
     @Override
     public void onReceive(Context context, Intent intent) {
-        // TODO Auto-generated method stub
         Log.d(TAG, "onReceive: start" + Calendar.getInstance().get(Calendar.MINUTE) + " minutes " + Calendar.getInstance().getTimeInMillis()%10);
         //Theese if statements makes sure that it starts up agian if the telefon reboots.
         if (intent.getAction() != null && context != null) {

@@ -96,10 +96,10 @@ public class    Adaptor_ListviewChild extends ArrayAdapter<String> {
                     }
                     childArr.get(position).setActive(true);
 
-                    //TODO maybe rephrase
                     Toast.makeText(context, "तपाईं परिवर्तन गर्नुहोस् " + childArr.get(position).getName(), Toast.LENGTH_SHORT).show();
                     Collections.swap(childArr, position, 0);
                     childInfo.setChildArr(childArr, context);
+                    //updates the progress and birthday array, so it updates with the child.
                     progress = childInfo.getProgressAge();
                     birthday = childInfo.getBirthdayString();
                     //Updates the adaptor after the change

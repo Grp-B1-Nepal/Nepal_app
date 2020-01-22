@@ -5,24 +5,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
-import com.example.nepal_app.Logic.FavoriteRecipes;
 import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
 
 import com.example.nepal_app.MainActivity;
 import com.example.nepal_app.R;
 import com.example.nepal_app.UI.Fragments.Recipes.Recipe_fragment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.recipelistVH>{
@@ -81,37 +77,13 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
         TextView recName;
         ImageView recImg;
         Button btn;
-        ToggleButton fav;
 
         public recipelistVH(View itemView) {
             super(itemView);
 
-            recName = itemView.findViewById(R.id.recipeName2);
-            recImg = itemView.findViewById(R.id.recipeImg2);
-            btn = itemView.findViewById(R.id.recipeBtnView2);
-            fav = itemView.findViewById(R.id.recipeBtnLike2);
-
-
-            fav.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked) {
-
-                        int adaptPos = getAdapterPosition();
-                        FavoriteRecipes.getInstance().favoriteList.add(recipeList.get(adaptPos));
-                        fav.setBackgroundResource(R.drawable.favorite_filled_foreground);
-                        notifyDataSetChanged();
-                    } else {
-
-                        int adaptPos = getAdapterPosition();
-                        RecipeHomeObject recipe = recipeList.get(adaptPos);
-                        int index = FavoriteRecipes.getInstance().favoriteList.indexOf(recipe);
-                        FavoriteRecipes.getInstance().favoriteList.remove(index);
-                        fav.setBackgroundResource(R.drawable.favorite_empty_foreground);
-                        notifyDataSetChanged();
-                    }
-                }
-            });
+            recName = itemView.findViewById(R.id.recipeName);
+            recImg = itemView.findViewById(R.id.recipeImg);
+            btn = itemView.findViewById(R.id.recipeBtnView);
 
         }
 

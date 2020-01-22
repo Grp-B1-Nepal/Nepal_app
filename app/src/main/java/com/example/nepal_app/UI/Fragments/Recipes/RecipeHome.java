@@ -7,7 +7,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.SearchManager;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -15,13 +14,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.SearchView;
 
 import com.example.nepal_app.Logic.Adaptor.CategoryAdapter;
 import com.example.nepal_app.Logic.Objects.CategoryObject;
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
 
-import com.example.nepal_app.Logic.FavoriteRecipes;
 import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
 
 import com.example.nepal_app.R;
@@ -34,7 +31,7 @@ public class RecipeHome extends Fragment {
 
     List<CategoryObject> categoryList;
     List<Integer> btnIcons;
-    public List<RecipeHomeObject> recipeRecommendedList, recipeSnacksList, recipeCommonList, favoriteList;
+    public List<RecipeHomeObject> recipeRecommendedList, recipeSnacksList, recipeCommonList;
     EditText searchField;
 
     public void fillLists() {
@@ -44,15 +41,11 @@ public class RecipeHome extends Fragment {
         recipeSnacksList = new ArrayList<>();
         recipeCommonList = new ArrayList<>();
         categoryList = new ArrayList<>();
-        favoriteList = FavoriteRecipes.getInstance().favoriteList;
         btnIcons = new ArrayList<>();
 
         //Loads all recipes with tag recommended
         recipeRecommendedList = recipeInfo.getRecipeListByTag(getContext(),"recommended");
         categoryList.add(new CategoryObject("Recommended", recipeRecommendedList));
-
-        // Loads all recipes from the singleton Class
-        categoryList.add(new CategoryObject("Favorites", favoriteList));
 
         //Loads all recipes with tag snack
         recipeSnacksList = recipeInfo.getRecipeListByTag(getContext(),"snack");
@@ -65,7 +58,6 @@ public class RecipeHome extends Fragment {
 
 
         btnIcons.add(R.drawable.ic_reho_recommended);
-        btnIcons.add(R.drawable.ic_reho_heart);
         btnIcons.add(R.drawable.ic_reho_snack);
         btnIcons.add(R.drawable.ic_reho_common);
     }

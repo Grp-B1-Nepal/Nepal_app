@@ -12,11 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.nepal_app.Logic.FavoriteRecipes;
 import com.example.nepal_app.Logic.Objects.CategoryObject;
 import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
 import com.example.nepal_app.R;
-import com.example.nepal_app.UI.Fragments.Recipes.RecipeHome;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +22,7 @@ import java.util.List;
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.categoryVH> implements Filterable{
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
     List<CategoryObject> categoryList;
-    List<RecipeHomeObject> recipeListRecFull, recipeListFavoriteFull, recipeListSnackFull, recipeListCommonFull;
+    List<RecipeHomeObject> recipeListRecFull, recipeListSnackFull, recipeListCommonFull;
     List<Integer> btnIcons;
     Context context;
 
@@ -33,14 +31,12 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         this.btnIcons = btnIcons;
         this.context = context;
         recipeListRecFull = new ArrayList<>();
-        recipeListFavoriteFull = new ArrayList<>();
         recipeListSnackFull = new ArrayList<>();
         recipeListCommonFull = new ArrayList<>();
 
         recipeListRecFull.addAll(categoryList.get(0).getRecipeList());
-        recipeListFavoriteFull.addAll(FavoriteRecipes.getInstance().favoriteList);
-        recipeListSnackFull.addAll(categoryList.get(2).getRecipeList());
-        recipeListCommonFull.addAll(categoryList.get(3).getRecipeList());
+        recipeListSnackFull.addAll(categoryList.get(1).getRecipeList());
+        recipeListCommonFull.addAll(categoryList.get(2).getRecipeList());
 
     }
 
@@ -111,13 +107,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
             List<RecipeHomeObject> filteredListRec = new ArrayList<>();
-            List<RecipeHomeObject> filteredListFav = new ArrayList<>();
             List<RecipeHomeObject> filteredListSnack = new ArrayList<>();
             List<RecipeHomeObject> filteredListCom = new ArrayList<>();
 
             if (constraint == null || constraint.length() == 0) {
                 filteredListRec.addAll(recipeListRecFull);
-                filteredListFav.addAll(recipeListFavoriteFull);
                 filteredListSnack.addAll(recipeListSnackFull);
                 filteredListCom.addAll(recipeListCommonFull);
             } else {
@@ -126,12 +120,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
                 for (RecipeHomeObject item : recipeListRecFull) {
                     if (item.getRecipeName().toLowerCase().contains(filterPattern)) {
                         filteredListRec.add(item);
-                        notifyDataSetChanged();
-                    }
-                }
-                for (RecipeHomeObject item : recipeListFavoriteFull) {
-                    if (item.getRecipeName().toLowerCase().contains(filterPattern)) {
-                        filteredListFav.add(item);
                         notifyDataSetChanged();
                     }
                 }
@@ -152,7 +140,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
             FilterResults results = new FilterResults();
             ArrayList<ArrayList<RecipeHomeObject>> filteredListAll = new ArrayList<>();
             filteredListAll.add((ArrayList<RecipeHomeObject>) filteredListRec);
-            filteredListAll.add((ArrayList<RecipeHomeObject>) filteredListFav);
             filteredListAll.add((ArrayList<RecipeHomeObject>) filteredListSnack);
             filteredListAll.add((ArrayList<RecipeHomeObject>) filteredListCom);
 
@@ -176,11 +163,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
             categoryList.get(2).getRecipeList().clear();
             notifyDataSetChanged();
             categoryList.get(2).setRecipeList((List)((List) results.values).get(2));
-            notifyDataSetChanged();
-
-            categoryList.get(3).getRecipeList().clear();
-            notifyDataSetChanged();
-            categoryList.get(3).setRecipeList((List)((List) results.values).get(3));
             notifyDataSetChanged();
 
         }

@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         //if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
         createNotificationChannel();
         NotificationScheduler.setReminder(this, MyReciever.class);
-        //TODO den skal ikke schedule en ny hvis der allerede er schedulet en.
         openFragment(new HomeFragment());
     }
 

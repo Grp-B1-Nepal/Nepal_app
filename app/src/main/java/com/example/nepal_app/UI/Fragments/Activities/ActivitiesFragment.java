@@ -24,7 +24,6 @@ import java.util.ArrayList;
  *
  */
 public class ActivitiesFragment extends Fragment implements View.OnClickListener {
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
     private Boolean isSoundPlaying = false;
@@ -86,7 +85,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
             months58.setOnClickListener(this);
             months912.setOnClickListener(this);
 
-            topbuttoncheck();
+            topButtonCheck();
 
         }
             return rod;
@@ -95,7 +94,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
     /**
      * This method checks which of the buttons in the top is marked. The top buttons are the three months choosing the age range.
      */
-    private void topbuttoncheck() {
+    private void topButtonCheck() {
 
         childInfo = ChildInfo.getInstance();
         childList = childInfo.getChildArr(getContext());
@@ -209,7 +208,6 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
                                     });
             }} else  {
                                     if(!isSoundPlaying) {
-                                        //TODO when more sound files are added it has to pick between them. Right now it's also only the speaker talking.
                                         isSoundPlaying = true;
                                         mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_tummytime);
                                         mediaPlayer.start();
@@ -262,7 +260,6 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
         soundlist.add(R.raw.activitiestts);
         soundlist.add(R.raw.activitiestts);
 
-        //TODO find sound clips.
         if (v == Singing) {
             imagenum = R.drawable.activity_singing;
             activityPOJO.setHeadlinetext("तपाईंको बच्चाको लागि गाउँदै");

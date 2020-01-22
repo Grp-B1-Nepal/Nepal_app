@@ -49,6 +49,7 @@ public class RecipeHomeAdapter extends RecyclerView.Adapter<RecipeHomeAdapter.re
         holder.recImg.setImageResource(identifier);
         holder.recName.setText(recipeList.get(position).getRecipeName());
         recipeInfo = recipeInfo.getInstance();
+        //We have an onClickListener, that passes the name of the recipe just pressed, such that we can via the JSON file, find and display the entire recipe
         holder.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

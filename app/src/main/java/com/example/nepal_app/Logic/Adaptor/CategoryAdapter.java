@@ -21,8 +21,9 @@ import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.categoryVH> implements Filterable{
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
+
     List<CategoryObject> categoryList;
-    List<RecipeHomeObject> recipeListRecFull, recipeListSnackFull, recipeListCommonFull;
+    List<RecipeHomeObject> recipeListRecFull, recipeListSnackFull, recipeListCommonFull; //This is for the search filter. We need to know what a full list looks like
     List<Integer> btnIcons;
     Context context;
 
@@ -33,7 +34,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         recipeListRecFull = new ArrayList<>();
         recipeListSnackFull = new ArrayList<>();
         recipeListCommonFull = new ArrayList<>();
-
+        //This is for the search filter. We need to know what a full list looks like
         recipeListRecFull.addAll(categoryList.get(0).getRecipeList());
         recipeListSnackFull.addAll(categoryList.get(1).getRecipeList());
         recipeListCommonFull.addAll(categoryList.get(2).getRecipeList());
@@ -63,6 +64,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         holder.rvRecipe.setAdapter(recipeAdapter);
         holder.rvRecipe.setRecycledViewPool(viewPool);
 
+        //Here we check whether or not a category has been clicked on and is expanded
         boolean isExpanded = categoryList.get(position).isExpanded();
         holder.rvRecipe.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
     }
@@ -87,6 +89,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
                 @Override
                 public void onClick(View v) {
 
+                    //We expand the list of recipes that matches the category pressed
                     CategoryObject cat = categoryList.get(getAdapterPosition());
                     cat.setExpanded(!cat.isExpanded());
                     notifyItemChanged(getAdapterPosition());
@@ -104,19 +107,25 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
 
     Filter theFilter = new Filter() {
 
+
+        //This is our search filter, were we filter the recipes, based on what was typed
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
+            //We create the filtered lists. constraint = what the user typed in
             List<RecipeHomeObject> filteredListRec = new ArrayList<>();
             List<RecipeHomeObject> filteredListSnack = new ArrayList<>();
             List<RecipeHomeObject> filteredListCom = new ArrayList<>();
 
+            //If there is nothing typed in, we show all the recipes
             if (constraint == null || constraint.length() == 0) {
                 filteredListRec.addAll(recipeListRecFull);
                 filteredListSnack.addAll(recipeListSnackFull);
                 filteredListCom.addAll(recipeListCommonFull);
             } else {
+                //the filterpattern is what we type in, all in lower case with no whitespacces
                 String filterPattern = constraint.toString().toLowerCase().trim();
 
+                //We look through all lists and see if they contain a recipeName, that matches the filter pattern
                 for (RecipeHomeObject item : recipeListRecFull) {
                     if (item.getRecipeName().toLowerCase().contains(filterPattern)) {
                         filteredListRec.add(item);
@@ -137,6 +146,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
                 }
             }
 
+            //We create filter results, which is the recipes that matches. We add all matches to a single arraylist, and make the results equal that list
             FilterResults results = new FilterResults();
             ArrayList<ArrayList<RecipeHomeObject>> filteredListAll = new ArrayList<>();
             filteredListAll.add((ArrayList<RecipeHomeObject>) filteredListRec);
@@ -147,6 +157,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
             return results;
         }
 
+        //This method then chooses what to display, based on the results
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
 

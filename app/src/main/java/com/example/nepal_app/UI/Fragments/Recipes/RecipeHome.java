@@ -7,7 +7,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.SearchManager;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -15,13 +14,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.SearchView;
 
 import com.example.nepal_app.Logic.Adaptor.CategoryAdapter;
 import com.example.nepal_app.Logic.Objects.CategoryObject;
 import com.example.nepal_app.Logic.Factory.RecipeInfo;
 
-import com.example.nepal_app.Logic.FavoriteRecipes;
 import com.example.nepal_app.Logic.Objects.RecipeHomeObject;
 
 import com.example.nepal_app.R;
@@ -32,40 +29,36 @@ import java.util.List;
 public class RecipeHome extends Fragment {
     private RecipeInfo recipeInfo;
 
-    List<CategoryObject> categoryList;
-    List<Integer> btnIcons;
-    public List<RecipeHomeObject> recipeRecommendedList, recipeSnacksList, recipeCommonList, favoriteList;
-    EditText searchField;
+
+    List<CategoryObject> categoryList; //A CategoryObject contains a name as a string and an Arraylist of RecipeHomeObjects
+    List<Integer> btnIcons; //This is a list if images to put on the buttons
+    public List<RecipeHomeObject> recipeRecommendedList, recipeSnacksList, recipeCommonList; //This is List of recipes we want in the different categories
+    EditText searchField; //This is the search bar in the top of the layout
 
     public void fillLists() {
-        //initiate views.
+        //We get the recipeInfo instance and set all lists to be arraylists
         recipeInfo = recipeInfo.getInstance();
         recipeRecommendedList = new ArrayList<>();
         recipeSnacksList = new ArrayList<>();
         recipeCommonList = new ArrayList<>();
         categoryList = new ArrayList<>();
-        favoriteList = FavoriteRecipes.getInstance().favoriteList;
         btnIcons = new ArrayList<>();
 
-        //Loads all recipes with tag recommended
+        //Loads all recipes with tag recommended from JSON file
         recipeRecommendedList = recipeInfo.getRecipeListByTag(getContext(),"recommended");
         categoryList.add(new CategoryObject("Recommended", recipeRecommendedList));
 
-        // Loads all recipes from the singleton Class
-        categoryList.add(new CategoryObject("Favorites", favoriteList));
-
-        //Loads all recipes with tag snack
+        //Loads all recipes with tag snack from JSON file
         recipeSnacksList = recipeInfo.getRecipeListByTag(getContext(),"snack");
         categoryList.add(new CategoryObject("Snacks", recipeSnacksList));
 
 
-        // Loads all recipes with tag common
+        //Loads all recipes with tag common from JSON file
         recipeCommonList = recipeInfo.getRecipeListByTag(getContext(),"common");
         categoryList.add(new CategoryObject("Common", recipeCommonList));
 
-
+        //Loads all images from drawables
         btnIcons.add(R.drawable.ic_reho_recommended);
-        btnIcons.add(R.drawable.ic_reho_heart);
         btnIcons.add(R.drawable.ic_reho_snack);
         btnIcons.add(R.drawable.ic_reho_common);
     }
@@ -73,7 +66,9 @@ public class RecipeHome extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        //We fill in our data
         fillLists();
+        //We set up our recyclerview
         final View v = inflater.inflate(R.layout.recipe_home, container, false);
         final FragmentActivity c = getActivity();
         final RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recipeRecView);
@@ -86,13 +81,17 @@ public class RecipeHome extends Fragment {
 
     }
 
+    //This method makes sure search works
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //We need the adapter, as it contains the Filter
         CategoryAdapter adapter = new CategoryAdapter(categoryList, btnIcons, getContext());
 
+        //The reason we have created this in onViewCreate, is that you cant findviewbyid in a fragment in onCreateView
         searchField = getView().findViewById(R.id.searchField);
+        //We add a textchangelistener to the searchbar
         searchField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -101,6 +100,7 @@ public class RecipeHome extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                //We filter on the text we type
                 if (adapter != null) {
                     adapter.getFilter().filter(s);
                 }

@@ -23,25 +23,12 @@
             android:paddingStart="10dp"
             android:text="Choose image"
             android:textAllCaps="false"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/hint"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.428"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewTitle3" />
-
-        <Button
-            android:id="@+id/button_editBack"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="40dp"
-            android:background="@drawable/button_shape_back"
-            android:text="Back"
-            android:textColor="#F2FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/button_deleteChild"
-            app:layout_constraintTop_toBottomOf="@+id/picture" />
 
         <ImageView
             android:id="@+id/downloaded_picture"
@@ -57,9 +44,9 @@
             android:id="@+id/textViewTitle"
             android:layout_width="320dp"
             android:layout_height="31dp"
+            android:paddingStart="5dp"
             android:text="Name"
             android:textColor="#F80F0000"
-            android:paddingStart="5dp"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/name"
             app:layout_constraintTop_toBottomOf="@+id/downloaded_picture" />
@@ -69,10 +56,10 @@
             android:layout_width="320dp"
             android:layout_height="31dp"
             android:layout_marginTop="20dp"
+            android:paddingStart="5dp"
             android:text="Image"
             android:textColor="#FA0A0000"
             android:textSize="20sp"
-            android:paddingStart="5dp"
             app:layout_constraintStart_toStartOf="@+id/picture"
             app:layout_constraintTop_toBottomOf="@+id/pickdate_button" />
 
@@ -81,10 +68,10 @@
             android:layout_width="320dp"
             android:layout_height="31dp"
             android:layout_marginTop="20dp"
+            android:paddingStart="5dp"
             android:text="Birthday"
             android:textColor="#FC110000"
             android:textSize="20sp"
-            android:paddingStart="5dp"
             app:layout_constraintStart_toStartOf="@+id/pickdate_button"
             app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
 
@@ -93,10 +80,10 @@
             android:layout_width="320dp"
             android:layout_height="31dp"
             android:layout_marginTop="20dp"
+            android:paddingStart="5dp"
             android:text="Gender"
             android:textColor="#F8090000"
             android:textSize="20sp"
-            android:paddingStart="5dp"
             app:layout_constraintStart_toStartOf="@+id/gender_spinner"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -122,12 +109,11 @@
             android:id="@+id/save_button"
             android:layout_width="80dp"
             android:layout_height="40dp"
-            android:layout_marginStart="40dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/button_shape"
             android:text="Save"
             android:textColor="#F3EDED"
-            app:layout_constraintStart_toEndOf="@+id/button_deleteChild"
+            app:layout_constraintEnd_toEndOf="@+id/picture"
             app:layout_constraintTop_toBottomOf="@+id/picture" />
 
         <Button
@@ -142,7 +128,6 @@
             android:paddingStart="10dp"
             android:text="Pick date"
             android:textAllCaps="false"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/hint"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -172,9 +157,7 @@
             android:background="@drawable/button_shape_back"
             android:text="Delete"
             android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/picture"
             app:layout_constraintTop_toBottomOf="@+id/picture" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

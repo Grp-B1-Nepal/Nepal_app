@@ -11,7 +11,7 @@
         android:bottom="5dp"
         />
     <gradient
-        android:endColor="#FFFFFF"
+        android:endColor="@color/justWhite"
         android:startColor="@color/buttongrey"
         android:centerY="0.8"
         android:angle="90"

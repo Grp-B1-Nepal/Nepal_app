@@ -13,8 +13,6 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class CacheSaving {
-    private ArrayList<ChildObj> childArr = new ArrayList<>();
-    private Bitmap bitmap;
 
 
     public void saveChild(Context context, ArrayList<ChildObj> arr){
@@ -46,7 +44,7 @@ public class CacheSaving {
      */
     public void saveImageNewName(Context context, String oldName, String newName){
 
-        bitmap = loadImage(context, oldName);
+        Bitmap bitmap = loadImage(context, oldName);
         deleteImage(oldName, context);
         saveImage(context,newName, bitmap);
     }
@@ -104,7 +102,7 @@ public class CacheSaving {
         String json = sharedPreferences.getString("ChildArr", null);
         Type type = new TypeToken<ArrayList<ChildObj>>() {
         }.getType();
-        childArr = gson.fromJson(json, type);
+        ArrayList<ChildObj> childArr = gson.fromJson(json, type);
         if (childArr == null){
             childArr = new ArrayList<>();
         }

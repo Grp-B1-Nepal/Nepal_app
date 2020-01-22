@@ -2,6 +2,7 @@ package com.example.nepal_app.UI.Fragments.Activities;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,12 +33,14 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private Boolean isSoundPlaying = false;
     private ImageView Singing, Talking, Tummy_Time, Cuddling_Time, Play_Time, Reading, SoundSinging, SoundTalking, SoundTummy_Time, SoundCuddling_Time, SoundPlay_Time, SoundReading;
     private View rod;
     private Button months04, months58, months912;
-    private int agerange = 0;
+    private int agerange = 1;
     private int imagenum = 0;
     private ChildInfo childInfo;
+    public MediaPlayer mediaPlayer= new MediaPlayer();
     private ArrayList<ChildObj> childList = new ArrayList<>();
 
 
@@ -127,7 +130,9 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
         childList = childInfo.getChildArr(getContext());
         //If the childlist is 0 we just want this one shown
         if (childList.size() == 0 ) {
-            months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            //months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            months04.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
+
             //Agerange will only be 0 the first time you enter, therefore we need it to select based upon the age of the current child.
         } else if (agerange == 0){
             childInfo.getMonthProgress();
@@ -137,28 +142,28 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
                 case 3:
                 case 4:
                     agerange = 1;
-                    months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                    months04.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
                     break;
                 case 5:
                 case 6:
                 case 7:
                 case 8:
                     agerange = 2;
-                    months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                    months58.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
                     break;
 
                 default:
                     agerange = 3;
-                    months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                    months912.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
                     break;
             }
             //theese 3 if statements serve their purpose upon back pressed. It remembers the it when another fragment is inflated to remember the users selection.
         } else if (agerange == 1) {
-            months04.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            months04.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
         } else if (agerange == 2) {
-            months58.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            months58.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
         } else if (agerange == 3) {
-            months912.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+            months58.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
         }
     }
 
@@ -176,23 +181,104 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
             transaction.commit();
 
         } else if (v == SoundCuddling_Time || v == SoundPlay_Time || v == SoundReading || v == SoundSinging || v == SoundTalking || v == SoundTummy_Time) {
+            if (v == SoundCuddling_Time) {
+                if(!isSoundPlaying) {
+                    //TODO when more sound files are added it has to pick between them. Right now it's also only the speaker talking.
+                    isSoundPlaying = true;
+                    mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_cuddlingtime);
+                    mediaPlayer.start();
+                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mediaPlayer.release();
+                            isSoundPlaying = false;
+                        }
+                    });
+            }} else if (v == SoundPlay_Time) {
+                    if(!isSoundPlaying) {
+                        //TODO when more sound files are added it has to pick between them. Right now it's also only the speaker talking.
+                        isSoundPlaying = true;
+                        mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_playtime);
+                        mediaPlayer.start();
+                        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                            @Override
+                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                mediaPlayer.release();
+                                isSoundPlaying = false;
+                            }
+                        });
+            }} else if (v == SoundReading) {
+                        if(!isSoundPlaying) {
+                            //TODO when more sound files are added it has to pick between them. Right now it's also only the speaker talking.
+                            isSoundPlaying = true;
+                            mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_reading);
+                            mediaPlayer.start();
+                            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                @Override
+                                public void onCompletion(MediaPlayer mediaPlayer) {
+                                    mediaPlayer.release();
+                                    isSoundPlaying = false;
+                                }
+                            });
+            }} else if (v == SoundSinging) {
+                            if(!isSoundPlaying) {
+                                //TODO when more sound files are added it has to pick between them. Right now it's also only the speaker talking.
+                                isSoundPlaying = true;
+                                mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_singing);
+                                mediaPlayer.start();
+                                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                    @Override
+                                    public void onCompletion(MediaPlayer mediaPlayer) {
+                                        mediaPlayer.release();
+                                        isSoundPlaying = false;
+                                    }
+                                });
+           }} else if (v == SoundTalking) {
+                                if(!isSoundPlaying) {
+                                    //TODO when more sound files are added it has to pick between them. Right now it's also only the speaker talking.
+                                    isSoundPlaying = true;
+                                    mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_talking);
+                                    mediaPlayer.start();
+                                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                        @Override
+                                        public void onCompletion(MediaPlayer mediaPlayer) {
+                                            mediaPlayer.release();
+                                            isSoundPlaying = false;
+                                        }
+                                    });
+            }} else if (v == SoundTummy_Time) {
+                                    if(!isSoundPlaying) {
+                                        //TODO when more sound files are added it has to pick between them. Right now it's also only the speaker talking.
+                                        isSoundPlaying = true;
+                                        mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_tummytime);
+                                        mediaPlayer.start();
+                                        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                                            @Override
+                                            public void onCompletion(MediaPlayer mediaPlayer) {
+                                                mediaPlayer.release();
+                                                isSoundPlaying = false;
+                                            }
+                                        });
+            }}
 //TODO add some sound files
         } else if (v == months04 || v == months58 || v == months912) {
             //Resets the color of all the buttons before it paints the background on one of them.
-            months04.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
-            months58.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
-            months912.getBackground().setColorFilter(Color.WHITE, PorterDuff.Mode.MULTIPLY);
+            months04.setBackground(getResources().getDrawable(R.drawable.buttonshape));
+            months58.setBackground(getResources().getDrawable(R.drawable.buttonshape));
+            months912.setBackground(getResources().getDrawable(R.drawable.buttonshape));
+
 
             //Paints the background and changes the informationnum range number. The number is passed on to the next fragment such that it knows what information it should get.
             if (v == months04) {
                 agerange = 1;
-                v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                v.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
+
             } else if (v == months58) {
                 agerange = 2;
-                v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                v.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
             } else if (v == months912) {
                 agerange = 3;
-                v.getBackground().setColorFilter(getResources().getColor(R.color.buttongrey), PorterDuff.Mode.MULTIPLY);
+                v.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
             }
         }
     }
@@ -218,9 +304,15 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
         //TODO find sound clips.
         if (v == Singing) {
             imagenum = R.drawable.activity_singing;
-            activityPOJO.setHeadlinetext("Singing for your child and it's benefits");
+            activityPOJO.setHeadlinetext("तपाईंको बच्चाको लागि गाउँदै");
 
             if (agerange == 1) {
+                soundlist.clear();
+                soundlist.add(R.raw.singing11);
+                soundlist.add(R.raw.singing12);
+                soundlist.add(R.raw.singing13);
+                soundlist.add(R.raw.singing14);
+
                 activityPOJO.setInformationnum(R.array.activities_information_Singing_category1);
                 activityPOJO.setSoundnumberlist(soundlist);
             } else if (agerange == 2) {
@@ -234,7 +326,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
         } else if (v == Talking) {
             imagenum = R.drawable.activity_talking;
-            activityPOJO.setHeadlinetext("Talking to your child and it's benefits");
+            activityPOJO.setHeadlinetext("तपाईंको बच्चासँग कुरा गर्दै");
 
             if (agerange == 1) {
                 activityPOJO.setInformationnum(R.array.activities_information_Talking_category1);
@@ -250,7 +342,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
         } else if (v == Tummy_Time) {
             imagenum = R.drawable.activity_tummytime;
-            activityPOJO.setHeadlinetext("How a little tummy time develops your childs abilities.");
+            activityPOJO.setHeadlinetext("पेट संग तपाइँको बच्चा संग समय");
 
             if (agerange == 1) {
                 activityPOJO.setInformationnum(R.array.activities_information_TummyTime_category1);
@@ -266,7 +358,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
         } else if (v == Cuddling_Time) {
             imagenum = R.drawable.activity_cuddling;
-            activityPOJO.setHeadlinetext("Cuddling increases the bond between the mother and the baby.");
+            activityPOJO.setHeadlinetext("तपाइँको बच्चा संग मिठो");
 
             if (agerange == 1) {
                 activityPOJO.setInformationnum(R.array.activities_information_CuddlingTime_category1);
@@ -282,7 +374,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
         } else if (v == Play_Time) {
             imagenum = R.drawable.activity_playtime;
-            activityPOJO.setHeadlinetext("Play time to increase your childs awareness");
+            activityPOJO.setHeadlinetext("तपाइँको बच्चासँग समय खेल्नुहोस्");
 
             if (agerange == 1) {
                 activityPOJO.setInformationnum(R.array.activities_information_PlayTimecategory1);
@@ -298,7 +390,7 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
         } else if (v == Reading) {
             imagenum = R.drawable.activity_reading;
-            activityPOJO.setHeadlinetext("Reading for your child to improve it's reading abilities");
+            activityPOJO.setHeadlinetext("तपाइँको बच्चाको लागि पढ्दै");
 
             if (agerange == 1) {
                 activityPOJO.setInformationnum(R.array.activities_information_Readingcategory1);

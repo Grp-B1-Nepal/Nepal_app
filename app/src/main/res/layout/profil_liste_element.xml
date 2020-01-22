@@ -8,10 +8,11 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
+        android:layout_width="345dp"
+        android:layout_height="133dp"
         android:layout_margin="5dp"
         android:background="@drawable/buttonshape_home"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -23,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="12/11/19"
+            android:fontFamily="@font/montserrat"
             app:layout_constraintStart_toStartOf="@+id/name"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -30,7 +32,8 @@
             android:id="@+id/gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="girl"
+            android:text="केटी"
+            android:fontFamily="@font/montserrat"
             app:layout_constraintStart_toStartOf="@+id/name"
             app:layout_constraintTop_toBottomOf="@+id/birthday" />
 
@@ -43,11 +46,12 @@
             android:bottomLeftRadius="30dp"
             android:bottomRightRadius="30dp"
             android:drawableLeft="@drawable/ic_action_name"
-            android:text="Edit info"
+            android:text="जानकारी"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:topLeftRadius="30dp"
             android:topRightRadius="30dp"
+            android:fontFamily="@font/montserrat"
             app:layout_constraintStart_toStartOf="@+id/image_children"
             app:layout_constraintTop_toBottomOf="@+id/image_children" />
 
@@ -55,8 +59,9 @@
             android:id="@+id/num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="700 days old"
+            android:text="700 दिन पुरानो"
             android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/montserrat"
             app:layout_constraintBottom_toTopOf="@+id/progressBar2"
             app:layout_constraintEnd_toEndOf="@+id/progressBar2" />
 
@@ -64,7 +69,7 @@
             android:id="@+id/image_children"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
@@ -77,9 +82,10 @@
             android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:text="Martha"
+            android:text="मार्था"
             android:textColor="#0A0101"
             android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
             app:layout_constraintStart_toEndOf="@+id/image_children"
             app:layout_constraintTop_toTopOf="@+id/image_children" />
 

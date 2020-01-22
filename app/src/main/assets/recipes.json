@@ -1,111 +1,347 @@
 [
   {
-  "name": "BANANA CAKE", "image": "banana_cake", "tag": "snack",  "favorite": false,
-  "recipe": [
+    "name": "करी", "image": "curryrec", "tag": "recommended",
+    "recipe": [
       {
         "images": [
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "recipehome_cake",
-          "egg_image",
-          "recipehome_cake"
+          "ingredient_oil",
+          "ingredient_onion",
+          "ingredient_blackpepper",
+          "ingredient_chili",
+          "ingredient_garlic",
+          "ingredient_ginger",
+          "ingredient_turmeric",
+          "ingredient_salt",
+          "ingredient_potato"
         ],
         "ingrediens": [
-          "1 1/2 cups all-purpose flour",
-          "2/3 cup white sugar",
-          "1 1/2 teaspoons baking powder",
-          "1/4 teaspoon salt",
-          "1 cup mashed bananas",
-          "1 egg",
-          "1/2 cup unsalted butter, melted",
-          "1/4 cup milk",
-          "3/4 cup semisweet chocolate chips"
+          "1 चम्मच खाना पकाउने तेल",
+          "1 ठूलो प्याज, बारी बारीले काटियो",
+          "1/2 चम्मच जमीन कालो मिर्च",
+          "1-2 हल्का हरियो खोर्सानी",
+          "2 चम्मच लसुन, काटिएको",
+          "1 चम्मच अदुवा जरा, ताजा ग्रेटेड",
+          "1/2 चम्मच भुई हल्दी",
+          "1 चम्मच नुन",
+          "2 कप आलु, खुली र"
         ],
         "directions": [
-          "Preheat oven to 350 degrees F (175 degrees C). Grease and flour a 9x13 inch pan.",
-          "In a large bowl, mix flour, sugar, baking powder and salt.",
-          "In a separate bowl, combine bananas, egg, melted butter and milk.",
-          "Stir banana mixture into flour mixture until blended. Be careful not to over mix.",
-          "Stir in chocolate chips.",
-          "Pour batter into 9x13 inch pan. Bake at 350 degrees F (175 degrees C) 30 to 35 minutes, or until a toothpick inserted into center of cake comes out clean. (It will have some melted chocolate, but no crumbs.)"
+          "तेल सासप्यानमा तताउनुहोस् र प्याज नरम र सुनौलो नभएसम्म फ्राई गर्नुहोस्।",
+          "मिर्च, खोर्सानी, लसुन, अदुवा, हल्दी र नुन मा चलाउनुहोस्।",
+          "२- minutes मिनेट पकाउन जारी राख्नुहोस् त्यसपछि आलुहरू थप गर्नुहोस्; हलचल",
+          "बाँकी सामग्री र तातो पानी थप्नुहोस्।",
+          "तरकारी नपहुञ्जेलसम्म उमालेर, आवश्यक परे भने गाढा।",
+          "चामल र सँगै सेवा गर्नुहोस्।"
         ]
       }
     ]
   },
   {
-    "name": "CHICKEN IN A BOX", "image": "recipehome_chicken", "tag": "recommended", "favorite": true,
+    "name": "CHICKEN MOMOS", "image": "dish1", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image"
+          "ingredient_flour",
+          "ingredient_oil",
+          "ingredient_onion",
+          "ingredient_garlic",
+          "ingredient_ginger",
+          "ingredient_carrot",
+          "ingredient_coriander",
+          "ingredient_garammasala",
+          "ingredient_cumin",
+          "ingredient_blackpepper",
+          "ingredient_salt"
         ],
         "ingrediens": [
-          "item2",
-          "item2",
-          "item2",
-          "item2",
-          "item2",
-          "item2",
-          "item2",
-          "item2",
-          "item2"
+          "100g flour",
+          "1 tablespoon oil",
+          "1/2 medium onion, finely chopped",
+          "2 large garlic cloves, finely grated",
+          "12g piece peeled ginger, finely grated",
+          "60g carrot, finely grated and excess liquid squeezed out",
+          "1/3 cup finely chopped coriander stalks",
+          "1 tablespoon garam masala",
+          "1 tablespoon ground cumin",
+          "1/2 tablespoon black pepper",
+          "1/2 tablespoon salt"
         ],
         "directions": [
-          "directions2",
-          "directions2",
-          "directions2",
-          "directions2",
-          "directions2",
-          "directions2"
+          "To make the dough, combine the flour and 100- 120 ml cold water in a bowl until the mixture comes together. Knead until smooth and soft, then cover with a damp tea towel and allow to rest while you make the filling.",
+          "Place all the filling ingredients in a large bowl and combine well. To check the seasoning, fry off a little bit of the filling in a frying pan, taste and adjust as necessary.",
+          "Place a large steamer on to boil and line the steamer tray with a disc of lightly greased baking paper.",
+          "Roll the dough into a log on your work surface, then cut into 20- 22 even pieces. Working with one piece of dough at a time and keeping the rest covered with a tea towel to prevent drying out, shape into a ball, then roll out on a lightly floured surface into a very thin circle about 6 -7 cm in diameter.  Place a generous teaspoon of the filling in the centre and enclose the filling. I take the momo in my right hand and use my thumb and forefinger to enclose the filling by gathering the edges of the dough and pleating as I stick them together. Make sure the filling stays away from the edges. Place directly into the steamer basket, seam-side up. Repeat with the remaining dough and filling. Once they are all done, place the momo in the steamer, cover and steam for 12-14 minutes or until the dough is no longer sticky.",
+          "To make the dipping sauce, heat a chargrill pan over high heat and cook the tomatoes and chillies, turning occasionally until the skin has blackened. When cool enough to handle, peel and chop the tomatoes, then seed and chop the chillies. Heat the oil in a small frying pan over low heat. Add the garlic and cook for 30 seconds or until fragrant and beginning to colour. Add the ginger, sugar, tomato, chilli and vinegar. Season to taste and combine well, then serve warm or at room temperature with the hot momo."
         ]
       }
     ]
   },
   {
-    "name": "BANANA IN A BOX", "image": "recipehome_bananas", "tag": "common", "favorite": false,
+    "name": "तरकारी पकोरा", "image": "dish2", "tag": "recommended",
     "recipe": [
       {
         "images": [
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image",
-          "egg_image"
+          "ingredient_onion",
+          "ingredient_cabbage",
+          "ingredient_potato",
+          "ingredient_spinach",
+          "ingredient_chili",
+          "ingredient_cumin",
+          "ingredient_coriander",
+          "ingredient_garammasala",
+          "ingredient_salt",
+          "ingredient_oil"
         ],
         "ingrediens": [
-          "item3",
-          "item3",
-          "item3",
-          "item3",
-          "item3",
-          "item3",
-          "item3",
-          "item3",
-          "item3"
+          "1 प्याज, पातलो काटियो",
+          "100g बन्दकोबी, धेरै पातलो काटिएको",
+          "100g आलु, grated",
+          "50g बच्चा पालक पातहरू",
+          "2 लामो हरियो खोर्सानी, काटियो",
+          "2 चम्मच ग्राउन्ड जीरा",
+          "2 चम्मच भुई धनिया",
+          "2 चम्मच गरम मसला",
+          "1 चम्मच नुन",
+          "१l तेल"
         ],
         "directions": [
-          "directions3",
-          "directions3",
-          "directions3",
-          "directions3",
-          "directions3",
-          "directions3"
+          "टमाटरको चटनीका लागि ओभन १ pre० डिग्री सेल्सियससम्म पुर्याउनुहोस्। टमाटरहरूलाई बेकिंग कागज-लाइनयुक्त ट्रेमा राख्नुहोस् र minutes 45 मिनेट-१ घण्टाको लागि, वा धेरै कोमल र गाढा रातो रंग सम्म। छाला हटाउनुहोस्, जीराको साथ ब्लेन्डरमा राख्नुहोस्, भुटेको धनिया, खोर्सानी र नुन, र मिठो नभएसम्म ब्लेन्ड गर्नुहोस्।",
+          "१he० डिग्री सेन्टिग्रेडमा प्रिहिट तेल। प्याज, गोभी, आलु, पालक, हरियो खोर्सानी, जीरा, धनिया, गरम मसाला र नुन ठूलो बाउलमा राख्नुहोस् र मिक्स गर्नुहोस्। बेसन वा चनाको पीठो हालेर अनि राम्रोसँग मिक्स गर्नुहोस्। बिस्तारै करीव १ 150० मिलीलिटर पानी थप्नुहोस्, र सब्जीहरू एक अर्कामा टाँसिए सम्म तपाईं मिश्रण जारी राख्नुहोस् र तपाईं तिनीहरूलाई आकार दिन सक्षम हुनुहुनेछ।",
+          "पकोरा मिश्रणको टुक्रा बिस्तारै राख्नुहोस् (लगभग १ टेस्पून) प्रत्येकलाई तातो तेलमा राख्नुहोस् र ches- minutes मिनेटको लागि ब्याचमा फ्राई गर्नुहोस्, सुनौलो नभएसम्म बदल्नुहोस्। थप तेल भिज्न कागज तौलियामा एक प्यासी चम्चा र स्थानको साथ पाकोरा हटाउनुहोस्। धनिया र टमाटरको चटनीको साथ तातो सेवा गर्नुहोस्।"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "LAMB SEKUWA", "image": "lambsekuwa", "tag": "snack",
+    "recipe": [
+      {
+        "images": [
+          "ingredient_salt",
+          "ingredient_lemon",
+          "ingredient_turmeric",
+          "ingredient_garammasala",
+          "ingredient_ginger",
+          "ingredient_garlic",
+          "ingredient_chili",
+          "ingredient_yogurt",
+          "ingredient_lamb",
+          "ingredient_butter",
+          "ingredient_salt"
+        ],
+        "ingrediens": [
+          "1 teaspoon salt",
+          "1 tablespoon lemon juice",
+          "1/2 teaspoon ground turmeric",
+          "1 teaspoon garam masala",
+          "1 tablespoon ginger, finely chopped",
+          "1 tablespoon garlic, finely chopped",
+          "2 small fresh green chillies, finely chopped",
+          "1/2 cup plain yogurt",
+          "1kg lamb leg",
+          "2 tablespoon butter",
+          "1 teaspoon salt"
+        ],
+        "directions": [
+          "You will need to begin this recipe one day ahead, to marinate the meat overnight.",
+          "Combine all the marinade ingredients in a mixing bowl, add the lamb, and mix well, making sure that each piece is coated. Cover and refrigerate for at least 8 hours.\n\n",
+          "Preheat a charcoal barbeque or chargrill to medium-high heat. Remove the lamb from the marinade, and thread onto the skewers. Grill for 8-10 minutes turning frequently and basting with the melted butter or ghee, or until the lamb is brown on all sides and cooked through.",
+          "Remove from grill, season to taste and drizzle with lemon juice. Serve immediately with beaten rice, tomato pickle or other condiments."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GWARAMARI BREAD", "image": "nepalesegwaramari", "tag": "snack",
+    "recipe": [
+      {
+        "images": [
+          "ingredient_flour",
+          "ingredient_bakingpowder",
+          "ingredient_ginger",
+          "ingredient_garlic",
+          "ingredient_cumin",
+          "ingredient_coriander",
+          "ingredient_salt",
+          "ingredient_blackpepper",
+          "ingredient_oil",
+          "ingredient_water"
+        ],
+        "ingrediens": [
+          "250g flour",
+          "1 teaspoon baking powder",
+          "1/4 teaspoon finely grated fresh ginger",
+          "1/4 teaspoon finely grated garlic",
+          "1/4 teaspoon ground cumin",
+          "1/4 teaspoon ground coriander",
+          "1 teaspoon salt",
+          "1 teaspoon black pepper",
+          "1l oil",
+          "1 cup of water"
+        ],
+        "directions": [
+          "Combine the flour, baking powder, ginger, garlic, cumin, coriander, and salt and pepper in a mixing bowl. Carefully add the water, stirring continuously, until the flour becomes a thick paste. Cover the bowl with plastic wrap and place in the fridge overnight.",
+          "Heat the oil in a deep saucepan to 190ºC. Stir the dough with a large metal spoon to deflate. When oil is ready, take a small ladleful (about 30g or 1 ½ tbsp) of the dough, make a small ball, place it gently into the oil, being careful of the hot oil. Fry for 4-5 minutes or until golden brown and crisp on the outside.",
+          "Remove the gwaramari from the oil with a slotted spoon. Rest on paper towel to drain excess oil. Serve hot with tea or chutney."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AALOO TAMA", "image": "aaloo_tamba", "tag": "snack",
+    "recipe": [
+      {
+        "images": [
+          "ingredient_blackbeans",
+          "ingredient_oil",
+          "ingredient_onion",
+          "ingredient_ginger",
+          "ingredient_potato",
+          "ingredient_cumin",
+          "ingredient_coriander",
+          "ingredient_chili",
+          "ingredient_bamboo"
+        ],
+        "ingrediens": [
+          "95g dried black-eyed beans",
+          "2 tablespoon oil",
+          "1/2 onion, sliced",
+          "1/2 teaspoon finely grated ginger",
+          "2 potatos, peeled and diced",
+          "2 teaspoon ground cumin",
+          "2 teaspoon ground coriander",
+          "2 teaspoon chili flakes",
+          "50g bamboo shoots"
+        ],
+        "directions": [
+          "Soak black-eyed beans overnight. Drain the water when ready to cook.",
+          "Pour oil into a saucepan and place over medium heat. Once the oil is hot, fry the onion, ginger and garlic until golden. Add the potato and soaked beans to the pan and fry for few minutes, stirring regularly, then add the cumin, ground coriander, chilli and salt. ",
+          "Once you smell the spicy aroma (1-2 minutes), add 1 litre (4 cups) boiling water and simmer until the potatoes and beans are tender.",
+          "Add bamboo shoots and simmer until warmed through. If using fresh bamboo shoots, simmer until tender. Garnish with coriander and serve."
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AALOO KO ACHAR", "image": "aloo", "tag": "common",
+    "recipe": [
+      {
+        "images": [
+          "ingredient_potato",
+          "ingredient_oil",
+          "ingredient_cumin",
+          "ingredient_turmeric",
+          "ingredient_coriander",
+          "ingredient_chili",
+          "ingredient_lemon",
+          "ingredient_salt"
+        ],
+        "ingrediens": [
+          "6 potatos",
+          "1l oil",
+          "1/2 a cup of sesame seeds",
+          "1/2 a cup of cumin",
+          "1/5 tablespoon of turmeric",
+          "1 tablespoon of coriander",
+          "5 green chilis",
+          "1l of lemon juice",
+          "1 teaspoon salt"
+        ],
+        "directions": [
+          "Boil potatoes, peel it and chop into quarters",
+          "Roast sesame seeds (Teel) (half cup) on a pan till it turns light brown and starts crackling, after which grind it in a food processor",
+          "Heat half cup of oil in frying pan and add about 30 – 40 methi seeds till it turns dark brown",
+          "Add cut green chilies (about 6 – 9 depending on your taste) light fry chilies for 20 seconds",
+          "Add spoonful of coriander, cumin and 1/5 of turmeric powder",
+          "Add the ground sesame seeds and salt to taste",
+          "Cook for a minute in low flame. Stir it continuously",
+          "Add the potatoes cook for about 3-4 minutes (stirring continuously)",
+          "Add half cup of fresh lime/lemon juice. Mix it very well",
+          "Garnish with fresh chopped coriander leaves"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "KWATI WITH CHICKEN", "image": "dish", "tag": "common",
+    "recipe": [
+      {
+        "images": [
+          "ingredient_kwati",
+          "ingredient_chicken",
+          "ingredient_oil",
+          "ingredient_salt",
+          "ingredient_turmeric",
+          "ingredient_coriander",
+          "ingredient_cumin",
+          "ingredient_chili"
+        ],
+        "ingrediens": [
+          "200g kwati",
+          "100g chicken",
+          "3 tablespoon oil",
+          "1 tablespoon salt",
+          "1/2 tablespoon turmeric",
+          "1/2 tablespoon coriander",
+          "1/2 tablespoon cumin ",
+          "1/2 tablespoon chilipowder"
+        ],
+        "directions": [
+          "Soak Kwati for a night",
+          "If you want them to be sprout then soak it for 2 nights and drain it in a soft cloth for about 2 days.",
+          "When you see the right amount of sprouts in it (the amount you would like to have)",
+          "Heat the pressure cooker in the gas",
+          "Add some oil",
+          "When the oil is hot add some fenugreek and thyme seed",
+          "When they turn brown add red chilies",
+          "Add the Kwati in the pressure cooker",
+          "Fry it for few minutes then add turmeric and salt",
+          "Now add the small cut pieces of chicken in the cooker and let it cook for 5 to 7 minutes",
+          "Put the lid of the pressure cooker and let it have 5 whistles.",
+          "Take the cooker immediately out of the gas and take off the lid",
+          "Pour it in the pan and cook it until it is well cooked"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "KWATI WITH BEEF", "image": "dish", "tag": "common",
+    "recipe": [
+      {
+        "images": [
+          "ingredient_kwati",
+          "ingredient_cow",
+          "ingredient_oil",
+          "ingredient_salt",
+          "ingredient_turmeric",
+          "ingredient_coriander",
+          "ingredient_cumin",
+          "ingredient_chili"
+        ],
+        "ingrediens": [
+          "200g kwati",
+          "100g beef",
+          "3 tablespoon oil",
+          "1 tablespoon salt",
+          "1/2 tablespoon turmeric",
+          "1/2 tablespoon coriander",
+          "1/2 tablespoon cumin ",
+          "1/2 tablespoon chilipowder"
+        ],
+        "directions": [
+          "Soak Kwati for a night",
+          "If you want them to be sprout then soak it for 2 nights and drain it in a soft cloth for about 2 days.",
+          "When you see the right amount of sprouts in it (the amount you would like to have)",
+          "Heat the pressure cooker in the gas",
+          "Add some oil",
+          "When the oil is hot add some fenugreek and thyme seed",
+          "When they turn brown add red chilies",
+          "Add the Kwati in the pressure cooker",
+          "Fry it for few minutes then add turmeric and salt",
+          "Now add the small cut pieces of beef in the cooker and let it cook for 5 to 7 minutes",
+          "Put the lid of the pressure cooker and let it have 5 whistles.",
+          "Take the cooker immediately out of the gas and take off the lid",
+          "Pour it in the pan and cook it until it is well cooked"
         ]
       }
     ]

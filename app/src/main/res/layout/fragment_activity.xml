@@ -13,9 +13,11 @@
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/buttonshape"
-        android:text="0-4 months"
+        android:text="0-4 महिना"
         android:textColor="#FF6E6E"
         android:textSize="11dp"
+        android:fontFamily="@font/montserrat"
+
         app:layout_constraintEnd_toStartOf="@+id/activities_button58months"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,9 +29,10 @@
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/buttonshape"
-        android:text="5-8 months"
+        android:text="5-8 महिना"
         android:textColor="#FF6E6E"
         android:textSize="11dp"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintEnd_toStartOf="@+id/activities_button912months"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activities_button04months"
@@ -41,9 +44,10 @@
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/buttonshape"
-        android:text="9-12 months"
+        android:text="9-12 महिना"
         android:textColor="#FF6E6E"
         android:textSize="11dp"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/activities_button58months"
@@ -86,8 +90,9 @@
                 android:id="@+id/activities_textviewSinging"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
-                android:text="Singing"
+                android:text="गाउँदै"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewSinging"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewSinging" />
 
@@ -127,8 +132,9 @@
                 android:id="@+id/activities_textviewTalking"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
-                android:text="Talking"
+                android:text="कुरा गर्दै"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewTalking"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewTalking" />
 
@@ -167,8 +173,9 @@
                 android:id="@+id/activities_textviewTummyTime"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
-                android:text="Tummy time"
+                android:text="पेट समय"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewTummyTime"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewTummyTime" />
 
@@ -215,8 +222,9 @@
                 android:id="@+id/activities_textviewPlayTime"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
-                android:text="Play Time"
+                android:text="प्ले समय"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewPlayTime"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewPlayTime" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -256,8 +264,9 @@
                 android:id="@+id/activities_textviewCuddlingTime"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
-                android:text="Cuddling Time"
+                android:text="कुडल समय"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewCuddlingTime"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewCuddlingTime" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -289,8 +298,9 @@
                 android:id="@+id/activities_textviewReading"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
-                android:text="Reading"
+                android:text="पढ्दै"
                 android:paddingStart="5dp"
+                android:fontFamily="@font/montserrat"
                 app:layout_constraintStart_toStartOf="@+id/activities_imageViewReading"
                 app:layout_constraintTop_toBottomOf="@+id/activities_imageViewReading" />
 

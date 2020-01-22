@@ -44,7 +44,7 @@
             android:paddingBottom="5dp"
             android:fontFamily="@font/montserrat_bold"
             android:textSize="25sp"
-            android:text="Ingrediens: "
+            android:text="सामग्रीहरू: "
             android:textColor="@color/redDark" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -66,7 +66,7 @@
             android:paddingBottom="5dp"
             android:fontFamily="@font/montserrat_bold"
             android:textSize="25sp"
-            android:text="Directions: "
+            android:text="निर्देशनहरू: "
             android:textColor="@color/redDark" />
 
         <androidx.recyclerview.widget.RecyclerView

@@ -84,7 +84,7 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
         viewHolder.name.setText(childArr.get(position).getName());
         viewHolder.birthday.setText(birthday[position]);
         viewHolder.gender.setText(childArr.get(position).getGender());
-        viewHolder.progress.setText(progress[position] + " days old");
+        viewHolder.progress.setText(progress[position] + " दिन पुरानो");
         viewHolder.progressBar.setProgress((int) progress[position]);
 
         if(childArr.size() > 1 ) {
@@ -97,13 +97,12 @@ public class Adaptor_ListviewChild extends ArrayAdapter<String> {
                     childArr.get(position).setActive(true);
 
                     //TODO maybe rephrase
-                    Toast.makeText(context, "You change to " + childArr.get(position).getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "तपाईं परिवर्तन गर्नुहोस् " + childArr.get(position).getName(), Toast.LENGTH_SHORT).show();
                     Collections.swap(childArr, position, 0);
                     childInfo.setChildArr(childArr, context);
                     //Updates the adaptor after the change
-                    progress = childInfo.getProgressAge();
-                    birthday = childInfo.getBirthdayString();
                     notifyDataSetChanged();
+
                 }
             });
         }

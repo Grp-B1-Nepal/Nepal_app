@@ -34,26 +34,25 @@ public class RecipeHome extends Fragment {
 
     List<CategoryObject> categoryList;
     List<Integer> btnIcons;
-    public List<RecipeHomeObject> recipeRecommendedList, recipeSnacksList, recipeCommonList, recipeFavoritesList, favoriteList, mainList;
+    public List<RecipeHomeObject> recipeRecommendedList, recipeSnacksList, recipeCommonList, favoriteList;
     EditText searchField;
 
     public void fillLists() {
+        //initiate views.
         recipeInfo = recipeInfo.getInstance();
         recipeRecommendedList = new ArrayList<>();
         recipeSnacksList = new ArrayList<>();
         recipeCommonList = new ArrayList<>();
         categoryList = new ArrayList<>();
         favoriteList = FavoriteRecipes.getInstance().favoriteList;
-        mainList = recipeInfo.getRecipeListByTag(getContext(),"loadAll");
         btnIcons = new ArrayList<>();
 
         //Loads all recipes with tag recommended
         recipeRecommendedList = recipeInfo.getRecipeListByTag(getContext(),"recommended");
         categoryList.add(new CategoryObject("Recommended", recipeRecommendedList));
 
-        // Loads all recipes with returns true on favorite
-        recipeFavoritesList = recipeInfo.getRecipeListByTag(getContext(),"favorite");
-        categoryList.add(new CategoryObject("Favorites", recipeFavoritesList));
+        // Loads all recipes from the singleton Class
+        categoryList.add(new CategoryObject("Favorites", favoriteList));
 
         //Loads all recipes with tag snack
         recipeSnacksList = recipeInfo.getRecipeListByTag(getContext(),"snack");

@@ -1,9 +1,11 @@
 package com.example.nepal_app.UI.Fragments.Profile.Child;
 
 
+import android.Manifest;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -24,8 +26,11 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -36,6 +41,8 @@ import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -45,14 +52,13 @@ import static android.app.Activity.RESULT_OK;
 
 
 public class Fragment_addChild extends Fragment implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
-    private Button save, pick_date, deleteButton,buttonBack, picture;
+    private Button save, pick_date, buttonBack;
     private EditText name;
     private ImageView  preview;
     private ArrayList<ChildObj> childArr = new ArrayList<>();
     private long currentDate;
     private static final int PICK_IMAGE =100;
     private Spinner genders;
-    private Uri imageUri = null;
     private ChildInfo childInfo;
     private Bitmap bitmap;
 
@@ -70,7 +76,7 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
 
         View view2 = inflater.inflate(R.layout.fragment_add_child, container, false);
         save = view2.findViewById(R.id.save_button);
-        picture = view2.findViewById(R.id.picture);
+        Button picture = view2.findViewById(R.id.picture);
         name = view2.findViewById(R.id.name);
         pick_date = view2.findViewById(R.id.pickdate_button);
         preview = view2.findViewById(R.id.downloaded_picture);
@@ -78,9 +84,8 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         genders = view2.findViewById(R.id.gender_spinner);
         pick_date.setOnClickListener(this);
         save.setOnClickListener(this);
-        deleteButton = view2.findViewById(R.id.button_deleteChild);
+        Button deleteButton = view2.findViewById(R.id.button_deleteChild);
         deleteButton.setVisibility(View.INVISIBLE);
-        buttonBack = view2.findViewById(R.id.button_editBack);
         buttonBack.setOnClickListener(this);
 
         childInfo = ChildInfo.getInstance();
@@ -109,30 +114,22 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
      */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Bitmap bitmapTemp;
-        float degree;
         Matrix matrix = new Matrix();
-        String filePath;
         try {
 
             if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
-                imageUri = data.getData();
+                Uri imageUri = data.getData();
                 bitmap = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 bitmapTemp = bitmap;
+
+                //Rotate image
+                if(bitmap.getWidth() > bitmap.getHeight()) {
+                    matrix.postRotate(90);
+                }
+
                 bitmap = Bitmap.createBitmap(bitmapTemp, 0,0, bitmap.getWidth(),bitmap.getHeight(),matrix,true);
                 bitmap = Bitmap.createScaledBitmap(bitmap,200,300,true);
 
-                String[] filePathColumn = {MediaStore.Images.Media.DATA};
-
-                Cursor cursor = getActivity().getContentResolver().query(imageUri, filePathColumn, null, null, null);
-                cursor.moveToFirst();
-
-                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                filePath = cursor.getString(columnIndex);
-                cursor.close();
-
-                //Rotate image
-                degree = getCameraPhotoOrientation(getContext(), imageUri, filePath);
-                matrix.setRotate(degree);
 
                 //Get round image
                 Glide.with(this).load(bitmap).
@@ -151,10 +148,13 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
 
     @Override
     public void onClick(View v) {
-
         if (v == save){
-            if (String.valueOf(name.getText()).equals("") || currentDate == 0 || bitmap == null || genders.getSelectedItem().equals("…")) {
+            if (String.valueOf(name.getText()).equals("") || currentDate == 0 || bitmap == null ||
+                    genders.getSelectedItem().equals("…")) {
 
+                if(childInfo.nameInUse(String.valueOf(name.getText()))){
+                    name.setError("Name already in use");
+                }
                 if (String.valueOf(name.getText()).equals("")){
                     name.setError("Please fill the name of the child");
                 }
@@ -168,7 +168,10 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
                     Toast.makeText(getContext(),"Select a gender",Toast.LENGTH_LONG).show();
                 }
             } else {
-                if (childArr.size() != 0) {
+                if (childInfo.nameInUse(String.valueOf(name.getText()))){
+                    name.setError("Name already in use");
+                    return;
+                } else  if (childArr.size() != 0) {
                     childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem()),false));
                 } else
                     childArr.add(new ChildObj(String.valueOf(name.getText()), currentDate, String.valueOf(genders.getSelectedItem()),true));
@@ -180,9 +183,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
             }
         } else if (v == pick_date) {
             showDateDialog();
-        } else if (v == buttonBack){
-            FragmentManager fm = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
-            fm.popBackStack();
         }
     }
 
@@ -220,36 +220,6 @@ public class Fragment_addChild extends Fragment implements View.OnClickListener,
         } else {
             Toast.makeText(getContext(),"Not a valid date",Toast.LENGTH_LONG).show();
         }
-    }
-
-    //Rotate image
-    public int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
-        int rotate = 0;
-        try {
-            context.getContentResolver().notifyChange(imageUri, null);
-            File imageFile = new File(imagePath);
-
-            ExifInterface exif = new ExifInterface(imageFile.getAbsolutePath());
-            int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-
-            switch (orientation) {
-                case ExifInterface.ORIENTATION_ROTATE_270:
-                    rotate = 270;
-                    break;
-                case ExifInterface.ORIENTATION_ROTATE_180:
-                    rotate = 180;
-                    break;
-                case ExifInterface.ORIENTATION_ROTATE_90:
-                    rotate = 90;
-                    break;
-            }
-
-            Log.i("RotateImage", "Exif orientation: " + orientation);
-            Log.i("RotateImage", "Rotate value: " + rotate);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return rotate;
     }
 
 }

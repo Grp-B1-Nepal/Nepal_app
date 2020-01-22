@@ -27,7 +27,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:background="@drawable/button_shape_home"
-                android:src="@drawable/quiz_frontpage_image2"
+                android:src="@drawable/quiz_frontpage_image"
                 app:layout_constraintEnd_toStartOf="@id/recipesSpeaker"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recipesButton" />
@@ -57,7 +57,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/activitesSpeaker"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-                app:srcCompat="@drawable/activities_frontpage_image2" />
+                app:srcCompat="@drawable/activities_frontpage_image" />
 
             <ImageButton
                 android:id="@+id/activitesSpeaker"
@@ -78,7 +78,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:background="@drawable/button_shape_home"
-                android:src="@drawable/profile_button_image2"
+                android:src="@drawable/profile_button_image"
                 app:layout_constraintEnd_toStartOf="@id/profileSpeaker"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/activitesButton" />
@@ -105,7 +105,7 @@
                 app:layout_constraintEnd_toStartOf="@id/progressSpeaker"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/profileButton"
-                app:srcCompat="@drawable/progress_frontpage_image2" />
+                app:srcCompat="@drawable/progress_frontpage_image" />
 
             <ImageButton
                 android:id="@+id/progressSpeaker"
@@ -126,7 +126,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:background="@drawable/button_shape_home"
-                android:src="@drawable/recipes_frontpage_image2"
+                android:src="@drawable/recipes_frontpage_image"
                 app:layout_constraintEnd_toStartOf="@id/recipesSpeaker"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/progressButton" />
@@ -181,7 +181,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/trans_1000xcf" />
+                    app:srcCompat="@drawable/days" />
 
                 <ImageView
                     android:id="@+id/imageView"
@@ -190,7 +190,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView6"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/mom_icon2" />
+                    app:srcCompat="@drawable/mom_icon" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

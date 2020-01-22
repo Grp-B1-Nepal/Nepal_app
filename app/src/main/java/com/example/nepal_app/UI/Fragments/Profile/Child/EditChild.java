@@ -186,10 +186,10 @@ public class EditChild extends Fragment implements View.OnClickListener {
 
     /**
      * Method implemented from datePickerDialog
-     * @param view
-     * @param year
-     * @param month
-     * @param day
+     * @param view the view you want to change
+     * @param year the year you set
+     * @param month the month you set
+     * @param day the day you set
      */
     private void onDateSet(DatePicker view, int year, int month, int day) {
         Date date = new Date();
@@ -211,7 +211,7 @@ public class EditChild extends Fragment implements View.OnClickListener {
     /**
      * Getter for the birthday
      * @param index For the child array
-     * @return
+     * @return a date
      */
     private String getBirthday(int index) {
         Calendar calendar = Calendar.getInstance();
@@ -225,9 +225,9 @@ public class EditChild extends Fragment implements View.OnClickListener {
 
     /**
      * Getting result inform of picture from the camera roll
-     * @param requestCode
-     * @param resultCode
-     * @param data
+     * @param requestCode the code you get from the phone
+     * @param resultCode a code you get from phone
+     * @param data the intent it gets
      */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Bitmap bitmapTemp;

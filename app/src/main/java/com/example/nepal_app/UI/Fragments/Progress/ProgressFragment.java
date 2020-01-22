@@ -155,7 +155,9 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    //Marks all buttons as unpressed
+    /**
+     * Marks all colors as unbressed.
+     */
     public void resetColors() {
         b1.setBackground(getResources().getDrawable(R.drawable.scroll_buttons));
         b2.setBackground(getResources().getDrawable(R.drawable.scroll_buttons));
@@ -172,6 +174,11 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
     }
 
     // Methode for setting text, pressed button.
+
+    /**
+     * Method for changing the text depending on the button pressed.
+     * @param agerange age of the child in months.
+     */
     public void updateInfo(int agerange){
 
         switch (agerange){

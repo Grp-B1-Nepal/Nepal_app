@@ -19,6 +19,11 @@ import com.example.nepal_app.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is the adapter for the outer recyclerView. It is a list of buttons, which are different categories.
+ * When the buttons are pressed, they open up a list of recipes, that corresponds to that category.
+ */
+
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.categoryVH> implements Filterable{
     private RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
 
@@ -74,6 +79,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.catego
         return categoryList.size();
     }
 
+    /**
+     * This is the viewholder the adapter uses
+     */
     public class categoryVH extends RecyclerView.ViewHolder {
         Button category;
         RecyclerView rvRecipe;

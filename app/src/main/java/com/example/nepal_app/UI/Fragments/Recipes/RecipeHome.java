@@ -26,6 +26,10 @@ import com.example.nepal_app.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This is the fragment for recipes.
+ */
+
 public class RecipeHome extends Fragment {
     private RecipeInfo recipeInfo;
 
@@ -35,6 +39,10 @@ public class RecipeHome extends Fragment {
     public List<RecipeHomeObject> recipeRecommendedList, recipeSnacksList, recipeCommonList; //This is List of recipes we want in the different categories
     EditText searchField; //This is the search bar in the top of the layout
 
+
+    /**
+     * This initialises all the data we use. We make use of the JSON file.
+     */
     public void fillLists() {
         //We get the recipeInfo instance and set all lists to be arraylists
         recipeInfo = recipeInfo.getInstance();
@@ -46,16 +54,16 @@ public class RecipeHome extends Fragment {
 
         //Loads all recipes with tag recommended from JSON file
         recipeRecommendedList = recipeInfo.getRecipeListByTag(getContext(),"recommended");
-        categoryList.add(new CategoryObject("Recommended", recipeRecommendedList));
+        categoryList.add(new CategoryObject("सिफारिश गरिएको", recipeRecommendedList));
 
         //Loads all recipes with tag snack from JSON file
         recipeSnacksList = recipeInfo.getRecipeListByTag(getContext(),"snack");
-        categoryList.add(new CategoryObject("Snacks", recipeSnacksList));
+        categoryList.add(new CategoryObject("स्नैक्स", recipeSnacksList));
 
 
         //Loads all recipes with tag common from JSON file
         recipeCommonList = recipeInfo.getRecipeListByTag(getContext(),"common");
-        categoryList.add(new CategoryObject("Common", recipeCommonList));
+        categoryList.add(new CategoryObject("सामान्य", recipeCommonList));
 
         //Loads all images from drawables
         btnIcons.add(R.drawable.ic_reho_recommended);

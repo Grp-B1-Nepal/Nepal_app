@@ -56,7 +56,7 @@ public class NotificationScheduler {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, DAILY_REMINDER_REQUEST_CODE, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager am = (AlarmManager) context.getSystemService(ALARM_SERVICE);
 
-        long daysinmillisec = 1000*60*60*24*14; //This is how many milliseconds a day is. Right now it triggers 30 days after download and 30 days after that.
+        long daysinmillisec = 1000*60*60*24*30; //This is how many milliseconds a day is. Right now it triggers 30 days after download and 30 days after that.
         // Gets the current time because that is the current date.
         //Calendar.getInstance().getTimeInMillis() + daysinmillisec
         am.setInexactRepeating(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis() + daysinmillisec, Calendar.getInstance().getTimeInMillis() + daysinmillisec, pendingIntent);

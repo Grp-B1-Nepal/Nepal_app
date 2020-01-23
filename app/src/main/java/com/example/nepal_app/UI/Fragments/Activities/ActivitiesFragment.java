@@ -86,7 +86,6 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
             months912.setOnClickListener(this);
 
             topButtonCheck();
-
         }
             return rod;
     }

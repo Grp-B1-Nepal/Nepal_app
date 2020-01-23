@@ -26,7 +26,7 @@
         android:layout_marginStart="10dp"
         android:background="@drawable/button_shape"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/view_recipe"
+        android:text="दृश्य"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="#FFFFFF"
         android:textSize="14sp"

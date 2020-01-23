@@ -31,7 +31,6 @@ public class baseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Sentry.init("https://123456789080494c98fbfc2a37702c6b@sentry.io/1234567");
     }
 
     @Override

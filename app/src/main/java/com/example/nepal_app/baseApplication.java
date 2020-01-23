@@ -16,6 +16,8 @@ import org.acra.annotation.AcraToast;
 import org.acra.data.StringFormat;
 import org.acra.sender.HttpSender;
 
+import io.sentry.Sentry;
+
 //Custom application class, to make sure that ACRA crash reporting always loads no matter where in the app you are.
 //Crash reporting to http domain, change this to your http, using ACRA 3rd part software.
 @AcraCore(buildConfigClass = BuildConfig.class,
@@ -29,6 +31,7 @@ public class baseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Sentry.init("https://123456789080494c98fbfc2a37702c6b@sentry.io/1234567");
     }
 
     @Override

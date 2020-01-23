@@ -36,7 +36,7 @@ dependencies {
     implementation('com.github.bumptech.glide:glide:4.10.0') {
         exclude group: "com.android.support"
     }
-
+    implementation 'io.sentry:sentry-android:1.7.27'
     implementation 'com.android.support:support-v4:29.+'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

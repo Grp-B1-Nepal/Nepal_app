@@ -20,6 +20,7 @@ import com.example.nepal_app.R;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 
 import static android.content.Context.ALARM_SERVICE;
 
@@ -32,7 +33,6 @@ public class NotificationScheduler {
     public static final int DAILY_REMINDER_REQUEST_CODE=100;
     public static final String TAG="NotificationScheduler";
     private static String CHANNEL_ID = "the100goldendaysNepalB1";
-    static int notificationId = 1;
 
     /**
      * This method sets the reminder to make sure the alarm triggers when it's supposed to.
@@ -55,11 +55,12 @@ public class NotificationScheduler {
         Intent intent1 = new Intent(context, cls);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, DAILY_REMINDER_REQUEST_CODE, intent1, PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager am = (AlarmManager) context.getSystemService(ALARM_SERVICE);
-
-        long daysinmillisec = 1000*60*60*24*30; //This is how many milliseconds a day is. Right now it triggers 30 days after download and 30 days after that.
+        Date date = new Date();
+        date.setTime(0);
+        date.setDate(30);
         // Gets the current time because that is the current date.
         //Calendar.getInstance().getTimeInMillis() + daysinmillisec
-        am.setInexactRepeating(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis() + daysinmillisec, Calendar.getInstance().getTimeInMillis() + daysinmillisec, pendingIntent);
+        am.setInexactRepeating(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis() + date.getTime(), Calendar.getInstance().getTimeInMillis() + date.getTime(), pendingIntent);
 
         Log.d(TAG, "setReminder: end");
         System.out.println("setReminder: end");

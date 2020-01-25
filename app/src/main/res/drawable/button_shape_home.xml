@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- En <ripple> farver viewet når der trykkes på det. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/redDarkDark">
+    <item>
+        <!-- En selector giver valg mellem forskellige drawables eller shapes i baggrunden
+          afhængig af om en knap, listelement eller lignende er trykket ned, har fokus eller er disablet -->
+        <selector>
+            <!-- Hvis knappen er disablet -->
+            <item android:state_enabled="false">
+                <shape>
+                    <gradient
+                        android:startColor="@color/redDarkDark"
+                        android:endColor="@color/redDarkDark"
+                        android:centerY="0.8"
+                        android:angle="90"
+                        android:type="linear"/>
+                    <stroke android:width="2dp" android:color="@color/redDarkDark" />
+
+                    <corners
+                        android:radius="20dp"/>
+                </shape>
+            </item>
+
+            <!-- Det normale farve skal være nederst -->
+            <item>
+<shape>
     <gradient
         android:startColor="@color/colorAccent"
         android:endColor="@color/colorPrimary"
@@ -11,3 +36,7 @@
     <corners
         android:radius="20dp"/>
 </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

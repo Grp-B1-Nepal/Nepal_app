@@ -26,11 +26,33 @@ import com.example.nepal_app.R;
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
 
-    private ImageButton activitiesB, activitesSound, profileB, profileSound,
-            progressB, progressSound, recipesB, recipesSound, quizB, quizSound, comicB, comicSound;
+  private int[] knapperId = {
+          R.id.activitesButton,
+          R.id.profileButton,
+          R.id.progressButton,
+          R.id.recipesButton,
+          R.id.quizButton,
+          R.id.comicButton,
+  };
+  private int[] lydeKnapId = {
+          R.id.activitesSpeaker,
+          R.id.profileSpeaker,
+          R.id.progressSpeaker,
+          R.id.recipesSpeaker,
+          R.id.quizSpeaker,
+          R.id.comicSpeaker,
+  };
+  private int[] lydeId = {
+          R.raw.homepage_activity,
+          R.raw.homepage_profile,
+          R.raw.homepage_progress,
+          R.raw.homepage_recipe,
+          0,
+          0,
+  };
+  MediaPlayer mp;
     private View rod;
     private Button authorbutton;
-    private Boolean isSoundPlaying = false;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -52,132 +74,67 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-            if(rod == null) {
             rod = inflater.inflate(R.layout.fragment_homepage, container, false);
 
-            //setting up buttons
-            activitiesB = rod.findViewById(R.id.activitesButton);
-            activitesSound = rod.findViewById(R.id.activitesSpeaker);
-            profileB = rod.findViewById(R.id.profileButton);
-            profileSound = rod.findViewById(R.id.profileSpeaker);
-            progressB = rod.findViewById(R.id.progressButton);
-            progressSound = rod.findViewById(R.id.progressSpeaker);
-            recipesB = rod.findViewById(R.id.recipesButton);
-            recipesSound = rod.findViewById(R.id.recipesSpeaker);
-            quizB = rod.findViewById(R.id.quizButton);
-            quizSound = rod.findViewById(R.id.quizSpeaker);
-            comicB = rod.findViewById(R.id.comicButton);
-            comicSound = rod.findViewById(R.id.comicSpeaker);
+            for (int rækkeNr = 0; rækkeNr< knapperId.length; rækkeNr++) {
+              ImageButton aktivitetKnap = rod.findViewById(knapperId[rækkeNr]);
+              aktivitetKnap.setOnClickListener(this);
+              ImageButton lydKnap = rod.findViewById(lydeKnapId[rækkeNr]);
+              if (lydeId[rækkeNr] != 0) {
+                lydKnap.setOnClickListener(this);
+              } else {
+                lydKnap.setEnabled(false); // slå de knapper fra der ikke har lyd
+              }
+            }
             authorbutton = rod.findViewById(R.id.authorbutton);
-
-            //setting up onclicklisteners
-            activitiesB.setOnClickListener(this);
-            activitesSound.setOnClickListener(this);
-            profileB.setOnClickListener(this);
-            profileSound.setOnClickListener(this);
-            progressB.setOnClickListener(this);
-            progressSound.setOnClickListener(this);
-            recipesB.setOnClickListener(this);
-            recipesSound.setOnClickListener(this);
-            quizB.setOnClickListener(this);
-            quizSound.setOnClickListener(this);
-            comicB.setOnClickListener(this);
-            comicSound.setOnClickListener(this);
             authorbutton.setOnClickListener(this);
 
-            }
+      rod.findViewById(R.id.quizButton).setEnabled(false);
+      rod.findViewById(R.id.comicButton).setEnabled(false);
+
         return rod;
     }
 
-    @Override
+  @Override
+  public void onPause() {
+    if (mp != null) {
+      mp.stop(); // Stop tidligere afspilning
+    }
+    super.onPause();
+  }
+
+  @Override
     public void onClick(View v) {
-        if (v == recipesB) {
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.container, new RecipeHome());
-            transaction.addToBackStack(null);
-            transaction.commit();
-        } else if (v == progressB) {
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.container, new ProgressFragment());
-            transaction.addToBackStack(null);
-            transaction.commit();
-        } else if (v == activitiesB) {
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.container, new ActivitiesFragment());
-            transaction.addToBackStack(null);
-            transaction.commit();
-        } else if (v == recipesSound) {
-            if (!isSoundPlaying) {
-                isSoundPlaying = true;
-                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_recipe);
-                mp.start();
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        mp.release();
-                        isSoundPlaying = false;
-                    }
-                });
-            }
-        } else if (v == progressSound) {
-            if (!isSoundPlaying) {
-                isSoundPlaying = true;
-                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_development);
-                mp.start();
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        mp.release();
-                        isSoundPlaying = false;
-                    }
-                });
-            }
-        } else if (v == activitesSound) {
-            if(!isSoundPlaying) {
-                isSoundPlaying = true;
-                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_activity);
-                mp.start();
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        mp.release();
-                        isSoundPlaying = false;
-                    }
-                });
-            }
-        } else if (v == profileB) {
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.container, new ProfileFragment());
-            transaction.addToBackStack(null);
-            transaction.commit();
-        } else if (v == profileSound) {
-            if(!isSoundPlaying) {
-                isSoundPlaying = true;
-                MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.homepage_profile);
-                mp.start();
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        mp.release();
-                        isSoundPlaying = false;
-                    }
-                });
-            }
-        } else if (v == comicB) {
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.container, new UDFragment());
-            transaction.addToBackStack(null);
-            transaction.commit();
-        } else if (v == quizB) {
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.container, new UDFragment());
-            transaction.addToBackStack(null);
-            transaction.commit();
-        } else if (v == authorbutton) {
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.container, new authorfragment());
-            transaction.addToBackStack(null);
-            transaction.commit();
+      for (int rækkeNr = 0; rækkeNr< knapperId.length; rækkeNr++) {
+        if (lydeKnapId[rækkeNr] == v.getId()) {
+          if (mp != null) {
+            mp.stop(); // Stop tidligere afspilning
+          }
+          mp = MediaPlayer.create(getActivity(), lydeId[rækkeNr]);
+          mp.seekTo(700); // Der er tavshed de første 0,7 sekunder af filerne - så hop over dem
+          mp.start();
+          mp.setOnCompletionListener(mpx -> {
+            mp.release();
+            mp = null;
+          });
+          return;
         }
+      }
+
+      Fragment fragment = null;
+      if (v.getId()==R.id.activitesButton) fragment = new ActivitiesFragment();
+      if (v.getId()==R.id.profileButton) fragment = new ProfileFragment();
+      if (v.getId()==R.id.progressButton) fragment = new ProgressFragment();
+      if (v.getId()==R.id.recipesButton) fragment = new RecipeHome();
+      if (v.getId()==R.id.authorbutton) fragment = new authorfragment();
+
+      if (fragment==null) {
+        new IllegalStateException("Tryk på ukendt knap").printStackTrace();
+        return;
+      }
+      FragmentTransaction transaction = getFragmentManager().beginTransaction();
+      transaction.replace(R.id.container, fragment);
+      transaction.addToBackStack(null);
+      transaction.commit();
     }
 }

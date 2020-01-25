@@ -29,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
         //if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
         createNotificationChannel();
         NotificationScheduler.setReminder(this, MyReciever.class);
-        openFragment(new HomeFragment());
+        if (savedInstanceState==null) {
+            openFragment(new HomeFragment());
+        }
     }
 
     public void openFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, fragment);
+        transaction.add(R.id.container, fragment);
         transaction.commit();
     }
 

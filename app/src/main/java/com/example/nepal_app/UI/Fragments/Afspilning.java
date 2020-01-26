@@ -17,19 +17,17 @@ public class Afspilning {
     stop();
     try {
       mp = mp1;
-      if (skipStart>0) {
-        mp.seekTo(skipStart); // Der er tavshed de første 0,7 sekunder af filerne - så hop over dem
-      }
-      mp.start();
       mp.setOnCompletionListener(mpx -> {
         try {
-          if (ocl!=null) ocl.onCompletion(null);
+          if (ocl != null) ocl.onCompletion(null);
+          mp.reset();
           mp.release();
           mp = null;
         } catch (Exception e) {
           e.printStackTrace();
         }
       });
+      mp.start();
     } catch (Exception e) {
       e.printStackTrace();  // fang alle fejl og log dem, men lad være at crashe app'en
     }
@@ -38,6 +36,9 @@ public class Afspilning {
   public static void stop() {
     if (mp != null) try {
       mp.stop(); // Stop tidligere afspilning
+      mp.reset();
+      mp.release();
+      mp = null;
     } catch (Exception e) {
       e.printStackTrace();  // fang alle fejl og log dem, men lad være at crashe app'en
     }

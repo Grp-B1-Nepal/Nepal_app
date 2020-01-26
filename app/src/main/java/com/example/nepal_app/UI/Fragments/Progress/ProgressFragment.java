@@ -17,6 +17,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.nepal_app.Logic.Objects.ChildObj;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.R;
+import com.example.nepal_app.UI.Fragments.Afspilning;
 
 import java.util.ArrayList;
 
@@ -127,32 +128,16 @@ public class ProgressFragment extends Fragment implements View.OnClickListener {
         } else if (v == b12) {
             updateInfo(12);
         } else if (v == speakerbutton1) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), soundfile1);
-            if(!isSoundPlaying) {
-                isSoundPlaying = true;
-                mp.start();
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        mp.release();
-                        isSoundPlaying = false;
-                    }
-                });
-            }
+            Afspilning.start(MediaPlayer.create(getActivity(), soundfile1));
         } else if (v == speakerbutton2) {
-            MediaPlayer mp = MediaPlayer.create(getActivity(), soundfile2);
-            if(!isSoundPlaying) {
-                isSoundPlaying = true;
-                mp.start();
-                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        mp.release();
-                        isSoundPlaying = false;
-                    }
-                });
-            }
+            Afspilning.start(MediaPlayer.create(getActivity(), soundfile2));
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Afspilning.stop(); // stop afspilning af lyd når fragmentet/aktiviteten ophører med at være synlig
     }
 
     /**

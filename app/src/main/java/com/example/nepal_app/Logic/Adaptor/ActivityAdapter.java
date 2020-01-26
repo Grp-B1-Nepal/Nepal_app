@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.R;
+import com.example.nepal_app.UI.Fragments.Afspilning;
 
 import java.util.ArrayList;
 
@@ -89,18 +90,7 @@ public class ActivityAdapter extends RecyclerView.Adapter<ActivityAdapter.ViewHo
          */
         @Override
         public void onClick(View v) {
-                if(!isSoundPlaying) {
-                    isSoundPlaying = true;
-                    mediaPlayer = MediaPlayer.create(mcontext, sounds.get(getLayoutPosition()));
-                    mediaPlayer.start();
-                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mediaPlayer) {
-                            mediaPlayer.release();
-                            isSoundPlaying = false;
-                        }
-                    });
-                }
+            Afspilning.start(MediaPlayer.create(mcontext, sounds.get(getLayoutPosition())));
         }
     }
 }

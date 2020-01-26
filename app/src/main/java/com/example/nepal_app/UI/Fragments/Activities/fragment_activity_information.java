@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nepal_app.Logic.Adaptor.ActivityAdapter;
 import com.example.nepal_app.R;
+import com.example.nepal_app.UI.Fragments.Afspilning;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -80,5 +81,11 @@ public class fragment_activity_information extends Fragment {
 
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(rcAdapter);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Afspilning.stop();
     }
 }

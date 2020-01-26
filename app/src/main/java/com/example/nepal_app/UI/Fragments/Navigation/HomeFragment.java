@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.nepal_app.UI.Fragments.Activities.ActivitiesFragment;
+import com.example.nepal_app.UI.Fragments.Afspilning;
 import com.example.nepal_app.UI.Fragments.Profile.ProfileFragment;
 import com.example.nepal_app.UI.Fragments.Progress.ProgressFragment;
 import com.example.nepal_app.UI.Fragments.Recipes.RecipeHome;
@@ -50,7 +51,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
           0,
           0,
   };
-  MediaPlayer mp;
     private View rod;
     private Button authorbutton;
 
@@ -97,9 +97,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
   @Override
   public void onPause() {
-    if (mp != null) {
-      mp.stop(); // Stop tidligere afspilning
-    }
+    Afspilning.stop();
     super.onPause();
   }
 
@@ -107,16 +105,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
       for (int rækkeNr = 0; rækkeNr< knapperId.length; rækkeNr++) {
         if (lydeKnapId[rækkeNr] == v.getId()) {
-          if (mp != null) {
-            mp.stop(); // Stop tidligere afspilning
-          }
-          mp = MediaPlayer.create(getActivity(), lydeId[rækkeNr]);
-          mp.seekTo(700); // Der er tavshed de første 0,7 sekunder af filerne - så hop over dem
-          mp.start();
-          mp.setOnCompletionListener(mpx -> {
-            mp.release();
-            mp = null;
-          });
+          Afspilning.start(MediaPlayer.create(getActivity(), lydeId[rækkeNr]), 700);
           return;
         }
       }

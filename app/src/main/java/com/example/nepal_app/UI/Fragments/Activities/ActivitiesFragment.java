@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.nepal_app.Logic.Factory.ChildInfo;
 import com.example.nepal_app.Logic.Objects.ChildObj;
 import com.example.nepal_app.R;
+import com.example.nepal_app.UI.Fragments.Afspilning;
 
 import java.util.ArrayList;
 
@@ -146,78 +147,18 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
 
         } else if (v == SoundCuddling_Time || v == SoundPlay_Time || v == SoundReading || v == SoundSinging || v == SoundTalking || v == SoundTummy_Time) {
             if (v == SoundCuddling_Time) {
-                if(!isSoundPlaying) {
-                    isSoundPlaying = true;
-                    mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_cuddlingtime);
-                    mediaPlayer.start();
-                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mediaPlayer) {
-                            mediaPlayer.release();
-                            isSoundPlaying = false;
-                        }
-                    });
-            }} else if (v == SoundPlay_Time) {
-                    if(!isSoundPlaying) {
-                        isSoundPlaying = true;
-                        mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_playtime);
-                        mediaPlayer.start();
-                        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                            @Override
-                            public void onCompletion(MediaPlayer mediaPlayer) {
-                                mediaPlayer.release();
-                                isSoundPlaying = false;
-                            }
-                        });
-            }} else if (v == SoundReading) {
-                        if(!isSoundPlaying) {
-                            isSoundPlaying = true;
-                            mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_reading);
-                            mediaPlayer.start();
-                            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                @Override
-                                public void onCompletion(MediaPlayer mediaPlayer) {
-                                    mediaPlayer.release();
-                                    isSoundPlaying = false;
-                                }
-                            });
-            }} else if (v == SoundSinging) {
-                            if(!isSoundPlaying) {
-                                isSoundPlaying = true;
-                                mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_singing);
-                                mediaPlayer.start();
-                                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                    @Override
-                                    public void onCompletion(MediaPlayer mediaPlayer) {
-                                        mediaPlayer.release();
-                                        isSoundPlaying = false;
-                                    }
-                                });
-           }} else if (v == SoundTalking) {
-                                if(!isSoundPlaying) {
-                                    isSoundPlaying = true;
-                                    mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_talking);
-                                    mediaPlayer.start();
-                                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                        @Override
-                                        public void onCompletion(MediaPlayer mediaPlayer) {
-                                            mediaPlayer.release();
-                                            isSoundPlaying = false;
-                                        }
-                                    });
-            }} else  {
-                                    if(!isSoundPlaying) {
-                                        isSoundPlaying = true;
-                                        mediaPlayer = MediaPlayer.create(getContext(), R.raw.activities_tummytime);
-                                        mediaPlayer.start();
-                                        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                            @Override
-                                            public void onCompletion(MediaPlayer mediaPlayer) {
-                                                mediaPlayer.release();
-                                                isSoundPlaying = false;
-                                            }
-                                        });
-            }}
+                Afspilning.start(MediaPlayer.create(getContext(), R.raw.activities_cuddlingtime));
+            } else if (v == SoundPlay_Time) {
+                Afspilning.start(MediaPlayer.create(getContext(), R.raw.activities_playtime));
+            } else if (v == SoundReading) {
+                Afspilning.start(MediaPlayer.create(getContext(), R.raw.activities_reading));
+            } else if (v == SoundSinging) {
+                Afspilning.start(MediaPlayer.create(getContext(), R.raw.activities_singing));
+           } else if (v == SoundTalking) {
+                Afspilning.start(MediaPlayer.create(getContext(), R.raw.activities_talking));
+            } else  {
+                Afspilning.start(MediaPlayer.create(getContext(), R.raw.activities_tummytime));
+            }
 
         } else if (v == months04 || v == months58 || v == months912) {
             //Resets the color of all the buttons before it paints the background on one of them.
@@ -239,6 +180,12 @@ public class ActivitiesFragment extends Fragment implements View.OnClickListener
                 v.setBackground(getResources().getDrawable(R.drawable.buttonshape_activities_gray));
             }
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Afspilning.stop(); // stop afspilning af lyd når fragmentet/aktiviteten ophører med at være synlig
     }
 
     /**
